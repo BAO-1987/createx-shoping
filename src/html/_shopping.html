@@ -1,0 +1,84 @@
+<section class="shopping">
+
+  <h2 class="shopping__title title">Ready To Ship</h2>
+
+  <div class="shopping__text">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est id pretium pellentesque leo. Lorem.</p>
+  </div>
+
+  <div class="shopping__wrapper">
+
+    <div class="shopping-slider">
+
+      <ul class="shopping-slider__list swiper-wrapper">
+
+        @loop("../html/parts/_article.html",[{
+        class: "swiper-slide",
+        image: "cards/black-chair",
+        imageDescr: "image of black-chair",
+        width: "270",
+        height: "270",
+        title: "Alina Velvet Modular Armless",
+        price: "£799.00",
+        oldprice: "",
+        btn: "View Details Products"
+        },
+        {
+        class: "swiper-slide",
+        image: "cards/blue-furniture",
+        imageDescr: "image of black-chair",
+        width: "270",
+        height: "270",
+        title: "Alina Velvet Modular Armless",
+        price: "£699.00",
+        oldprice: "",
+        btn: "View Details Products"
+        },
+        {
+        class: "swiper-slide",
+        image: "cards/green-furniture",
+        imageDescr: "image of black-chair",
+        width: "270",
+        height: "270",
+        title: "Serpentine Velvet Sofa",
+        price: "£795.00",
+        oldprice: "",
+        btn: "View Details Products"
+        },
+        {
+        class: "swiper-slide",
+        image: "cards/chairs",
+        imageDescr: "image of black-chair",
+        width: "270",
+        height: "270",
+        title: "Clarion Dining Chair",
+        price: "£795.00",
+        oldprice: "",
+        btn: "View Details Products"
+        },
+        {
+        class: "swiper-slide",
+        image: "cards/black-chair",
+        imageDescr: "image of black-chair",
+        width: "270",
+        height: "270",
+        title: "Alina Velvet Modular Armless",
+        price: "£799.00",
+        oldprice: "",
+        btn: "View Details Products"
+        }
+        ])
+
+      </ul>
+
+    </div>
+
+    <button class="shopping-slider__prev slider-btn">
+    </button>
+
+    <button class="shopping-slider__next slider-btn slider-btn--reverse">
+    </button>
+
+  </div>
+
+</section>

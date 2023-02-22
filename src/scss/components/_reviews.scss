@@ -1,0 +1,51 @@
+.reviews-slider {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+
+  &__item {
+    @include flex-sb;
+    gap: 10px;
+  }
+
+  &__blockquote {
+    @include flex;
+    padding-top: rem(20);
+    flex-direction: column;
+    width: 100%;
+    max-width: 860px;
+    line-height: 1.7;
+  }
+
+  &__author {
+    @include flex-all-center;
+    margin-top: auto;
+    padding-left: clamp(20px, 2rem, 30px);
+    position: relative;
+    font-family: var(--font-title);
+    font-weight: 300;
+    letter-spacing: 0.265em;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 225px;
+      height: 45px;
+      background-image: url("../img/sprite.svg#stars");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    transform: translateX(40%);
+  }
+
+
+}

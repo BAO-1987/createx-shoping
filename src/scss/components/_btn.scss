@@ -1,0 +1,138 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 0 em(40);
+  font-weight: 700;
+  line-height: 3.25;
+  letter-spacing: 0.031em;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+
+
+  &:focus {
+    outline: 2px solid var(--color-active);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    background-color: var(--color-orange-100);
+  }
+
+  &:active {
+    background-color: var(--color-active);
+  }
+
+  &--inverse {
+    border-color: var(--color-green);
+    color: var(--color-green);
+    background-color: var(--color-white);
+
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-red);
+    }
+  }
+
+  // &--second {
+  //   padding: 20px 72px 20px 30px;
+  //   background-color: var(--color-white);
+  //   color: var(--color-ebony);
+  //   border: 1px solid var(--color-ebony);
+
+  //   &::before {
+  //     content: "";
+  //     right: 24px;
+  //     background-color: var(--color-ebony);
+  //   }
+  // }
+
+  // &--inverse {
+  //   border: 1px solid var(--color-white);
+  //   background-color: transparent;
+  // }
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.slider-btn {
+
+  @include flex-all-center;
+
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  top: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    // right: 0;
+    // top: 0;
+    mask-image: url("../img/sprite.svg#arrow");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-gray);
+    transition: background-color 3s linear;
+
+    // @include for-width(-mobile-l) {
+    //   width: 20px;
+    //   height: 20px;
+    // }
+  }
+
+  &--reverse {
+
+    &::before {
+      transform: rotate(180deg);
+
+      // @include for-width(-mobile-l) {
+      //   width: 20px;
+      //   height: 20px;
+      // }
+    }
+
+    // @include for-width(-mobile-l) {
+    //   right: 30px;
+    // }
+  }
+
+  &:hover {
+
+    &:before {
+      background-color: var(--color-brown);
+    }
+  }
+
+  // @include for-width(-mobile-l) {
+  //   width: 20px;
+  //   height: 20px;
+  // }
+}
+
+.slider-btn.swiper-button-disabled {
+  pointer-events: none;
+
+  &::before {
+    background-color: transparent;
+  }
+}

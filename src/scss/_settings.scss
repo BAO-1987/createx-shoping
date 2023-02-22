@@ -1,0 +1,88 @@
+.page {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100%;
+  }
+}
+
+.site-container {
+  @include footerToBottom;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.title {
+  @include h2;
+
+
+
+  &--article {
+    @include flex;
+
+    margin-bottom: 0;
+    min-height: 65px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  &--reviews {
+    margin-bottom: rem(70);
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+}
+
+section {
+  margin-bottom: rem(180);
+}
+
+.logo {
+  @include flex-all-center;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.input-reset {
+  border-color: transparent;
+  padding: 15px 30px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: transparent;
+
+  &::placeholder {
+    color: var(--color-gray);
+  }
+}
