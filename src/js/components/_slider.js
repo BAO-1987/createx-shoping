@@ -15,23 +15,18 @@ const heroSlider = new Swiper(".hero-slider", {
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
+  // loop: true,
 
-  speed: heroSliderSpeed,
-  autoplay: {
-    delay: 1000,
-  },
+  // speed: heroSliderSpeed,
+  // autoplay: {
+  //   delay: 1000,
+  // },
   // loop: true,
   // centeredSlides: true,
 
   // autoplay: {
   //   delay: 2000,
   //   disableOnInteraction: false,
-  // },
-
-
-  // a11y: {
-  //   prevSlideMessage: 'Попередній слайд',
-  //   nextSlideMessage: 'Наступний слайд',
   // },
 
   navigation: {
