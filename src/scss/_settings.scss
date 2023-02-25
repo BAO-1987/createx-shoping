@@ -25,6 +25,10 @@
   padding: 0 var(--container-offset);
   width: 100%;
   max-width: var(--container-width);
+
+  &--wrapper {
+    max-width: var(--wrapper-width);
+  }
 }
 
 .title {

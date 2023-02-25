@@ -81,7 +81,7 @@
   top: 50%;
   // left: 32px;
   transform: translateY(-50%);
-  transition: border-color 3s linear;
+  transition: background-color 3s linear;
 
   &::before {
     content: "";
@@ -93,7 +93,7 @@
     width: 24px;
     height: 24px;
     background-color: var(--color-gray);
-    transition: background-color 3s linear;
+    transition: background-color 2s linear;
 
     // @include for-width(-mobile-l) {
     //   width: 20px;
@@ -119,10 +119,10 @@
   }
 
   &:hover {
-    border-color: var(--color-green);
+    background-color: var(--color-green);
 
     &::before {
-      background-color: var(--color-green);
+      background-color: var(--color-white);
     }
   }
 
