@@ -72,11 +72,10 @@ select {
 button {
   appearance: none;
   outline-color: transparent;
-  overflow: visible;
   margin: 0;
   border: 0;
   padding: 0;
-  width: auto;
+  width: fit-content;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   line-height: normal;

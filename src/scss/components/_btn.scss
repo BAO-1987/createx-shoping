@@ -6,7 +6,7 @@
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: var(--br);
   padding: 0 em(40);
   font-weight: 700;
   line-height: 3.25;
@@ -41,23 +41,28 @@
     }
   }
 
-  // &--second {
-  //   padding: 20px 72px 20px 30px;
-  //   background-color: var(--color-white);
-  //   color: var(--color-ebony);
-  //   border: 1px solid var(--color-ebony);
+  &--article {
+    padding: 1px 32px;
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 3.14;
 
-  //   &::before {
-  //     content: "";
-  //     right: 24px;
-  //     background-color: var(--color-ebony);
-  //   }
-  // }
-
-  // &--inverse {
-  //   border: 1px solid var(--color-white);
-  //   background-color: transparent;
-  // }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 17px;
+      left: 48px;
+      mask-image: url("../img/sprite.svg#cart");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-white);
+      transition: background-color 2s linear;
+    }
+  }
 }
 
 .btn-reset {

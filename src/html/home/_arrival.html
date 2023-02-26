@@ -1,4 +1,5 @@
 <section class="arrival">
+
   <div class="container container--wrapper">
 
     <h2 class="title">new arrivals</h2>
@@ -8,5 +9,42 @@
       <a href="#">See the collection here</a>
     </div>
 
+    <div class="arrival-slider">
+
+      <ul class="arrival__list">
+
+        @loop("../parts/_article.html",[{
+        class: "swiper-slide",
+        sale: "-50%",
+        rating: "article__rating--five",
+        image: "arrival/caps",
+        imageDescr: "image of caps",
+        width: "280",
+        height: "320",
+        title: "Black and white sport cap",
+        price: "$18.15",
+        oldprice: ""
+        },
+        {
+        class: "swiper-slide",
+        sale: "-50%",
+        rating: "article__rating--five",
+        image: "arrival/cap",
+        imageDescr: "image of caps",
+        width: "280",
+        height: "320",
+        title: "Black and white sport cap",
+        price: "$18.15",
+        oldprice: "",
+        }
+        ])
+
+      </ul>
+
+
+    </div>
+
   </div>
+
+
 </section>
