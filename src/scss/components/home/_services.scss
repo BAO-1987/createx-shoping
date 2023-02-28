@@ -1,0 +1,60 @@
+.services {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    @include flex-all-center;
+    flex-direction: column;
+    position: relative;
+
+    &::before {
+      content: "";
+      top: -70px;
+      position: absolute;
+      mask-image: url("../img/sprite.svg#delivery");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 48px;
+      height: 48px;
+      background-color: var(--color-green);
+      transition: background-color 2s linear;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 136px;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 1), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
+    }
+
+    &--shipping {
+      &::before {
+        mask-image: url("../img/sprite.svg#delivery");
+      }
+    }
+
+    &--support {
+      &::before {
+        mask-image: url("../img/sprite.svg#call-center");
+      }
+    }
+
+    &--guarantee {
+      &::before {
+        mask-image: url("../img/sprite.svg#shield");
+      }
+    }
+
+    &--payment {
+      &::before {
+        mask-image: url("../img/sprite.svg#credit-card");
+      }
+    }
+  }
+}

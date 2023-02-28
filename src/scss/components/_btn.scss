@@ -41,6 +41,27 @@
     }
   }
 
+  &--instagram {
+    padding: 0 em(40) 0 em(72);
+    border-color: var(--color-green);
+    color: var(--color-green);
+    background-color: var(--color-white);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 38px;
+      mask-image: url("../img/sprite.svg#instagram");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 24px;
+      height: 24px;
+      background-color: var(--color-green);
+      transition: background-color 2s linear;
+    }
+  }
+
   &--article {
     padding: 1px 32px;
     width: 100%;
@@ -63,6 +84,26 @@
       transition: background-color 2s linear;
     }
   }
+
+  // &--apple {
+  //   padding: 0 14px 0 46px;
+  //   background-color: var(--color-gray);
+
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: 17px;
+  //     left: 17px;
+  //     mask-image: url("../img/sprite.svg#apple");
+  //     mask-position: center;
+  //     mask-repeat: no-repeat;
+  //     mask-size: cover;
+  //     width: 25px;
+  //     height: 30px;
+  //     background-color: var(--color-white);
+  //     transition: background-color 2s linear;
+  //   }
+  // }
 }
 
 .btn-reset {

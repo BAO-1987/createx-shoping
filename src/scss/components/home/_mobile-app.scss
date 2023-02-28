@@ -1,3 +1,82 @@
 .mobile-app {
-  
+  position: relative;
+  background-color: var(--color-black);
+
+  &__inner {
+    @include flex;
+
+    justify-content: end;
+    padding: rem(60) 15px;
+  }
+
+  &__box {
+    position: absolute;
+    left: 17%;
+    bottom: 0;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 15px;
+    z-index: 5;
+  }
+
+  &__title {
+
+    @include adaptive_size("font-size", 32, 20);
+    color: var(--color-white);
+    text-transform: none;
+    text-align: left;
+    margin-bottom: rem(50);
+  }
+
+  &__list {
+    @include flex;
+    gap: 25px;
+
+    li {
+      padding: 12px 80px;
+      background-color: var(--color-gray);
+      border-radius: var(--br);
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // padding: 0 40px;
+
+    &--apple {
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        background-image: url("../img/sprite.svg#apple");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 132px;
+        height: 35px;
+      }
+    }
+
+    &--android {
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        background-image: url("../img/sprite.svg#android");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 132px;
+        height: 32px;
+      }
+    }
+  }
 }
