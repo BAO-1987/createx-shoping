@@ -1,3 +1,33 @@
 <section class="fashion">
-  
+
+  <ul class="fashion__list">
+
+    @loop("../parts/_card.html",[{
+    class: "card_item",
+    image: "fashion/bag",
+    imageDescr: "image of bag",
+    width: "600",
+    height: "300",
+    title: "Bag Trends for Summer 2020",
+    name: "Fashion",
+    time: "August 24, 2020",
+    comments: "No comments",
+    desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis..."
+    },
+    {
+    class: "card_item",
+    image: "fashion/sneakers",
+    imageDescr: "image of sneakers",
+    width: "600",
+    height: "300",
+    title: "Top 10 of This Season’s Hottest Sneakers",
+    name: "Lifestyle",
+    time: "July 16, 2020",
+    comments: "4 comments",
+    desc: "Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus..."
+    }
+    ])
+
+  </ul>
+
 </section>
