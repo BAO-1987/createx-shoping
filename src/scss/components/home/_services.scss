@@ -9,6 +9,18 @@
     flex-direction: column;
     position: relative;
 
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 136px;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 1), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
+      }
+    }
+
     &::before {
       content: "";
       top: -70px;
@@ -23,15 +35,6 @@
       transition: background-color 2s linear;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 1px;
-      height: 136px;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 1), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
-    }
 
     &--shipping {
       &::before {
