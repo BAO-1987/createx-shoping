@@ -33,7 +33,7 @@
   &--inverse {
     border-color: var(--color-green);
     color: var(--color-green);
-    background-color: var(--color-white);
+    background-color: transparent;
 
     &:hover {
       color: var(--color-white);

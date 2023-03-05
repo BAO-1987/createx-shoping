@@ -1,0 +1,7 @@
+.partners {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 102px;
+  }
+}

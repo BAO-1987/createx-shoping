@@ -14,21 +14,5 @@
   --color-gray-100: #787a80;
   --color-red: #ff4242;
   --br: 4px;
-  --color-bg: black;
-}
-
-:root:has(#pink:checked) {
-  --color-bg: pink;
-}
-
-:root:has(#blue:checked) {
-  --color-bg: blue;
-}
-
-:root:has(#green:checked) {
-  --color-bg: green;
-}
-
-:root:has(#dark:checked) {
-  --color-bg: red;
+  --grid-gap: 30px;
 }

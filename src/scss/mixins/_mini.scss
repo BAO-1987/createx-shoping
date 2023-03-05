@@ -4,6 +4,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--color-gray);
 }
 
 $browser-context: 16; // Default
@@ -19,8 +20,7 @@ $browser-context: 16; // Default
     /* stylelint-disable-next-line function-comma-newline-after */
     "#{$pathToImage}.avif"type("image/avif"),
     "#{$pathToImage}.webp"type("image/webp"),
-    "#{$pathToImage}.jpg"type("image/jpg")
-  );
+    "#{$pathToImage}.jpg"type("image/jpg"));
 }
 
 @mixin footerToBottom {
@@ -31,30 +31,30 @@ $browser-context: 16; // Default
 }
 
 @mixin mr($value) {
-    &:not(:last-child) {
-        margin-right: $value;
-    }
+  &:not(:last-child) {
+    margin-right: $value;
+  }
 }
 
 @mixin ml($value) {
-    &:not(:last-child) {
-        margin-left: $value;
-    }
+  &:not(:last-child) {
+    margin-left: $value;
+  }
 }
 
 @mixin mb($value) {
-    &:not(:last-child) {
-        margin-bottom: $value;
-    }
+  &:not(:last-child) {
+    margin-bottom: $value;
+  }
 }
 
 @mixin mt($value) {
-    &:not(:last-child) {
-        margin-top: $value;
-    }
+  &:not(:last-child) {
+    margin-top: $value;
+  }
 }
 
 @mixin pseudo() {
-    content: "";
-    display: block;
+  content: "";
+  display: block;
 }

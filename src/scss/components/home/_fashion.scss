@@ -2,5 +2,12 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  &__content {
+    @include flex-all-sb;
+
+    margin-bottom: 60px;
   }
 }

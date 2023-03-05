@@ -1,0 +1,10 @@
+.banners {
+  &__list {
+    display: grid;
+  }
+&__item {
+  @include bg-cover;
+  
+  min-height: 500px;
+}
+}
