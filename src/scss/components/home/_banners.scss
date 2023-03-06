@@ -2,9 +2,48 @@
   &__list {
     display: grid;
   }
-&__item {
-  @include bg-cover;
-  
-  min-height: 500px;
+
+  &__content {
+    padding: 60px 0 60px 60px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+  }
+
+  &__item {
+    @include bg-cover;
+
+    min-height: 500px;
+  }
 }
+
+.countdown {
+  &__list {
+    @include flex;
+
+    gap: 24px;
+
+    li {
+      @include flex-all-center;
+
+      flex-direction: column;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.5;
+
+      & span:last-of-type {
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      &:first-of-type {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
 }
