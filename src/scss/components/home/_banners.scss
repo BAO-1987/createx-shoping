@@ -5,12 +5,16 @@
 
   &__content {
     padding: 60px 0 60px 60px;
+    width: 100%;
+    max-width: 400px;
+
+    &--delivery {
+      max-width: 455px;
+    }
   }
 
   &__title {
     margin-bottom: 40px;
-    width: 100%;
-    max-width: 400px;
     text-align: left;
   }
 
@@ -18,10 +22,26 @@
     @include bg-cover;
 
     min-height: 500px;
+    border-radius: var(--br);
+    position: relative;
+
+    &--delivery {
+      // @include flex-sb;
+
+      background-color: var(--color-gray-300);
+    }
+  }
+
+  &__box {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
   }
 }
 
 .countdown {
+  padding-top: 80px;
+
   &__list {
     @include flex;
 

@@ -2,16 +2,28 @@
 
   <ul class="banners__list">
 
+    <li class="banners__item" style="background-image: url(img/banners/girl.jpg);">
+
+      <div class="banners__content">
+
+        <span class="slogan">summer collections</span>
+
+        <h2 class="banners__title title title--banners">Sale Up to 70%</h2>
+
+        <a class="btn btn--inverse" href="#">Explore new prices</a>
+      </div>
+
+    </li>
+
     <li class="banners__item" style="background-image: url(img/banners/men.jpg);">
 
       <div class="banners__content">
 
         <span class="slogan">Deal of the week</span>
 
-        <h2 class="banners__title title">Stay Warm With Our New Sweaters</h2>
+        <h2 class="title title--banners">Stay Warm With Our New Sweaters</h2>
 
         <a class="btn btn--inverse" href="#">Shop now</a>
-
 
         <div class="countdown">
 
@@ -47,6 +59,41 @@
           </ul>
 
         </div>
+
+    </li>
+
+    <li class="banners__item" style="background-image: url(img/banners/bags.jpg);">
+
+      <div class="banners__content">
+
+        <span class="slogan">new collection</span>
+
+        <h2 class="title title--banners">Shoes & Bags
+          autumn / winter 2020</h2>
+
+        <a class="btn btn--inverse" href="#">See offers</a>
+      </div>
+
+    </li>
+
+    <li class="banners__item banners__item--delivery">
+
+      <div class="banners__content banners__content--delivery">
+
+        <span class="slogan">for all new email subscribers</span>
+
+        <h2 class="title title--banners">Get 5% Off & Free Delivery</h2>
+
+         @include("../parts/_form.html")
+
+      </div>
+
+      <div class="banners__box">
+        <picture>
+          <source srcset="img/banners/delivery.webp" type="image/webp">
+          <img loading="lazy" src="img/banners/delivery.png" width="440" height="380" alt="image of delivery">
+        </picture>
+      </div>
 
     </li>
 
