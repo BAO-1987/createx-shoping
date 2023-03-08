@@ -2,7 +2,7 @@
 
   <ul class="banners__list">
 
-    <li class="banners__item" style="background-image: url(img/banners/girl.jpg);">
+    <li class="banners__item banners__item--girl" style="background-image: url(img/banners/girl.jpg);">
 
       <div class="banners__content">
 
@@ -15,7 +15,7 @@
 
     </li>
 
-    <li class="banners__item" style="background-image: url(img/banners/men.jpg);">
+    <li class="banners__item banners__item--men" style="background-image: url(img/banners/men.jpg);">
 
       <div class="banners__content">
 
@@ -62,7 +62,21 @@
 
     </li>
 
-    <li class="banners__item" style="background-image: url(img/banners/bags.jpg);">
+    <li class="banners__item banners__item--delivery" style="background-image: url(img/banners/delivery.png);">
+
+      <div class="banners__content banners__content--delivery">
+
+        <span class="slogan">for all new email subscribers</span>
+
+        <h2 class="title title--banners">Get 5% Off & Free Delivery</h2>
+
+        @include("../parts/_form.html")
+
+      </div>
+
+    </li>
+
+    <li class="banners__item banners__item--bags" style="background-image: url(img/banners/bags.jpg);">
 
       <div class="banners__content">
 
@@ -76,26 +90,7 @@
 
     </li>
 
-    <li class="banners__item banners__item--delivery">
 
-      <div class="banners__content banners__content--delivery">
-
-        <span class="slogan">for all new email subscribers</span>
-
-        <h2 class="title title--banners">Get 5% Off & Free Delivery</h2>
-
-         @include("../parts/_form.html")
-
-      </div>
-
-      <div class="banners__box">
-        <picture>
-          <source srcset="img/banners/delivery.webp" type="image/webp">
-          <img loading="lazy" src="img/banners/delivery.png" width="440" height="380" alt="image of delivery">
-        </picture>
-      </div>
-
-    </li>
 
   </ul>
 
