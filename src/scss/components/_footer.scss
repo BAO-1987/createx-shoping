@@ -1,0 +1,18 @@
+.footer {
+  padding: rem(60) 0 rem(30) 0;
+  background-color: var(--color-black);
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.6;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 151px;
+  }
+}
+
+
+.footer-nav {
+  @include flex;
+  gap: 151px;
+}
