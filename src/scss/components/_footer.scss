@@ -1,18 +1,101 @@
 .footer {
+  position: relative;
   padding: rem(60) 0 rem(30) 0;
   background-color: var(--color-black);
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;
 
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 74px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-white);
+    opacity: 0.15;
+  }
+
   &__inner {
+
+    margin-bottom: rem(64);
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 151px;
+    gap: clamp(1.50rem, calc(0.16rem + 11.70vw), 9.38rem);
+  }
+
+  &__copyright {
+    color: var(--color-white);
+    font-size: 12px;
+    line-height: 1.5;
+
+    a {
+      position: relative;
+      padding-left: 20px;
+      transition: color 3s ease-in-out;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -4px;
+        mask-image: url("../img/sprite.svg#createx-logo");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 16px;
+        height: 16px;
+        background-color: var(--color-green);
+      }
+
+      &:hover {
+        color: var(--color-green);
+      }
+    }
   }
 }
 
-
 .footer-nav {
   @include flex;
-  gap: 151px;
+
+  gap: clamp(1.5rem, calc(0.16rem + 11.70vw), 9.38rem);
+
+  &__item {
+    gap: 4px;
+  }
+
+  &__link {
+    transition: color 0.3s linear;
+
+    &:is(:hover, :active) {
+      color: var(--color-white);
+    }
+  }
+}
+
+.footer-address {
+  &__list {
+    @include flex;
+
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+
+    span {
+      padding-right: 4px;
+      color: var(--color-white);
+    }
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
 }

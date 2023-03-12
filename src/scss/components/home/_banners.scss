@@ -12,6 +12,11 @@
 
     &--delivery {
       max-width: 455px;
+
+      p {
+        font-size: 14px;
+        color: var(--color-gray-800);
+      }
     }
   }
 
@@ -45,7 +50,7 @@
 
     &--delivery {
       grid-area: 2 / 4/ 3 / 8;
-      background-color: var(--color-gray-300);
+
       background-position: bottom right;
       background-size: 450px 400px;
     }

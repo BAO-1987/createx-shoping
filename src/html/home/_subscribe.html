@@ -1,0 +1,76 @@
+<section class="subscribe">
+
+  <div class="container">
+
+    <div class="subscribe__inner">
+
+      <div class="subscribe__content">
+
+        <h2 class="subscribe__title title">Subscribe for updates</h2>
+
+        <div class="subscribe__text">
+          <p>Subscribe for exclusive early sale access and new arrivals.</p>
+        </div>
+
+        <fieldset class="checkboxes">
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="Women" name="gender" id="women">
+            <label class="checkboxes__label" for="women">Women</label>
+          </div>
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="Men" name="gender" id="Men">
+            <label class="checkboxes__label" for="Men">Men</label>
+          </div>
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="Girls" name="gender" id="Girls">
+            <label class="checkboxes__label" for="Girls">Girls</label>
+          </div>
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="Boys" name="gender" id="Boys">
+            <label class="checkboxes__label" for="Boys">Boys</label>
+          </div>
+
+
+
+
+          <!-- <label class="checkboxes__label" checked>
+            <input class="checkboxes__input" type="radio" value="Men" name="Men">
+            <span class="checkboxes__text">Men</span>
+          </label>
+
+          <label class="checkboxes__label">
+            <input class="checkboxes__input" type="radio" value="Girls" name="Girls">
+            <span class="checkboxes__text">Girls</span>
+          </label>
+
+          <label class="checkboxes__label">
+            <input class="checkboxes__input" type="radio" value="Boys" name="Boys">
+            <span class="checkboxes__text">Boys</span>
+          </label> -->
+
+        </fieldset>
+
+        @include("../parts/_form.html")
+
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">I agree to receive communications from Createx Store.</span>
+        </label>
+      </div>
+
+      <div class="subscribe__box">
+        <picture>
+          <source srcset="img/subscribe/subscribe-bg.webp" type="image/webp">
+          <img loading="lazy" src="img/subscribe/subscribe-bg.png" width="461" height="416" alt="image of postman">
+        </picture>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

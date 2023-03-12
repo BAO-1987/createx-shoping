@@ -1,6 +1,7 @@
 .form {
   width: 100%;
-  max-width: 365px;
+  max-width: fit-content;
+
   &__box {
     @include flex-sb;
 
@@ -29,17 +30,9 @@
     top: -30px;
     transition: top 0.2s linear;
   }
-
-  &__text {
-    display: block;
-    font-size: 14px;
-    line-height: 1.5;
-  }
 }
 
-// .form__input:focus ~ .form__label,
-// .form__input:valid ~ .form__label {
-//   font-size: 14px;
-//   color: var(--color-active);
-//   transform: translateY(-100%);
-// }
+.custom-checkbox {
+  @include custom-checkbox;
+}
+

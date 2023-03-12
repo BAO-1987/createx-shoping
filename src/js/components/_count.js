@@ -1,5 +1,5 @@
 
-const newDate = new Date('mar 11 23 21:29:25').getTime()
+const newDate = new Date('mar 25 23 21:29:25').getTime()
 const countdown = setInterval(() => {
 
   const date = new Date().getTime()
