@@ -14,9 +14,15 @@
 
     li {
       position: relative;
+      overflow: hidden;
+      will-change: transform;
 
       &:hover h3 {
         color: var(--color-green);
+      }
+
+      &:hover img {
+        scale: (1.1);
       }
 
       a {
@@ -34,6 +40,7 @@
 
   &__img {
     margin-bottom: 15px;
+    transition: scale 0.8s linear;
   }
 
   &__wrapper {
