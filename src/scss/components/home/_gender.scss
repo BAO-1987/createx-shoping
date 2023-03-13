@@ -11,20 +11,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
-
     li {
       position: relative;
-      overflow: hidden;
-      will-change: transform;
+
 
       &:hover h3 {
         color: var(--color-green);
       }
-
-      &:hover img {
-        scale: (1.1);
-      }
-
       a {
         transition: color 3s linear;
 
@@ -35,13 +28,13 @@
           inset: 0;
         }
       }
+
+      img {
+        margin-bottom: 15px;
+      }
     }
   }
 
-  &__img {
-    margin-bottom: 15px;
-    transition: scale 0.8s linear;
-  }
 
   &__wrapper {
     padding-top: clamp(50px, 3rem, 185px);

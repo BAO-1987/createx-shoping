@@ -1,14 +1,25 @@
 .header {
-  position: sticky;
+
+  position: absolute;
   z-index: 2;
-  font-weight: 400;
-  font-size: 20px;
+  left: 0;
+  right: 0;
 
   &__inner {
     @include flex-all-sb;
 
     padding: 1.9rem 0;
 
+  }
+
+  &__bottom {
+  display: grid;
+  place-content: center;
+   padding: 8px 0;
+
+    background-color: var(--color-green);
+    color: var(--color-white);
+    text-align: center;
   }
 
   // &__logo {
@@ -22,11 +33,6 @@
   //   max-width: 381px;
   // }
 
-  &__action {
-    @include flex-all-sb;
-
-    gap: 30px;
-  }
 
   // &__link {
   //   @include flex-a-center;
@@ -56,112 +62,108 @@
   //   }
   // }
 
-  .header-banner {
-    @include flex-all-center;
 
-    padding: 1.2rem 0;
-    line-height: 1.4;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-white);
-    background-color: var(--color-green);
-  }
 }
 
-.nav {
+// .nav {
+//   position: relative;
+
+//   &__list {
+//     @include flex-a-center;
+//   }
+
+//   &__item {
+//     &:not(:last-child) {
+//       margin-right: clamp(20px, 3.2rem, 40px);
+//     }
+
+//     &--logo {
+//       pointer-events: none;
+//     }
+
+//     // &:nth-child(5) {
+//     //   margin-right: auto;
+//     // }
+//   }
+
+//   &__link {
+//     position: relative;
+//     line-height: 1.65;
+
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       left: 0;
+//       bottom: -3px;
+//       width: 100%;
+//       height: 2px;
+//       background-color: var(--color-red);
+//       transform: scale(0);
+//       transform-origin: center;
+//       transition: transform 0.3s linear;
+//     }
+
+//     &:focus {
+//       outline: 2px solid var(--color-red);
+//       outline-offset: 2px;
+//     }
+
+//     &:hover {
+//       &::before {
+//         transform: scale(1);
+//       }
+//     }
+
+//     &:active {
+//       color: var(--color-red);
+//     }
+//   }
+// }
+
+// .form-search {
+//   visibility: hidden;
+//   opacity: 0;
+
+//   display: none;
+
+//   width: 100%;
+//   max-width: 75px;
+
+//   &__btn {
+//     position: relative;
+//   }
+
+//   &__icon {
+//     width: 25px;
+//     height: 25px;
+//     fill: var(--color-white);
+//   }
+// }
+
+
+// .cart {
+//   position: relative;
+
+//   &__icon {
+//     width: 30px;
+//     height: 30px;
+//   }
+
+//   &__count {
+//     @include flex-all-center;
+
+//     position: absolute;
+//     top: 18px;
+//     right: -7px;
+//     border-radius: 50%;
+//     width: 25px;
+//     height: 25px;
+//     color: var(--color-white);
+//     background-color: var(--color-brown);
+//   }
+// }
+
+.offers-slider {
   position: relative;
-
-  &__list {
-    @include flex-a-center;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: clamp(20px, 3.2rem, 40px);
-    }
-
-    &--logo {
-      pointer-events: none;
-    }
-
-    // &:nth-child(5) {
-    //   margin-right: auto;
-    // }
-  }
-
-  &__link {
-    position: relative;
-    line-height: 1.65;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 100%;
-      height: 2px;
-      background-color: var(--color-red);
-      transform: scale(0);
-      transform-origin: center;
-      transition: transform 0.3s linear;
-    }
-
-    &:focus {
-      outline: 2px solid var(--color-red);
-      outline-offset: 2px;
-    }
-
-    &:hover {
-      &::before {
-        transform: scale(1);
-      }
-    }
-
-    &:active {
-      color: var(--color-red);
-    }
-  }
-}
-
-.form-search {
-  visibility: hidden;
-  opacity: 0;
-
-  display: none;
-
-  width: 100%;
-  max-width: 75px;
-
-  &__btn {
-    position: relative;
-  }
-
-  &__icon {
-    width: 25px;
-    height: 25px;
-    fill: var(--color-white);
-  }
-}
-
-
-.cart {
-  position: relative;
-
-  &__icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  &__count {
-    @include flex-all-center;
-
-    position: absolute;
-    top: 18px;
-    right: -7px;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    color: var(--color-white);
-    background-color: var(--color-brown);
-  }
+  overflow: hidden;
 }
