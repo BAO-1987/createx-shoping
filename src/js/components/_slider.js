@@ -15,20 +15,20 @@ const heroSlider = new Swiper(".hero-slider", {
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
-  effect: "fade",
+  // effect: "fade",
   // loop: true,
 
-  speed: heroSliderSpeed,
-  autoplay: {
-    delay: 1000,
-  },
-  loop: true,
-  centeredSlides: true,
+  // speed: heroSliderSpeed,
+  // autoplay: {
+  //   delay: 1000,
+  // },
+  // loop: true,
+  // centeredSlides: true,
 
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  //   disableOnInteraction: false,
+  // },
 
   navigation: {
     nextEl: ".hero-slider__next",
@@ -53,21 +53,13 @@ const heroSlider = new Swiper(".hero-slider", {
 
 const offersSlider = new Swiper(".offers-slider", {
   slidesPerView: 1,
-  // effect: "flip",
-  // cubeEffect: {
-  //   shadow: false,
-  //   slideShadows: false,
-  //   shadowOffset: 20,
-  //   shadowScale: 0.94,
-  // },
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
   // loop: true,
-  // centeredSlides: true,
 
   // autoplay: {
-  //   delay: 2000,
+  //   delay: 3500,
   //   disableOnInteraction: false,
   // },
 

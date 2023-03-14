@@ -1,5 +1,4 @@
 .header {
-
   position: absolute;
   z-index: 2;
   left: 0;
@@ -9,13 +8,12 @@
     @include flex-all-sb;
 
     padding: 1.9rem 0;
-
   }
 
   &__bottom {
-  display: grid;
-  place-content: center;
-   padding: 8px 0;
+    display: grid;
+    place-items: center;
+    padding: 8px 0;
 
     background-color: var(--color-green);
     color: var(--color-white);
@@ -32,7 +30,6 @@
   //   width: 100%;
   //   max-width: 381px;
   // }
-
 
   // &__link {
   //   @include flex-a-center;
@@ -61,8 +58,6 @@
 
   //   }
   // }
-
-
 }
 
 // .nav {
@@ -140,7 +135,6 @@
 //   }
 // }
 
-
 // .cart {
 //   position: relative;
 
@@ -166,4 +160,36 @@
 .offers-slider {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 530px;
+
+  &__item {
+    font-weight: 900;
+    font-size: 12px;
+
+    a {
+      position: relative;
+      padding-left: 4px;
+      font-weight: 400;
+      transition: color 0.3s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        height: 0.8px;
+        background-color: currentcolor;
+        transition: background-color 0.3s linear;
+      }
+
+      &:hover {
+        // color: var(--color-green);
+
+        &::before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }

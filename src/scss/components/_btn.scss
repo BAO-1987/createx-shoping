@@ -214,7 +214,8 @@
     width: 16px;
     height: 16px;
     background-color: var(--color-white);
-    transition: background-color 2s linear;
+    opacity: 0.6;
+    transition: opacity 0.3s linear;
   }
 
   &--reverse {
@@ -225,16 +226,15 @@
 
   }
 
-  &:hover {
-    background-color: var(--color-white);
+  &:hover::before {
     opacity: 1;
   }
 
   &__prev {
-    left: 29%;
+    left: 25%;
   }
 
    &__next {
-     left: 69%;
+     right: 25%;
    }
 }
