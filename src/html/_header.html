@@ -4,12 +4,12 @@
 
     <div class="container">
 
-      <a class="logo" href="#">
-        <img class="logo__img" src="img/logo.svg" alt="logo of ecommerce createx" width="130" height="22"
-          loading="lazy">
-      </a>
-
       <nav class="nav" title="primary navigation">
+
+        <a class="logo" href="#">
+          <img class="logo__img" src="img/logo.svg" alt="logo of ecommerce createx" width="130" height="22" loading="lazy">
+        </a>
+
         <ul class="nav__list">
 
           <li class="nav__item">
@@ -38,17 +38,23 @@
 
         <form class="form-search" action="#" autocomplete="off" method="get">
 
-          <label class="visually-hidden" for="mail">Email</label>
+          <label class="visually-hidden" for="search"></label>
 
-          <input class="form__input" type="mail" id="email" placeholder="Your working email" required>
+          <input class="form-search__input" type="search" id="search" placeholder="Search for products..."
+            required>
 
-          <button class="btn" type="submit">Subscribe</button>
+          <button class="form-search__btn btn-reset" type="submit">
+            <span class="visually-hidden">search</span>
+            <svg class="form-search__icon">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
 
         </form>
 
-    </div>
+      </div>
 
-  </div>
+    </div>
 
   </div>
 

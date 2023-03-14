@@ -1,0 +1,7 @@
+.nav {
+  @include flex-all-center;
+
+  &__list {
+    @include flex;
+  }
+}

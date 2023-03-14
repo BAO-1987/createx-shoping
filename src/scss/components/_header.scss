@@ -1,13 +1,15 @@
 .header {
   position: absolute;
   z-index: 2;
-  left: 0;
-  right: 0;
+  top: 0;
+  width: 100%;
+  margin-bottom: 10px;
 
-  &__inner {
-    @include flex-all-sb;
+  &__middle {
+    @include flex;
 
-    padding: 1.9rem 0;
+    padding: 20px 0;
+    background-color: var(--color-white);
   }
 
   &__bottom {
