@@ -1,7 +1,19 @@
 .nav {
-  @include flex-all-center;
+  @include flex-all-sb;
 
   &__list {
     @include flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: clamp(25px, 3rem, 40px);
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--color-gray-800);
   }
 }

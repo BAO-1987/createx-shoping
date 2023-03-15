@@ -37,6 +37,7 @@ section {
 
 .logo {
   @include flex-all-center;
+  margin-right: clamp(25px, 3.75rem, 60px)
 }
 
 .visually-hidden {

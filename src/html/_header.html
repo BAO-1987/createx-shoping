@@ -2,7 +2,7 @@
 
   <div class="header__middle">
 
-    <div class="container">
+    <div class="header__wrapper container">
 
       <nav class="nav" title="primary navigation">
 
@@ -35,49 +35,44 @@
         </ul>
       </nav>
 
+      <form class="form-search" action="#" autocomplete="off" method="get">
+
+        <label class="visually-hidden" for="search"></label>
+
+        <input class="form-search__input" type="search" id="search" placeholder="Search for products..." required>
+
+        <button class="form-search__btn btn-reset" type="submit">
+          <span class="visually-hidden">search</span>
+          <svg class="form-search__icon">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </button>
+
+      </form>
+
+
       <div class="header__action">
 
-        <form class="form-search" action="#" autocomplete="off" method="get">
-
-          <label class="visually-hidden" for="search"></label>
-
-          <input class="form-search__input" type="search" id="search" placeholder="Search for products..." required>
-
-          <button class="form-search__btn btn-reset" type="submit">
-            <span class="visually-hidden">search</span>
-            <svg class="form-search__icon">
-              <use xlink:href="img/sprite.svg#search"></use>
+        <div class="wishlist">
+          <span class="visually-hidden">wishlist</span>
+          <a class="wishlist__link" href="#">
+            <svg class="wishlist__icon">
+              <use xlink:href="img/sprite.svg#heart"></use>
             </svg>
-          </button>
+          </a>
+          <span class="whishlist__count">2</span>
+        </div>
 
-        </form>
+        <div class="cart">
 
+          <span class="visually-hidden">cart</span>
 
-        <div class="header__users">
-
-          <div class="wishlist">
-            <span class="visually-hidden">wishlist</span>
-            <a class="wishlist__link" href="#">
-              <svg class="wishlist__icon">
-                <use xlink:href="img/sprite.svg#heart"></use>
-              </svg>
-            </a>
-            <span class="whishlist__count">2</span>
-          </div>
-
-          <div class="cart">
-
-            <span class="visually-hidden">cart</span>
-
-            <a class="cart__link" href="#">
-              <svg class="cart__icon">
-                <use xlink:href="img/sprite.svg#cart"></use>
-              </svg>
-            </a>
-            <span class="cart__count">4</span>
-
-          </div>
-
+          <a class="cart__link" href="#">
+            <svg class="cart__icon">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </a>
+          <span class="cart__count">4</span>
 
         </div>
 

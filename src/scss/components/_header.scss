@@ -6,10 +6,18 @@
   margin-bottom: 10px;
 
   &__middle {
-    @include flex;
 
     padding: 20px 0;
     background-color: var(--color-white);
+  }
+
+  &__action {
+    @include flex;
+    gap: 20px;
+  }
+
+  &__wrapper {
+    @include flex-all-sb;
   }
 
   &__bottom {
@@ -21,6 +29,8 @@
     color: var(--color-white);
     text-align: center;
   }
+
+
 
   // &__logo {
   //   position: absolute;
