@@ -40,6 +40,11 @@
   &__input {
     padding: 12px 0 12px 16px;
     width: 100%;
+
+    &::placeholder {
+      font-size: 14px;
+      color: var(--color-gray-600);
+    }
   }
 
   &__btn {
@@ -65,8 +70,6 @@
       fill: var(--color-green);
     }
   }
-
-
 }
 
 .custom-checkbox {
