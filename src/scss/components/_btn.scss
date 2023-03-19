@@ -86,6 +86,28 @@
     }
   }
 
+   &--offers {
+     padding: 0 em(48) 0 em(24);
+     border-color: var(--color-green);
+     color: var(--color-green);
+     background-color: var(--color-white);
+
+     &::before {
+       content: "";
+       position: absolute;
+       right: 20px;
+       mask-image: url("../img/sprite.svg#arrow");
+       mask-position: center;
+       mask-repeat: no-repeat;
+       mask-size: cover;
+       width: 16px;
+       height: 16px;
+       rotate: -180deg;
+       background-color: var(--color-green);
+       transition: background-color 2s linear;
+     }
+   }
+
   &--article {
     padding: 1px 32px;
     width: 100%;

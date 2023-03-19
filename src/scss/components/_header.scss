@@ -5,19 +5,43 @@
   width: 100%;
   margin-bottom: 10px;
 
-  &__middle {
+  &__inner {
+    @include flex-all-sb;
 
+    padding: 10px 15px;
+  }
+
+  &__middle {
     padding: 20px 0;
     background-color: var(--color-white);
   }
 
+  &__link {
+    font-weight: 900;
+    transition: color 0.3s linear;
+
+    span {
+      font-weight: 400;
+    }
+
+    &:is(:hover, :active) {
+      color: var(--color-white);
+    }
+  }
+
   &__action {
     @include flex;
+
     gap: 20px;
   }
 
   &__wrapper {
     @include flex-all-sb;
+  }
+
+  &__users {
+    @include flex;
+    gap: 60px;
   }
 
   &__bottom {
@@ -29,8 +53,6 @@
     color: var(--color-white);
     text-align: center;
   }
-
-
 
   // &__logo {
   //   position: absolute;
@@ -72,102 +94,7 @@
   // }
 }
 
-// .nav {
-//   position: relative;
 
-//   &__list {
-//     @include flex-a-center;
-//   }
-
-//   &__item {
-//     &:not(:last-child) {
-//       margin-right: clamp(20px, 3.2rem, 40px);
-//     }
-
-//     &--logo {
-//       pointer-events: none;
-//     }
-
-//     // &:nth-child(5) {
-//     //   margin-right: auto;
-//     // }
-//   }
-
-//   &__link {
-//     position: relative;
-//     line-height: 1.65;
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       left: 0;
-//       bottom: -3px;
-//       width: 100%;
-//       height: 2px;
-//       background-color: var(--color-red);
-//       transform: scale(0);
-//       transform-origin: center;
-//       transition: transform 0.3s linear;
-//     }
-
-//     &:focus {
-//       outline: 2px solid var(--color-red);
-//       outline-offset: 2px;
-//     }
-
-//     &:hover {
-//       &::before {
-//         transform: scale(1);
-//       }
-//     }
-
-//     &:active {
-//       color: var(--color-red);
-//     }
-//   }
-// }
-
-// .form-search {
-//   visibility: hidden;
-//   opacity: 0;
-
-//   display: none;
-
-//   width: 100%;
-//   max-width: 75px;
-
-//   &__btn {
-//     position: relative;
-//   }
-
-//   &__icon {
-//     width: 25px;
-//     height: 25px;
-//     fill: var(--color-white);
-//   }
-// }
-
-// .cart {
-//   position: relative;
-
-//   &__icon {
-//     width: 30px;
-//     height: 30px;
-//   }
-
-//   &__count {
-//     @include flex-all-center;
-
-//     position: absolute;
-//     top: 18px;
-//     right: -7px;
-//     border-radius: 50%;
-//     width: 25px;
-//     height: 25px;
-//     color: var(--color-white);
-//     background-color: var(--color-brown);
-//   }
-// }
 
 .offers-slider {
   position: relative;
@@ -202,6 +129,36 @@
           background-color: transparent;
         }
       }
+    }
+  }
+}
+
+.header-top {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-gray-900);
+  font-size: 14px;
+
+  &__inner {
+    @include flex-all-sb;
+
+    padding: 10px 15px;
+  }
+
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: clamp(15px, 2rem, 35px);
+    }
+  }
+
+  &__link {
+    transition: color 0.3s linear;
+
+    &:is(:hover, :active) {
+      color: var(--color-white);
     }
   }
 }

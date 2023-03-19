@@ -1,0 +1,35 @@
+.languages {
+
+  span {
+    @include flex-all-center;
+
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      background-image: url("../img/en.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 45px;
+      mask-image: url("../img/sprite.svg#arrow-down");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 12px;
+      height: 12px;
+      background-color: var(--color-white);
+      transition: background-color 2s linear;
+    }
+  }
+}

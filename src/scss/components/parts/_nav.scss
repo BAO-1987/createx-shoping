@@ -3,6 +3,25 @@
 
   &__list {
     @include flex;
+
+    &--dropdown {
+      position: absolute;
+      top: 78%;
+      z-index: 20;
+      display: block;
+      padding: 20px 0 40px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: auto;
+      background-color: var(--color-white);
+      opacity: 1;
+      visibility: visible;
+      transition-property: opacity, visibility;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+    }
   }
 
   &__item {
@@ -12,8 +31,107 @@
   }
 
   &__link {
+    position: relative;
     font-weight: 700;
     text-transform: capitalize;
     color: var(--color-gray-800);
+    transition: color 0.3s linear;
+
+    &:before {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      content: '';
+      pointer-events: none;
+      background-color: var(--color-green);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      // margin-left: -5px;
+      opacity: 0;
+      transition: opacity 0.3s linear, bottom 0.3s linear;
+    }
+
+    &:hover {
+      color: var(--color-green);
+
+      &::before {
+        opacity: 1;
+        bottom: -20px;
+      }
+    }
+
+    &--dropdown {
+      cursor: pointer;
+      color: var(--color-red);
+    }
+  }
+}
+
+.dropdown-list {
+  @include flex-jc;
+
+  border-top: 1px solid var(--color-gray-300);
+  font-size: 14px;
+  color: var(--color-gray-800);
+
+  &__item {
+    &:last-child {
+      width: 100%;
+      max-width: 285px;
+      // flex-shrink: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: clamp(15px, 1.8rem, 35px);
+      width: 100%;
+      max-width: 180px;
+    }
+
+    &:nth-child(4) {
+      margin-right: clamp(30px, 8.43rem, 135px);
+    }
+  }
+}
+
+.dropdown-submenu {
+  box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+    0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+    0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+    0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  border-radius: 0 0 4px 4px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s linear;
+
+    &:is(:hover, :active) {
+      color: var(--color-green);
+    }
+
+    &--sale {
+      color: var(--color-red);
+    }
+
+    &--main {
+      font-weight: 700;
+      color: var(--color-gray-900);
+    }
+  }
+
+  &__img {
+    border-radius: var(--br);
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: var(--color-gray-900);
   }
 }

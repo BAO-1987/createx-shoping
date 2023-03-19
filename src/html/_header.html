@@ -1,10 +1,10 @@
 <header class="header">
 
-  <div class="header__top">
+  <div class="header__top header-top">
 
-    <div class="container header__inner">
+    <div class="container header-top__inner">
 
-      <a class="header__link" href="tel:+4055550128"><span>Available 24/7 at</span>(405) 555-0128</a>
+      <a class="header__link" href="tel:+4055550128"><span>Available 24/7 at </span>(405) 555-0128</a>
 
       <nav class="header-top__nav nav" title="second navigation">
         <ul class="header-top__list">
@@ -14,7 +14,7 @@
           </li>
 
           <li class="header-top__item">
-            <a class="nheader-top__link" href="#">Track order</a>
+            <a class="header-top__link" href="#">Track order</a>
           </li>
 
           <li class="header-top__item">
@@ -32,48 +32,59 @@
 
         <div class="languages">
 
-          <ul class="languages__list">
+          <span>Eng / $</span>
+
+          <!-- <ul class="languages__list">
 
             <li class="languages__item">
               <a class="languages__link" href="#">Eng / $</a>
+              <img src="img/en.png" width="20" height="12" alt="image of flag of USA" loading="lazy">
             </li>
 
             <li class="languages__item">
               <a class="languages__link" href="#">Fra / €</a>
+                 <img src="img/fr.png" width="20" height="12" alt="image of flag of France" loading="lazy">
             </li>
 
             <li class="languages__item">
               <a class="languages__link" href="#">Den / €</a>
+                 <img src="img/de.png" width="20" height="12" alt="image of flag of Germany" loading="lazy">
             </li>
 
-          </ul>
+          </ul> -->
 
         </div>
 
-        <dialog class="modal">
+        <div class="login">
 
-          <h2 class="modal__title title">Sign in</h2>
+          <a class="login__link" href="#">Log in / Register</a>
 
-          <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
+          <dialog class="modal">
 
-          <form class="form-modal" action="#" autocomplete="off" method="get">
+            <h2 class="modal__title title">Sign in</h2>
 
-            <input class="form-modal__input" type="mail" id="email" placeholder="Your working email" required
-              pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-            <label class="form-modal__label" for="mail">Email</label>
+            <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
 
-            <input class="form-modal__input" type="password" id="password" placeholder="Your working email" required
-              pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-            <label class="form-modal__label" for="password">Password</label>
+            <form class="form-modal" action="#" autocomplete="off" method="get">
 
-            <button class="btn" type="submit">Sign in</button>
+              <input class="form-modal__input" type="mail" id="email" placeholder="Your working email" required
+                pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
+              <label class="form-modal__label" for="mail">Email</label>
 
-          </form>
+              <input class="form-modal__input" type="password" id="password" placeholder="Your working email" required
+                pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
+              <label class="form-modal__label" for="password">Password</label>
 
-          <p>Don't have an account? Sign up</p>
+              <button class="btn" type="submit">Sign in</button>
+
+            </form>
+
+            <p>Don't have an account? Sign up</p>
 
 
-        </dialog>
+          </dialog>
+
+        </div>
 
       </div>
 
@@ -112,8 +123,170 @@
             <a class="nav__link" href="#">women</a>
           </li>
 
-          <li class="nav__item nav__item--dropdown">
-            <a class="nav__link" href="#">sale</a>
+          <li class="nav__item">
+
+            <span class="nav__link nav__link--dropdown">sale</span>
+
+            <ul class="nav__list nav__list--dropdown dropdown-list dropdown-submenu">
+
+              <li class="dropdown-list__item">
+                <ul class="dropdown-submenu__list">
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">New collection</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Best Sellers</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Plus Size</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link--sale" href="#">Sale up to 70%</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown-list__item">
+                <ul class="dropdown-submenu__list">
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link--main" href="#">CLOTHES</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Coats</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Jackets</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Suits</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Dresses</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Cardigans & sweaters</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Dresses</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Cardigans & sweaters</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Sweatshirts & hoodies</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">T-shirts & tops</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Pants</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Jeans</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Shorts</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Skirts</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Lingerie & nightwear</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Sportswear</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Swimwear</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown-list__item">
+                <ul class="dropdown-submenu__list">
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link--main" href="#">SHOES</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Boots</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Flat shoes</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Heels</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Mules</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Sliders</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Slippers</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Sneakers</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Leather</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown-list__item">
+                <ul class="dropdown-submenu__list">
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link--main" href="#">ACCESSORIES</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Bags & bagpacks</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Hats & scarves</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Hair accessories</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Belts</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Jewellery</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Watches</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Sunglasses</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Purses</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Gloves</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Socks & tights</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown-list__item">
+
+                <picture>
+                  <source srcset="img/curling-boy.webp" type="image/webp">
+                  <img loading="lazy" src="img/curling-boy.jpg" class="dropdown-submenu__img" width="285" height="285" alt="image of curling boy">
+                </picture>
+
+                <p class="dropdown-submenu__text">Back to school. Sale up to 50%</p>
+
+                <a class="btn btn--offers" href="#">See offers</a>
+
+              </li>
+
+            </ul>
+
           </li>
 
         </ul>
