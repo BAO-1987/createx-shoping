@@ -1,6 +1,6 @@
 .mobile-app {
   position: relative;
-  background-color: var(--color-black);
+  background-color: var(--color-gray-900);
 
   &__inner {
     @include flex;

@@ -85,6 +85,7 @@
 
   &__item {
     @include bg-cover;
+    
     min-height: 800px;
   }
 

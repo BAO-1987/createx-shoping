@@ -165,22 +165,22 @@ section {
   }
 
   &__input {
-    position: absolute;
+      position: absolute;
 
-    &:checked+.checkboxes__label {
-      background-color: var(--color-green);
-      border-color: var(--color-green);
-      color: var(--color-white);
-    }
+      &:checked+.checkboxes__label {
+        background-color: var(--color-green);
+        border-color: var(--color-green);
+        color: var(--color-white);
+      }
 
-    &:focus-visible+.checkboxes__label {
-      outline: 2px solid var(--color-green);
-      outline-offset: 2px;
-    }
+      &:focus-visible+.checkboxes__label {
+        outline: 2px solid var(--color-green);
+        outline-offset: 2px;
+      }
 
-    &:disabled+.checkboxes__label {
-      opacity: 0.4;
-      pointer-events: none;
-    }
+      &:disabled+.checkboxes__label {
+        opacity: 0.4;
+        pointer-events: none;
+      }
   }
 }
