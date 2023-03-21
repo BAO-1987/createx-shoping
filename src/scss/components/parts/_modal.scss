@@ -1,0 +1,46 @@
+.modal {
+  padding: 27px 48px 48px 48px;
+  width: 486px;
+  max-width: 100%;
+  text-align: center;
+  background-color: var(--color-white);
+  cursor: pointer;
+
+  margin: auto;
+
+  &::backdrop {
+    background: rgba(30, 33, 44, 0.75);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: clamp(1.13rem, calc(-0.08rem + 6.02vw), 1.75rem);
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: var(--color-gray-700);
+    margin-bottom: 24px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-gray-700);
+    transition: fill 0.3s linear;
+
+    &:hover {
+      fill: var(--color-green);
+    }
+  }
+}
