@@ -177,32 +177,40 @@
 </footer>
 
 
-   <dialog class="modal" id="modal">
+<dialog class="modal" id="modal">
 
-    <button class="modal__close btn-reset" aria-label="close modal" type="button">
-      <svg class="modal__icon">
+  <button class="modal__close btn-reset" aria-label="close modal" type="button">
+    <svg class="modal__icon">
       <use xlink:href="img/sprite.svg#close"></use>
     </svg>
   </button>
 
-     <h2 class="modal__title title">Sign in</h2>
+  <h2 class="modal__title title">Sign in</h2>
 
-     <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
+  <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
 
-     <form class="form-modal form" action="#" autocomplete="off" method="get">
+  <form class="form-modal form" action="#" autocomplete="off" method="get">
 
-       <input class="form__input" type="mail" id="email" placeholder="Your working email" required
-         pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-       <label class="form__label" for="mail">Email</label>
+    <div class="form-modal__box">
+      <input class="form__input" type="mail" id="email" placeholder="Your working email" required
+        pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
+      <label class="form__label" for="mail">Email</label>
+    </div>
 
-       <input class="form__input" type="password" id="password" placeholder="...." required>
-       <label class="form__label" for="password">Password</label>
+    <div class="form-modal__box">
+      <input class="form__input form__input--password" type="password" id="password" required>
+      <label class="form__label" for="password">Password</label>
 
-       <button class="btn" type="submit">Sign in</button>
+         <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox"/>
+       </div>
 
-     </form>
+    </div>
 
-     <p>Don't have an account? Sign up</p>
+    <button class="btn" type="submit">Sign in</button>
+
+  </form>
+
+  <p>Don't have an account? Sign up</p>
 
 
-   </dialog>
+</dialog>

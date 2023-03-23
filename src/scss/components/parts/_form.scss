@@ -1,6 +1,6 @@
 .form {
   width: 100%;
-  max-width: fit-content;
+  max-width: 100%;
 
   &__box {
     @include flex-sb;
@@ -18,12 +18,15 @@
     padding: 10px 0 10px 16px;
     width: 100%;
     background-color: var(--color-white);
+
+    // &--password {
+    //   -webkit-text-security: circle;
+    // }
   }
 
   &__label {
     position: absolute;
     top: -30px;
-    transition: top 0.2s linear;
   }
 }
 
@@ -72,6 +75,64 @@
   }
 }
 
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .btn {
+    width: 100%;
+  }
+
+  &__box {
+    position: relative;
+
+    .form__label {
+      left: 0;
+    }
+  }
+}
+
 .custom-checkbox {
   @include custom-checkbox;
+}
+
+.show-password {
+  position: absolute;
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__input {
+    appearance: none;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 5px;
+      width: 20px;
+      height: 20px;
+      mask-image: url("../img/sprite.svg#eye");
+      mask-position: center;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      background-color: var(--color-gray-800);
+      transition: background-image 0.3s linear;
+    }
+
+    &:checked::before {
+      content: "";
+      mask-image: url("../img/sprite.svg#closed-eye");
+      background-color: var(--color-green);
+    }
+
+    &:checked+.form__input--password {
+      -webkit-text-security: none !important;
+    }
+  }
 }
