@@ -2,10 +2,10 @@
   padding: 27px 48px 48px 48px;
   width: 486px;
   max-width: 100%;
+  font-size: 14px;
   text-align: center;
   background-color: var(--color-white);
   cursor: pointer;
-
   margin: auto;
 
   &::backdrop {
@@ -22,6 +22,10 @@
     font-size: 14px;
     color: var(--color-gray-700);
     margin-bottom: 53px;
+  }
+
+  &__link {
+    color: var(--color-green);
   }
 
   &__close {
@@ -42,5 +46,9 @@
     &:hover {
       fill: var(--color-green);
     }
+  }
+
+  &__singup {
+    text-align: left;
   }
 }

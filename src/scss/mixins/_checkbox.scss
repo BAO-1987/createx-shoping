@@ -2,6 +2,7 @@
 
 @mixin custom-checkbox {
   position: relative;
+  font-size: 14px;
 
   &__field {
     appearance: none;

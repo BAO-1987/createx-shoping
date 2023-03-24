@@ -100,7 +100,7 @@
 
         </ul>
 
-        <ul class="social" title="social list" role="list">
+        <ul class="social__list" title="social list" role="list">
 
           <li class="social__item">
             <a class="social__link social__link--fb" href="#" target="_blank">
@@ -162,7 +162,6 @@
 
       </div>
 
-
     </div>
 
     <div class="footer__copyright">
@@ -170,7 +169,6 @@
         © All rights reserved. Made with <a href="#">by Createx Studio</a>
       </p>
     </div>
-
 
   </div>
 
@@ -201,16 +199,29 @@
       <input class="form__input form__input--password" type="password" id="password" required>
       <label class="form__label" for="password">Password</label>
 
-         <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox"/>
-       </div>
+      <div class="show-password">
 
+        <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox" />
+        <label class="visually-hidden" for="show-password-checkbox"></label>
+      </div>
+    </div>
+
+    <div class="form-modal__box form-modal__box--password">
+
+      <label class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field">
+        <span class="custom-checkbox__content">Keep me signed in</span>
+      </label>
+
+     <a class="modal__link" href="#">Forgot password?</a>
     </div>
 
     <button class="btn" type="submit">Sign in</button>
 
   </form>
 
-  <p>Don't have an account? Sign up</p>
+  <p class="modal__singup">Don't have an account? <a href="#" class="modal__link">Sign up</a></p>
 
+    @include("../html/parts/_singup.html")
 
 </dialog>
