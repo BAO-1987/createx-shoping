@@ -3,10 +3,12 @@
   font-weight: 900;
   font-size: clamp(1.56rem, calc(1.3rem + 1.31vw), 2.88rem);
   line-height: 1.3;
+  text-align: center;
 
   &--hero {
     font-size: clamp(2.19rem, calc(1.73rem + 2.31vw), 4.5rem);
     letter-spacing: 0.015em;
+    text-align: left;
   }
 
   &--banners {

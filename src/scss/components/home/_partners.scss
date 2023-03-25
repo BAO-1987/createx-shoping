@@ -1,7 +1,41 @@
 .partners {
   &__list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    row-gap: 102px;
+    @include flex-all-sb;
+    // row-gap: 102px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    li {
+      white-space: nowrap;
+      flex-shrink: 0;
+      animation: ticker 15s linear infinite;
+      padding: 0 50px;
+      min-height: 64px;
+    }
+  }
+
+  &__icon {
+    width: 120px;
+    min-height: 64px;
+    filter: grayscale(1) invert(0.3) sepia(29%);
+    transition: filter 0.5s ease-in-out;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateZ(0);
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
   }
 }

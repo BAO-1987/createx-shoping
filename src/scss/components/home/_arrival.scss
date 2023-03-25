@@ -2,10 +2,11 @@
   padding-top: 180px;
 
   &__text {
+    margin-bottom: rem(60);
     text-align: center;
 
     p {
-      color: var(--color-gray-100);
+      color: var(--color-gray-700);
     }
 
     a {
