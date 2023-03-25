@@ -18,6 +18,12 @@
   justify-content: center;
 }
 
+@mixin flex-all-center-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin flex-all-sb {
   display: flex;
   align-items: center;

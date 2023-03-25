@@ -8,6 +8,17 @@
   cursor: pointer;
   margin: auto;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color:var(--color-gray-300);
+    right: 0;
+    left: 0;
+    bottom: 141px;
+  }
+
   &::backdrop {
     background: rgba(30, 33, 44, 0.75);
   }
@@ -49,6 +60,7 @@
   }
 
   &__singup {
+    margin-bottom: rem(48);
     text-align: left;
   }
 }

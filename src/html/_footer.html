@@ -100,37 +100,49 @@
 
         </ul>
 
-        <ul class="social__list" title="social list" role="list">
+        <ul class="social__list social__list--footer" role="list">
 
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="#" target="_blank">
-              <span class="visually-hidden">find us facebook</span>
-            </a>
-          </li>
-
-          <li class="social__item">
-            <a class="social__link social__link--in" href="#" target="_blank">
-              <span class="visually-hidden">find us instagram</span>
-            </a>
-          </li>
-
-          <li class="social__item">
-            <a class="social__link social__link--tw" href="#" target="_blank">
-              <span class="visually-hidden">find us twitter</span>
-            </a>
-          </li>
-
-          <li class="social__item">
-            <a class="social__link social__link--yt" href="#" target="_blank">
-              <span class="visually-hidden">find us youtube</span>
-            </a>
-          </li>
-
-          <li class="social__item">
-            <a class="social__link social__link--p" href="#" target="_blank">
-              <span class="visually-hidden">find us pinterest</span>
-            </a>
-          </li>
+          @loop("../html/parts/_social.html",[{
+          class: "social__item",
+          link: "social__link",
+          http: "#",
+          aria: "facebook page",
+          iconTitle: "social__icon",
+          icon: "img/sprite.svg#facebook",
+          },
+          {
+          class: "social__item",
+          link: "social__link",
+          http: "#",
+          aria: "instagram page",
+          iconTitle: "social__icon",
+          icon: "img/sprite.svg#instagram",
+          },
+          {
+          class: "social__item",
+          link: "social__link",
+          http: "#",
+          aria: "twitter page",
+          iconTitle: "social__icon",
+          icon: "img/sprite.svg#twitter",
+          },
+          {
+          class: "social__item",
+          link: "social__link",
+          http: "#",
+          aria: "youtube page",
+          iconTitle: "social__icon",
+          icon: "img/sprite.svg#youtube",
+          },
+          {
+          class: "social__item",
+          link: "social__link",
+          http: "#",
+          aria: "pinterest page",
+          iconTitle: "social__icon",
+          icon: "img/sprite.svg#pinterest",
+          }
+          ])
 
         </ul>
 
@@ -174,54 +186,4 @@
 
 </footer>
 
-
-<dialog class="modal" id="modal">
-
-  <button class="modal__close btn-reset" aria-label="close modal" type="button">
-    <svg class="modal__icon">
-      <use xlink:href="img/sprite.svg#close"></use>
-    </svg>
-  </button>
-
-  <h2 class="modal__title title">Sign in</h2>
-
-  <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
-
-  <form class="form-modal form" action="#" autocomplete="off" method="get">
-
-    <div class="form-modal__box">
-      <input class="form__input" type="mail" id="email" placeholder="Your working email" required
-        pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-      <label class="form__label" for="mail">Email</label>
-    </div>
-
-    <div class="form-modal__box">
-      <input class="form__input form__input--password" type="password" id="password" required>
-      <label class="form__label" for="password">Password</label>
-
-      <div class="show-password">
-
-        <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox" />
-        <label class="visually-hidden" for="show-password-checkbox"></label>
-      </div>
-    </div>
-
-    <div class="form-modal__box form-modal__box--password">
-
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Keep me signed in</span>
-      </label>
-
-     <a class="modal__link" href="#">Forgot password?</a>
-    </div>
-
-    <button class="btn" type="submit">Sign in</button>
-
-  </form>
-
-  <p class="modal__singup">Don't have an account? <a href="#" class="modal__link">Sign up</a></p>
-
-    @include("../html/parts/_singup.html")
-
-</dialog>
+@include("../html/parts/_modal.html")

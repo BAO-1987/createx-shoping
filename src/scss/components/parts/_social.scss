@@ -1,0 +1,42 @@
+.social {
+  &__list {
+    @include flex-all-center;
+    gap: 12px;
+
+    &--footer {
+      .social__icon {
+        fill: var(--color-white);
+      }
+    }
+  }
+
+  &__link {
+    @include flex-all-center-inline;
+
+    border-radius: var(--br);
+    width: 32px;
+    height: 32px;
+    background-color: rgba(120, 122, 128, 0.12);
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: rgb(23, 105, 106, 0.12);
+
+      .social__icon {
+        fill: var(--color-green);
+      }
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-gray-700);
+    transition: fill 0.3s linear;
+  }
+
+  &__text {
+    margin-bottom: rem(16);
+    color: var(--color-gray-700);
+  }
+}
