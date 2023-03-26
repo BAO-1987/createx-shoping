@@ -1,22 +1,23 @@
 .partners {
-  &__list {
-    @include flex-all-sb;
-    // row-gap: 102px;
-    position: relative;
-    overflow: hidden;
+  overflow: hidden;
 
-    &:hover {
+  &__list {
+    @include flex;
+    // row-gap: 102px;
+
+
+    &:hover .partners__item {
       animation-play-state: paused;
     }
-
-    li {
-      white-space: nowrap;
-      flex-shrink: 0;
-      animation: ticker 15s linear infinite;
-      padding: 0 50px;
-      min-height: 64px;
-    }
   }
+
+  &__item {
+    white-space: nowrap;
+    flex-shrink: 0;
+    animation: ticker 15s linear infinite;
+    padding: 0 50px;
+  }
+
 
   &__icon {
     width: 120px;

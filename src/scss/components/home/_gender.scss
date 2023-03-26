@@ -2,7 +2,6 @@
   position: relative;
   padding-bottom: 180px;
 
-
   &__list {
     position: absolute;
     top: -20%;
@@ -10,31 +9,42 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+  }
 
-    li {
-      position: relative;
+  &__item {
+    position: relative;
 
+    picture {
+      overflow: hidden;
+      margin-bottom: 15px;
+      border-radius: var(--br);
+    }
 
-      &:hover h3 {
+    &:hover {
+      h3 {
         color: var(--color-green);
-      }
-      a {
-        transition: color 3s linear;
-
-        &::before {
-          content: "";
-          position: absolute;
-          z-index: 5;
-          inset: 0;
-        }
       }
 
       img {
-        margin-bottom: 15px;
+        transform: scale(1.08);
       }
     }
-  }
 
+    a {
+      transition: color 3s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        inset: 0;
+      }
+    }
+
+    img {
+      transition: transform 0.3s ease-in-out;
+    }
+  }
 
   &__wrapper {
     padding-top: clamp(50px, 3rem, 185px);

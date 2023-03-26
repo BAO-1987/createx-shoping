@@ -1,13 +1,14 @@
 .arrival {
   padding-top: 180px;
 
+  &__title {
+    text-align: center;
+  }
+
   &__text {
     margin-bottom: rem(60);
     text-align: center;
-
-    p {
-      color: var(--color-gray-700);
-    }
+    color: var(--color-gray-700);
 
     a {
       position: relative;
