@@ -2,13 +2,13 @@
   position: relative;
   transition: color 0.3s linear;
 
-
-  span {
+  &__span {
     @include flex-all-center;
 
     margin-bottom: 15px;
     position: relative;
     cursor: pointer;
+    transition: color 0.3s linear;
 
     &::before {
       content: "";
@@ -23,6 +23,7 @@
     }
 
     &::after {
+      --rotate: rotate(0);
       content: "";
       position: absolute;
       left: 50px;
@@ -32,28 +33,60 @@
       mask-size: cover;
       width: 12px;
       height: 12px;
-      background-color: var(--color-white);
-      transition: background-color 2s linear;
+      top: 50%;
+      background-color: currentColor;
+      transform: translateY(-50%) var(--rotate);
+      transition: background-color 0.3s linear, transform 0.3s linear;
     }
+
+    &:hover {
+      color: var(--color-white);
+    }
+
+    // &.open {
+    //   &::after {
+    //     background-color: var(--color-white);
+    //   }
   }
 
-  &__list {
-    box-shadow: 0 1.75rem 1.875rem rgb(154 156 165 / 8%),
-      0 1.25rem 1rem rgb(154 156 165 / 5%),
-      0 0.5rem 0.625rem rgb(154 156 165 / 4%),
-      0 0.25rem 0.25rem rgb(30 33 44 / 3%);
 
+  // &:active {
+  //   &::after {
+  //     --rotate: rotate(-180deg);
+
+  //     transform: translateY(-50%) var(--rotate);
+  //   }
+  // }
+
+  &__list {
+    box-shadow: 0 1.75rem 1.875rem rgb(154 156 165 / 8%), 0 1.25rem 1rem rgb(154 156 165 / 5%),
+      0 0.5rem 0.625rem rgb(154 156 165 / 4%), 0 0.25rem 0.25rem rgb(30 33 44 / 3%);
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     background-color: var(--color-white);
-    width: 100%;
     top: 80%;
-    min-width: 130px;
+    width: 130px;
     left: -30px;
     padding: 10px 10px;
     z-index: 999;
     margin: 0 auto;
     color: var(--color-gray-900);
     border-radius: var(--br);
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    // &.open + .languages__span::after {
+    //   --rotate: rotate(-180deg);
+
+    //   transform: translateY(-50%) var(--rotate);
+    // }
   }
 
   &__item {
@@ -96,9 +129,5 @@
     &:hover {
       color: var(--color-green);
     }
-  }
-
-  &:hover {
-    color: var(--color-white);
   }
 }
