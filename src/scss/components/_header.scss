@@ -53,48 +53,7 @@
     color: var(--color-white);
     text-align: center;
   }
-
-  // &__logo {
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   top: 50%;
-  //   transform: translateY(-155%);
-  //   margin: 0 auto;
-  //   width: 100%;
-  //   max-width: 381px;
-  // }
-
-  // &__link {
-  //   @include flex-a-center;
-
-  //   position: relative;
-  //   isolation: isolate;
-  //   padding: em(5) em(5) em(5) em(55);
-  //   background-color: var(--color-grey-100);
-  //   text-transform: uppercase;
-  //   color: var(--color-red);
-  //   font-weight: 600;
-  //   font-size: 14px;
-  //   line-height: 2.1;
-
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     left: 5px;
-  //     background-image: url("../img/sprite.svg#rings");
-  //     background-position: center;
-  //     background-repeat: no-repeat;
-  //     background-size: cover;
-  //     width: 33px;
-  //     height: 29px;
-  //     background-color: var(--color-red);
-
-  //   }
-  // }
 }
-
-
 
 .offers-slider {
   position: relative;

@@ -1,8 +1,12 @@
 .languages {
+  position: relative;
+  transition: color 0.3s linear;
+
 
   span {
     @include flex-all-center;
 
+    margin-bottom: 15px;
     position: relative;
     cursor: pointer;
 
@@ -10,7 +14,7 @@
       content: "";
       position: absolute;
       left: -28px;
-      background-image: url("../img/en.png");
+      background-image: url("../img/languages/usa.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -21,7 +25,7 @@
     &::after {
       content: "";
       position: absolute;
-      left: 45px;
+      left: 50px;
       mask-image: url("../img/sprite.svg#arrow-down");
       mask-position: center;
       mask-repeat: no-repeat;
@@ -31,5 +35,70 @@
       background-color: var(--color-white);
       transition: background-color 2s linear;
     }
+  }
+
+  &__list {
+    box-shadow: 0 1.75rem 1.875rem rgb(154 156 165 / 8%),
+      0 1.25rem 1rem rgb(154 156 165 / 5%),
+      0 0.5rem 0.625rem rgb(154 156 165 / 4%),
+      0 0.25rem 0.25rem rgb(30 33 44 / 3%);
+
+    position: absolute;
+    background-color: var(--color-white);
+    width: 100%;
+    top: 80%;
+    min-width: 130px;
+    left: -30px;
+    padding: 10px 10px;
+    z-index: 999;
+    margin: 0 auto;
+    color: var(--color-gray-900);
+    border-radius: var(--br);
+  }
+
+  &__item {
+    // @include flex-all-center;
+    // position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   left: -28px;
+    //   background-image: url("../img/languages/usa.png");
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   width: 20px;
+    //   height: 12px;
+    // }
+
+    // &--fra {
+    //   &::before {
+    //     background-image: url("../img/languages/fr.png");
+    //   }
+    // }
+
+    // &--de {
+    //   &::before {
+    //     background-image: url("../img/languages/de.png");
+    //   }
+    // }
+  }
+
+  a {
+    @include flex-ar;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+
+  &:hover {
+    color: var(--color-white);
   }
 }

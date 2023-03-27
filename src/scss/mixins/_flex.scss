@@ -18,6 +18,12 @@
   justify-content: center;
 }
 
+@mixin flex-ar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 @mixin flex-all-center-inline {
   display: inline-flex;
   align-items: center;
