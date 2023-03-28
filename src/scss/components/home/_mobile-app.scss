@@ -23,17 +23,18 @@
   }
 
   &__title {
-
-    @include adaptive_size("font-size", 32, 20);
-    color: var(--color-white);
-    text-transform: none;
-    text-align: left;
     margin-bottom: rem(50);
+    font-size: clamp(1.56rem, calc(1.48rem + 0.44vw), 2rem);
+    color: var(--color-white);
   }
 
   &__list {
     @include flex;
 
     gap: 25px;
+  }
+
+  &__link {
+    @include flex-all-center;
   }
 }

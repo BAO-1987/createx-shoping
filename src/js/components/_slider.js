@@ -84,9 +84,22 @@ const arrivalSlider = new Swiper(".arrival-slider", {
   // },
 
 
-   pagination: {
-     el: ".swiper-pagination",
-     clickable: true,
-   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
+const trendingSlider = new Swiper(".trending-slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+  grabCursor: true,
+  loop: true,
+
+  navigation: {
+    nextEl: ".trending-slider__next",
+    prevEl: ".trending-slider__prev",
+  },
+});

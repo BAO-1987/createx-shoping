@@ -1,0 +1,42 @@
+.trending {
+  position: relative;
+  margin: 0 0 clamp(35px, 6.3rem, 105px) 0;
+  padding: clamp(35px, 5rem, 85px) 0;
+  background-color: var(--color-gray-300);
+
+  &__nav {
+    @include flex-all-sb;
+  }
+
+  &__btns {
+    position: relative;
+    @include flex-sb;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+
+.trending-slider {
+  overflow: hidden;
+
+  &__next,
+  &__prev {
+    right: 0;
+
+    &:hover {
+      background-color: var(--color-green);
+
+      &::before {
+        background-color: var(--color-white);
+      }
+    }
+  }
+
+  &__prev {
+    right: 60px;
+  }
+}
