@@ -69,3 +69,24 @@ const offersSlider = new Swiper(".offers-slider", {
     prevEl: ".offers-btn__prev",
   },
 });
+
+const arrivalSlider = new Swiper(".arrival-slider", {
+  slidesPerView: 6,
+  spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+  grabCursor: true,
+  // loop: true,
+
+  // autoplay: {
+  //   delay: 3500,
+  //   disableOnInteraction: false,
+  // },
+
+
+   pagination: {
+     el: ".swiper-pagination",
+     clickable: true,
+   },
+});
+

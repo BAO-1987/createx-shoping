@@ -1,0 +1,76 @@
+<section class="tranding">
+
+  <div class="container">
+
+    <div class="tranding__nav">
+
+      <h2 class="title">Trending now</h2>
+
+      <div class="trading__btns">
+        <button class="trading-slider__prev slider-btn" type="button"></button>
+        <button class="trading-slider__next slider-btn slider-btn--reverse" type="button"></button>
+      </div>
+
+    </div>
+
+    <div class="trading-slider">
+
+      <ul class="trading-slider__list">
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: "",
+        rating: "img/sprite.svg#rating-five",
+        image: "trading/shirt",
+        imageDescr: "image of blue shirt",
+        width: "390",
+        height: "440",
+        title: "Shirt with insertion lace trims",
+        price: "$49.95",
+        oldprice: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: "",
+        rating: "img/sprite.svg#rating-for",
+        image: "trading/watch",
+        imageDescr: "image of watch",
+        width: "390",
+        height: "440",
+        title: "Chrono watch with blue leather belt",
+        price: "$120.60",
+        oldprice: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: "",
+        rating: "img/sprite.svg#rating-for",
+        image: "trading/coat",
+        imageDescr: "image of watch",
+        width: "390",
+        height: "440",
+        title: "Check coat with colour contrast",
+        price: "$183.45",
+        oldprice: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: "",
+        rating: "img/sprite.svg#rating-for",
+        image: "trading/coat",
+        imageDescr: "image of coat",
+        width: "390",
+        height: "440",
+        title: "Men fashion gray shoes",
+        price: "$183.45",
+        oldprice: ""
+        })
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>

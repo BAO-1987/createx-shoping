@@ -114,6 +114,7 @@
     max-width: 100%;
     font-size: 14px;
     line-height: 3.14;
+    z-index: 10;
 
     &::before {
       content: "";
