@@ -6,13 +6,13 @@
 
       @sale
 
-       <svg class="article__rating">
-         <use xlink:href="@rating"></use>
-       </svg>
+      <svg class="article__rating">
+        <use xlink:href="@rating"></use>
+      </svg>
 
       <picture>
         <source srcset="img/@image.webp" type="image/webp">
-        <img src="img/@image" class="article__img" width="@width" height="@height" alt="@imageDesc" loading="lazy">
+        <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc" loading="lazy">
       </picture>
 
       <button class="article__wish btn-reset" type="button"></button>
@@ -29,7 +29,11 @@
       <div class="article__price">
 
         <span class="article__price-new">@price</span>
-        
+
+        <span class="article__price-curent">@priceCurrent</span>
+
+        <span class="article__price-old">@priceOld</span>
+
       </div>
 
     </div>
@@ -37,4 +41,3 @@
   </article>
 
 </li>
-

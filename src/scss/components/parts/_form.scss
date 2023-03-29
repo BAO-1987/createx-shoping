@@ -80,8 +80,10 @@
   gap: 50px;
 
   .btn {
-    width: 100%;
     margin-bottom: 24px;
+    max-width: 100%;
+    width: 100%;
+
   }
 
   &__box {
