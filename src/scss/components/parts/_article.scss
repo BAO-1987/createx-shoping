@@ -9,6 +9,8 @@
   // max-width: 362px;
 
   a {
+    margin-top: auto;
+    margin-bottom: 8px;
     transition: color 0.3s linear;
 
     &::before {
@@ -113,15 +115,21 @@
     padding: 16px;
     width: 100%;
     // max-width: fit-content;
+    background-color: transparent;
   }
 
   &__title {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
-    color: var(--color-gray);
+    color: currentColor;
     text-transform: none;
     text-align: left;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__price {

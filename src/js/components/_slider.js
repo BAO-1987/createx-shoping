@@ -103,3 +103,18 @@ const trendingSlider = new Swiper(".trending-slider", {
     prevEl: ".trending-slider__prev",
   },
 });
+
+const saleSlider = new Swiper(".sale-slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+  grabCursor: true,
+  loop: true,
+
+  navigation: {
+    nextEl: ".sale-slider__next",
+    prevEl: ".sale-slider__prev",
+  },
+});
+

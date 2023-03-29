@@ -32,7 +32,7 @@
   &__information {
     @include flex;
 
-    color: var(--color-gray-100);
+    color: var(--color-gray-700);
     margin-bottom: 16px;
     gap: 24px;
     font-size: 14px;
@@ -50,7 +50,7 @@
         right: -13px;
         width: 1px;
         height: 12px;
-        background-color: var(--color-gray-100);
+        background-color: currentColor;
       }
     }
 
@@ -67,7 +67,7 @@
         mask-size: cover;
         width: 16px;
         height: 16px;
-        background-color: var(--color-gray-100);
+        background-color: currentColor;
       }
     }
   }

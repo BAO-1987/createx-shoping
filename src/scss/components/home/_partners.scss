@@ -14,7 +14,7 @@
   &__item {
     white-space: nowrap;
     flex-shrink: 0;
-    animation: ticker 15s linear infinite;
+    animation: ticker 25s linear 0.1s infinite;
     padding: 0 50px;
   }
 
@@ -36,7 +36,7 @@
     transform: translateZ(0);
   }
 
-  to {
+  100% {
     transform: translate3d(-100%, 0, 0);
   }
 }

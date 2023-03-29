@@ -30,27 +30,18 @@
     transform: scale(100%) translateY(67px);
     transition: transform 0.6s linear;
     width: 100%;
+    max-width: 100%;
     z-index: -1;
   }
 
-  // &:focus {
-  //   outline: 2px solid var(--color-active);
-  //   outline-offset: 2px;
-  // }
-
   &:hover {
     color: var(--color-green);
-
+    border-color: var(--color-green);
 
     &::after {
       transform: scale(147%) translateY(0);
     }
   }
-
-
-  // &:active {
-  //   background-color: var(--color-active);
-  // }
 
   &--inverse {
     border-color: var(--color-green);
@@ -82,32 +73,54 @@
       mask-size: cover;
       width: 24px;
       height: 24px;
+      background-color: currentColor;
+      transition: background-color 0.6s linear;
+    }
+
+    &::after {
       background-color: var(--color-green);
-      transition: background-color 2s linear;
+    }
+
+    &:hover {
+      color: var(--color-white);
+      // background-color: var(--color-green);
+
+      &::after {
+        transform: scale(150%) translateY(0);
+      }
     }
   }
 
-   &--offers {
-     padding: 0 em(48) 0 em(24);
-     border-color: var(--color-green);
-     color: var(--color-green);
-     background-color: var(--color-white);
+  &--offers {
+    padding: 0 em(48) 0 em(24);
+    border-color: var(--color-green);
+    color: var(--color-green);
+    background-color: var(--color-white);
 
-     &::before {
-       content: "";
-       position: absolute;
-       right: 20px;
-       mask-image: url("../img/sprite.svg#arrow");
-       mask-position: center;
-       mask-repeat: no-repeat;
-       mask-size: cover;
-       width: 16px;
-       height: 16px;
-       rotate: -180deg;
-       background-color: var(--color-green);
-       transition: background-color 2s linear;
-     }
-   }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      mask-image: url("../img/sprite.svg#arrow");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 16px;
+      height: 16px;
+      rotate: -180deg;
+      background-color: currentColor;
+      transition: background-color 6s linear;
+    }
+
+    &::after {
+      background-color: var(--color-green);
+    }
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-green);
+    }
+  }
 
   &--article {
     padding: 1px 32px;
@@ -257,7 +270,7 @@
     left: 25%;
   }
 
-   &__next {
-     right: 25%;
-   }
+  &__next {
+    right: 25%;
+  }
 }

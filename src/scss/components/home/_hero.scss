@@ -1,6 +1,11 @@
 .hero {
   margin-bottom: 0;
 
+  &__btns {
+    @include flex;
+    gap: 24px;
+  }
+
   &__pagination {
     @include flex;
 
@@ -74,7 +79,7 @@
       transform: scaleX(1);
       transition: transform var(--hero-slider-speed) ease-in-out;
       opacity: 1 !important;
-      background-color: var(--color-gray-900);
+      background-color: black;
     }
   }
 }
@@ -85,7 +90,7 @@
 
   &__item {
     @include bg-cover;
-    
+
     min-height: 800px;
   }
 
