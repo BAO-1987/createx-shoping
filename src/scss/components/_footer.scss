@@ -64,10 +64,28 @@
   }
 
   &__link {
+    position: relative;
     transition: color 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: currentcolor;
+      transform: scale(0);
+      transform-origin: center;
+      transition: transform 0.3s linear;
+    }
 
     &:is(:hover, :active) {
       color: var(--color-white);
+
+      &::before {
+        transform: scale(1);
+      }
     }
   }
 }

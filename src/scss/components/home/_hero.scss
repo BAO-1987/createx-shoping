@@ -15,7 +15,7 @@
     line-height: 1.5;
     counter-reset: pag;
     left: calc((100% - 1260px) / 2) !important;
-    bottom: 120px !important;
+    bottom: 186px !important;
 
     .swiper-pagination-bullet {
       display: flex;
@@ -32,7 +32,6 @@
         content: "0"counter(pag);
         font-weight: 700;
         font-size: 28px;
-        line-height: 1.5;
         color: var(--color-gray-800);
         opacity: 0.6;
         transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -47,7 +46,7 @@
   &__bar {
     position: relative;
     overflow: hidden;
-    border-radius: 100px;
+    border-radius: 100vh;
     width: 100%;
     height: 2px;
     background-color: var(--color-gray-800);
@@ -95,7 +94,7 @@
   }
 
   &__content {
-    padding: 140px 15px 120px;
+    padding: 134px 15px 0;
   }
 
   &__next {
