@@ -2,6 +2,7 @@
   @include flex;
 
   gap: 8px;
+  margin-right: clamp(20px, rem(22), 25px);
 
   &__icon {
     width: 20px;

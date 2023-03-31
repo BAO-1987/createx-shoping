@@ -10,7 +10,6 @@
   overscroll-behavior-y: none;
 
   &__body {
-    margin: 0;
     min-width: 320px;
     min-height: 100%;
   }
@@ -123,9 +122,25 @@ section {
 }
 
 .login {
+  position: relative;
+
   &__link {
     transition: 0.3s color linear;
     cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -23px;
+      mask-image: url("../img/sprite.svg#profile");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 16px;
+      height: 16px;
+      background-color: currentColor;
+      transition: background-color 0.6s linear;
+    }
 
     &:hover {
       color: var(--color-white);

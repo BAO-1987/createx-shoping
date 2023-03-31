@@ -112,9 +112,9 @@
       transition: background-color 6s linear;
     }
 
-    &::after {
-      background-color: var(--color-green);
-    }
+    // &::after {
+    //   background-color: var(--color-green);
+    // }
 
     &:hover {
       color: var(--color-white);
