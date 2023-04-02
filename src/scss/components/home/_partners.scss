@@ -12,9 +12,10 @@
   }
 
   &__item {
+    display: inline-block;
     white-space: nowrap;
     flex-shrink: 0;
-    animation: ticker 25s linear 0.1s infinite;
+    animation: ticker 15s linear 0.1s infinite;
     padding: 0 50px;
   }
 

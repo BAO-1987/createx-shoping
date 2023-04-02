@@ -87,24 +87,24 @@
     background-color: var(--color-white);
     z-index: 10;
 
-    &::before {
-      content: "";
-      position: absolute;
-      mask-image: url("../img/sprite.svg#heart");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      width: 17px;
-      height: 16px;
-      background-color: var(--color-gray-700);
-      transition: background-color 2s linear;
+    &:hover .article__icon {
+      fill: var(--color-green);
+    }
+  }
+
+  &__icon {
+    width: 17px;
+    height: 16px;
+    fill: var(--color-gray-700);
+    transition: fill 0.9s linear;
+
+    &--filled {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
     }
 
-    &:hover {
-      &::before {
-        background-color: var(--color-green);
-      }
-    }
+
   }
 
   &__content {
@@ -180,50 +180,4 @@
     opacity: 1;
     visibility: visible;
   }
-}
-
-.color-picker>fieldset {
-  border: 0;
-  display: flex;
-  gap: 10px;
-  width: fit-content;
-  background: var(--color-white);
-  padding: 1rem 3rem;
-  margin-inline: auto;
-  border-radius: 24px;
-}
-
-.color-picker input[type="radio"] {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  outline: 1px solid var(--radio-color, currentColor);
-  outline-offset: 3px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.color-picker input[type="radio"]:checked {
-  background-color: var(--radio-color);
-}
-
-
-.color-picker input[type="radio"]#pink {
-  --radio-color: pink;
-}
-
-.color-picker input[type="radio"]#blue {
-  --radio-color: blue;
-}
-
-.color-picker input[type="radio"]#green {
-  --radio-color: green;
-}
-
-.color-picker input[type="radio"]#dark {
-  --radio-color: red;
-}
-
-#pink {
-  --color-bg: pink;
 }

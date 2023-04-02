@@ -72,7 +72,7 @@ const offersSlider = new Swiper(".offers-slider", {
 
 const arrivalSlider = new Swiper(".arrival-slider", {
   slidesPerView: 6,
-  spaceBetween: 30,
+  spaceBetween: 20,
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,

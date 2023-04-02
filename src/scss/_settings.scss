@@ -34,13 +34,14 @@
   }
 }
 
-section {
-  margin-bottom: rem(180);
+.section {
+  margin-bottom: clamp(50px, rem(180), 185px);
 }
 
 .logo {
   @include flex-all-center;
-  margin-right: clamp(25px, 3.75rem, 60px)
+  margin-right: clamp(25px, 3.75rem, 60px);
+  flex-shrink: 0;
 }
 
 .visually-hidden {

@@ -15,7 +15,16 @@
         <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc" loading="lazy">
       </picture>
 
-      <button class="article__wish btn-reset" type="button"></button>
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
 
     </div>
 

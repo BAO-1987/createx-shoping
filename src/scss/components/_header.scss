@@ -41,6 +41,7 @@
 
   &__users {
     @include flex-all-center;
+    padding-left: 25px;
     // gap: 80px;
     // margin-left: auto;
   }

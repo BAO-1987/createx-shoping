@@ -20,7 +20,10 @@ h3 {
   font-size: clamp(1rem, calc(0.95rem + 0.25vw), 1.25rem);
   line-height: 1.5;
   text-align: center;
-  text-transform: capitalize;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
 }
 
 .footer-title {
