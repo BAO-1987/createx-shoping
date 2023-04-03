@@ -123,15 +123,17 @@
 }
 
 .login {
-  position: relative;
 
-  &__link {
+  &__btn {
+    @include flex-all-center;
+    position: relative;
     transition: 0.3s color linear;
-    cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
+      top: 50%;
+      transform: translateY(-60%);
       left: -23px;
       mask-image: url("../img/sprite.svg#profile");
       mask-position: center;

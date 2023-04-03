@@ -4,13 +4,16 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(6, 1fr);
+    @include flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
 
   &__item {
     position: relative;
+
 
     picture {
       overflow: hidden;

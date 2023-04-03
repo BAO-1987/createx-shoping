@@ -1,10 +1,9 @@
 .btn {
+  @include flex-all-center;
+
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: fit-content;
+   max-width: fit-content;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
@@ -170,6 +169,7 @@
 .btn-reset {
   border: none;
   padding: 0;
+  color: inherit;
   background: transparent;
 }
 

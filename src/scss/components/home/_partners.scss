@@ -1,43 +1,27 @@
 .partners {
-  overflow: hidden;
+padding: clamp(50px, rem(120), 125px) 0;
 
   &__list {
-    @include flex;
-    // row-gap: 102px;
-
-
-    &:hover .partners__item {
-      animation-play-state: paused;
-    }
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    // column-gap: 102px;
   }
 
   &__item {
-    display: inline-block;
-    white-space: nowrap;
-    flex-shrink: 0;
-    animation: ticker 15s linear 0.1s infinite;
-    padding: 0 50px;
+    // flex-shrink: 0;
+    &:not(:last-child) {
+      margin-right: clamp(50px, rem(102), 105px);
+    }
   }
-
 
   &__icon {
     width: 120px;
-    min-height: 64px;
-    filter: grayscale(1) invert(0.3) sepia(29%);
-    transition: filter 0.5s ease-in-out;
+    height: 64px;
+    filter: grayscale(100%);
+    transition: filter 0.3s linear;
 
     &:hover {
       filter: none;
     }
-  }
-}
-
-@keyframes ticker {
-  0% {
-    transform: translateZ(0);
-  }
-
-  100% {
-    transform: translate3d(-100%, 0, 0);
   }
 }

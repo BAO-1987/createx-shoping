@@ -2,7 +2,7 @@
   @include flex;
   position: relative;
   margin-right: clamp(25px, rem(98), 105px);
-  padding-left: clamp(15px, rem(30), 35px);
+  padding-left: 10px;
 
   &__span {
     @include flex-all-center;
@@ -17,6 +17,8 @@
       left: -28px;
       width: 20px;
       height: 12px;
+      top: 50%;
+      transform: translateY(-60%);
       background-image: url("../img/languages/usa.png");
       background-position: center;
       background-size: cover;
