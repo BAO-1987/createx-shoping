@@ -3,10 +3,10 @@
 
   position: relative;
   z-index: 1;
-   max-width: fit-content;
+  max-width: fit-content;
   border-width: 1px;
   border-style: solid;
-  border-color: transparent;
+  border-color: currentColor;
   border-radius: var(--br);
   padding: 0 em(40);
   font-weight: 700;
@@ -15,14 +15,14 @@
   color: var(--color-white);
   background-color: var(--color-green);
   transition-property: color, background-color, border-color;
-  transition-duration: 0.6s;
+  transition-duration: 0.7s;
   transition-timing-function: linear;
   overflow: hidden;
 
   &::after {
     background-color: var(--color-white);
     border-radius: 65%;
-    content: '';
+    content: "";
     height: 100%;
     position: absolute;
     top: 0;
@@ -31,11 +31,22 @@
     width: 100%;
     max-width: 100%;
     z-index: -1;
+    isolation: isolate;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: currentColor;
+    transition: background-color 0.6s linear;
   }
 
   &:hover {
     color: var(--color-green);
-    border-color: var(--color-green);
+    border-color: transparent;
 
     &::after {
       transform: scale(147%) translateY(0);
@@ -58,22 +69,14 @@
 
   &--instagram {
     padding: 0 em(40) 0 em(72);
-    border-color: var(--color-green);
     color: var(--color-green);
     background-color: var(--color-white);
 
     &::before {
-      content: "";
-      position: absolute;
       left: 38px;
       mask-image: url("../img/sprite.svg#instagram");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
       width: 24px;
       height: 24px;
-      background-color: currentColor;
-      transition: background-color 0.6s linear;
     }
 
     &::after {
@@ -82,7 +85,6 @@
 
     &:hover {
       color: var(--color-white);
-      // background-color: var(--color-green);
 
       &::after {
         transform: scale(150%) translateY(0);
@@ -92,32 +94,27 @@
 
   &--offers {
     padding: 0 em(48) 0 em(24);
-    border-color: var(--color-green);
     color: var(--color-green);
     background-color: var(--color-white);
 
     &::before {
-      content: "";
-      position: absolute;
       right: 20px;
       mask-image: url("../img/sprite.svg#arrow");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
       width: 16px;
       height: 16px;
       rotate: -180deg;
-      background-color: currentColor;
-      transition: background-color 6s linear;
     }
 
-    // &::after {
-    //   background-color: var(--color-green);
-    // }
+    &::after {
+      background-color: var(--color-green);
+    }
 
     &:hover {
       color: var(--color-white);
-      background-color: var(--color-green);
+
+      &::after {
+        transform: scale(150%) translateY(0);
+      }
     }
   }
 
@@ -130,40 +127,15 @@
     z-index: 10;
 
     &::before {
-      content: "";
-      position: absolute;
       bottom: 17px;
       left: 48px;
       mask-image: url("../img/sprite.svg#cart");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
       width: 16px;
       height: 16px;
-      background-color: var(--color-white);
-      transition: background-color 2s linear;
+      // background-color: var(--color-white);
+      // transition: background-color 2s linear;
     }
   }
-
-  // &--apple {
-  //   padding: 0 14px 0 46px;
-  //   background-color: var(--color-gray);
-
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     bottom: 17px;
-  //     left: 17px;
-  //     mask-image: url("../img/sprite.svg#apple");
-  //     mask-position: center;
-  //     mask-repeat: no-repeat;
-  //     mask-size: cover;
-  //     width: 25px;
-  //     height: 30px;
-  //     background-color: var(--color-white);
-  //     transition: background-color 2s linear;
-  //   }
-  // }
 }
 
 .btn-reset {
@@ -201,18 +173,14 @@
   }
 
   &--reverse {
-
     &::before {
       transform: rotate(180deg);
     }
-
   }
 
   &:hover {
     opacity: 1;
   }
-
-
 
   // @include for-width(-mobile-l) {
   //   width: 20px;
@@ -222,6 +190,8 @@
 
 .slider-btn.swiper-button-disabled {
   pointer-events: none;
+  opacity: 0;
+ visibility: hidden;
 
   &::before {
     background-color: transparent;
@@ -255,11 +225,9 @@
   }
 
   &--reverse {
-
     &::before {
       transform: rotate(180deg);
     }
-
   }
 
   &:hover::before {
