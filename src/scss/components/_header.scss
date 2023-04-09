@@ -1,9 +1,7 @@
 .header {
-  position: absolute;
-  z-index: 2;
+  position: sticky;
+  z-index: 999;
   top: 0;
-  width: 100%;
-  margin-bottom: 10px;
 
   &__inner {
     @include flex-all-sb;
@@ -17,15 +15,49 @@
   }
 
   &__link {
+    position: relative;
     font-weight: 900;
     transition: color 0.3s linear;
 
+    // @include for-width (-tablet) {
+    //   opacity: 0;
+    //   visibility: hidden;
+    // }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   mask-position: center;
+    //   mask-repeat: no-repeat;
+    //   mask-size: cover;
+    //   mask-image: url("../img/sprite.svg#phone");
+    //   width: 24px;
+    //   height: 24px;
+    //   background-color: currentcolor;
+    //   transition: background-color 0.3s linear;
+    //   display: none;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+
+    //   @include for-width (-tablet) {
+    //     display: flex;
+    //   }
+    // }
+
     span {
       font-weight: 400;
+
+      @include for-width(-mobile-sl) {
+        display: none;
+      }
     }
 
     &:is(:hover, :active) {
       color: var(--color-white);
+    }
+
+    &:hover::before {
+      background-color: var(--color-white);
     }
   }
 
@@ -49,7 +81,7 @@
   &__bottom {
     display: grid;
     place-items: center;
-    padding: 8px 0;
+    padding: 10px 0;
 
     background-color: var(--color-green);
     color: var(--color-white);
@@ -106,7 +138,7 @@
   // }
 
   &__nav {
-      padding: 12px 0;
+    padding: 12px 0;
     // margin-left: auto;
   }
 
@@ -114,11 +146,20 @@
     @include flex;
     margin-right: auto;
     margin-left: auto;
+
+    @include for-width(-mobile-l) {
+      display: none;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: clamp(15px, 2rem, 35px);
+
+      @include for-width(-tablet) {
+        margin-right: 15px;
+      }
+
     }
   }
 

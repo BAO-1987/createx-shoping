@@ -4,23 +4,19 @@
   }
 
   &__list {
-    // display: grid;
-    // grid-template-columns: repeat(6, 1fr);
-    @include flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
     gap: 30px;
   }
 
   &__item {
     position: relative;
 
-
     picture {
       overflow: hidden;
       margin-bottom: 25px;
       border-radius: 100vw;
-      width: 180px;
-      height: 180px;
     }
 
     a {

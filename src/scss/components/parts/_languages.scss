@@ -4,6 +4,10 @@
   margin-right: clamp(25px, rem(98), 105px);
   padding-left: 10px;
 
+  @include for-width (-tablet) {
+    margin-right: 50px;
+  }
+
   &__span {
     @include flex-all-center;
 

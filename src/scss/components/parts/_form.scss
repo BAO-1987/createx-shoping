@@ -30,6 +30,7 @@
 }
 
 .form-search {
+  display: inline-block;
   position: relative;
   width: 100%;
   max-width: 380px;
@@ -38,6 +39,16 @@
   flex-shrink: 0;
   margin-right: clamp(20px, 3rem, 50px);
   margin-left: auto;
+
+  @include for-width(-desktop-med) {
+    max-width: 300px;
+    margin-left: 15px;
+  }
+
+  @include for-width(-desktop-s) {
+    max-width: 200px;
+    margin-right: 20px;
+  }
 
   &__input {
     padding: 12px 0 12px 16px;
