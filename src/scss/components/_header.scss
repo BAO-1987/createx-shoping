@@ -19,35 +19,32 @@
     font-weight: 900;
     transition: color 0.3s linear;
 
-    // @include for-width (-tablet) {
-    //   opacity: 0;
-    //   visibility: hidden;
-    // }
+    &::before {
+      content: "";
+      position: absolute;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-image: url("../img/sprite.svg#phone");
+      width: 24px;
+      height: 24px;
+      background-color: currentcolor;
+      transition: background-color 0.3s linear;
+      display: none;
+      top: 50%;
+      transform: translateY(-50%);
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   mask-position: center;
-    //   mask-repeat: no-repeat;
-    //   mask-size: cover;
-    //   mask-image: url("../img/sprite.svg#phone");
-    //   width: 24px;
-    //   height: 24px;
-    //   background-color: currentcolor;
-    //   transition: background-color 0.3s linear;
-    //   display: none;
-    //   top: 50%;
-    //   transform: translateY(-50%);
-
-    //   @include for-width (-tablet) {
-    //     display: flex;
-    //   }
-    // }
+      @include for-width (-tablet) {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
 
     span {
       font-weight: 400;
 
-      @include for-width(-mobile-sl) {
+      @include for-width(-tablet) {
         display: none;
       }
     }
@@ -63,8 +60,6 @@
 
   &__action {
     @include flex;
-
-    gap: 20px;
   }
 
   &__wrapper {
@@ -147,8 +142,10 @@
     margin-right: auto;
     margin-left: auto;
 
-    @include for-width(-mobile-l) {
+    @include for-width(-mobile-md) {
       display: none;
+      visibility: hidden;
+      opacity: 0;
     }
   }
 

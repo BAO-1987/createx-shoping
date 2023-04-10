@@ -1,7 +1,7 @@
 .burger {
   @include burger;
 
-  display: block;
+  display: none;
 
   @include for-width (+tablet) {
     display: none;
