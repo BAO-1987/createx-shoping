@@ -3,7 +3,7 @@
 
   display: none;
 
-  @include for-width (+tablet) {
-    display: none;
+  @include for-width (-mobile-l) {
+    display: flex;
   }
 }

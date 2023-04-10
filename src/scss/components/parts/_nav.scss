@@ -6,56 +6,56 @@
 
     @include flex;
 
-    // @include for-width(-tablet) {
-    //   flex-direction: column;
-    //   align-items: flex-start;
-    //   position: absolute;
-    //   left: 0;
-    //   top: var(--header-height);
-    //   overflow-y: auto;
-    //   padding: rem(25);
-    //   width: 100%;
-    //   height: calc(100vh - var(--header-height));
-    //   background-color: var(--color-white);
-    //   transform: translateX(-100%);
-    //   transition: translate 0.3s linear;
-    //   font-size: 20px;
+    @include for-width(-mobile-l) {
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      left: 0;
+      top: var(--header-height);
+      overflow-y: auto;
+      padding: rem(25);
+      width: 100%;
+      height: calc(100vh - var(--header-height));
+      background-color: var(--color-white);
+      transform: translateX(-100%);
+      transition: translate 0.3s linear;
+      font-size: 20px;
 
-    //   &.menu--active {
-    //     transform: translate(0);
-    //   }
-    // }
+      &.menu--active {
+        transform: translate(0);
+      }
+    }
 
-    // &--dropdown {
-    //   position: absolute;
-    //   top: calc(var(--header-height) - 39px);
-    //   padding: 20px 0 40px;
-    //   width: 100%;
-    //   left: 0;
-    //   right: 0;
-    //   margin: 0 auto;
-    //   // height: auto;
-    //   opacity: 0;
-    //   visibility: hidden;
-    //   transition-property: opacity, visibility;
-    //   transition-duration: 0.3s;
-    //   transition-timing-function: linear;
+    &--dropdown {
+      position: absolute;
+      top: calc(var(--header-height) - 39px);
+      padding: 20px 0 40px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      // height: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition-property: opacity, visibility;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
 
-    //   @include for-width(-tablet) {
-    //     transform: translateX(0);
-    //     top: 0;
-    //     position: relative;
-    //     padding: 0;
-    //     font-size: 16px;
-    //     top: 10px;
-    //   }
+      @include for-width(-tablet) {
+        transform: translateX(0);
+        top: 0;
+        position: relative;
+        padding: 0;
+        font-size: 16px;
+        top: 10px;
+      }
 
-    //   &.open {
-    //     opacity: 1;
-    //     visibility: visible;
-    //     display: flex;
-    //   }
-    // }
+      &.open {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+      }
+    }
   }
 
   &__item {
