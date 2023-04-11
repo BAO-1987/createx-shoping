@@ -7,15 +7,21 @@
   }
 
   &__pagination {
-    @include flex;
-
+    display: inline-flex;
     font-family: var(--font-second);
     font-weight: 700;
     font-size: 28px;
     line-height: 1.5;
     counter-reset: pag;
-    left: calc((100% - 1260px) / 2) !important;
+    left: calc((100% - 1230px) / 2) !important;
     bottom: 186px !important;
+    width: fit-content;
+    max-width: fit-content;
+
+    @include for-width (-desktop-med) {
+      left: 15px !important;
+      padding-right: 15px;
+    }
 
     .swiper-pagination-bullet {
       display: flex;

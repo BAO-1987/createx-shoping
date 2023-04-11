@@ -18,9 +18,9 @@
     width: 100%;
     background-color: var(--color-white);
 
-    // &--password {
-    //   -webkit-text-security: circle;
-    // }
+    &:focus {
+      border: 1px solid var(--color-green);
+    }
   }
 
   &__label {
@@ -65,6 +65,11 @@
     &::placeholder {
       font-size: 14px;
       color: var(--color-gray-600);
+    }
+
+    &:focus {
+      border: 1px solid var(--color-green);
+      outline-color: transparent;
     }
   }
 
