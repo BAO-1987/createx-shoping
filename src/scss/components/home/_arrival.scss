@@ -1,6 +1,10 @@
 .arrival {
   padding-top: 180px;
 
+  @include for-width (-desktop-s) {
+    padding-top: rem(90);
+  }
+
   &__title {
     text-align: center;
   }
@@ -46,6 +50,7 @@
   &:not(:last-child) {
     margin-right: 12px !important;
   }
+
   &-active {
     background-color: var(--color-gray-800);
   }

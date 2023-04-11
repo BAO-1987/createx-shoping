@@ -2,16 +2,16 @@
   margin-bottom: 0;
 
   &__btns {
-    @include flex;
+    display: inline-flex;
     gap: 24px;
+
+    @include for-width (-mobile-sl) {
+      flex-direction: column;
+    }
   }
 
   &__pagination {
     display: inline-flex;
-    font-family: var(--font-second);
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.5;
     counter-reset: pag;
     left: calc((100% - 1230px) / 2) !important;
     bottom: 186px !important;
@@ -21,6 +21,10 @@
     @include for-width (-desktop-med) {
       left: 15px !important;
       padding-right: 15px;
+
+      @include for-width (-tablet) {
+        bottom: 80px !important;
+      }
     }
 
     .swiper-pagination-bullet {
@@ -36,8 +40,9 @@
       &::before {
         counter-increment: pag;
         content: "0"counter(pag);
+        font-family: var(--font-second);
         font-weight: 700;
-        font-size: 28px;
+        font-size: clamp(1.25rem, calc(1.15rem + 0.5vw), 1.75rem);
         color: var(--color-gray-800);
         opacity: 0.6;
         transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -97,10 +102,14 @@
     @include bg-cover;
 
     min-height: 800px;
+
+    @include for-width (-tablet) {
+      min-height: 500px;
+    }
   }
 
   &__content {
-    padding: 134px 15px 0;
+    padding-top: clamp(50px, rem(134), 150px);
   }
 
   &__next {

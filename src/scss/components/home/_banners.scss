@@ -4,11 +4,17 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 16px;
+
+    @include for-width (-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
-
   &__content {
-    padding: 60px 0 60px 60px;
+    // padding: 60px 15px 0 60px;
+
+    padding: clamp(35px, rem(60), 65px) 15px 0 clamp(35px, rem(60), 65px);
     width: 100%;
     max-width: 400px;
 
@@ -24,10 +30,18 @@
 
   .banners__item--girl {
     grid-area: 1 / 1 / 2 / 3;
+
+    @include for-width (-tablet) {
+      grid-area: auto;
+    }
   }
 
   .banners__item--men {
     grid-area: 1 / 3 / 2 / 6;
+
+    @include for-width (-tablet) {
+      grid-area: auto;
+    }
   }
 
   .banners__item--bags {

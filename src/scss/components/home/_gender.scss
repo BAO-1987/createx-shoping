@@ -1,6 +1,10 @@
 .gender {
   position: relative;
-  padding-bottom: 180px;
+  padding-bottom: clamp(50px, rem(180), 185px);
+
+  @include for-width (-desktop-s) {
+    padding-bottom: rem(90);
+  }
 
   &__list {
     position: absolute;
@@ -8,7 +12,7 @@
     z-index: 5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: var(--grid-gap);
   }
 
   &__item {

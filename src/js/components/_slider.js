@@ -15,6 +15,7 @@ const heroSlider = new Swiper(".hero-slider", {
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
+  autoHeight: true,
   // effect: "fade",
   // loop: true,
 

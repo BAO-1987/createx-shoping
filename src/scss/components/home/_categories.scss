@@ -7,11 +7,17 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 
-    gap: 30px;
+    gap: var(--grid-gap);
+
+    @include for-width (-tablet) {
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+    }
   }
 
   &__item {
     position: relative;
+
 
     picture {
       overflow: hidden;
