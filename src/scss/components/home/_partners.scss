@@ -1,16 +1,18 @@
 .partners {
-padding: clamp(50px, rem(120), 125px) 0;
+  padding: clamp(50px, rem(120), 125px) 0;
+
+  @include for-width(-desktop-med) {
+    padding: clamp(25px, rem(60), 65px) 0;
+  }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    // column-gap: 102px;
-  }
+    gap: clamp(1.13rem, calc(2rem + 4vw), 6.4rem);
+    place-items: center;
 
-  &__item {
-    // flex-shrink: 0;
-    &:not(:last-child) {
-      margin-right: clamp(50px, rem(102), 105px);
+    @include for-width (-mobile-l) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 

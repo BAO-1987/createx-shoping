@@ -11,7 +11,7 @@
   }
 
   &__content {
-    padding: 24px 24px 21px 24px;
+    padding: 24px;
 
     a {
       transition: color 3s linear;
@@ -24,8 +24,14 @@
     }
 
     h3 {
+      @include flex-all-center;
       margin-bottom: 12px;
       text-align: left;
+      min-height: 50px;
+    }
+
+    @include for-width (-tablet) {
+      padding: 5px;
     }
   }
 
@@ -34,15 +40,20 @@
 
     color: var(--color-gray-700);
     margin-bottom: 16px;
-    gap: 24px;
     font-size: 14px;
     line-height: 1.5;
+
+    @include for-width (-mobile-l) {
+      font-size: 12px;
+    }
   }
 
   &__info {
     position: relative;
 
     &:not(:last-child) {
+      margin-right: clamp(10px, rem(24), 25px);
+
       &::after {
         content: "";
         position: absolute;
@@ -50,7 +61,15 @@
         right: -13px;
         width: 1px;
         height: 12px;
-        background-color: currentColor;
+        background-color: currentcolor;
+      }
+
+      @include for-width (-mobile-l) {
+        margin-right: 5px;
+
+        &::after {
+          content: none;
+        }
       }
     }
 
@@ -73,8 +92,6 @@
   }
 
   &__text {
-    width: 100%;
-    max-width: 530px;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;

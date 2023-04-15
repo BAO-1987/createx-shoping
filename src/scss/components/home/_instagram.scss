@@ -1,9 +1,28 @@
 .instagram {
   @include flex-sb;
 
+  &__content {
+    margin-right: 30px;
+    flex-shrink: 0;
+
+    @include for-width (-mobile-l) {
+      text-align: center;
+      flex-shrink: inherit;
+
+      .btn {
+        margin: 0 auto;
+      }
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+  }
+
+  @include for-width (-mobile-l) {
+    flex-direction: column-reverse;
+    gap: rem(30);
   }
 }

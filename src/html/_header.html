@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header fixed-block">
 
   <div class="header__top header-top">
 
@@ -100,13 +100,13 @@
             <a class="nav__link" href="#">boys</a>
           </li>
 
-          <li class="nav__item">
+          <li class="nav__item" dropdown>
 
-            <span class="nav__link nav__link--dropdown">sale</span>
+            <span class="nav__link nav__link--dropdown" dropdown-button>sale</span>
 
-            <ul class="nav__list nav__list--dropdown dropdown-list dropdown-submenu">
+            <ul class="nav__list nav__list--dropdown dropdown-list">
 
-              <li class="dropdown-list__item">
+              <li class="dropdown-list__item dropdown-submenu">
                 <ul class="dropdown-submenu__list">
                   <li class="dropdown-submenu__item">
                     <a class="dropdown-submenu__link" href="#">New collection</a>
@@ -123,11 +123,12 @@
                 </ul>
               </li>
 
-              <li class="dropdown-list__item">
+              <li class="dropdown-list__item dropdown-submenu" data-dropdown>
+
+                <span class="dropdown-submenu__title" data-dropdown-button>clothes</span>
+
                 <ul class="dropdown-submenu__list">
-                  <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link--main" href="#">CLOTHES</a>
-                  </li>
+
                   <li class="dropdown-submenu__item">
                     <a class="dropdown-submenu__link" href="#">Coats</a>
                   </li>
@@ -179,11 +180,9 @@
                 </ul>
               </li>
 
-              <li class="dropdown-list__item">
+              <li class="dropdown-list__item dropdown-submenu" data-dropdown>
+                <span class="dropdown-submenu__title" data-dropdown-button>shoes</span>
                 <ul class="dropdown-submenu__list">
-                  <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link--main" href="#">SHOES</a>
-                  </li>
                   <li class="dropdown-submenu__item">
                     <a class="dropdown-submenu__link" href="#">Boots</a>
                   </li>
@@ -191,31 +190,29 @@
                     <a class="dropdown-submenu__link" href="#">Flat shoes</a>
                   </li>
                   <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Heels</a>
+                    <a class="dropdown-submenu__link" href="#">Heels</a>
                   </li>
                   <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Mules</a>
+                    <a class="dropdown-submenu__link" href="#">Mules</a>
                   </li>
                   <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Sliders</a>
+                    <a class="dropdown-submenu__link" href="#">Sliders</a>
                   </li>
                   <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Slippers</a>
+                    <a class="dropdown-submenu__link" href="#">Slippers</a>
                   </li>
                   <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Sneakers</a>
+                    <a class="dropdown-submenu__link" href="#">Sneakers</a>
                   </li>
                   <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link-sale" href="#">Leather</a>
+                    <a class="dropdown-submenu__link" href="#">Leather</a>
                   </li>
                 </ul>
               </li>
 
-              <li class="dropdown-list__item">
+              <li class="dropdown-list__item dropdown-submenu" data-dropdown>
+                <span class="dropdown-submenu__title" data-dropdown-button>accessories</span>
                 <ul class="dropdown-submenu__list">
-                  <li class="dropdown-submenu__item">
-                    <a class="dropdown-submenu__link dropdown-submenu__link--main" href="#">ACCESSORIES</a>
-                  </li>
                   <li class="dropdown-submenu__item">
                     <a class="dropdown-submenu__link" href="#">Bags & bagpacks</a>
                   </li>
@@ -249,7 +246,7 @@
                 </ul>
               </li>
 
-              <li class="dropdown-list__item">
+              <li class="dropdown-list__item dropdown-submenu">
 
                 <picture>
                   <source srcset="img/curling-boy.webp" type="image/webp">
@@ -264,6 +261,32 @@
               </li>
 
             </ul>
+
+          </li>
+
+          <li class="nav__item nav__item--account" dropdown>
+
+            <span class="nav__link nav__link--dropdown" dropdown-button>account</span>
+
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item dropdown-submenu">
+                <ul class="dropdown-submenu__list">
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Delivery & returns</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Track order</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Blog</a>
+                  </li>
+                  <li class="dropdown-submenu__item">
+                    <a class="dropdown-submenu__link" href="#">Contacts</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
 
           </li>
 
