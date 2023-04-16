@@ -11,7 +11,7 @@
   }
 
   &__content {
-    padding: 24px;
+    padding: clamp(5px, calc(0.31rem + 1vw), 1.5rem);
 
     a {
       transition: color 3s linear;
@@ -30,9 +30,9 @@
       min-height: 50px;
     }
 
-    @include for-width (-tablet) {
-      padding: 5px;
-    }
+    // @include for-width (-tablet) {
+    //   padding: 5px;
+    // }
   }
 
   &__information {

@@ -1,7 +1,6 @@
 .trending {
   position: relative;
-  margin: 0 0 clamp(35px, 6.3rem, 105px) 0;
-  padding: clamp(35px, 5rem, 85px) 0;
+  padding: clamp(1rem, calc(0.8rem + 3.5vw), 5rem) 0;
   background-color: var(--color-gray-300);
 
   &__nav {
@@ -21,7 +20,7 @@
 
 .trending-slider {
   overflow: hidden;
-  padding-bottom: clamp(25px, 5rem, 85px);
+  margin-bottom: clamp(1rem, calc(0.8rem + 3.5vw), 5rem);
 
   &__next,
   &__prev {

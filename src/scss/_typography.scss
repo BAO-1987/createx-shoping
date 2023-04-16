@@ -1,5 +1,5 @@
 .title {
-  margin-bottom: rem(60);
+  margin-bottom: clamp(2rem, calc(0.5rem + 2.7vw), 3.75rem);
   font-weight: 900;
   font-size: clamp(1.56rem, calc(1.3rem + 1.31vw), 2.88rem);
   line-height: 1.3;

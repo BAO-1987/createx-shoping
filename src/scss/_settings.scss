@@ -35,21 +35,14 @@
 }
 
 .section {
-  margin-bottom: clamp(50px, rem(180), 185px);
-
-  @include for-width (-desktop-med) {
-    margin-bottom: clamp(20px, rem(90), 95px);
-  }
+  margin-bottom: clamp(3rem, calc(2rem + 8.45vw), 11.25rem);
 }
 
 .logo {
   @include flex-all-center;
-  margin-right: clamp(25px, 3.75rem, 60px);
-  flex-shrink: 0;
 
-  @include for-width (-tablet) {
-    margin-right: 20px;
-  }
+  flex-shrink: 0;
+  margin-right: clamp(1rem, calc(0.5rem + 2.7vw), 3.75rem);
 }
 
 .visually-hidden {
