@@ -677,12 +677,7 @@ h3::first-letter {
 
 .gender {
   position: relative;
-  padding-bottom: clamp(50px, 11.25rem, 185px);
-}
-@media (max-width: calc(68.75em - 0.0625em)) {
-  .gender {
-    padding-bottom: 5.625rem;
-  }
+  padding-bottom: clamp(3rem, 2rem + 8.45vw, 11.25rem);
 }
 .gender__list {
   position: absolute;
@@ -728,11 +723,11 @@ h3::first-letter {
 }
 
 .arrival {
-  padding-top: 180px;
+  padding-top: clamp(2rem, 2rem + 8.45vw, 11.25rem);
 }
-@media (max-width: calc(68.75em - 0.0625em)) {
+@media (max-width: calc(36em - 0.0625em)) {
   .arrival {
-    padding-top: 5.625rem;
+    padding-top: 3.125rem;
   }
 }
 .arrival__title {
@@ -759,7 +754,7 @@ h3::first-letter {
 .arrival-slider {
   overflow: hidden;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: clamp(1rem, 0.5rem + 2.7vw, 3.75rem);
 }
 
 .arrival__pagination {
@@ -803,7 +798,7 @@ h3::first-letter {
 .categories__item picture {
   overflow: hidden;
   margin-bottom: 25px;
-  border-radius: 100vw;
+  border-radius: 50%;
 }
 .categories__item a::before {
   content: "";

@@ -13,6 +13,11 @@
       grid-template-columns: repeat(3, 1fr);
       place-items: center;
     }
+
+    // @include for-width (-mobile-md) {
+    //   grid-template-columns: repeat(2, 1fr);
+    //   place-items: center;
+    // }
   }
 
   &__item {
@@ -22,7 +27,9 @@
     picture {
       overflow: hidden;
       margin-bottom: 25px;
-      border-radius: 100vw;
+      border-radius: 50%;
+      // height: 180px;
+      // width: 180px;
     }
 
     a {

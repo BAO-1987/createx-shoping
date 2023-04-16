@@ -72,7 +72,7 @@ const offersSlider = new Swiper(".offers-slider", {
 });
 
 const arrivalSlider = new Swiper(".arrival-slider", {
-  slidesPerView: 6,
+  slidesPerView: 2,
   spaceBetween: 20,
   mousewheelControl: true,
   keyboardControl: true,
@@ -88,6 +88,21 @@ const arrivalSlider = new Swiper(".arrival-slider", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+
+  breakpoints: {
+
+    475: {
+      slidesPerView: 3,
+    },
+
+    992: {
+      slidesPerView: 4,
+    },
+
+    1600: {
+      slidesPerView: 6,
+    },
   },
 });
 

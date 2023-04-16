@@ -363,7 +363,7 @@ const offersSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]("
   }
 });
 const arrivalSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".arrival-slider", {
-  slidesPerView: 6,
+  slidesPerView: 2,
   spaceBetween: 20,
   mousewheelControl: true,
   keyboardControl: true,
@@ -378,6 +378,17 @@ const arrivalSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](
   pagination: {
     el: ".swiper-pagination",
     clickable: true
+  },
+  breakpoints: {
+    475: {
+      slidesPerView: 3
+    },
+    992: {
+      slidesPerView: 4
+    },
+    1600: {
+      slidesPerView: 6
+    }
   }
 });
 const trendingSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".trending-slider", {
