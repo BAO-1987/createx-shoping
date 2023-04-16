@@ -798,7 +798,7 @@ h3::first-letter {
 .categories__item picture {
   overflow: hidden;
   margin-bottom: 25px;
-  border-radius: 50%;
+  border-radius: 100vw;
 }
 .categories__item a::before {
   content: "";
