@@ -109,11 +109,11 @@
   }
 
   &__content {
-    padding-top: clamp(50px, rem(134), 9.4rem);
+    padding-top: clamp(2.8rem, calc(0.5rem + 6.61vw), 8.44rem);
   }
 
   &__next {
-    right: 32px;
+    right: 42px;
   }
 
   &__prev {

@@ -347,6 +347,44 @@
   opacity: 1;
 }
 
+.countdown {
+  padding-top: clamp(2rem, 1rem + 3.3vw, 5rem);
+  margin-bottom: 20px;
+}
+.countdown__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+.countdown__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+}
+.countdown__list li span:last-of-type {
+  font-weight: 400;
+  font-size: 14px;
+}
+.countdown__list li:first-of-type {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .title {
   margin-bottom: clamp(2rem, 0.5rem + 2.7vw, 3.75rem);
   font-weight: 900;
@@ -674,10 +712,10 @@ h3::first-letter {
   }
 }
 .hero-slider__content {
-  padding-top: clamp(50px, 8.375rem, 9.4rem);
+  padding-top: clamp(2.8rem, 0.5rem + 6.61vw, 8.44rem);
 }
 .hero-slider__next {
-  right: 32px;
+  right: 42px;
 }
 .hero-slider__prev {
   left: 32px;
@@ -1136,59 +1174,23 @@ h3::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--color-gray-300);
-  height: 500px;
+  min-height: 500px;
   border-radius: var(--br);
   position: relative;
 }
 .banners__item--delivery {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 4;
-  grid-area: 2/4/3/8;
   background-position: bottom right;
   background-size: 450px 400px;
+}
+@media (max-width: calc(62em - 0.0625em)) {
+  .banners__item {
+    min-height: 350px;
+  }
 }
 .banners__box {
   position: absolute;
   bottom: 0;
   z-index: 1;
-}
-
-.countdown {
-  padding-top: 80px;
-}
-.countdown__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 24px;
-}
-.countdown__list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.5;
-}
-.countdown__list li span:last-of-type {
-  font-weight: 400;
-  font-size: 14px;
-}
-.countdown__list li:first-of-type {
-  display: none;
-  visibility: hidden;
 }
 
 .partners {

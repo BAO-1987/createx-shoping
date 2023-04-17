@@ -105,18 +105,18 @@
   &__input {
     position: absolute;
 
-    &:checked + .checkboxes__label {
+    &:checked+.checkboxes__label {
       background-color: var(--color-green);
       border-color: var(--color-green);
       color: var(--color-white);
     }
 
-    &:focus-visible + .checkboxes__label {
+    &:focus-visible+.checkboxes__label {
       outline: 2px solid var(--color-green);
       outline-offset: 2px;
     }
 
-    &:disabled + .checkboxes__label {
+    &:disabled+.checkboxes__label {
       opacity: 0.4;
       pointer-events: none;
     }
@@ -220,5 +220,36 @@
 
   &:hover .offers-btn {
     opacity: 1;
+  }
+}
+
+.countdown {
+  padding-top: clamp(2rem, calc(1rem + 3.3vw), 5rem);
+  margin-bottom: 20px;
+
+  &__list {
+    @include flex;
+
+    gap: 24px;
+
+    li {
+      @include flex-all-center;
+
+      flex-direction: column;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.5;
+
+      & span:last-of-type {
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      &:first-of-type {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
   }
 }
