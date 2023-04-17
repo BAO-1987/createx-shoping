@@ -1,8 +1,6 @@
 .article {
   @include flex-a-center;
   position: relative;
-  // width: 100%;
-  // max-width: 285px;
   flex-direction: column;
   height: 100%;
   // width: 100%;
@@ -27,12 +25,11 @@
 
   &__box {
     position: relative;
-    border-radius: var(--br);
 
     span {
       position: absolute;
-      top: 16px;
-      left: 16px;
+      top: 4%;
+      left: 4%;
       padding: 1px 8px;
       background-color: var(--color-red);
       color: var(--color-white);
@@ -41,6 +38,10 @@
       font-size: 16px;
       line-height: 1.6;
     }
+  }
+
+  &__img {
+    border-radius: var(--br);
   }
 
   // &__sale {
@@ -58,8 +59,8 @@
 
   &__rating {
     position: absolute;
-    right: 16px;
-    top: 16px;
+    right: 4%;
+    top: 4%;
     width: 78px;
     height: 14px;
 
@@ -114,8 +115,6 @@
     flex: 1;
     padding: 16px;
     width: 100%;
-    // max-width: fit-content;
-    background-color: transparent;
   }
 
   &__title {
@@ -130,6 +129,10 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    @include for-width(-mobile-sl) {
+      text-align: center;
+    }
   }
 
   &__price {
@@ -139,7 +142,7 @@
     margin-top: auto;
     margin-bottom: 15px;
     font-weight: 700;
-    font-size: 24;
+    font-size: clamp(1rem, calc(0.82rem + 0.88vw), 1.5rem);
     line-height: 1.3;
 
     &-curent {
@@ -154,6 +157,9 @@
       line-height: 1.3;
       color: var(--color-gray-700);
       text-decoration: line-through;
+    }
+   @include for-width(-mobile-sl) {
+      justify-content: center;
     }
   }
 

@@ -15,9 +15,9 @@
   }
 }
 
-// .main {
-//   padding-top: calc(var(--header-height));
-// }
+.main {
+  padding-top: calc(var(--header-height));
+}
 
 .site-container {
   @include footerToBottom;
@@ -105,18 +105,18 @@
   &__input {
     position: absolute;
 
-    &:checked+.checkboxes__label {
+    &:checked + .checkboxes__label {
       background-color: var(--color-green);
       border-color: var(--color-green);
       color: var(--color-white);
     }
 
-    &:focus-visible+.checkboxes__label {
+    &:focus-visible + .checkboxes__label {
       outline: 2px solid var(--color-green);
       outline-offset: 2px;
     }
 
-    &:disabled+.checkboxes__label {
+    &:disabled + .checkboxes__label {
       opacity: 0.4;
       pointer-events: none;
     }
@@ -124,7 +124,6 @@
 }
 
 .login {
-
   &__btn {
     @include flex-all-center;
     position: relative;
@@ -168,11 +167,58 @@
   overscroll-behavior: none;
 
   &::before {
+    --vh: 100%;
     content: "";
     position: absolute;
+    // top: 0;
     z-index: 95;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-color: rgba(30, 33, 44, 0.75);
+  }
+}
+
+.offers-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 530px;
+
+  &__item {
+    font-weight: 900;
+    font-size: 12px;
+
+    a {
+      position: relative;
+      padding-left: 4px;
+      font-weight: 400;
+      transition: color 0.3s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        height: 0.8px;
+        background-color: currentcolor;
+        transition: background-color 0.3s linear;
+      }
+
+      &:hover {
+        &::before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .offers-btn {
+    opacity: 0;
+    transition: opacity 0.3s liner;
+  }
+
+  &:hover .offers-btn {
+    opacity: 1;
   }
 }

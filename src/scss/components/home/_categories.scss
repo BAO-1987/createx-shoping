@@ -14,22 +14,15 @@
       place-items: center;
     }
 
-    // @include for-width (-mobile-md) {
-    //   grid-template-columns: repeat(2, 1fr);
-    //   place-items: center;
-    // }
   }
 
   &__item {
     position: relative;
 
-
     picture {
       overflow: hidden;
-      margin-bottom: 25px;
+      margin-bottom: rem(25);
       border-radius: 100vw;
-      // height: 180px;
-      // width: 180px;
     }
 
     a {

@@ -182,10 +182,10 @@
     opacity: 1;
   }
 
-  // @include for-width(-mobile-l) {
-  //   width: 20px;
-  //   height: 20px;
-  // }
+  @include for-width(-tablet) {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .slider-btn.swiper-button-disabled {

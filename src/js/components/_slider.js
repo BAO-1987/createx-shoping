@@ -16,20 +16,12 @@ const heroSlider = new Swiper(".hero-slider", {
   keyboardControl: true,
   grabCursor: true,
   autoHeight: true,
-  // effect: "fade",
-  // loop: true,
+  loop: true,
 
-  // speed: heroSliderSpeed,
-  // autoplay: {
-  //   delay: 1000,
-  // },
-  // loop: true,
-  // centeredSlides: true,
-
-  // autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false,
-  // },
+  speed: heroSliderSpeed,
+  autoplay: {
+    delay: 2500,
+  },
 
   navigation: {
     nextEl: ".hero-slider__next",
@@ -57,12 +49,12 @@ const offersSlider = new Swiper(".offers-slider", {
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
-  // loop: true,
+  loop: true,
 
-  // autoplay: {
-  //   delay: 3500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
 
 
   navigation: {
@@ -72,17 +64,17 @@ const offersSlider = new Swiper(".offers-slider", {
 });
 
 const arrivalSlider = new Swiper(".arrival-slider", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 20,
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
-  // loop: true,
+  loop: true,
 
-  // autoplay: {
-  //   delay: 3500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
 
 
   pagination: {
@@ -93,26 +85,37 @@ const arrivalSlider = new Swiper(".arrival-slider", {
   breakpoints: {
 
     475: {
+      slidesPerView: 2,
+    },
+
+    768: {
       slidesPerView: 3,
     },
 
-    992: {
-      slidesPerView: 4,
-    },
-
-    1600: {
+    1200: {
       slidesPerView: 6,
     },
   },
 });
 
 const trendingSlider = new Swiper(".trending-slider", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
   loop: true,
+
+  breakpoints: {
+
+    475: {
+      slidesPerView: 2,
+    },
+
+    1200: {
+      slidesPerView: 3,
+    },
+  },
 
   navigation: {
     nextEl: ".trending-slider__next",
@@ -121,16 +124,27 @@ const trendingSlider = new Swiper(".trending-slider", {
 });
 
 const saleSlider = new Swiper(".sale-slider", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   mousewheelControl: true,
   keyboardControl: true,
   grabCursor: true,
   loop: true,
 
+  breakpoints: {
+
+    475: {
+      slidesPerView: 2,
+    },
+
+
+    1200: {
+      slidesPerView: 3,
+    },
+  },
+
   navigation: {
     nextEl: ".sale-slider__next",
     prevEl: ".sale-slider__prev",
   },
 });
-
