@@ -1,11 +1,6 @@
 .arrival {
   padding-top: clamp(2rem, calc(2rem + 8.45vw), 11.25rem);
 
-
-  @include for-width (-mobile-md) {
-    padding-top: rem(50);
-  }
-
   &__title {
     text-align: center;
   }
@@ -34,19 +29,22 @@
       }
     }
   }
+
+  @include for-width(-mobile-md) {
+    padding-top: rem(50);
+  }
 }
 
 .arrival-slider {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   padding-bottom: clamp(1rem, calc(0.5rem + 2.7vw), 3.75rem);
 }
 
-
 .swiper-pagination-bullet {
+  border-radius: 100vw;
   width: 30px;
-  height: 3px;
-  border-radius: 3px;
+  height: 4px;
   background-color: var(--color-gray-500);
   opacity: 1;
 

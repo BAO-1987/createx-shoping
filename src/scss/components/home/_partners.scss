@@ -1,18 +1,13 @@
 .partners {
-  padding: clamp(50px, rem(120), 125px) 0;
-
-  @include for-width(-desktop-med) {
-    padding: clamp(25px, rem(60), 65px) 0;
-  }
+  padding: clamp(2rem, calc(1.3rem + 2.29vw), 4.06rem) 0;
 
   &__list {
     display: grid;
+    place-items: center;
     grid-template-columns: repeat(6, 1fr);
     gap: clamp(1.13rem, calc(2rem + 4vw), 6.4rem);
-    place-items: center;
-    // gap: max(4vw, 2rem) 6.3rem;
 
-    @include for-width (-mobile-l) {
+    @include for-width(-mobile-l) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

@@ -5,31 +5,30 @@
     display: inline-flex;
     gap: 24px;
 
-    @include for-width (-mobile-sl) {
+    @include for-width(-mobile-sl) {
       flex-direction: column;
     }
   }
 
   &__pagination {
-    display: inline-flex;
     counter-reset: pag;
     left: calc((100% - 1230px) / 2) !important;
     bottom: 186px !important;
+    display: inline-flex;
     width: fit-content;
-    max-width: fit-content;
 
-    @include for-width (-desktop-med) {
+    @include for-width(-desktop-med) {
       left: 15px !important;
       padding-right: 15px;
 
-      @include for-width (-tablet) {
+      @include for-width(-tablet) {
         bottom: 80px !important;
       }
     }
 
     .swiper-pagination-bullet {
-      display: flex;
-      flex-direction: column;
+      @include flex-col;
+
       border-radius: 0;
       width: 178px;
       height: auto;
@@ -86,10 +85,10 @@
 
   .hero__bar {
     &::after {
+      background-color: var(--color-black);
+      opacity: 1 !important;
       transform: scaleX(1);
       transition: transform var(--hero-slider-speed) ease-in-out;
-      opacity: 1 !important;
-      background-color: black;
     }
   }
 }
@@ -103,7 +102,7 @@
 
     min-height: 800px;
 
-    @include for-width (-tablet) {
+    @include for-width(-tablet) {
       min-height: 500px;
     }
   }

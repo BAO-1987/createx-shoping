@@ -17,7 +17,7 @@
 
 .sale-slider {
   overflow: hidden;
-  padding-bottom: clamp(25px, 5rem, 85px);
+  padding-bottom: clamp(1rem, calc(0.5rem + 2.7vw), 3.75rem);
 
   &__next,
   &__prev {

@@ -1,10 +1,9 @@
 .article {
   @include flex-a-center;
+
   position: relative;
   flex-direction: column;
   height: 100%;
-  // width: 100%;
-  // max-width: 362px;
 
   a {
     margin-top: auto;
@@ -14,8 +13,8 @@
     &::before {
       content: "";
       position: absolute;
-      inset: 0;
       z-index: 5;
+      inset: 0;
     }
 
     &:hover {
@@ -28,15 +27,14 @@
 
     span {
       position: absolute;
-      top: 4%;
       left: 4%;
-      padding: 1px 8px;
-      background-color: var(--color-red);
-      color: var(--color-white);
+      top: 4%;
       border-radius: var(--br);
+      padding: 1px 8px;
       font-weight: 700;
-      font-size: 16px;
       line-height: 1.6;
+      color: var(--color-white);
+      background-color: var(--color-red);
     }
   }
 
@@ -44,36 +42,12 @@
     border-radius: var(--br);
   }
 
-  // &__sale {
-  //   position: absolute;
-  //   top: 16px;
-  //   left: 16px;
-  //   padding: 1px 8px;
-  //   background-color: var(--color-red);
-  //   color: var(--color-white);
-  //   border-radius: var(--br);
-  //   font-weight: 700;
-  //   font-size: 16px;
-  //   line-height: 1.6;
-  // }
-
   &__rating {
     position: absolute;
     right: 4%;
     top: 4%;
     width: 78px;
     height: 14px;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   background-image: url("../img/sprite.svg#rating-five");
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   width: 78px;
-    //   height: 14px;
-    // }
   }
 
   &__wish {
@@ -100,21 +74,23 @@
     transition: fill 0.9s linear;
 
     &--filled {
+      display: none;
       opacity: 0;
       visibility: hidden;
-      display: none;
     }
-
-
   }
 
   &__content {
-    @include flex;
+    @include flex-col;
     justify-content: center;
-    flex-direction: column;
+
     flex: 1;
     padding: 16px;
     width: 100%;
+
+    @include for-width(-mobile-md) {
+      padding: 5px;
+    }
   }
 
   &__title {
@@ -158,7 +134,8 @@
       color: var(--color-gray-700);
       text-decoration: line-through;
     }
-   @include for-width(-mobile-sl) {
+
+    @include for-width(-mobile-sl) {
       justify-content: center;
     }
   }
