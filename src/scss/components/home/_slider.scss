@@ -1,7 +1,10 @@
-.trending {
+.slider {
   position: relative;
-  padding: clamp(1rem, calc(0.8rem + 3.5vw), 5rem) 0;
-  background-color: var(--color-gray-300);
+
+  &--trending {
+    padding: clamp(1rem, calc(0.8rem + 3.5vw), 5rem) 0;
+    background-color: var(--color-gray-300);
+  }
 
   &__nav {
     @include flex-all-sb;
@@ -18,9 +21,10 @@
   }
 }
 
+.sale-slider,
 .trending-slider {
   overflow: hidden;
-  margin-bottom: clamp(1rem, calc(0.8rem + 3.5vw), 5rem);
+  padding-bottom: clamp(1rem, calc(0.5rem + 2.7vw), 3.75rem);
 
   &__next,
   &__prev {
