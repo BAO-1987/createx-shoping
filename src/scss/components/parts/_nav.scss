@@ -209,6 +209,13 @@
   }
 
   &__item {
+
+    &:first-child {
+      @include for-width(-tablet) {
+        margin: 0 0 20px;
+      }
+    }
+
     &:last-child {
       width: 100%;
       max-width: 285px;
@@ -221,11 +228,11 @@
 
       @include for-width(-tablet) {
         max-width: max-content;
-
       }
 
       @include for-width(-mobile-l) {
         max-width: 100%;
+        margin: 0;
       }
     }
 
@@ -234,6 +241,10 @@
 
       @include for-width(-desktop-med) {
         margin-right: 35px;
+      }
+
+      @include for-width(-mobile-l) {
+        margin: 0;
       }
     }
 
