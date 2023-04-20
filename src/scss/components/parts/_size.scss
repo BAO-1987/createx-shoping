@@ -1,0 +1,24 @@
+.size {
+  &__table {
+    width: 100%;
+    max-width: 775px;
+    border-collapse: collapse;
+    border: 1px solid var(--color-gray-300);
+
+    th,
+    td {
+      padding: 10px;
+    }
+
+    tr:nth-child(2n+1) {
+      background-color: var(--color-gray-200);
+    }
+
+    caption {
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+
+    }
+  }
+}

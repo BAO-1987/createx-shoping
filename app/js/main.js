@@ -23,6 +23,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_headerHeight__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_headerHeight */ "./src/js/components/_headerHeight.js");
 /* harmony import */ var _components_subList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_subList */ "./src/js/components/_subList.js");
 /* harmony import */ var _components_subList__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_subList__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_sizeModal */ "./src/js/components/_sizeModal.js");
+/* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_sizeModal__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -287,6 +290,24 @@ showPasswordCheckbox.addEventListener('change', function () {
   } else {
     passwordInput.type = 'password';
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/_sizeModal.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/_sizeModal.js ***!
+  \*****************************************/
+/***/ (() => {
+
+const modal = document.querySelector("#size");
+const openModal = document.querySelector(".btn__size");
+const closeModal = document.querySelector(".size__close");
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+closeModal.addEventListener("click", () => {
+  modal.close();
 });
 
 /***/ }),
