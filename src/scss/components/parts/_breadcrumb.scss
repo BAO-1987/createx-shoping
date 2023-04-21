@@ -1,0 +1,107 @@
+.breadcrumb {
+  padding: 16px 0;
+  background-color: var(--color-gray-200);
+
+  &__list {
+    @include flex;
+
+    // li {
+    //   position: relative;
+
+    //   &:not(:last-child) {
+    //     margin-right: 32px;
+
+    //     &::after {
+    //       content: "";
+    //       position: absolute;
+    //       rotate: -90deg;
+    //       width: 16px;
+    //       height: 16px;
+    //       right: -24px;
+    //       content: "";
+    //       mask-image: url("../img/sprite.svg#arrow-down");
+    //       mask-position: center;
+    //       mask-repeat: no-repeat;
+    //       mask-size: cover;
+    //       background-color: currentcolor;
+    //     }
+    //   }
+
+    //   a {
+    //     font-weight: 400;
+    //     font-size: 14px;
+    //     color: var(--color-gray-800);
+    //     transition: color 0.3s linear;
+
+    //   &:first-of-type {
+    //     position: relative;
+    //     color: red;
+
+    //     &::before {
+    //       width: 16px;
+    //       height: 16px;
+    //       content: "";
+    //       mask-image: url("../img/sprite.svg#home");
+    //       mask-position: center;
+    //       mask-repeat: no-repeat;
+    //       mask-size: cover;
+    //       background-color: currentcolor;
+    //       position: absolute;
+    //       transition: background-color 0.3s linear;
+    //     }
+    //   }
+    // }
+
+    //   span {
+    //     color: var(--color-gray-600);
+    //   }
+    // }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        rotate: -90deg;
+        width: 16px;
+        height: 16px;
+        right: -24px;
+        content: "";
+        mask-image: url("../img/sprite.svg#arrow-down");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        background-color: currentcolor;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-gray-800);
+    transition: color 0.3s linear;
+
+    &--main {
+      position: relative;
+
+      &::before {
+        width: 16px;
+        height: 16px;
+        content: "";
+        mask-image: url("../img/sprite.svg#home");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        background-color: currentcolor;
+        position: absolute;
+        transition: background-color 0.3s linear;
+      }
+    }
+  }
+}
