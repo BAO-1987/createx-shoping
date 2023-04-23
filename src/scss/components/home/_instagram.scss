@@ -19,6 +19,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+
+    li {
+      cursor: pointer;
+    }
   }
 
   @include for-width(-mobile-l) {

@@ -148,3 +148,32 @@ const saleSlider = new Swiper(".sale-slider", {
     prevEl: ".sale-slider__prev",
   },
 });
+
+const workImages = document.querySelector('.single-slider');
+
+if (workImages) {
+  const workSlider = new Swiper('.single-slider__nav', {
+    spaceBetween: 20,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 6
+      },
+      768: {
+        slidesPerView: 10,
+      }
+    }
+  });
+  const workSlidesNav = new Swiper(workImages, {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".single-slider__next",
+      prevEl: ".single-slider__prev",
+    },
+    thumbs: {
+      swiper: workSlider,
+    },
+  });
+}

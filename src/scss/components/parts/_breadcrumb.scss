@@ -3,7 +3,7 @@
   background-color: var(--color-gray-200);
 
   &__list {
-    @include flex;
+    @include flex-a-center;
 
     // li {
     //   position: relative;
@@ -68,15 +68,16 @@
         content: "";
         position: absolute;
         rotate: -90deg;
+        top: 50%;
+        transform: translateX(50%);
         width: 16px;
         height: 16px;
         right: -24px;
-        content: "";
         mask-image: url("../img/sprite.svg#arrow-down");
         mask-position: center;
         mask-repeat: no-repeat;
         mask-size: cover;
-        background-color: currentcolor;
+        background-color: var(--color-gray-600);
       }
     }
   }
@@ -87,21 +88,19 @@
     color: var(--color-gray-800);
     transition: color 0.3s linear;
 
-    &--main {
-      position: relative;
+    &:is(:hover, :active) {
+      color: var(--color-green);
+    }
+  }
 
-      &::before {
-        width: 16px;
-        height: 16px;
-        content: "";
-        mask-image: url("../img/sprite.svg#home");
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: cover;
-        background-color: currentcolor;
-        position: absolute;
-        transition: background-color 0.3s linear;
-      }
+  &__icon {
+    width: 16px;
+    height: 17px;
+    fill: var(--color-gray-800);
+    transition: fill 0.3s linear;
+
+    &:hover {
+      fill: var(--color-green);
     }
   }
 }
