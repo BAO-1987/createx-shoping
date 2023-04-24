@@ -506,30 +506,33 @@ const saleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
     prevEl: ".sale-slider__prev"
   }
 });
-const workImages = document.querySelector('.single-slider');
-if (workImages) {
-  const workSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.single-slider__nav', {
+const singleImages = document.querySelector('.single-slider');
+if (singleImages) {
+  const singleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.single-slider__nav', {
     spaceBetween: 20,
     slidesPerView: 5,
+    loop: true,
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-      576: {
-        slidesPerView: 6
-      },
-      768: {
-        slidesPerView: 10
+      320: {
+        slidesPerView: 3,
+        spaceBetween: 10
       }
+      // 768: {
+      //   slidesPerView: 2,
+      // }
     }
   });
-  const workSlidesNav = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](workImages, {
+
+  const singleSlidesNav = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](singleImages, {
     slidesPerView: 1,
     navigation: {
       nextEl: ".single-slider__next",
       prevEl: ".single-slider__prev"
     },
     thumbs: {
-      swiper: workSlider
+      swiper: singleSlider
     }
   });
 }

@@ -149,31 +149,33 @@ const saleSlider = new Swiper(".sale-slider", {
   },
 });
 
-const workImages = document.querySelector('.single-slider');
+const singleImages = document.querySelector('.single-slider');
 
-if (workImages) {
-  const workSlider = new Swiper('.single-slider__nav', {
+if (singleImages) {
+  const singleSlider = new Swiper('.single-slider__nav', {
     spaceBetween: 20,
     slidesPerView: 5,
+    loop: true,
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-      576: {
-        slidesPerView: 6
+      320: {
+        slidesPerView: 3,
+         spaceBetween: 10,
       },
-      768: {
-        slidesPerView: 10,
-      }
+      // 768: {
+      //   slidesPerView: 2,
+      // }
     }
   });
-  const workSlidesNav = new Swiper(workImages, {
+  const singleSlidesNav = new Swiper(singleImages, {
     slidesPerView: 1,
     navigation: {
       nextEl: ".single-slider__next",
       prevEl: ".single-slider__prev",
     },
     thumbs: {
-      swiper: workSlider,
+      swiper: singleSlider,
     },
   });
 }

@@ -24,6 +24,22 @@
     cursor: zoom-in;
   }
 
+  &__link {
+    // position: relative;
+
+    &::before {
+      content: "+";
+      position: absolute;
+      font-size: 40px;
+      inset: 0;
+      color: #fff;
+       background-color: var(--color-gray-900);
+       opacity: 0.6;
+
+
+    }
+  }
+
   &__img {
     border-radius: var(--br);
   }
@@ -35,19 +51,22 @@
   &__prev {
     left: 32px;
 
-    &:hover {
-      background-color: var(--color-green);
+    // &:hover {
+    //   background-color: var(--color-green);
 
-      &::before {
-        background-color: var(--color-white);
-      }
-    }
+    //   &::before {
+    //     background-color: var(--color-white);
+    //   }
+    // }
   }
 }
 
 
 .single-slider__nav {
   overflow: hidden;
+  // .single-slider__list {
+  // align-items: flex-start;
+  // }
 
   .single-slider__item {
     position: relative;
@@ -64,6 +83,7 @@
       content: "";
       position: absolute;
       inset: 0;
+      border-radius: var(--br);
       background-color: var(--color-gray-900);
       opacity: 0.6;
     }

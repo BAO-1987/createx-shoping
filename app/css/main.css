@@ -1340,6 +1340,15 @@ h3::first-letter {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
+.single-slider__link::before {
+  content: "+";
+  position: absolute;
+  font-size: 40px;
+  inset: 0;
+  color: #fff;
+  background-color: var(--color-gray-900);
+  opacity: 0.6;
+}
 .single-slider__img {
   border-radius: var(--br);
 }
@@ -1348,12 +1357,6 @@ h3::first-letter {
 }
 .single-slider__prev {
   left: 32px;
-}
-.single-slider__prev:hover {
-  background-color: var(--color-green);
-}
-.single-slider__prev:hover::before {
-  background-color: var(--color-white);
 }
 
 .single-slider__nav {
@@ -1376,6 +1379,7 @@ h3::first-letter {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: var(--br);
   background-color: var(--color-gray-900);
   opacity: 0.6;
 }
@@ -3253,6 +3257,7 @@ h3::first-letter {
 }
 
 .breadcrumb {
+  margin-bottom: 2rem;
   padding: 16px 0;
   background-color: var(--color-gray-200);
 }
