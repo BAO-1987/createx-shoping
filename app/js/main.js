@@ -511,20 +511,18 @@ if (singleImages) {
   const singleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.single-slider__nav', {
     spaceBetween: 20,
     slidesPerView: 5,
-    loop: true,
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-      320: {
-        slidesPerView: 3,
-        spaceBetween: 10
-      }
+      // 320: {
+      //   slidesPerView: 3,
+      //    spaceBetween: 10,
+      // },
       // 768: {
       //   slidesPerView: 2,
       // }
     }
   });
-
   const singleSlidesNav = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](singleImages, {
     slidesPerView: 1,
     navigation: {

@@ -155,14 +155,13 @@ if (singleImages) {
   const singleSlider = new Swiper('.single-slider__nav', {
     spaceBetween: 20,
     slidesPerView: 5,
-    loop: true,
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-      320: {
-        slidesPerView: 3,
-         spaceBetween: 10,
-      },
+      // 320: {
+      //   slidesPerView: 3,
+      //    spaceBetween: 10,
+      // },
       // 768: {
       //   slidesPerView: 2,
       // }

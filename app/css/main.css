@@ -1340,14 +1340,37 @@ h3::first-letter {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
+.single-slider__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 .single-slider__link::before {
-  content: "+";
+  content: "";
   position: absolute;
-  font-size: 40px;
-  inset: 0;
-  color: #fff;
-  background-color: var(--color-gray-900);
-  opacity: 0.6;
+  -webkit-mask-image: url("../img/sprite.svg#play");
+  mask-image: url("../img/sprite.svg#play");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  width: 55px;
+  height: 55px;
+  background-color: var(--color-white);
+  -webkit-transition: background-color 0.6s linear;
+  -o-transition: background-color 0.6s linear;
+  transition: background-color 0.6s linear;
+}
+.single-slider__link:hover::before {
+  background-color: var(--color-green);
 }
 .single-slider__img {
   border-radius: var(--br);
@@ -1364,31 +1387,39 @@ h3::first-letter {
 }
 .single-slider__nav .single-slider__item {
   position: relative;
-  width: 104px !important;
-  min-height: 104px;
-  cursor: pointer;
-  border-radius: var(--br);
+  border-style: solid;
   border-width: 1px;
   border-color: transparent;
-  border-style: solid;
+  border-radius: var(--br);
   -webkit-transition: border-color 0.3s linear;
   -o-transition: border-color 0.3s linear;
   transition: border-color 0.3s linear;
+  cursor: pointer;
 }
 .single-slider__nav .single-slider__item::before {
   content: "";
   position: absolute;
-  inset: 0;
   border-radius: var(--br);
   background-color: var(--color-gray-900);
   opacity: 0.6;
+  -webkit-transition: opacity 0.3s linear background-color 0.3s linear;
+  -o-transition: opacity 0.3s linear background-color 0.3s linear;
+  transition: opacity 0.3s linear background-color 0.3s linear;
+  inset: 0;
 }
 .single-slider__nav .single-slider__item.swiper-slide-thumb-active {
-  background-color: var(--color-green);
+  border-color: var(--color-green);
 }
 .single-slider__nav .single-slider__item.swiper-slide-thumb-active::before {
   background-color: transparent;
   opacity: 1;
+}
+.single-slider__nav .single-slider__link {
+  pointer-events: none;
+}
+.single-slider__nav .single-slider__link::before {
+  width: 32px;
+  height: 32px;
 }
 
 .footer {

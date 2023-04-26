@@ -25,18 +25,23 @@
   }
 
   &__link {
-    // position: relative;
+    @include flex-all-center;
 
     &::before {
-      content: "+";
+      content: "";
       position: absolute;
-      font-size: 40px;
-      inset: 0;
-      color: #fff;
-       background-color: var(--color-gray-900);
-       opacity: 0.6;
+      mask-image: url("../img/sprite.svg#play");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 55px;
+      height: 55px;
+      background-color: var(--color-white);
+      transition: background-color 0.6s linear;
+    }
 
-
+    &:hover::before {
+      background-color: var(--color-green);
     }
   }
 
@@ -50,46 +55,33 @@
 
   &__prev {
     left: 32px;
-
-    // &:hover {
-    //   background-color: var(--color-green);
-
-    //   &::before {
-    //     background-color: var(--color-white);
-    //   }
-    // }
   }
 }
 
-
 .single-slider__nav {
   overflow: hidden;
-  // .single-slider__list {
-  // align-items: flex-start;
-  // }
 
   .single-slider__item {
     position: relative;
-    width: 104px !important;
-    min-height: 104px;
-    cursor: pointer;
-    border-radius: var(--br);
+    border-style: solid;
     border-width: 1px;
     border-color: transparent;
-    border-style: solid;
+    border-radius: var(--br);
     transition: border-color 0.3s linear;
+    cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
-      inset: 0;
       border-radius: var(--br);
       background-color: var(--color-gray-900);
       opacity: 0.6;
+      transition: opacity 0.3s linear background-color 0.3s linear;
+      inset: 0;
     }
 
     &.swiper-slide-thumb-active {
-      background-color: var(--color-green);
+      border-color: var(--color-green);
 
       &::before {
         background-color: transparent;
@@ -98,5 +90,11 @@
     }
   }
 
-
+  .single-slider__link {
+    pointer-events: none;
+    &::before {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
