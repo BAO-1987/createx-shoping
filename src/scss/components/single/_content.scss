@@ -1,6 +1,7 @@
 .single {
   &__content {
     @include flex-sb;
+    
     margin-bottom: rem(32);
   }
 
@@ -92,6 +93,7 @@
 
   .single-slider__link {
     pointer-events: none;
+
     &::before {
       width: 32px;
       height: 32px;
