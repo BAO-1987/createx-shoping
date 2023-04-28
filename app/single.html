@@ -405,7 +405,7 @@
     <div class="container">
       <ul class="breadcrumb__list">
         <li class="breadcrumb__item">
-          <a class="breadcrumb__link breadcrumb__link--main" href="#">
+          <a class="breadcrumb__link" href="#">
             <svg class="breadcrumb__icon">
               <use xlink:href="img/sprite.svg#home"></use>
             </svg>
@@ -548,7 +548,64 @@
 
       <div class="single__desc">
 
-        <p>15,99</p>
+        <div class="single__side">
+
+          <div class="single__price">
+
+            <span class="single__price-current">$15.50</span>
+
+            <span class="single__price-old">$31.00</span>
+
+            <span class="single__sale">-50%</span>
+
+          </div>
+
+          <div class="single__reviews">
+            <span>12 reviews</span>
+          </div>
+
+        </div>
+
+        <form class="color-picker" action="">
+
+          <legend>Color</legend>
+
+          <ul>
+
+            <li>
+              <input class="color-picker__input" type="radio" id="pink" name="color" value="pink">
+              <label class="visually-hidden" for="pink">pink</label>
+            </li>
+
+            <li>
+
+              <input class="color-picker__input" type="radio" id="blue" name="color" value="blue">
+              <label class="visually-hidden" for="blue">blue</label>
+            </li>
+
+            <li>
+
+            <input class="color-picker__input" type="radio" id="yellow" name="color" value="yellow">
+            <label class="visually-hidden" for="yellow">yellow</label>
+            </li>
+
+          </ul>
+
+        </form>
+
+        <div class="size">
+
+          <select class="size__select" name="select" id="select" placeholder="Please select">
+            <option value="">XS</option>
+            <option value="">S</option>
+            <option value="">M</option>
+            <option value="">L</option>
+            <option value="">XL</option>
+          </select>
+
+          <button class="btn btn--size" type="button">Size chart</button>
+
+        </div>
 
       </div>
 

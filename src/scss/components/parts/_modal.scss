@@ -1,5 +1,7 @@
 .modal {
   padding: 27px 48px 48px 48px;
+  border: 0;
+  border-radius: var(--br);
   width: 486px;
   max-width: 100%;
   font-size: 14px;
@@ -13,7 +15,7 @@
     position: absolute;
     width: 100%;
     height: 1px;
-    background-color:var(--color-gray-300);
+    background-color: var(--color-gray-300);
     right: 0;
     left: 0;
     bottom: 141px;
@@ -21,6 +23,7 @@
 
   &::backdrop {
     background: rgba(30, 33, 44, 0.75);
+    // opacity: 0;
   }
 
   &__title {
@@ -63,4 +66,45 @@
     margin-bottom: rem(48);
     text-align: left;
   }
+
+  &[open] {
+    animation: slide-up 1000ms forwards;
+  }
+
 }
+
+// .modal[open] {
+//   animation: slide-up 1000ms forwards;
+// }
+
+// @keyframes fade-in {
+//   0% {
+//     opacity: 0;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+

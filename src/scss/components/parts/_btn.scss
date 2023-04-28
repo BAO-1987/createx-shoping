@@ -136,6 +136,23 @@
       // transition: background-color 2s linear;
     }
   }
+
+  &--size {
+    padding: 0 14px;
+    // background-color: var;
+
+    &::before {
+      mask-image: url("../img/sprite.svg#hanger");
+      width: 16px;
+      height: 16px;
+      // background-color: var(--color-white);
+      // transition: background-color 2s linear;
+    }
+
+    &::after {
+      background-color: transparent;
+    }
+  }
 }
 
 .btn-reset {

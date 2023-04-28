@@ -4,7 +4,7 @@
   margin-right: clamp(25px, rem(98), 105px);
   padding-left: 10px;
 
-  @include for-width (-tablet) {
+  @include for-width(-tablet) {
     margin-right: 50px;
   }
 
@@ -53,6 +53,7 @@
   }
 
   &__list {
+    display: none;
     position: absolute;
     left: -30px;
     top: 110%;
@@ -66,13 +67,14 @@
     background-color: var(--color-white);
     opacity: 0;
     visibility: hidden;
-    transition-property: opacity, visibility;
+    transition-property: visibility, display;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
 
     &.open {
-      opacity: 1;
+      display: block;
       visibility: visible;
+      animation: slide-up 1000ms forwards, fade-in 1000ms forwards;
 
       +.languages__span::after {
         --rotate: rotate(-180deg);
@@ -97,5 +99,25 @@
     &:hover {
       color: var(--color-green);
     }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(5%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

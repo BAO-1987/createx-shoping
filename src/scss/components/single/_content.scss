@@ -1,7 +1,7 @@
 .single {
   &__content {
     @include flex-sb;
-    
+
     margin-bottom: rem(32);
   }
 
@@ -13,6 +13,64 @@
     overflow: hidden;
     width: 100%;
     max-width: 600px;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 525px;
+  }
+
+  &__side {
+    @include flex-sb;
+    margin-bottom: 12px;
+  }
+
+  &__price {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 8px;
+
+    &-current {
+      font-size: 24px;
+      color: var(--color-red);
+    }
+
+    &-old {
+      margin-right: rem(33);
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--color-gray-700);
+      text-decoration: line-through;
+    }
+  }
+
+  &__sale {
+    padding: 1px 8px;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    border-radius: var(--br);
+  }
+
+  &__reviews {
+    position: relative;
+    font-size: 14px;
+    color: var(--color-gray-700);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: -4px;
+      background-image: url("../img/sprite.svg#rating-for");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 78px;
+      height: 14px;
+    }
+
+
   }
 }
 
