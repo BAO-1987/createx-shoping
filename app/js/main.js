@@ -44,6 +44,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_sizeModal */ "./src/js/components/_sizeModal.js");
 /* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_sizeModal__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _components_fancy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/_fancy */ "./src/js/components/_fancy.js");
+/* harmony import */ var _components_colorPicker__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/_colorPicker */ "./src/js/components/_colorPicker.js");
+/* harmony import */ var _components_colorPicker__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_colorPicker__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/_tableAddAria */ "./src/js/components/_tableAddAria.js");
+/* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_tableAddAria__WEBPACK_IMPORTED_MODULE_11__);
+
+
 
 
 
@@ -187,6 +193,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
+
+/***/ }),
+
+/***/ "./src/js/components/_colorPicker.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/_colorPicker.js ***!
+  \*******************************************/
+/***/ (() => {
+
+(function () {
+  for (var e = document.querySelectorAll("[data-label]"), t = 0; t < e.length; t++) e[t].addEventListener("change", function () {
+    var e = this.dataset.label;
+    try {
+      document.getElementById(e).textContent = this.value;
+    } catch (e) {
+      e.message = "Cannot set property 'textContent' of null", console.error("Make sure the [data-label] matches with the id of the target element you want to change text of!");
+    }
+  });
+})();
 
 /***/ }),
 
@@ -556,6 +581,51 @@ document.addEventListener("click", e => {
     dropdown.classList.remove("open");
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/components/_tableAddAria.js":
+/*!********************************************!*\
+  !*** ./src/js/components/_tableAddAria.js ***!
+  \********************************************/
+/***/ (() => {
+
+function AddTableARIA() {
+  try {
+    var allTables = document.querySelectorAll('table');
+    for (var i = 0; i < allTables.length; i++) {
+      allTables[i].setAttribute('role', 'table');
+    }
+    var allCaptions = document.querySelectorAll('caption');
+    for (var i = 0; i < allCaptions.length; i++) {
+      allCaptions[i].setAttribute('role', 'caption');
+    }
+    var allRowGroups = document.querySelectorAll('thead, tbody, tfoot');
+    for (var i = 0; i < allRowGroups.length; i++) {
+      allRowGroups[i].setAttribute('role', 'rowgroup');
+    }
+    var allRows = document.querySelectorAll('tr');
+    for (var i = 0; i < allRows.length; i++) {
+      allRows[i].setAttribute('role', 'row');
+    }
+    var allCells = document.querySelectorAll('td');
+    for (var i = 0; i < allCells.length; i++) {
+      allCells[i].setAttribute('role', 'cell');
+    }
+    var allHeaders = document.querySelectorAll('th');
+    for (var i = 0; i < allHeaders.length; i++) {
+      allHeaders[i].setAttribute('role', 'columnheader');
+    }
+    // this accounts for scoped row headers
+    var allRowHeaders = document.querySelectorAll('th[scope=row]');
+    for (var i = 0; i < allRowHeaders.length; i++) {
+      allRowHeaders[i].setAttribute('role', 'rowheader');
+    }
+  } catch (e) {
+    console.log("AddTableARIA(): " + e);
+  }
+}
+AddTableARIA();
 
 /***/ }),
 

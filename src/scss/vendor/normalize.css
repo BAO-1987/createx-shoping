@@ -12,6 +12,7 @@ html {
 *:focus {
   outline: 2px solid var(--color-green);
   outline-offset: 2px;
+  border-radius: inherit;
 }
 
 * {
@@ -78,11 +79,12 @@ button:disabled {
   cursor: default;
 }
 
-input {
+input, select {
   appearance: none;
   border: none;
   border-radius: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 input::-webkit-search-decoration,
@@ -111,17 +113,9 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
-}
 
-input[type="number"] {
-  -moz-appearance: textfield;
-  /* Firefox */
+select::-ms-expand {
+  display: none;
 }
 
 button,

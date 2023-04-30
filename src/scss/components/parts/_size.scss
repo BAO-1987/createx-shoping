@@ -1,4 +1,9 @@
 .size {
+  @include flex-sb;
+  align-items: center;
+
+
+
   &__table {
     width: 100%;
     max-width: 775px;
@@ -21,4 +26,82 @@
 
     }
   }
+}
+
+.select {
+  display: block;
+  grid-area: select;
+  width: 100%;
+  // padding: 0 1rem 0 0;
+  background-color: var(--color-white);
+  border: none;
+
+  option {
+    white-space: normal;
+
+    // Only affects Chrome
+    outline-color: var(--color-green);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    grid-area: select;
+    padding: 12px 12px 12px 14px;
+    border: 1px solid var(--color-gray-400);
+    border-radius: var(--br);
+    margin-bottom: 2rem;
+
+    &::after {
+      grid-area: select;
+      justify-self: end;
+      // content: "";
+      // width: 16px;
+      // height: 16px;
+      // background-color: var(--color-gray-800);
+      // clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+      pointer-events: none;
+
+      --rotate: rotate(0);
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      mask-image: url("../img/sprite.svg#arrow-down");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 15px;
+      height: 15px;
+      background-color: var(--color-gray-800);
+      transform: translateY(-50%) var(--rotate);
+      transition: background-color 0.3s linear,
+        transform 0.3s linear;
+    }
+  }
+
+
+}
+
+.input__nubmer {
+  position: relative;
+  border: 1px solid var(--color-gray-400);
+  border-radius: var(--br);
+  padding: 12px 15px;
+  outline-color: transparent;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-gray-800);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }

@@ -167,39 +167,59 @@
         </div>
 
         <form class="color-picker" action="">
+          <fieldset>
+            <legend class="color-picker__title">Color</legend>
 
-          <legend>Color</legend>
+            <input class="color-picker__input" type="radio" id="pink" name="color" value="pink" data-label="colorOption"
+              checked>
+            <label class="visually-hidden" for="pink">pink</label>
 
+            <input class="color-picker__input" type="radio" id="blue" name="color" value="blue"
+              data-label="colorOption">
+            <label class="visually-hidden" for="blue">blue</label>
 
-              <input class="color-picker__input" type="radio" id="pink" name="color" value="pink">
-              <label class="visually-hidden" for="pink">pink</label>
-
-
-              <input class="color-picker__input" type="radio" id="blue" name="color" value="blue">
-              <label class="visually-hidden" for="blue">blue</label>
-
-
-            <input class="color-picker__input" type="radio" id="yellow" name="color" value="yellow">
+            <input class="color-picker__input" type="radio" id="yellow" name="color" value="yellow"
+              data-label="colorOption">
             <label class="visually-hidden" for="yellow">yellow</label>
 
+            <span class="color-picker__value" id="colorOption">Pink</span>
 
-          </ul>
+          </fieldset>
 
         </form>
 
         <div class="size">
 
-          <select class="size__select" name="select" id="select" placeholder="Please select">
-            <option value="">XS</option>
-            <option value="">S</option>
-            <option value="">M</option>
-            <option value="">L</option>
-            <option value="">XL</option>
-          </select>
+          <label class="size__lable" for="size">Size</label>
+
+          <div class="select__inner">
+
+            <select class="select" name="select" id="size">
+              <option value disabled selected>Please select</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="xlink">XL</option>
+            </select>
+
+          </div>
 
           <button class="btn btn--size" type="button">Size chart</button>
 
         </div>
+
+        <li>
+
+          <label class="visually-hidden" for="number"></label>
+
+          <input class="input__nubmer"  type="number" inputmode="numeric" step="1" min="1" max="10" placeholder="1" value="1">
+
+          <button class="btn btn--article" type="button">Add to cart</button>
+
+          <button class="btn" type="button">Favourite</button>
+
+        </li>
 
       </div>
 

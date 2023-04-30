@@ -138,10 +138,13 @@
   }
 
   &--size {
-    padding: 0 14px;
-    // background-color: var;
+    padding: 0 0 0 24px;
+    background-color: var(--color-white);
+    color: var(--color-gray-800);
+    // border: 0;
 
     &::before {
+      left: 0;
       mask-image: url("../img/sprite.svg#hanger");
       width: 16px;
       height: 16px;
