@@ -174,20 +174,42 @@
   }
 }
 
-.color-picker {
+.product-form {
   margin-bottom: rem(24);
-  font-size: 14px;
 
-  fieldset {
-    display: inline-flex;
-    align-items: center;
-    border: 0;
-    gap: 16px;
+  &__list {
+    @include flex-col;
+    gap: 2rem;
   }
+
+  &__item {
+    &--select {
+      @include flex-sb;
+      align-items: end;
+    }
+
+    &--number {
+      @include flex-all-sb;
+      gap: 2rem;
+    }
+  }
+}
+
+.color-picker {
+  @include flex;
+  gap: 1rem;
 
   &__title {
     margin-bottom: 12px;
     color: var(--color-gray-800);
+  }
+
+  &__item {
+    &--value {
+      text-transform: capitalize;
+      color: var(--color-gray-600);
+      transition: all 0.3s linear;
+    }
   }
 
   &__input {
@@ -226,11 +248,5 @@
     &#yellow {
       --radio-color: var(--color-yellow);
     }
-  }
-
-  &__value {
-    text-transform: capitalize;
-    color: var(--color-gray-600);
-    transition: all 0.3s linear;
   }
 }

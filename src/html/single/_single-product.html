@@ -30,7 +30,26 @@
       <p class="single__code">Art. No. <span>183260098</span></p>
     </div>
 
-    <div class="single__inner">
+    <ul class="tabs__btns" role="tablist">
+
+      <li role="presentation">
+        <button class="tabs__btn tabs__btn--active active" role="tab" type="button" data-tab-target="general">General
+          info</button>
+      </li>
+
+      <li role="presentation">
+        <button class="tabs__btn" type="button" role="tab" data-tab-target="details">Product details</button>
+      </li>
+
+      <li role="presentation">
+        <button class="tabs__btn" type="button" role="tab" data-tab-target="reviews">Reviews
+          <sup>12</sup>
+        </button>
+      </li>
+
+    </ul>
+
+    <div class="single__inner tabs__content tabs__content--active active" data-tab-content="general">
 
       <div class="single__product">
 
@@ -50,7 +69,6 @@
                   alt="Basic hooded sweatshirt in pink" loading="lazy">
               </picture>
             </li>
-
 
             <li class="single-slider__item swiper-slide" data-fancybox data-src="img/single/single-2.webp"
               data-width="1200" data-height="1200">
@@ -166,62 +184,96 @@
 
         </div>
 
-        <form class="color-picker" action="">
-          <fieldset>
-            <legend class="color-picker__title">Color</legend>
+        <form class="product-form" action="">
 
-            <input class="color-picker__input" type="radio" id="pink" name="color" value="pink" data-label="colorOption"
-              checked>
-            <label class="visually-hidden" for="pink">pink</label>
+          <ul class="product-form__list">
 
-            <input class="color-picker__input" type="radio" id="blue" name="color" value="blue"
-              data-label="colorOption">
-            <label class="visually-hidden" for="blue">blue</label>
+            <li class="product-form__item">
 
-            <input class="color-picker__input" type="radio" id="yellow" name="color" value="yellow"
-              data-label="colorOption">
-            <label class="visually-hidden" for="yellow">yellow</label>
+              <p class="color-picker__title">Color</p>
 
-            <span class="color-picker__value" id="colorOption">Pink</span>
+              <ul class="color-picker">
 
-          </fieldset>
+                <li class="color-picker__item">
+                  <input class="color-picker__input" type="radio" id="pink" name="color" value="pink"
+                    data-label="colorOption" checked>
+                  <label class="visually-hidden" for="pink">pink</label>
+                </li>
+
+                <li class="color-picker__item">
+                  <input class="color-picker__input" type="radio" id="blue" name="color" value="blue"
+                    data-label="colorOption">
+                  <label class="visually-hidden" for="blue">blue</label>
+                </li>
+
+                <li class="color-picker__item">
+                  <input class="color-picker__input" type="radio" id="yellow" name="color" value="yellow"
+                    data-label="colorOption">
+                  <label class="visually-hidden" for="yellow">yellow</label>
+                </li>
+
+                <li class="color-picker__item color-picker__item--value">
+                  <span id="colorOption">Pink</span>
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="product-form__item product-form__item--select">
+
+              <div class="size">
+
+                <label class="size__lable" for="size">Size</label>
+
+                <div class="size__inner">
+                  <select class="size__select" name="select" id="size">
+                    <option value disabled selected>Please select</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="xlink">XL</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="btn__size btn btn--size" type="button">Size chart</button>
+            </li>
+
+            <li class="product-form__item product-form__item--number">
+
+              <label class="visually-hidden" for="number"></label>
+
+              <input class="input__nubmer" type="number" inputmode="numeric" step="1" min="1" max="10" placeholder="1"
+                value="1">
+
+              <button class="btn btn--article" type="submit">Add to cart</button>
+
+              <button class="btn btn--favorite" type="button">Favorite</button>
+            </li>
+
+          </ul>
 
         </form>
 
-        <div class="size">
-
-          <label class="size__lable" for="size">Size</label>
-
-          <div class="select__inner">
-
-            <select class="select" name="select" id="size">
-              <option value disabled selected>Please select</option>
-              <option value="XS">XS</option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="xlink">XL</option>
-            </select>
-
-          </div>
-
-          <button class="btn btn--size" type="button">Size chart</button>
-
-        </div>
-
-        <li>
-
-          <label class="visually-hidden" for="number"></label>
-
-          <input class="input__nubmer"  type="number" inputmode="numeric" step="1" min="1" max="10" placeholder="1" value="1">
-
-          <button class="btn btn--article" type="button">Add to cart</button>
-
-          <button class="btn" type="button">Favourite</button>
-
-        </li>
 
       </div>
+
+    </div>
+
+    <div class="single__inner tabs__content" data-tab-content="details">
+
+      <p>
+        details
+      </p>
+
+    </div>
+
+    <div class="single__inner tabs__content" data-tab-content="reviews">
+
+      <p>
+        reviews
+      </p>
 
     </div>
 

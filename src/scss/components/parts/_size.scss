@@ -1,8 +1,6 @@
 .size {
-  @include flex-sb;
-  align-items: center;
-
-
+  width: 100%;
+  max-width: 350px;
 
   &__table {
     width: 100%;
@@ -26,21 +24,18 @@
 
     }
   }
-}
 
-.select {
-  display: block;
-  grid-area: select;
-  width: 100%;
-  // padding: 0 1rem 0 0;
-  background-color: var(--color-white);
-  border: none;
+  &__select {
+    display: block;
+    grid-area: select;
+    width: 100%;
 
-  option {
-    white-space: normal;
+    option {
+      white-space: normal;
 
-    // Only affects Chrome
-    outline-color: var(--color-green);
+      // Only affects Chrome
+      outline-color: var(--color-green);
+    }
   }
 
   &__inner {
@@ -48,13 +43,9 @@
     grid-template-areas: "select";
     align-items: center;
     position: relative;
-    width: 100%;
-    max-width: 350px;
-    grid-area: select;
     padding: 12px 12px 12px 14px;
     border: 1px solid var(--color-gray-400);
     border-radius: var(--br);
-    margin-bottom: 2rem;
 
     &::after {
       grid-area: select;
@@ -83,9 +74,26 @@
         transform 0.3s linear;
     }
   }
-
-
 }
+
+// .select {
+//   display: block;
+//   grid-area: select;
+//   width: 100%;
+//   // padding: 0 1rem 0 0;
+//   background-color: var(--color-white);
+//   border: none;
+
+//   option {
+//     white-space: normal;
+
+//     // Only affects Chrome
+//     outline-color: var(--color-green);
+//   }
+
+
+
+
 
 .input__nubmer {
   position: relative;
