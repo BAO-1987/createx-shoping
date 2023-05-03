@@ -3758,4 +3758,68 @@ input[type=number]::-webkit-outer-spin-button {
 .tabs__btn:hover {
   color: var(--color-gray-800);
 }
+
+.accordion__panel {
+  position: relative;
+}
+.accordion__panel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+}
+.accordion__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0fr;
+  grid-template-rows: 0fr;
+  -webkit-transition: grid-template-rows 500ms;
+  -o-transition: grid-template-rows 500ms;
+  transition: grid-template-rows 500ms;
+  transition: grid-template-rows 500ms, -ms-grid-rows 500ms;
+}
+.accordion__content div {
+  overflow: hidden;
+}
+.accordion__content[aria-hidden=false] {
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+.accordion h3 {
+  position: relative;
+}
+.accordion__btn {
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: inherit;
+}
+.accordion__btn::before {
+  content: "";
+  position: absolute;
+  -webkit-mask-position: center;
+  mask-position: center;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--color-green);
+  -webkit-transition: -webkit-mask-image 0.3s linear;
+  transition: -webkit-mask-image 0.3s linear;
+  -o-transition: mask-image 0.3s linear;
+  transition: mask-image 0.3s linear;
+  transition: mask-image 0.3s linear, -webkit-mask-image 0.3s linear;
+}
+.accordion__btn::before {
+  -webkit-mask-image: url("../img/sprite.svg#plus");
+  mask-image: url("../img/sprite.svg#plus");
+}
+.accordion__btn[aria-expanded=true]::before {
+  -webkit-mask-image: url("../img/sprite.svg#minus");
+  mask-image: url("../img/sprite.svg#minus");
+}
 /*# sourceMappingURL=main.css.map */

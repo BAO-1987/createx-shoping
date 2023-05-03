@@ -50,6 +50,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_tableAddAria__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/_tabs */ "./src/js/components/_tabs.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/_accordion */ "./src/js/components/_accordion.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_13__);
+
 
 
 
@@ -196,6 +199,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
+
+/***/ }),
+
+/***/ "./src/js/components/_accordion.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/_accordion.js ***!
+  \*****************************************/
+/***/ (() => {
+
+const accordion = document.querySelector(".accordion");
+accordion.addEventListener("click", e => {
+  const activePanel = e.target.closest(".accordion__panel");
+  if (!activePanel) return;
+  toggleAccordion(activePanel);
+});
+function toggleAccordion(panelToActivate) {
+  const activeButton = panelToActivate.querySelector("button");
+  const activePanel = panelToActivate.querySelector(".accordion__content");
+  const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
+  if (activePanelIsOpened === "true") {
+    panelToActivate.querySelector("button").setAttribute("aria-expanded", false);
+    panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", true);
+  } else {
+    panelToActivate.querySelector("button").setAttribute("aria-expanded", true);
+    panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", false);
+  }
+}
 
 /***/ }),
 

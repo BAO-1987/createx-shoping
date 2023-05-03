@@ -1,0 +1,69 @@
+.accordion {
+
+  &__panel {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: red;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+
+    & div {
+      overflow: hidden;
+    }
+  }
+
+  &__content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+
+  h3 {
+    position: relative;
+  }
+
+  &__btn {
+    background: transparent;
+    border: 0;
+    font: inherit;
+    color: inherit;
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-position: center;
+      right: 16px;
+      width: 24px;
+      height: 24px;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      background-color: var(--color-green);
+      transition: mask-image 0.3s linear;
+    }
+
+    &::before {
+      mask-image: url("../img/sprite.svg#plus");
+    }
+
+    // &::after {
+    //   mask-image: url("../img/sprite.svg#minus");
+    //   opacity: 0;
+    // }
+    &[aria-expanded="true"]::before {
+
+      mask-image: url("../img/sprite.svg#minus");
+
+    }
+  }
+
+
+
+}
