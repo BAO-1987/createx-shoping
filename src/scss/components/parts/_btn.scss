@@ -4,9 +4,7 @@
   position: relative;
   z-index: 1;
   max-width: fit-content;
-  border-width: 1px;
-  border-style: solid;
-  border-color: currentColor;
+  border: 1px solid var(--color-green);
   border-radius: var(--br);
   padding: 0 em(40);
   font-weight: 700;
@@ -15,7 +13,7 @@
   letter-spacing: 0.031em;
   color: var(--color-white);
   background-color: var(--color-green);
-  transition-property: color, background-color, border-color;
+  transition-property: color, background-color;
   transition-duration: 0.7s;
   transition-timing-function: linear;
   overflow: hidden;
@@ -23,17 +21,13 @@
 
   &::after {
     background-color: var(--color-white);
-    border-radius: 65%;
+    border-radius: 75%;
     content: "";
-    height: 100%;
     position: absolute;
-    top: 0;
-    transform: scale(100%) translateY(67px);
+    transform: translateY(67px);
     transition: transform 0.6s linear;
-    width: 100%;
-    max-width: 100%;
+    inset: 0;
     z-index: -1;
-
   }
 
   &::before {
@@ -43,20 +37,18 @@
     mask-repeat: no-repeat;
     mask-size: cover;
     background-color: currentcolor;
-    transition: background-color 0.6s linear;
+    transition: background-color 0.7s linear;
   }
 
   &:hover {
     color: var(--color-green);
-    border-color: transparent;
 
     &::after {
-      transform: scale(147%) translateY(0);
+      transform: scale(160%) translateY(0);
     }
   }
 
   &--inverse {
-    border-color: var(--color-green);
     color: var(--color-green);
     background-color: transparent;
 
@@ -283,5 +275,3 @@
     right: 24%;
   }
 }
-
-

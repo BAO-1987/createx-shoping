@@ -448,8 +448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const heroSliderSpeed = 1500;
 const bodyStyles = window.getComputedStyle(document.body);
-const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed'); //get
-
+const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
 document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');
 const heroSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".hero-slider", {
   slidesPerView: 1,
@@ -458,10 +457,11 @@ const heroSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".h
   grabCursor: true,
   autoHeight: true,
   loop: true,
-  speed: heroSliderSpeed,
-  autoplay: {
-    delay: 2500
-  },
+  // speed: heroSliderSpeed,
+  // autoplay: {
+  //   delay: 2500,
+  // },
+
   navigation: {
     nextEl: ".hero-slider__next",
     prevEl: ".hero-slider__prev"

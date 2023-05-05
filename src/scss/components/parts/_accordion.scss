@@ -1,5 +1,4 @@
 .accordion {
-
   &__panel {
     position: relative;
 
@@ -15,7 +14,7 @@
   &__content {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 500ms;
+    transition: grid-template-rows 0.5s;
 
     & div {
       overflow: hidden;
@@ -41,29 +40,19 @@
       position: absolute;
       mask-position: center;
       right: 16px;
-      width: 24px;
-      height: 24px;
+      width: 16px;
+      height: 16px;
+      mask-image: url("../img/sprite.svg#plus");
       mask-repeat: no-repeat;
       mask-size: cover;
       background-color: var(--color-green);
-      transition: mask-image 0.3s linear;
+      transition: mask-image 0.1s linear;
+      background-color: var(--color-green);
     }
 
-    &::before {
-      mask-image: url("../img/sprite.svg#plus");
-    }
 
-    // &::after {
-    //   mask-image: url("../img/sprite.svg#minus");
-    //   opacity: 0;
-    // }
     &[aria-expanded="true"]::before {
-
       mask-image: url("../img/sprite.svg#minus");
-
     }
   }
-
-
-
 }

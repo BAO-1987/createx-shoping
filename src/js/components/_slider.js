@@ -6,7 +6,7 @@ import Swiper, {
 const heroSliderSpeed = 1500;
 
 const bodyStyles = window.getComputedStyle(document.body);
-const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed'); //get
+const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
 
 document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');
 
@@ -18,10 +18,10 @@ const heroSlider = new Swiper(".hero-slider", {
   autoHeight: true,
   loop: true,
 
-  speed: heroSliderSpeed,
-  autoplay: {
-    delay: 2500,
-  },
+  // speed: heroSliderSpeed,
+  // autoplay: {
+  //   delay: 2500,
+  // },
 
   navigation: {
     nextEl: ".hero-slider__next",

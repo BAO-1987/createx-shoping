@@ -24,7 +24,7 @@
   --color-black: #000;
   --color-red: #ff4242;
   --color-yellow: #fede41;
-  --br: 4px;
+  --br: 0.25em;
   --grid-gap: 30px;
 }
 
@@ -1678,9 +1678,7 @@ h3::first-letter {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  border-width: 1px;
-  border-style: solid;
-  border-color: currentColor;
+  border: 1px solid var(--color-green);
   border-radius: var(--br);
   padding: 0 2.5em;
   font-weight: 700;
@@ -1689,9 +1687,9 @@ h3::first-letter {
   letter-spacing: 0.031em;
   color: var(--color-white);
   background-color: var(--color-green);
-  -webkit-transition-property: color, background-color, border-color;
-  -o-transition-property: color, background-color, border-color;
-  transition-property: color, background-color, border-color;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
   -webkit-transition-duration: 0.7s;
   -o-transition-duration: 0.7s;
   transition-duration: 0.7s;
@@ -1703,21 +1701,18 @@ h3::first-letter {
 }
 .btn::after {
   background-color: var(--color-white);
-  border-radius: 65%;
+  border-radius: 75%;
   content: "";
-  height: 100%;
   position: absolute;
-  top: 0;
-  -webkit-transform: scale(100%) translateY(67px);
-  -ms-transform: scale(100%) translateY(67px);
-  transform: scale(100%) translateY(67px);
+  -webkit-transform: translateY(67px);
+  -ms-transform: translateY(67px);
+  transform: translateY(67px);
   -webkit-transition: -webkit-transform 0.6s linear;
   transition: -webkit-transform 0.6s linear;
   -o-transition: transform 0.6s linear;
   transition: transform 0.6s linear;
   transition: transform 0.6s linear, -webkit-transform 0.6s linear;
-  width: 100%;
-  max-width: 100%;
+  inset: 0;
   z-index: -1;
 }
 .btn::before {
@@ -1730,21 +1725,19 @@ h3::first-letter {
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: currentcolor;
-  -webkit-transition: background-color 0.6s linear;
-  -o-transition: background-color 0.6s linear;
-  transition: background-color 0.6s linear;
+  -webkit-transition: background-color 0.7s linear;
+  -o-transition: background-color 0.7s linear;
+  transition: background-color 0.7s linear;
 }
 .btn:hover {
   color: var(--color-green);
-  border-color: transparent;
 }
 .btn:hover::after {
-  -webkit-transform: scale(147%) translateY(0);
-  -ms-transform: scale(147%) translateY(0);
-  transform: scale(147%) translateY(0);
+  -webkit-transform: scale(160%) translateY(0);
+  -ms-transform: scale(160%) translateY(0);
+  transform: scale(160%) translateY(0);
 }
 .btn--inverse {
-  border-color: var(--color-green);
   color: var(--color-green);
   background-color: transparent;
 }
@@ -3774,10 +3767,10 @@ input[type=number]::-webkit-outer-spin-button {
   display: grid;
   -ms-grid-rows: 0fr;
   grid-template-rows: 0fr;
-  -webkit-transition: grid-template-rows 500ms;
-  -o-transition: grid-template-rows 500ms;
-  transition: grid-template-rows 500ms;
-  transition: grid-template-rows 500ms, -ms-grid-rows 500ms;
+  -webkit-transition: grid-template-rows 0.5s;
+  -o-transition: grid-template-rows 0.5s;
+  transition: grid-template-rows 0.5s;
+  transition: grid-template-rows 0.5s, -ms-grid-rows 0.5s;
 }
 .accordion__content div {
   overflow: hidden;
@@ -3801,22 +3794,21 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-mask-position: center;
   mask-position: center;
   right: 16px;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-image: url("../img/sprite.svg#plus");
+  mask-image: url("../img/sprite.svg#plus");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: var(--color-green);
-  -webkit-transition: -webkit-mask-image 0.3s linear;
-  transition: -webkit-mask-image 0.3s linear;
-  -o-transition: mask-image 0.3s linear;
-  transition: mask-image 0.3s linear;
-  transition: mask-image 0.3s linear, -webkit-mask-image 0.3s linear;
-}
-.accordion__btn::before {
-  -webkit-mask-image: url("../img/sprite.svg#plus");
-  mask-image: url("../img/sprite.svg#plus");
+  -webkit-transition: -webkit-mask-image 0.1s linear;
+  transition: -webkit-mask-image 0.1s linear;
+  -o-transition: mask-image 0.1s linear;
+  transition: mask-image 0.1s linear;
+  transition: mask-image 0.1s linear, -webkit-mask-image 0.1s linear;
+  background-color: var(--color-green);
 }
 .accordion__btn[aria-expanded=true]::before {
   -webkit-mask-image: url("../img/sprite.svg#minus");
