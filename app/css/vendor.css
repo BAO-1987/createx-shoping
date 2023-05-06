@@ -85,7 +85,8 @@ button:disabled {
   cursor: default;
 }
 
-input, select {
+input,
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -161,6 +162,12 @@ li {
 address,
 cite {
   font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+  border-spacing: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1741,6 +1748,9 @@ html.with-fancybox body.hide-scrollbar {
   overflow: visible;
   z-index: 1050;
   outline: none;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: 100%;

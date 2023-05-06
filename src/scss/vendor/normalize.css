@@ -79,7 +79,8 @@ button:disabled {
   cursor: default;
 }
 
-input, select {
+input,
+select {
   appearance: none;
   border: none;
   border-radius: 0;
@@ -152,6 +153,12 @@ li {
 address,
 cite {
   font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+  border-spacing: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

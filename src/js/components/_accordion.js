@@ -1,14 +1,14 @@
 const accordion = document.querySelector(".accordion");
 
 accordion.addEventListener("click", (e) => {
-  const activePanel = e.target.closest(".accordion__panel");
+  const activePanel = e.target.closest(".accordion__item");
   if (!activePanel) return;
   toggleAccordion(activePanel);
 });
 
 function toggleAccordion(panelToActivate) {
   const activeButton = panelToActivate.querySelector("button");
-  const activePanel = panelToActivate.querySelector(".accordion__content");
+  const activePanel = panelToActivate.querySelector(".accordion__item");
   const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
 
   if (activePanelIsOpened === "true") {

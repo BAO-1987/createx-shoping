@@ -3524,7 +3524,6 @@ h3::first-letter {
 .size__table {
   width: 100%;
   max-width: 775px;
-  border-collapse: collapse;
   border: 1px solid var(--color-gray-300);
 }
 .size__table th,
@@ -3596,6 +3595,8 @@ h3::first-letter {
 }
 
 .input__nubmer {
+  width: 100%;
+  max-width: 80px;
   position: relative;
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
@@ -3752,25 +3753,31 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--color-gray-800);
 }
 
-.accordion__panel {
+.accordion__item {
   position: relative;
 }
-.accordion__panel::before {
+.accordion__item::before {
   content: "";
   position: absolute;
+  bottom: -20px;
   width: 100%;
   height: 1px;
-  background-color: red;
+  background-color: var(--color-gray-300);
+}
+.accordion__item:not(:last-child) {
+  margin-bottom: 2.5rem;
 }
 .accordion__content {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 0fr;
   grid-template-rows: 0fr;
-  -webkit-transition: grid-template-rows 0.5s;
-  -o-transition: grid-template-rows 0.5s;
-  transition: grid-template-rows 0.5s;
-  transition: grid-template-rows 0.5s, -ms-grid-rows 0.5s;
+  -webkit-transition: grid-template-rows 0.5s ease-in-out;
+  -o-transition: grid-template-rows 0.5s ease-in-out;
+  transition: grid-template-rows 0.5s ease-in-out;
+  transition: grid-template-rows 0.5s ease-in-out, -ms-grid-rows 0.5s ease-in-out;
+  font-size: 14px;
+  color: var(--color-gray-800);
 }
 .accordion__content div {
   overflow: hidden;
@@ -3779,21 +3786,23 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
 }
-.accordion h3 {
-  position: relative;
-}
 .accordion__btn {
-  background: transparent;
-  border: 0;
-  font: inherit;
-  color: inherit;
+  position: relative;
+  width: 100%;
+  -webkit-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+  text-align: left;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--color-gray-900);
 }
 .accordion__btn::before {
   content: "";
   position: absolute;
   -webkit-mask-position: center;
   mask-position: center;
-  right: 16px;
+  right: 0;
   width: 16px;
   height: 16px;
   -webkit-mask-image: url("../img/sprite.svg#plus");
@@ -3810,8 +3819,45 @@ input[type=number]::-webkit-outer-spin-button {
   transition: mask-image 0.1s linear, -webkit-mask-image 0.1s linear;
   background-color: var(--color-green);
 }
+.accordion__btn[aria-expanded=true] {
+  color: var(--color-green);
+}
 .accordion__btn[aria-expanded=true]::before {
   -webkit-mask-image: url("../img/sprite.svg#minus");
   mask-image: url("../img/sprite.svg#minus");
+}
+.accordion__text {
+  margin-bottom: 1.5rem;
+}
+.accordion__text span {
+  font-weight: 700;
+}
+
+.accordion-table {
+  width: 100%;
+}
+.accordion-table th,
+.accordion-table td {
+  padding: 15px 0;
+}
+.accordion-table tr {
+  position: relative;
+}
+.accordion-table tr::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(218, 219, 221, 0)), color-stop(rgba(218, 219, 221, 0.5)), color-stop(rgb(218, 219, 221)), color-stop(rgba(218, 219, 221, 0.5)), to(rgba(218, 219, 221, 0)));
+  background: -o-linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
+  background: linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
+}
+.accordion-table__title {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.063em;
+  color: var(--color-gray-700);
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

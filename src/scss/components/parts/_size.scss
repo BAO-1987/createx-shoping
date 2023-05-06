@@ -5,7 +5,6 @@
   &__table {
     width: 100%;
     max-width: 775px;
-    border-collapse: collapse;
     border: 1px solid var(--color-gray-300);
 
     th,
@@ -96,6 +95,8 @@
 
 
 .input__nubmer {
+  width: 100%;
+  max-width: 80px;
   position: relative;
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);

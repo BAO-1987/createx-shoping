@@ -657,9 +657,9 @@
 
         </form>
 
-        <div class="accordion">
+        <ul class="accordion">
 
-          <div class="accordion__panel">
+          <li class="accordion__item">
             <h3 id="panel1-title">
               <button class="accordion__btn" aria-expanded="true" aria-controls="accordion1__content">
                 Delivery
@@ -669,13 +669,46 @@
               id="panel1-content">
 
               <div>
-                <p>Free standard shipping on orders over $35 before tax, plus free returns.</p>
+                <p class="accordion__text">Free standard shipping on orders <span>over $35</span> before tax, plus free returns.</p>
+
+                <table class="accordion-table">
+
+                  <thead>
+                    <tr>
+                      <th class="accordion-table__title">type</th>
+                      <th class="accordion-table__title">how long</th>
+                      <th class="accordion-table__title">how much</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th>Standard delivery</th>
+                      <td>1-4 business days</td>
+                      <td>$4.50</td>
+                    </tr>
+
+                    <tr>
+                      <th>Express delivery</th>
+                      <td>1 business day</td>
+                      <td>$10.00</td>
+                    </tr>
+
+                    <tr>
+                      <th>Pick up in store</th>
+                      <td>1-3 business days</td>
+                      <td>Free</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
               </div>
 
             </div>
-          </div>
+          </li>
 
-        </div>
+        </ul>
 
       </div>
 
