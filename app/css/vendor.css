@@ -166,8 +166,6 @@ cite {
 
 table {
   border-collapse: collapse;
-  border: 0;
-  border-spacing: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

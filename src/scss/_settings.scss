@@ -268,3 +268,57 @@
     }
   }
 }
+
+.return__list {
+  list-style-type: disc;
+
+  li {
+    padding-left: 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      background-color: var(--color-green);
+      border-radius: 50%;
+    }
+  }
+}
+
+.share {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: rem(60);
+  gap: 16px;
+}
+
+.payment__list {
+  display: inline-flex;
+  gap: rem(24);
+}
+
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

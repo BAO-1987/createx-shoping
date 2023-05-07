@@ -23,7 +23,6 @@
 
   &::backdrop {
     background: rgba(30, 33, 44, 0.75);
-    // opacity: 0;
   }
 
   &__title {
@@ -70,31 +69,10 @@
   &[open] {
     animation: slide-up 1000ms forwards;
   }
-
 }
 
-// .modal[open] {
-//   animation: slide-up 1000ms forwards;
-// }
-
-// @keyframes fade-in {
-//   0% {
-//     opacity: 0;
-//   }
-
-//   100% {
-//     opacity: 1;
-//   }
-// }
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
+.modal[open] {
+  animation: slide-up 1000ms forwards;
 }
 
 @keyframes slide-up {
@@ -106,5 +84,3 @@
     transform: translateY(0%);
   }
 }
-
-

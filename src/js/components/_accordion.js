@@ -1,4 +1,4 @@
-const accordion = document.querySelector(".accordion");
+const accordion = document.querySelector(".accordion__list");
 
 accordion.addEventListener("click", (e) => {
   const activePanel = e.target.closest(".accordion__item");
