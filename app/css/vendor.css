@@ -1746,6 +1746,9 @@ html.with-fancybox body.hide-scrollbar {
   overflow: visible;
   z-index: 1050;
   outline: none;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: 100%;

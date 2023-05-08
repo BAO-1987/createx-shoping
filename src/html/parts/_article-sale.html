@@ -1,65 +1,77 @@
-<li class="@class">
+<article class="article article--single">
 
-  <article class="article-sale">
+  <div class="article__box">
 
-    <div class="article__box">
+    @sale
 
-      @sale
+    <svg class="article__rating">
+      <use xlink:href="@rating"></use>
+    </svg>
 
-      <svg class="article__rating">
-        <use xlink:href="@rating"></use>
+
+    <div class="article-slider">
+
+
+      <ul class="article-slider__list swiper-wrapper">
+
+        <li class="swiper-slide">
+          <picture>
+            <source srcset="img/@image.webp" type="image/webp">
+            <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
+              loading="lazy">
+          </picture>
+        </li>
+
+        <li class="swiper-slide">
+          <picture>
+            <source srcset="img/@image.webp" type="image/webp">
+            <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
+              loading="lazy">
+          </picture>
+        </li>
+
+        <li class="swiper-slide">
+          <picture>
+            <source srcset="img/@image.webp" type="image/webp">
+            <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
+              loading="lazy">
+          </picture>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+      <svg class="article__icon">
+        <use xlink:href="img/sprite.svg#heart"></use>
       </svg>
 
-      <picture>
-        <source srcset="img/@image.webp" type="image/webp">
-        <img src="img/@image" class="article__img" width="@width" height="@height" alt="@imageDesc" loading="lazy">
-      </picture>
+      <svg class="article__icon article__icon--filled">
+        <use xlink:href="img/sprite.svg#heart-filled"></use>
+      </svg>
+    </button>
 
-      <button class="article__wish btn-reset" type="button"></button>
+  </div>
 
-    </div>
+  <div class="article__content">
 
-    <div class="article__content">
-
-      <a href="#">
-        <h3 class="article__title">@title</h3>
-      </a>
+    <a href="#">
+      <h3 class="article__title">@title</h3>
+    </a>
 
 
-      <div class="article__price">
+    <div class="article__price">
 
-        <span class="article__price-new">@price</span>
+      <span class="article__price-new">@price</span>
 
-        <span class="article__price-old">@oldprice</span>
-      </div>
+      <span class="article__price-curent">@priceCurrent</span>
 
-      <div class="article__interaction">
-
-        <!-- <form class="color-picker" action="">
-
-          <fieldset>
-            <legend class="visually-hidden">Pick a color scheme</legend>
-
-            <label for="pink" class="visually-hidden">Pink theme</label>
-            <input type="radio" id="pink" class="pink" name="theme">
-
-            <label for="blue" class="visually-hidden">Blue theme</label>
-            <input type="radio" id="blue" name="theme">
-
-            <label for="green" class="visually-hidden">Green theme</label>
-            <input type="radio" id="green" name="theme">
-
-            <label for="red" class="visually-hidden">Dark theme</label>
-            <input type="radio" id="dark" name="theme">
-          </fieldset>
-        </form> -->
-
-        <button class="btn btn--article" type="button">Add to cart</button>
-
-      </div>
+      <span class="article__price-old">@priceOld</span>
 
     </div>
 
-  </article>
+  </div>
 
-</li>
+</article>
