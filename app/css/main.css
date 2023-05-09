@@ -471,6 +471,75 @@
     opacity: 1;
   }
 }
+.carousel {
+  position: relative;
+  width: 390px;
+  height: 440px;
+}
+.carousel__item {
+  height: 440px;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  -webkit-transition: 200ms opacity ease-in-out;
+  -o-transition: 200ms opacity ease-in-out;
+  transition: 200ms opacity ease-in-out;
+  -webkit-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+.carousel__item[data-active] {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+.carousel-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  isolation: isolate;
+  left: 1rem;
+  z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.carousel-btn::before {
+  content: "";
+  position: absolute;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--color-gray-800);
+  -webkit-transition: background-color 0.7s linear;
+  -o-transition: background-color 0.7s linear;
+  transition: background-color 0.7s linear;
+  -webkit-mask-image: url("../img/sprite.svg#chevron");
+  mask-image: url("../img/sprite.svg#chevron");
+  width: 16px;
+  height: 16px;
+}
+.carousel-btn--reverse {
+  right: 1rem;
+  rotate: 180deg;
+}
+.carousel-btn:hover::before {
+  background-color: var(--color-green);
+}
+.carousel .article__img {
+  min-height: 440px;
+}
+
 .title {
   margin-bottom: clamp(2rem, 0.5rem + 2.7vw, 3.75rem);
   font-weight: 900;
@@ -2082,6 +2151,7 @@ h3::first-letter {
 }
 .article__box span {
   position: absolute;
+  z-index: 5;
   left: 4%;
   top: 4%;
   border-radius: var(--br);
@@ -2096,6 +2166,7 @@ h3::first-letter {
 }
 .article__rating {
   position: absolute;
+  z-index: 5;
   right: 4%;
   top: 4%;
   width: 78px;

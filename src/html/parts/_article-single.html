@@ -9,31 +9,33 @@
     </svg>
 
 
-    <div class="article-slider">
+    <div class="carousel" data-carousel>
 
+      <button class="carousel-btn" data-carousel-button="prev" type="button"></button>
+      <button class="carousel-btn carousel-btn--reverse" data-carousel-button="next" type="button"></button>
 
-      <ul class="article-slider__list swiper-wrapper">
+      <ul class="carousel__list" data-slides>
 
-        <li class="swiper-slide">
+        <li class="carousel__item" data-active>
           <picture>
-            <source srcset="img/@image.webp" type="image/webp">
-            <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
+            <source srcset="img/@image1.webp" type="image/webp">
+            <img src="img/@image1.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
               loading="lazy">
           </picture>
         </li>
 
-        <li class="swiper-slide">
+        <li class="carousel__item">
           <picture>
-            <source srcset="img/@image.webp" type="image/webp">
-            <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
+            <source srcset="img/@image2.webp" type="image/webp">
+            <img src="img/@image2.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
               loading="lazy">
           </picture>
         </li>
 
-        <li class="swiper-slide">
+        <li class="carousel__item">
           <picture>
-            <source srcset="img/@image.webp" type="image/webp">
-            <img src="img/@image.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
+            <source srcset="img/@image3.webp" type="image/webp">
+            <img src="img/@image3.jpg" class="article__img" width="@width" height="@height" alt="@imageDesc"
               loading="lazy">
           </picture>
         </li>
@@ -57,10 +59,7 @@
 
   <div class="article__content">
 
-    <a href="#">
-      <h3 class="article__title">@title</h3>
-    </a>
-
+         <h3 class="article__title">@title</h3>
 
     <div class="article__price">
 

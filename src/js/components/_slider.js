@@ -178,3 +178,11 @@ if (singleImages) {
     },
   });
 }
+
+// const articleSlider = new Swiper(".article-slider", {
+//   slidesPerView: 1,
+//   mousewheelControl: true,
+//   keyboardControl: true,
+//   grabCursor: true,
+//   loop: true,
+// });

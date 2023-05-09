@@ -51,6 +51,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/_tabs */ "./src/js/components/_tabs.js");
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/_accordion */ "./src/js/components/_accordion.js");
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/_carousel */ "./src/js/components/_carousel.js");
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_14__);
+
 
 
 
@@ -225,6 +228,28 @@ function toggleAccordion(panelToActivate) {
     panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", false);
   }
 }
+
+/***/ }),
+
+/***/ "./src/js/components/_carousel.js":
+/*!****************************************!*\
+  !*** ./src/js/components/_carousel.js ***!
+  \****************************************/
+/***/ (() => {
+
+const buttons = document.querySelectorAll("[data-carousel-button]");
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = button.closest("[data-carousel]").querySelector("[data-slides]");
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
+});
 
 /***/ }),
 
@@ -589,6 +614,14 @@ if (singleImages) {
     }
   });
 }
+
+// const articleSlider = new Swiper(".article-slider", {
+//   slidesPerView: 1,
+//   mousewheelControl: true,
+//   keyboardControl: true,
+//   grabCursor: true,
+//   loop: true,
+// });
 
 /***/ }),
 
