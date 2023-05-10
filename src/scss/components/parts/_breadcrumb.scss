@@ -5,40 +5,41 @@
 
   &__list {
     @include flex-a-center;
-  }
 
-  &__item {
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 32px;
-
-      &::after {
-        content: "";
-        position: absolute;
-        rotate: -90deg;
-        top: 50%;
-        transform: translateX(50%);
-        width: 16px;
-        height: 16px;
-        right: -24px;
-        mask-image: url("../img/sprite.svg#arrow-down");
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: cover;
-        background-color: var(--color-gray-600);
-      }
-    }
-  }
-
-  &__link {
     font-weight: 400;
     font-size: 14px;
-    color: var(--color-gray-800);
-    transition: color 0.3s linear;
 
-    &:is(:hover, :active) {
-      color: var(--color-green);
+    li {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: -24px;
+          mask-image: url("../img/sprite.svg#chevron");
+          mask-position: center;
+          mask-repeat: no-repeat;
+          mask-size: cover;
+          width: 16px;
+          height: 16px;
+          background-color: var(--color-gray-600);
+          rotate: 180deg;
+        }
+      }
+
+      a {
+        color: var(--color-gray-800);
+        transition: color 0.3s linear;
+
+        &:is(:hover, :active) {
+          color: var(--color-green);
+        }
+      }
     }
   }
 

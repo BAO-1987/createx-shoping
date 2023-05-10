@@ -351,7 +351,6 @@
     left: 1rem;
     z-index: 2;
     top: 50%;
-    transform: translateY(-50%);
 
     &::before {
       content: "";
@@ -360,7 +359,7 @@
       mask-repeat: no-repeat;
       mask-size: cover;
       background-color: var(--color-gray-800);
-      transition: background-color 0.7s linear;
+      transition: background-color 0.3s linear;
       mask-image: url("../img/sprite.svg#chevron");
       width: 16px;
       height: 16px;
@@ -372,11 +371,30 @@
     }
 
     &:hover::before {
-      background-color: var(--color-green);
+      background-color: var(--color-white);
     }
   }
 
   .article__img {
     min-height: 440px;
+  }
+}
+
+.list {
+  li {
+    position: relative;
+    padding-left: 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 100vw;
+      width: 4px;
+      height: 4px;
+      background-color: var(--color-green);
+      transform: translateY(-50%);
+    }
   }
 }

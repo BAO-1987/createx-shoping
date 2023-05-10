@@ -59,7 +59,7 @@
 
   <div class="article__content">
 
-         <h3 class="article__title">@title</h3>
+    <h3 class="article__title">@title</h3>
 
     <div class="article__price">
 
@@ -70,6 +70,64 @@
       <span class="article__price-old">@priceOld</span>
 
     </div>
+
+    <form class="article-form" action="#">
+      <ul class="color-picker">
+
+        <li class="color-picker__item">
+          <input class="color-picker__input" type="radio" id="pink" name="color" value="pink" data-label="colorOption"
+            checked>
+          <label class="visually-hidden" for="pink">pink</label>
+        </li>
+
+        <li class="color-picker__item">
+          <input class="color-picker__input" type="radio" id="blue" name="color" value="blue" data-label="colorOption">
+          <label class="visually-hidden" for="blue">blue</label>
+        </li>
+
+        <li class="color-picker__item">
+          <input class="color-picker__input" type="radio" id="yellow" name="color" value="yellow"
+            data-label="colorOption">
+          <label class="visually-hidden" for="yellow">yellow</label>
+        </li>
+
+      </ul>
+
+      <fieldset class="checkboxes">
+
+        <div class="checkboxes__item">
+          <input class="checkboxes__input" type="radio" value="xs" name="size01" id="XS">
+          <label class="checkboxes__label" for="XS">XS</label>
+        </div>
+
+        <div class="checkboxes__item">
+          <input class="checkboxes__input" type="radio" value="s" name="size01" id="S">
+          <label class="checkboxes__label" for="S">S</label>
+        </div>
+
+        <div class="checkboxes__item">
+          <input class="checkboxes__input" type="radio" value="M" name="size01" id="M">
+          <label class="checkboxes__label" for="M">M</label>
+        </div>
+
+        <div class="checkboxes__item">
+          <input class="checkboxes__input" type="radio" value="L" name="size01" id="L">
+          <label class="checkboxes__label" for="L">L</label>
+        </div>
+
+        <div class="checkboxes__item">
+          <input class="checkboxes__input" type="radio" value="XL" name="size01" id="XL">
+          <label class="checkboxes__label" for="XL">XL</label>
+        </div>
+
+      </fieldset>
+
+
+    </form>
+
+
+
+
 
   </div>
 
