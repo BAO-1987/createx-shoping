@@ -113,12 +113,13 @@
   }
 
   &--article {
-    padding: 0 em(82) 0 em(112);
+    padding: 0 em(82);
     width: 100%;
+    max-width: 100%;
     z-index: 10;
 
     &::before {
-      left: 72px;
+      left: clamp(5px, 65px, 70px);
       bottom: 16px;
       mask-image: url("../img/sprite.svg#cart");
       width: 16px;
@@ -218,6 +219,10 @@
   @include for-width(-tablet) {
     width: 35px;
     height: 35px;
+  }
+
+  @include for-width (-mobile-md) {
+    display: none;
   }
 }
 

@@ -251,3 +251,23 @@
     }
   }
 }
+
+.form-article {
+  &__inner {
+    @include flex-all-sb;
+
+    margin-bottom: 20px;
+  }
+  .checkboxes {
+    margin: 0;
+  }
+
+  .checkboxes__label {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 8px;
+    min-width: 24px;
+    height: 24px;
+
+  }
+}
