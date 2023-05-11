@@ -398,3 +398,14 @@
     }
   }
 }
+
+.single-reviews {
+  &__progres{
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 40px;
+    background-color: red;
+    background-image: linear-gradient(to top, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%)
+  }
+}

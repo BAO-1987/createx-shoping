@@ -551,6 +551,17 @@
   transform: translateY(-50%);
 }
 
+.single-reviews__progres {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 40px;
+  background-color: red;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(37%, rgb(43, 194, 83)), color-stop(69%, rgb(84, 240, 84)));
+  background-image: -o-linear-gradient(bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+  background-image: linear-gradient(to top, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+}
+
 .title {
   margin-bottom: clamp(2rem, 0.5rem + 2.7vw, 3.75rem);
   font-weight: 900;
