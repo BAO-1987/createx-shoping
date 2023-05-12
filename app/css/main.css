@@ -551,15 +551,76 @@
   transform: translateY(-50%);
 }
 
-.single-reviews__progres {
-  display: block;
+.single-reviews__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  color: var(--color-gray-700);
+}
+.single-reviews__item::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  -webkit-mask-image: url("../img/sprite.svg#star");
+  mask-image: url("../img/sprite.svg#star");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  width: 12px;
+  height: 12px;
+  background-color: currentcolor;
+}
+.single-reviews__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+.single-reviews__progress {
+  margin: 0 16px 0 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   height: 4px;
-  width: 100%;
+  width: 365px;
+  border: none;
   border-radius: 40px;
-  background-color: red;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(37%, rgb(43, 194, 83)), color-stop(69%, rgb(84, 240, 84)));
-  background-image: -o-linear-gradient(bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
-  background-image: linear-gradient(to top, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+  background-color: var(--color-gray-300);
+}
+.single-reviews__progress--five {
+  --radio-color: #03cea4;
+}
+.single-reviews__progress--four {
+  --radio-color: #1fdf58;
+}
+.single-reviews__progress--three {
+  --radio-color: #f2ea2b;
+}
+.single-reviews__progress--two {
+  --radio-color: #f89828;
+}
+.single-reviews__progress--one {
+  --radio-color: #ff4242;
+}
+.single-reviews__progress[value]::-webkit-progress-bar {
+  background-color: var(--color-gray-300);
+  border-radius: 40px;
+}
+.single-reviews__progress[value]::-webkit-progress-value {
+  background-color: var(--radio-color, currentcolor);
+  border-radius: 40px 0 0 40px;
+}
+.single-reviews__progress[value]::-moz-progress-bar {
+  background-color: var(--radio-color, currentcolor);
+  border-radius: 40px 0 0 40px;
 }
 
 .title {

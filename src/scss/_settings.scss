@@ -302,7 +302,6 @@
   gap: rem(24);
 }
 
-
 @keyframes slide-up {
   0% {
     transform: translateY(-5%);
@@ -400,12 +399,74 @@
 }
 
 .single-reviews {
-  &__progres{
-    display: block;
+  &__item {
+    @include flex-all-center;
+
+    position: relative;
+    font-size: 14px;
+    color: var(--color-gray-700);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      mask-image: url("../img/sprite.svg#star");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 12px;
+      height: 12px;
+      background-color: currentcolor;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__progress {
+    margin: 0 16px 0 30px;
+    appearance: none;
     height: 4px;
-    width: 100%;
+    width: 365px;
+    border: none;
     border-radius: 40px;
-    background-color: red;
-    background-image: linear-gradient(to top, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%)
+    background-color: var(--color-gray-300);
+
+
+    &--five {
+      --radio-color: #03cea4;
+    }
+
+    &--four {
+      --radio-color: #1fdf58;
+    }
+
+    &--three {
+      --radio-color: #f2ea2b;
+    }
+
+    &--two {
+      --radio-color: #f89828;
+    }
+
+    &--one {
+      --radio-color: #ff4242;
+    }
+
+    &[value]::-webkit-progress-bar {
+      background-color: var(--color-gray-300);
+      border-radius: 40px;
+    }
+
+    &[value]::-webkit-progress-value {
+      background-color: var(--radio-color, currentcolor);
+      border-radius: 40px 0 0 40px;
+    }
+
+    &[value]::-moz-progress-bar {
+      background-color: var(--radio-color, currentcolor);
+      border-radius: 40px 0 0 40px;
+    }
   }
 }
