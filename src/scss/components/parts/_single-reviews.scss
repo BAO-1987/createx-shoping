@@ -1,0 +1,73 @@
+.single-reviews {
+
+
+  &__content {
+    @include flex-sb;
+
+    margin-bottom: rem(80);
+  }
+
+  &__text {
+    margin-right: rem(80);
+    width: 100%;
+    max-width: 235px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: rem(55);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(-20);
+      background-image: url("../img/sprite.svg#rating-for");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 78px;
+      height: 14px;
+    }
+  }
+
+  &__sort {
+    @include flex-sb;
+  }
+
+  &__select {
+    border: 1px solid red;
+  }
+
+}
+
+.hide {
+  /* You can play with the seconds to change the "animation" */
+  animation: hide 0.5s ease forwards;
+  display: none;
+}
+
+.show {
+  /* You can play with the seconds to change the "animation" */
+  animation: show 0.5s ease forwards;
+  display: block;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+   opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

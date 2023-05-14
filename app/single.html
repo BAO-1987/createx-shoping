@@ -657,8 +657,8 @@
 
                 <label class="visually-hidden" for="number"></label>
 
-                <input class="input__nubmer" type="number" inputmode="numeric" step="1" min="1" max="10" placeholder="1"
-                  value="1">
+                <input class="input__nubmer" type="number" inputmode="numeric" id="number" step="1" min="1" max="10"
+                  placeholder="1" value="1">
 
                 <button class="btn btn--article" type="submit">Add to cart</button>
 
@@ -986,48 +986,232 @@
         <div class="single-reviews">
 
           <div class="single-reviews__content">
-            <h2 class="single-reviews__title  title">12 reviews</h2>
 
-            <p>9 out of 12 (75%) Customers recommended this product</p>
+            <div class="single-reviews__text">
+
+              <h3 class="single-reviews__title  title">12 reviews</h3>
+
+              <p>9 out of 12 (75%) Customers recommended this product</p>
+
+            </div>
+
+            <ul class="rating__list" role="list">
+
+              <li class="rating__item">
+                5
+                <progress class="rating__progress rating__progress--five" value="87" max="100">87%</progress>
+                7
+              </li>
+
+              <li class="rating__item">
+                4
+                <progress class="rating__progress rating__progress--four" value="47" max="100">47%</progress>
+                2
+              </li>
+
+              <li class="rating__item">
+                3
+                <progress class="rating__progress rating__progress--three" value="24" max="100">24%</progress>
+                1
+              </li>
+
+              <li class="rating__item">
+                2
+                <progress class="rating__progress rating__progress--two" value="24" max="100">24%</progress>
+                1
+              </li>
+
+              <li class="rating__item">
+                1
+                <progress class="rating__progress rating__progress--one" value="24" max="100">24%</progress>
+                1
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="single-reviews__sort">
+
+            <button class="btn">Leave a review</button>
+<!--
+            <select class="single-reviews__select" name="select">
+              <option label="Newest" class="filter" value=".newest" data-filter="newest"></option>
+              <option label="Oldest" class="filter" value=".oldest" data-filter="oldest"></option>
+              <option label="High rating" class="filter" value=".high" data-filter="high"></option>
+              <option label="Low rating" class="filter" value=".low" data-filter="low"></option>
+            </select> -->
+
+            <div class="single-reviews__select">
+              <span class="filter" data-filter="newest">newest</span>
+
+              <span class="filter" data-filter="oldest">oldest</span>
+
+              <span class="filter" data-filter="high">high</span>
+
+             <span class="filter" data-filter="low">low</span>
+            </div>
 
           </div>
 
           <ul class="single-reviews__list" role="list">
 
-            <li class="single-reviews__item">
-              5
-              <progress class="single-reviews__progress single-reviews__progress--five" value="87" max="100">87%</progress>
-              7
-            </li>
+            <li class="single-reviews__item" data-filter="newest">1</li>
 
-            <li class="single-reviews__item">
-              4
-              <progress class="single-reviews__progress single-reviews__progress--four" value="47" max="100">47%</progress>
-             2
-            </li>
+            <li class="single-reviews__item" data-filter="newest">1+</li>
 
-            <li class="single-reviews__item">
-              3
-              <progress class="single-reviews__progress single-reviews__progress--three" value="24"
-                max="100">24%</progress>
-              1
-            </li>
+            <li class="single-reviews__item" data-filter="oldest">2</li>
 
-            <li class="single-reviews__item">
-              2
-              <progress class="single-reviews__progress single-reviews__progress--two" value="24" max="100">24%</progress>
-              1
-            </li>
+            <li class="single-reviews__item" data-filter="oldest">2+</li>
 
-            <li class="single-reviews__item">
-              1
-              <progress class="single-reviews__progress single-reviews__progress--one" value="24" max="100">24%</progress>
-              1
-            </li>
+            <li class="single-reviews__item" data-filter="high">3</li>
+
+            <li class="single-reviews__item" data-filter="high">3+</li>
+
+            <li class="single-reviews__item" data-filter="low">4</li>
+
+            <li class="single-reviews__item" data-filter="low">4+</li>
 
           </ul>
 
         </div>
+
+        <article class="article article--single">
+
+  <div class="article__box">
+
+    <span class="article__sale">-50%</span>
+
+    <svg class="article__rating">
+      <use xlink:href="img/sprite.svg#rating-five"></use>
+    </svg>
+
+    <div class="carousel" data-carousel>
+
+      <button class="carousel-btn" data-carousel-button="prev" type="button"></button>
+      <button class="carousel-btn carousel-btn--reverse" data-carousel-button="next" type="button"></button>
+
+      <ul class="carousel__list" data-slides>
+
+        <li class="carousel__item" data-active>
+          <picture>
+            <source srcset="img/single/single-1.webp" type="image/webp">
+            <img src="img/single/single-1.jpg" class="article__img" width="390" height="440" alt="@imageDesc"
+              loading="lazy">
+          </picture>
+        </li>
+
+        <li class="carousel__item">
+          <picture>
+            <source srcset="img/single/single-2.webp" type="image/webp">
+            <img src="img/single/single-2.jpg" class="article__img" width="390" height="440" alt="@imageDesc"
+              loading="lazy">
+          </picture>
+        </li>
+
+        <li class="carousel__item">
+          <picture>
+            <source srcset="img/single/single-3.webp" type="image/webp">
+            <img src="img/single/single-3.jpg" class="article__img" width="390" height="440" alt="@imageDesc"
+              loading="lazy">
+          </picture>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+      <svg class="article__icon">
+        <use xlink:href="img/sprite.svg#heart"></use>
+      </svg>
+
+      <svg class="article__icon article__icon--filled">
+        <use xlink:href="img/sprite.svg#heart-filled"></use>
+      </svg>
+    </button>
+
+  </div>
+
+  <div class="article__content">
+
+    <h3 class="article__title">Basic hooded sweatshirt in pink</h3>
+
+    <div class="article__price">
+
+      <span class="article__price-new"></span>
+
+      <span class="article__price-curent">$15.50</span>
+
+      <span class="article__price-old">$31.15</span>
+
+    </div>
+
+    <form class="form-article" action="#">
+
+      <div class="form-article__inner">
+
+        <fieldset class="checkboxes">
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="xs" name="size01" id="XS">
+            <label class="checkboxes__label" for="XS">XS</label>
+          </div>
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="s" name="size01" id="S">
+            <label class="checkboxes__label" for="S">S</label>
+          </div>
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="M" name="size01" id="M">
+            <label class="checkboxes__label" for="M">M</label>
+          </div>
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="L" name="size01" id="L">
+            <label class="checkboxes__label" for="L">L</label>
+          </div>
+
+          <div class="checkboxes__item">
+            <input class="checkboxes__input" type="radio" value="XL" name="size01" id="XL">
+            <label class="checkboxes__label" for="XL">XL</label>
+          </div>
+
+        </fieldset>
+
+        <ul class="color-picker">
+
+          <li class="color-picker__item">
+            <input class="color-picker__input" type="radio" id="pink" name="color" value="pink" data-label="colorOption"
+              checked>
+            <label class="visually-hidden" for="pink">pink</label>
+          </li>
+
+          <li class="color-picker__item">
+            <input class="color-picker__input" type="radio" id="blue" name="color" value="blue"
+              data-label="colorOption">
+            <label class="visually-hidden" for="blue">blue</label>
+          </li>
+
+          <li class="color-picker__item">
+            <input class="color-picker__input" type="radio" id="yellow" name="color" value="yellow"
+              data-label="colorOption">
+            <label class="visually-hidden" for="yellow">yellow</label>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <button class="btn btn--article" type="submit">Add to cart</button>
+
+    </form>
+
+  </div>
+
+</article>
 
       </div>
 
@@ -1240,7 +1424,7 @@
     <div class="form-modal__box">
       <input class="form__input" type="mail" id="email" placeholder="Your working email" required
         pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-      <label class="form__label" for="mail">Email</label>
+      <label class="form__label" for="email">Email</label>
     </div>
 
     <div class="form-modal__box">

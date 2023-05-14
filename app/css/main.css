@@ -551,7 +551,10 @@
   transform: translateY(-50%);
 }
 
-.single-reviews__item {
+.rating__list {
+  margin-right: 6.5625rem;
+}
+.rating__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,7 +568,7 @@
   font-size: 14px;
   color: var(--color-gray-700);
 }
-.single-reviews__item::before {
+.rating__item::before {
   content: "";
   position: absolute;
   left: 10px;
@@ -581,10 +584,10 @@
   height: 12px;
   background-color: currentcolor;
 }
-.single-reviews__item:not(:last-child) {
+.rating__item:not(:last-child) {
   margin-bottom: 25px;
 }
-.single-reviews__progress {
+.rating__progress {
   margin: 0 16px 0 30px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -595,31 +598,31 @@
   border-radius: 40px;
   background-color: var(--color-gray-300);
 }
-.single-reviews__progress--five {
-  --radio-color: #03cea4;
+.rating__progress--five {
+  --bg-color: #03cea4;
 }
-.single-reviews__progress--four {
-  --radio-color: #1fdf58;
+.rating__progress--four {
+  --bg-color: #1fdf58;
 }
-.single-reviews__progress--three {
-  --radio-color: #f2ea2b;
+.rating__progress--three {
+  --bg-color: #f2ea2b;
 }
-.single-reviews__progress--two {
-  --radio-color: #f89828;
+.rating__progress--two {
+  --bg-color: #f89828;
 }
-.single-reviews__progress--one {
-  --radio-color: #ff4242;
+.rating__progress--one {
+  --bg-color: #ff4242;
 }
-.single-reviews__progress[value]::-webkit-progress-bar {
+.rating__progress[value]::-webkit-progress-bar {
   background-color: var(--color-gray-300);
   border-radius: 40px;
 }
-.single-reviews__progress[value]::-webkit-progress-value {
-  background-color: var(--radio-color, currentcolor);
+.rating__progress[value]::-webkit-progress-value {
+  background-color: var(--bg-color, currentcolor);
   border-radius: 40px 0 0 40px;
 }
-.single-reviews__progress[value]::-moz-progress-bar {
-  background-color: var(--radio-color, currentcolor);
+.rating__progress[value]::-moz-progress-bar {
+  background-color: var(--bg-color, currentcolor);
   border-radius: 40px 0 0 40px;
 }
 
@@ -2349,16 +2352,16 @@ h3::first-letter {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: auto 0 15px 0;
+  margin: auto 0 15px 0;
   font-weight: 700;
   font-size: clamp(1rem, 0.82rem + 0.88vw, 1.5rem);
   line-height: 1.3;
-  gap: 12px;
 }
 .article__price-curent {
   font-weight: 700;
   font-size: 24px;
   color: var(--color-red);
+  margin-right: 12px;
 }
 .article__price-old {
   font-weight: 400;
@@ -4149,5 +4152,94 @@ input[type=number]::-webkit-outer-spin-button {
 .care__item--dry::before {
   -webkit-mask-image: url("../img/sprite.svg#no-dry");
   mask-image: url("../img/sprite.svg#no-dry");
+}
+
+.single-reviews__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.single-reviews__text {
+  margin-right: 5rem;
+  width: 100%;
+  max-width: 235px;
+}
+.single-reviews__title {
+  position: relative;
+  margin-bottom: 3.4375rem;
+}
+.single-reviews__title::before {
+  content: "";
+  position: absolute;
+  bottom: -1.25rem;
+  background-image: url("../img/sprite.svg#rating-for");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 78px;
+  height: 14px;
+}
+.single-reviews__sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.single-reviews__select {
+  border: 1px solid red;
+}
+
+.hide {
+  /* You can play with the seconds to change the "animation" */
+  -webkit-animation: hide 0.5s ease forwards;
+  animation: hide 0.5s ease forwards;
+  display: none;
+}
+
+.show {
+  /* You can play with the seconds to change the "animation" */
+  -webkit-animation: show 0.5s ease forwards;
+  animation: show 0.5s ease forwards;
+  display: block;
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

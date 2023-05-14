@@ -398,7 +398,11 @@
   }
 }
 
-.single-reviews {
+.rating {
+  &__list {
+    margin-right: rem(105);
+  }
+
   &__item {
     @include flex-all-center;
 
@@ -433,25 +437,24 @@
     border-radius: 40px;
     background-color: var(--color-gray-300);
 
-
     &--five {
-      --radio-color: #03cea4;
+      --bg-color: #03cea4;
     }
 
     &--four {
-      --radio-color: #1fdf58;
+      --bg-color: #1fdf58;
     }
 
     &--three {
-      --radio-color: #f2ea2b;
+      --bg-color: #f2ea2b;
     }
 
     &--two {
-      --radio-color: #f89828;
+      --bg-color: #f89828;
     }
 
     &--one {
-      --radio-color: #ff4242;
+      --bg-color: #ff4242;
     }
 
     &[value]::-webkit-progress-bar {
@@ -460,12 +463,12 @@
     }
 
     &[value]::-webkit-progress-value {
-      background-color: var(--radio-color, currentcolor);
+      background-color: var(--bg-color, currentcolor);
       border-radius: 40px 0 0 40px;
     }
 
     &[value]::-moz-progress-bar {
-      background-color: var(--radio-color, currentcolor);
+      background-color: var(--bg-color, currentcolor);
       border-radius: 40px 0 0 40px;
     }
   }
