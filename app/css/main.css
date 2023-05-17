@@ -519,10 +519,11 @@
   transition: background-color 0.3s linear;
   -webkit-mask-image: url("../img/sprite.svg#chevron");
   mask-image: url("../img/sprite.svg#chevron");
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 .carousel-btn--reverse {
+  left: auto;
   right: 1rem;
   rotate: 180deg;
 }
@@ -2243,15 +2244,15 @@ h3::first-letter {
 }
 .article__box span {
   position: absolute;
+  left: 4%;
+  top: 4%;
+  z-index: 5;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 5;
-  left: 4%;
-  top: 4%;
   border-radius: var(--br);
   padding: 1px 8px;
   font-weight: 700;
@@ -2264,9 +2265,9 @@ h3::first-letter {
 }
 .article__rating {
   position: absolute;
-  z-index: 5;
   right: 4%;
   top: 4%;
+  z-index: 5;
   width: 78px;
   height: 14px;
 }
@@ -2313,12 +2314,12 @@ h3::first-letter {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 16px;
   width: 100%;
 }
@@ -2332,7 +2333,6 @@ h3::first-letter {
   overflow: hidden;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.5;
   text-align: left;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -2352,16 +2352,16 @@ h3::first-letter {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: auto 0 15px 0;
+  margin: auto 0 15px;
   font-weight: 700;
   font-size: clamp(1rem, 0.82rem + 0.88vw, 1.5rem);
   line-height: 1.3;
 }
 .article__price-curent {
+  margin-right: 12px;
   font-weight: 700;
   font-size: 24px;
   color: var(--color-red);
-  margin-right: 12px;
 }
 .article__price-old {
   font-weight: 400;
@@ -2422,17 +2422,16 @@ h3::first-letter {
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 12px;
-  text-align: left;
   min-height: 50px;
+  text-align: left;
 }
 .card__information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: var(--color-gray-700);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   font-size: 14px;
-  line-height: 1.5;
+  color: var(--color-gray-700);
 }
 @media (max-width: calc(48em - 0.0625em)) {
   .card__information {
@@ -2448,8 +2447,8 @@ h3::first-letter {
 .card__info:not(:last-child)::after {
   content: "";
   position: absolute;
-  bottom: 5px;
   right: -13px;
+  bottom: 5px;
   width: 1px;
   height: 12px;
   background-color: currentcolor;
@@ -2911,12 +2910,11 @@ h3::first-letter {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 1px 8px 1px 8px;
-  background-color: var(--color-green-100);
-  color: var(--color-white);
+  padding: 1px 8px;
   font-weight: 900;
   font-size: 12px;
-  border-radius: var(--br);
+  color: var(--color-white);
+  background-color: var(--color-green-100);
   border: 100vh;
   width: 23px;
   height: 20px;
@@ -3993,12 +3991,12 @@ input[type=number]::-webkit-outer-spin-button {
   display: grid;
   -ms-grid-rows: 0fr;
   grid-template-rows: 0fr;
+  font-size: 14px;
+  color: var(--color-gray-800);
   -webkit-transition: grid-template-rows 0.5s ease-in-out;
   -o-transition: grid-template-rows 0.5s ease-in-out;
   transition: grid-template-rows 0.5s ease-in-out;
   transition: grid-template-rows 0.5s ease-in-out, -ms-grid-rows 0.5s ease-in-out;
-  font-size: 14px;
-  color: var(--color-gray-800);
 }
 .accordion__content div {
   overflow: hidden;
@@ -4009,36 +4007,35 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .accordion__btn {
   position: relative;
+  margin-bottom: 1rem;
   width: 100%;
+  font-weight: 700;
+  text-align: left;
+  color: var(--color-gray-900);
   -webkit-transition: color 0.5s linear;
   -o-transition: color 0.5s linear;
   transition: color 0.5s linear;
-  text-align: left;
-  margin-bottom: 16px;
-  font-weight: 700;
-  color: var(--color-gray-900);
 }
 .accordion__btn::before {
   content: "";
   position: absolute;
-  -webkit-mask-position: center;
-  mask-position: center;
   right: 0;
-  width: 16px;
-  height: 16px;
   -webkit-mask-image: url("../img/sprite.svg#plus");
   mask-image: url("../img/sprite.svg#plus");
+  -webkit-mask-position: center;
+  mask-position: center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   mask-size: cover;
+  width: 16px;
+  height: 16px;
   background-color: var(--color-green);
   -webkit-transition: -webkit-mask-image 0.1s linear;
   transition: -webkit-mask-image 0.1s linear;
   -o-transition: mask-image 0.1s linear;
   transition: mask-image 0.1s linear;
   transition: mask-image 0.1s linear, -webkit-mask-image 0.1s linear;
-  background-color: var(--color-green);
 }
 .accordion__btn[aria-expanded=true] {
   color: var(--color-green);
@@ -4078,8 +4075,8 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.063em;
-  color: var(--color-gray-700);
   text-transform: uppercase;
+  color: var(--color-gray-700);
 }
 
 .product-details {

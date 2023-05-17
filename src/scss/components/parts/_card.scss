@@ -28,24 +28,19 @@
       @include flex-all-center;
 
       margin-bottom: 12px;
-      text-align: left;
       min-height: 50px;
+      text-align: left;
     }
-
-    // @include for-width (-tablet) {
-    //   padding: 5px;
-    // }
   }
 
   &__information {
     @include flex;
 
-    color: var(--color-gray-700);
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     font-size: 14px;
-    line-height: 1.5;
+    color: var(--color-gray-700);
 
-    @include for-width (-mobile-l) {
+    @include for-width(-mobile-l) {
       font-size: 12px;
     }
   }
@@ -59,14 +54,14 @@
       &::after {
         content: "";
         position: absolute;
-        bottom: 5px;
         right: -13px;
+        bottom: 5px;
         width: 1px;
         height: 12px;
         background-color: currentcolor;
       }
 
-      @include for-width (-mobile-l) {
+      @include for-width(-mobile-l) {
         margin-right: 5px;
 
         &::after {

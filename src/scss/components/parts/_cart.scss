@@ -10,12 +10,17 @@
 
   &__count {
     @include flex-all-center;
-    padding: 1px 8px 1px 8px;
-    background-color: var(--color-green-100);
-    color: var(--color-white);
+
+    padding: 1px 8px;
+
+
+
+
     font-weight: 900;
     font-size: 12px;
-    border-radius: var(--br);
+
+    color: var(--color-white);
+    background-color: var(--color-green-100);
     border: 100vh;
     width: 23px;
     height: 20px;
