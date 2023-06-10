@@ -80,7 +80,7 @@
 
           </div>
 
-          <button class="login__btn btn-reset" type="button">
+          <button class="login__btn btn-reset" type="button" data-modal-open>
             <span>Log in / Register</span>
           </button>
 
@@ -396,7 +396,6 @@
   </div>
 
 </header>
-
     <main class="main">
 
       <section class="hero">
@@ -1920,7 +1919,7 @@
 
 </section>
 
-        <dialog class="modal modal--size" id="size-modal">
+        <!-- <dialog class="modal modal--size" id="size-modal">
 
   <button class="size__close btn-reset" aria-label="close modal" type="button">
     <svg class="modal__icon">
@@ -1982,6 +1981,7 @@
       <td>275/90</td>
     </tr>
 
+
     <tr>
       <td>South Korea</td>
       <td>230</td>
@@ -1996,8 +1996,7 @@
 
   </table>
 
-</dialog>
-
+</dialog> -->
       </div>
 
       <section class="subscribe">
@@ -2251,60 +2250,64 @@
 
 </footer>
 
-<dialog class="modal" id="modal">
+<div class="modals">
 
-  <button class="modal__close btn-reset" aria-label="close modal" type="button">
-    <svg class="modal__icon">
-      <use xlink:href="img/sprite.svg#close"></use>
-    </svg>
-  </button>
+  <dialog class="modal" data-modal>
 
-  <h2 class="modal__title title">Sign in</h2>
+    <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
+      <svg class="modal__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
 
-  <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
+    <h2 class="modal__title title">Sign in</h2>
 
-  <form class="form-modal form" action="#" autocomplete="off" method="get">
+    <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
 
-    <div class="form-modal__box">
-      <input class="form__input" type="mail" id="email" placeholder="Your working email" required
-        pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-      <label class="form__label" for="email">Email</label>
-    </div>
+    <form class="form-modal form" action="#" autocomplete="off" method="get">
 
-    <div class="form-modal__box">
-      <input class="form__input form__input--password" type="password" id="password" required>
-      <label class="form__label" for="password">Password</label>
-
-      <div class="show-password">
-
-        <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox" />
-        <label class="visually-hidden" for="show-password-checkbox"></label>
+      <div class="form-modal__box">
+        <input class="form__input" type="mail" id="email" placeholder="Your working email" required
+          pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
+        <label class="form__label" for="email">Email</label>
       </div>
-    </div>
 
-    <div class="form-modal__box form-modal__box--password">
+      <div class="form-modal__box">
+        <input class="form__input form__input--password" type="password" id="password" required>
+        <label class="form__label" for="password">Password</label>
 
-      <label class="custom-checkbox">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Keep me signed in</span>
-      </label>
+        <div class="show-password">
 
-      <a class="modal__link" href="#">Forgot password?</a>
-    </div>
+          <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox" />
+          <label class="visually-hidden" for="show-password-checkbox"></label>
+        </div>
+      </div>
 
-    <button class="btn" type="submit">Sign in</button>
+      <div class="form-modal__box form-modal__box--password">
 
-  </form>
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">Keep me signed in</span>
+        </label>
 
-  <p class="modal__singup">Don’t have an account? <a href="#" class="modal__link">Sign up</a></p>
+        <a class="modal__link" href="#">Forgot password?</a>
+      </div>
 
-  <div class="social">
+      <button class="btn" type="submit">Sign in</button>
 
-    <p class="social__text">Or sign in with</p>
+    </form>
 
-    <ul class="social__list" role="list">
+    <p class="modal__singup">Don’t have an account? <button class="modal__link btn-reset" type="button"
+        data-modal-open-sing>Sign
+        up</button></p>
 
-             <li class="social__item">
+    <div class="social">
+
+      <p class="social__text">Or sign in with</p>
+
+      <ul class="social__list" role="list">
+
+               <li class="social__item">
          <a class="social__link" href="#" target="_blank" aria-label="sing up by facebook">
            <svg class="social__icon">
              <use xlink:href="img/sprite.svg#facebook"></use>
@@ -2333,89 +2336,185 @@
          </a>
        </li>
 
-    </ul>
+      </ul>
 
-  </div>
+    </div>
 
-</dialog>
+  </dialog>
 
-<dialog class="modal modal--size" id="size-modal">
+  <dialog class="modal" data-modal-sing>
 
-  <button class="size__close btn-reset" aria-label="close modal" type="button">
-    <svg class="modal__icon">
-      <use xlink:href="img/sprite.svg#close"></use>
-    </svg>
-  </button>
+    <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
+      <svg class="modal__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
 
-  <h2 class="title">Size chart</h2>
+    <h2 class="modal__title title">Sign up</h2>
 
-  <table class="size__table">
+    <p class="modal__text">Registration takes less than a minute but gives you full control over your orders.</p>
 
-    <caption>Footwear</caption>
+    <form class="form-modal form" action="#" autocomplete="off" method="get">
 
-    <tr>
-      <td data-cell="name">Europe</td>
-      <td data-cell="size">35</td>
-      <td data-cell="size">36</td>
-      <td data-cell="size">37</td>
-      <td data-cell="size">38</td>
-      <td data-cell="size">39</td>
-      <td data-cell="size">40</td>
-      <td data-cell="size">41</td>
-      <td data-cell="size">42</td>
-    </tr>
+      <div class="form-modal__box">
+        <input class="form__input" type="mail" id="email" placeholder="Your working email" required
+          pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
+        <label class="form__label" for="email">Email</label>
+      </div>
 
-    <tr>
-      <td>USA</td>
-      <td>5</td>
-      <td>6</td>
-      <td>6.5</td>
-      <td>7.5</td>
-      <td>8</td>
-      <td>9</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
+      <div class="form-modal__box">
+        <input class="form__input form__input--password" type="password" id="password" required>
+        <label class="form__label" for="password">Password</label>
 
-    <tr>
-      <td>United Kingdom</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-    </tr>
+        <div class="show-password">
 
-    <tr>
-      <td>China</td>
-      <td>230/83</td>
-      <td>235/84</td>
-      <td>240/85</td>
-      <td>245/86</td>
-      <td>255/87</td>
-      <td>260/88</td>
-      <td>265/89</td>
-      <td>275/90</td>
-    </tr>
+          <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox" />
+          <label class="visually-hidden" for="show-password-checkbox"></label>
+        </div>
+      </div>
 
-    <tr>
-      <td>South Korea</td>
-      <td>230</td>
-      <td>235</td>
-      <td>240</td>
-      <td>245</td>
-      <td>255</td>
-      <td>260</td>
-      <td>265</td>
-      <td>275</td>
-    </tr>
+      <div class="form-modal__box form-modal__box--password">
 
-  </table>
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">Keep me signed in</span>
+        </label>
 
-</dialog>
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">Keep me signed in</span>
+        </label>
+
+        <a class="modal__link" href="#">Forgot password?</a>
+      </div>
+
+      <button class="btn" type="submit">Sign in</button>
+
+    </form>
+
+    <p class="modal__singup">Don’t have an account? <button class="modal__link btn-reset" type="button"
+        data-modal-open>Sign in</button></p>
+
+    <div class="social">
+
+      <p class="social__text">Or sign in with</p>
+
+      <ul class="social__list" role="list">
+
+               <li class="social__item">
+         <a class="social__link" href="#" target="_blank" aria-label="sing up by facebook">
+           <svg class="social__icon">
+             <use xlink:href="img/sprite.svg#facebook"></use>
+           </svg>
+         </a>
+       </li>
+       <li class="social__item">
+         <a class="social__link" href="#" target="_blank" aria-label="sing up by google">
+           <svg class="social__icon">
+             <use xlink:href="img/sprite.svg#google"></use>
+           </svg>
+         </a>
+       </li>
+       <li class="social__item">
+         <a class="social__link" href="#" target="_blank" aria-label="sing up by twitter">
+           <svg class="social__icon">
+             <use xlink:href="img/sprite.svg#twitter"></use>
+           </svg>
+         </a>
+       </li>
+       <li class="social__item">
+         <a class="social__link" href="#" target="_blank" aria-label="sing up by linkedin">
+           <svg class="social__icon">
+             <use xlink:href="img/sprite.svg#linkedin"></use>
+           </svg>
+         </a>
+       </li>
+
+      </ul>
+
+    </div>
+
+  </dialog>
+
+  <dialog class="modal modal--size" data-modal-size>
+
+    <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
+      <svg class="modal__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <h2 class="title">Size chart</h2>
+
+    <table class="size__table">
+
+      <caption>Footwear</caption>
+
+      <tr>
+        <td data-cell="name">Europe</td>
+        <td data-cell="size">35</td>
+        <td data-cell="size">36</td>
+        <td data-cell="size">37</td>
+        <td data-cell="size">38</td>
+        <td data-cell="size">39</td>
+        <td data-cell="size">40</td>
+        <td data-cell="size">41</td>
+        <td data-cell="size">42</td>
+      </tr>
+
+      <tr>
+        <td>USA</td>
+        <td>5</td>
+        <td>6</td>
+        <td>6.5</td>
+        <td>7.5</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+      </tr>
+
+      <tr>
+        <td>United Kingdom</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+
+      <tr>
+        <td>China</td>
+        <td>230/83</td>
+        <td>235/84</td>
+        <td>240/85</td>
+        <td>245/86</td>
+        <td>255/87</td>
+        <td>260/88</td>
+        <td>265/89</td>
+        <td>275/90</td>
+      </tr>
+
+      <tr>
+        <td>South Korea</td>
+        <td>230</td>
+        <td>235</td>
+        <td>240</td>
+        <td>245</td>
+        <td>255</td>
+        <td>260</td>
+        <td>265</td>
+        <td>275</td>
+      </tr>
+
+    </table>
+
+  </dialog>
+
+</div>
 
   </div>
 </body>
