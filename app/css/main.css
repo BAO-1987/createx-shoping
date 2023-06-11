@@ -362,7 +362,7 @@
   display: flex;
   gap: 24px;
 }
-.countdown__list li {
+.countdown__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,9 +378,8 @@
   flex-direction: column;
   font-weight: 700;
   font-size: 28px;
-  line-height: 1.5;
 }
-.countdown__list li span:last-of-type {
+.countdown__label {
   font-weight: 400;
   font-size: 14px;
 }
@@ -3508,11 +3507,11 @@ h3::first-letter {
 }
 
 .modal {
-  padding: 27px 48px 48px 48px;
+  padding: clamp(1.1rem, 2vw + 1rem, 3rem);
   border: 0;
   border-radius: var(--br);
-  width: 486px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 486px;
   font-size: 14px;
   text-align: center;
   background-color: var(--color-white);
@@ -3528,6 +3527,13 @@ h3::first-letter {
   right: 0;
   left: 0;
   bottom: 141px;
+}
+.modal--size {
+  max-width: 870px;
+  overflow-x: scroll;
+}
+.modal--size::before {
+  content: none;
 }
 .modal::-webkit-backdrop {
   background: rgba(30, 33, 44, 0.75);
@@ -3553,13 +3559,13 @@ h3::first-letter {
   position: absolute;
   right: 20px;
   top: 20px;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 .modal__icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   fill: var(--color-gray-700);
   -webkit-transition: fill 0.3s linear;
   -o-transition: fill 0.3s linear;
@@ -3571,6 +3577,11 @@ h3::first-letter {
 .modal__singup {
   margin-bottom: 3rem;
   text-align: left;
+}
+.modal__inner .tabs__nav {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .modal[open] {
   -webkit-animation: slide-up 1000ms forwards;
@@ -3739,7 +3750,6 @@ h3::first-letter {
 }
 .size__table {
   width: 100%;
-  max-width: 775px;
   border: 1px solid var(--color-gray-300);
 }
 .size__table th,
@@ -3753,6 +3763,12 @@ h3::first-letter {
   font-weight: 700;
   font-size: 18px;
   text-align: center;
+}
+@media (max-width: calc(36em - 0.0625em)) {
+  .size__table th,
+  .size__table td {
+    padding: 5px;
+  }
 }
 .size__select {
   -ms-grid-row: 1;

@@ -216,35 +216,24 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************************/
 /***/ (() => {
 
-// const accordion = document.querySelector(".accordion__list");
-
-// accordion.addEventListener("click", (e) => {
-//   const activePanel = e.target.closest(".accordion__item");
-//   if (!activePanel) return;
-//   toggleAccordion(activePanel);
-// });
-
-// function toggleAccordion(panelToActivate) {
-//   const activeButton = panelToActivate.querySelector("button");
-//   const activePanel = panelToActivate.querySelector(".accordion__item");
-//   const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
-
-//   if (activePanelIsOpened === "true") {
-//     panelToActivate
-//       .querySelector("button")
-//       .setAttribute("aria-expanded", false);
-
-//     panelToActivate
-//       .querySelector(".accordion__content")
-//       .setAttribute("aria-hidden", true);
-//   } else {
-//     panelToActivate.querySelector("button").setAttribute("aria-expanded", true);
-
-//     panelToActivate
-//       .querySelector(".accordion__content")
-//       .setAttribute("aria-hidden", false);
-//   }
-// }
+const accordion = document.querySelector(".accordion__list");
+accordion.addEventListener("click", e => {
+  const activePanel = e.target.closest(".accordion__item");
+  if (!activePanel) return;
+  toggleAccordion(activePanel);
+});
+function toggleAccordion(panelToActivate) {
+  const activeButton = panelToActivate.querySelector("button");
+  const activePanel = panelToActivate.querySelector(".accordion__item");
+  const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
+  if (activePanelIsOpened === "true") {
+    panelToActivate.querySelector("button").setAttribute("aria-expanded", false);
+    panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", true);
+  } else {
+    panelToActivate.querySelector("button").setAttribute("aria-expanded", true);
+    panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", false);
+  }
+}
 
 /***/ }),
 
@@ -311,10 +300,10 @@ buttons.forEach(button => {
       const currentDate = new Date().getTime();
       const remainingTime = parseInt((countdownDate - currentDate) / 1000);
       if (remainingTime >= 0) {
-        const daysElement = element.querySelector(".countdown-days .countdown-value");
-        const hoursElement = element.querySelector(".countdown-hours .countdown-value");
-        const minutesElement = element.querySelector(".countdown-minutes .countdown-value");
-        const secondsElement = element.querySelector(".countdown-seconds .countdown-value");
+        const daysElement = element.querySelector(".countdown-days .countdown__value");
+        const hoursElement = element.querySelector(".countdown-hours .countdown__value");
+        const minutesElement = element.querySelector(".countdown-mins .countdown__value");
+        const secondsElement = element.querySelector(".countdown-seconds .countdown__value");
         const days = Math.floor(remainingTime / (24 * 60 * 60));
         const hours = Math.floor(remainingTime % (24 * 60 * 60) / (60 * 60));
         const minutes = Math.floor(remainingTime % (60 * 60) / 60);
@@ -802,9 +791,13 @@ AddTableARIA();
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
 
-if (document.querySelector('.single')) {
-  const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.single');
-}
+
+// if (document.querySelector('.single')) {
+//   const tabs = new GraphTabs('.single')
+// }
+
+const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.single');
+const tabsSize = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.size');
 
 /***/ }),
 

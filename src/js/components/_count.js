@@ -19,10 +19,10 @@
       const remainingTime = parseInt((countdownDate - currentDate) / 1000);
 
       if (remainingTime >= 0) {
-        const daysElement = element.querySelector(".countdown-days .countdown-value");
-        const hoursElement = element.querySelector(".countdown-hours .countdown-value");
-        const minutesElement = element.querySelector(".countdown-minutes .countdown-value");
-        const secondsElement = element.querySelector(".countdown-seconds .countdown-value");
+        const daysElement = element.querySelector(".countdown-days .countdown__value");
+        const hoursElement = element.querySelector(".countdown-hours .countdown__value");
+        const minutesElement = element.querySelector(".countdown-mins .countdown__value");
+        const secondsElement = element.querySelector(".countdown-seconds .countdown__value");
 
         const days = Math.floor(remainingTime / (24 * 60 * 60));
         const hours = Math.floor((remainingTime % (24 * 60 * 60)) / (60 * 60));

@@ -1,9 +1,9 @@
 .modal {
-  padding: 27px 48px 48px 48px;
+  padding: clamp(1.1rem, 2vw + 1rem, 3rem);
   border: 0;
   border-radius: var(--br);
-  width: 486px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 486px;
   font-size: 14px;
   text-align: center;
   background-color: var(--color-white);
@@ -19,6 +19,14 @@
     right: 0;
     left: 0;
     bottom: 141px;
+  }
+
+  &--size {
+    max-width: 870px;
+    overflow-x: scroll;
+    &::before {
+      content: none;
+    }
   }
 
   &::backdrop {
@@ -46,14 +54,14 @@
     position: absolute;
     right: 20px;
     top: 20px;
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
   }
 
   &__icon {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     fill: var(--color-gray-700);
     transition: fill 0.3s linear;
 
@@ -65,6 +73,12 @@
   &__singup {
     margin-bottom: rem(48);
     text-align: left;
+  }
+
+  &__inner {
+    .tabs__nav {
+      justify-content: center;
+    }
   }
 
   &[open] {

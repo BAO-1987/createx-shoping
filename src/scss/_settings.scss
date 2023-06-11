@@ -242,20 +242,19 @@
   &__list {
     @include flex;
     gap: 24px;
+  }
 
-    li {
-      @include flex-all-center;
+  &__item {
+    @include flex-all-center;
 
-      flex-direction: column;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 1.5;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 28px;
+  }
 
-      & span:last-of-type {
-        font-weight: 400;
-        font-size: 14px;
-      }
-    }
+  &__label {
+    font-weight: 400;
+    font-size: 14px;
   }
 }
 
