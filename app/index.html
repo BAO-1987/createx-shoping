@@ -80,8 +80,8 @@
 
           </div>
 
-          <button class="login__btn btn-reset" type="button" data-modal-open>
-            <span>Log in / Register</span>
+          <button class="login__btn modal__btn  btn-reset" type="button" data-modal="modal1">
+            Log in / Register
           </button>
 
         </div>
@@ -396,6 +396,7 @@
   </div>
 
 </header>
+
     <main class="main">
 
       <section class="hero">
@@ -941,40 +942,35 @@
 
         <a class="btn btn--inverse" href="#">Shop now</a>
 
-      </div>
+        <div class="countdown" data-countdown="08/30/2023 07:00:00 PM">
 
-      <div class="countdown">
+          <span class="slogan">Limited time offer</span>
 
-        <span class="slogan">Limited time offer</span>
+          <ul class="countdown__list">
 
-        <ul class="countdown__list">
+            <li class="countdown-days">
+              <span class="countdown-value">00</span>
+              <span class="countdown-label">Days</span>
+            </li>
 
-          <li>
-            <span class="months"></span>
-            <span>Months</span>
-          </li>
+            <li class="countdown-hours">
+              <span class="countdown-value">00</span>
+              <span class="countdown-label">Hours</span>
+            </li>
 
-          <li>
-            <span class="days"></span>
-            <span>Days</span>
-          </li>
+            <li class="countdown-minutes">
+              <span class="countdown-value">00</span>
+              <span class="countdown-label">Mins</span>
+            </li>
 
-          <li>
-            <span class="hours"></span>
-            <span>Hours</span>
-          </li>
+            <li class="countdown-seconds">
+              <span class="countdown-value">00</span>
+              <span class="countdown-label">Sec</span>
+            </li>
 
-          <li>
-            <span class="minutes"></span>
-            <span>Minutes</span>
-          </li>
+          </ul>
 
-          <li>
-            <span class="seconds"></span>
-            <span>Seconds</span>
-          </li>
-
-        </ul>
+        </div>
 
       </div>
 
@@ -1003,11 +999,10 @@
         <h2 class="title title--banners">Get 5% Off & Free Delivery</h2>
 
         <form class="form" action="#" autocomplete="off" method="get">
-
   <div class="form__box">
-    <input class="form__input" type="email" id="email" placeholder="Your working email" required
-      pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-    <label class="form__label" for="mail">Email</label>
+    <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email" required
+      aria-invalid="true" aria-errormessage="email-error">
+    <label class="form__label" for="email">Email</label>
     <button class="btn" type="submit">Subscribe</button>
   </div>
 </form>
@@ -2038,11 +2033,10 @@
         </fieldset>
 
         <form class="form" action="#" autocomplete="off" method="get">
-
   <div class="form__box">
-    <input class="form__input" type="email" id="email" placeholder="Your working email" required
-      pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-    <label class="form__label" for="mail">Email</label>
+    <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email" required
+      aria-invalid="true" aria-errormessage="email-error">
+    <label class="form__label" for="email">Email</label>
     <button class="btn" type="submit">Subscribe</button>
   </div>
 </form>
@@ -2252,7 +2246,7 @@
 
 <div class="modals">
 
-  <dialog class="modal" data-modal>
+  <dialog class="modal" id="modal1">
 
     <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
       <svg class="modal__icon">
@@ -2267,13 +2261,16 @@
     <form class="form-modal form" action="#" autocomplete="off" method="get">
 
       <div class="form-modal__box">
-        <input class="form__input" type="mail" id="email" placeholder="Your working email" required
-          pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-        <label class="form__label" for="email">Email</label>
+        <label class="form__label" for="email">Email
+        </label>
+
+        <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email"
+          required aria-invalid="true" aria-errormessage="email-error">
       </div>
 
       <div class="form-modal__box">
-        <input class="form__input form__input--password" type="password" id="password" required>
+        <input class="form__input form__input--password" type="password" id="password" autocomplete="current-password"
+          required aria-invalid="true" aria-errormessage="password-error">
         <label class="form__label" for="password">Password</label>
 
         <div class="show-password">
@@ -2297,16 +2294,12 @@
 
     </form>
 
-    <p class="modal__singup">Don’t have an account? <button class="modal__link btn-reset" type="button"
-        data-modal-open-sing>Sign
-        up</button></p>
+    <p class="modal__singup">Don’t have an account? <button class="modal__btn btn-reset" type="button"
+        data-modal="modalSing">Sign up</button></p>
 
     <div class="social">
-
       <p class="social__text">Or sign in with</p>
-
       <ul class="social__list" role="list">
-
                <li class="social__item">
          <a class="social__link" href="#" target="_blank" aria-label="sing up by facebook">
            <svg class="social__icon">
@@ -2337,12 +2330,11 @@
        </li>
 
       </ul>
-
     </div>
 
   </dialog>
 
-  <dialog class="modal" data-modal-sing>
+  <dialog class="modal" id="modalSing">
 
     <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
       <svg class="modal__icon">
@@ -2357,43 +2349,54 @@
     <form class="form-modal form" action="#" autocomplete="off" method="get">
 
       <div class="form-modal__box">
-        <input class="form__input" type="mail" id="email" placeholder="Your working email" required
-          pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}">
-        <label class="form__label" for="email">Email</label>
+        <label class="form__label" for="text">Full Name
+        </label>
+        <input class="form__input" type="text" id="text" placeholder="Your full name" required aria-invalid="true"
+          aria-errormessage="name-error" required>
       </div>
 
       <div class="form-modal__box">
-        <input class="form__input form__input--password" type="password" id="password" required>
-        <label class="form__label" for="password">Password</label>
+        <label class="form__label" for="emailSing">Email
+        </label>
+        <input class="form__input" type="email" id="emailSing" autocomplete="username" placeholder="Your working email"
+          required aria-invalid="true" aria-errormessage="email-error">
+      </div>
+
+      <div class="form-modal__box">
+        <input class="form__input form__input--password" type="password" id="passwordSing"
+          autocomplete="current-password" required aria-invalid="true" aria-errormessage="password-error">
+        <label class="form__label" for="passwordSing">Password</label>
 
         <div class="show-password">
+          <input class="show-password__input" type="checkbox" name="show" id="showPassword" />
+          <label class="visually-hidden" for="showPassword"></label>
+        </div>
+      </div>
 
-          <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox" />
-          <label class="visually-hidden" for="show-password-checkbox"></label>
+      <div class="form-modal__box">
+        <input class="form__input form__input--password" type="password" id="confirmPassword"
+          autocomplete="current-password" required aria-invalid="true" aria-errormessage="password-error">
+        <label class="form__label" for="confirmPassword">Confirm Password</label>
+
+        <div class="show-password">
+          <input class="show-password__input" type="checkbox" name="show" id="showPasswordConfirm" />
+          <label class="visually-hidden" for="showPasswordConfirm"></label>
         </div>
       </div>
 
       <div class="form-modal__box form-modal__box--password">
-
         <label class="custom-checkbox">
           <input type="checkbox" class="custom-checkbox__field">
-          <span class="custom-checkbox__content">Keep me signed in</span>
+          <span class="custom-checkbox__content">Remember me</span>
         </label>
-
-        <label class="custom-checkbox">
-          <input type="checkbox" class="custom-checkbox__field">
-          <span class="custom-checkbox__content">Keep me signed in</span>
-        </label>
-
-        <a class="modal__link" href="#">Forgot password?</a>
       </div>
 
       <button class="btn" type="submit">Sign in</button>
 
     </form>
 
-    <p class="modal__singup">Don’t have an account? <button class="modal__link btn-reset" type="button"
-        data-modal-open>Sign in</button></p>
+    <p class="modal__singup">Already have an account? <button class="modal__btn btn-reset" type="button"
+        data-modal="modal1">Sign in</button></p>
 
     <div class="social">
 
@@ -2436,7 +2439,7 @@
 
   </dialog>
 
-  <dialog class="modal modal--size" data-modal-size>
+  <dialog class="modal modal--size" id="modalSize">
 
     <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
       <svg class="modal__icon">
@@ -2514,7 +2517,7 @@
 
   </dialog>
 
-</div>
+  </di>
 
   </div>
 </body>

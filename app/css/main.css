@@ -283,8 +283,8 @@
   transition: background-color 0.6s linear;
 }
 @media (max-width: calc(48em - 0.0625em)) {
-  .login__btn span {
-    display: none;
+  .login__btn {
+    font-size: 0;
   }
 }
 .login__btn:hover {
@@ -355,7 +355,6 @@
 
 .countdown {
   padding-top: clamp(2rem, 1rem + 3.3vw, 5rem);
-  margin-bottom: 20px;
 }
 .countdown__list {
   display: -webkit-box;
@@ -384,11 +383,6 @@
 .countdown__list li span:last-of-type {
   font-weight: 400;
   font-size: 14px;
-}
-.countdown__list li:first-of-type {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
 }
 
 .return__list {
@@ -625,6 +619,10 @@
 .rating__progress[value]::-moz-progress-bar {
   background-color: var(--bg-color, currentcolor);
   border-radius: 40px 0 0 40px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline-color: none;
 }
 
 .title {
@@ -2506,14 +2504,16 @@ h3::first-letter {
 .form__input {
   position: relative;
   outline: 0;
-  border: 1px solid var(--color-gray-400);
+  border-style: solid;
+  border-color: var(--color-gray-400);
+  border-width: 1px;
   border-radius: var(--br);
   padding: 10px 0 10px 16px;
   width: 100%;
   background-color: var(--color-white);
 }
 .form__input:focus {
-  border: 1px solid var(--color-green);
+  border-color: var(--color-green);
 }
 .form__label {
   position: absolute;
@@ -2586,8 +2586,9 @@ h3::first-letter {
   color: var(--color-gray-600);
 }
 .form-search__input:focus {
-  border: 1px solid var(--color-green);
-  outline-color: transparent;
+  outline: none;
+  -webkit-box-shadow: 0 20px 20px -20px rgba(23, 105, 106, 0.16), 0px 26px 24px -10px rgba(23, 105, 106, 0.1), 0px 12px 10px -6px rgba(23, 105, 106, 0.08), 0px 4px 4px -4px rgba(23, 105, 106, 0.05);
+  box-shadow: 0 20px 20px -20px rgba(23, 105, 106, 0.16), 0px 26px 24px -10px rgba(23, 105, 106, 0.1), 0px 12px 10px -6px rgba(23, 105, 106, 0.08), 0px 4px 4px -4px rgba(23, 105, 106, 0.05);
 }
 .form-search__btn {
   position: absolute;
@@ -2724,8 +2725,8 @@ h3::first-letter {
   right: 14px;
   -webkit-mask-image: url("../img/sprite.svg#eye");
   mask-image: url("../img/sprite.svg#eye");
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-size: cover;
@@ -3544,7 +3545,8 @@ h3::first-letter {
   color: var(--color-gray-700);
   margin-bottom: 53px;
 }
-.modal__link {
+.modal__link,
+.modal .modal__btn {
   color: var(--color-green);
 }
 .modal__close {

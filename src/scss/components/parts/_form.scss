@@ -12,14 +12,16 @@
   &__input {
     position: relative;
     outline: 0;
-    border: 1px solid var(--color-gray-400);
+    border-style: solid;
+    border-color: var(--color-gray-400);
+    border-width: 1px;
     border-radius: var(--br);
     padding: 10px 0 10px 16px;
     width: 100%;
     background-color: var(--color-white);
 
     &:focus {
-      border: 1px solid var(--color-green);
+      border-color: var(--color-green);
     }
   }
 
@@ -74,8 +76,9 @@
     }
 
     &:focus {
-      border: 1px solid var(--color-green);
-      outline-color: transparent;
+      outline: none;
+      box-shadow: 0 20px 20px -20px rgba(23, 105, 106, 0.16), 0px 26px 24px -10px rgba(23, 105, 106, 0.1),
+        0px 12px 10px -6px rgba(23, 105, 106, 0.08), 0px 4px 4px -4px rgba(23, 105, 106, 0.05);
     }
   }
 
@@ -153,8 +156,8 @@
       position: absolute;
       right: 14px;
       mask-image: url("../img/sprite.svg#eye");
-      width: 24px;
-      height: 24px;
+      width: 16px;
+      height: 16px;
       mask-position: center;
       mask-size: cover;
       mask-repeat: no-repeat;
@@ -231,7 +234,6 @@
       height: 24px;
       transform: scale(0);
       transition: 120ms transform ease-in-out;
-
     }
 
     &:checked::before {
@@ -268,6 +270,5 @@
     padding: 8px;
     min-width: 24px;
     height: 24px;
-
   }
 }

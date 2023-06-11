@@ -295,31 +295,46 @@ buttons.forEach(button => {
   \*************************************/
 /***/ (() => {
 
-
-// const newDate = new Date('may 25 23 21:29:25').getTime()
-// const countdown = setInterval(() => {
-
-//   const date = new Date().getTime()
-//   const diff = newDate - date
-
-//   const month = Math.floor((diff % (1000 * 60 * 60 * 24 * (365.25 / 12) * 365)) / (1000 * 60 * 60 * 24 * (365.25 / 12)))
-//   const days = Math.floor(diff % (1000 * 60 * 60 * 24 * (365.25 / 12)) / (1000 * 60 * 60 * 24));
-//   const hours = Math.floor(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-//   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-//   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-//   document.querySelector(".seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds
-//   document.querySelector(".minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes
-//   document.querySelector(".hours").innerHTML = hours < 10 ? '0' + hours : hours
-//   document.querySelector(".days").innerHTML = days < 10 ? '0' + days : days
-//   document.querySelector(".months").innerHTML = month < 10 ? '0' + month : month
-
-//   if (diff <= 0) {
-//     clearInterval(countdown)
-//     // document.querySelector(".countdown").style.display = "none";
-//   }
-
-// }, 1000)
+(function () {
+  const countdownElements = document.querySelectorAll(".countdown");
+  if (countdownElements !== null) {
+    for (let i = 0; i < countdownElements.length; i++) {
+      setupCountdown(countdownElements[i]);
+    }
+  }
+  function setupCountdown(element) {
+    const countdownDate = new Date(element.dataset.countdown).getTime();
+    if (isNaN(countdownDate)) {
+      return;
+    }
+    setInterval(function () {
+      const currentDate = new Date().getTime();
+      const remainingTime = parseInt((countdownDate - currentDate) / 1000);
+      if (remainingTime >= 0) {
+        const daysElement = element.querySelector(".countdown-days .countdown-value");
+        const hoursElement = element.querySelector(".countdown-hours .countdown-value");
+        const minutesElement = element.querySelector(".countdown-minutes .countdown-value");
+        const secondsElement = element.querySelector(".countdown-seconds .countdown-value");
+        const days = Math.floor(remainingTime / (24 * 60 * 60));
+        const hours = Math.floor(remainingTime % (24 * 60 * 60) / (60 * 60));
+        const minutes = Math.floor(remainingTime % (60 * 60) / 60);
+        const seconds = Math.floor(remainingTime % 60);
+        if (daysElement !== null) {
+          daysElement.textContent = days < 10 ? "0" + days : days;
+        }
+        if (hoursElement !== null) {
+          hoursElement.textContent = hours < 10 ? "0" + hours : hours;
+        }
+        if (minutesElement !== null) {
+          minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
+        }
+        if (secondsElement !== null) {
+          secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
+        }
+      }
+    }, 1000);
+  }
+})();
 
 /***/ }),
 
@@ -481,20 +496,30 @@ document.addEventListener("click", e => {
   \*************************************/
 /***/ (() => {
 
-const modal = document.querySelector("[data-modal]");
-const openModal = document.querySelector("[data-modal-open]");
-const openModalSing = document.querySelector("[data-modal-open-sing]");
-const closeModal = document.querySelector("[data-modal-close]");
-openModal.addEventListener("click", () => {
-  modal.showModal();
+const buttons = document.querySelectorAll(".modal__btn");
+const closeButtons = document.querySelectorAll("[data-modal-close]");
+let currentModal = null;
+buttons.forEach(button => {
+  button.addEventListener("click", event => {
+    const modalId = event.target.dataset.modal;
+    const modal = document.getElementById(modalId);
+    if (modal && modal !== currentModal) {
+      if (currentModal) {
+        currentModal.close();
+      }
+      modal.showModal();
+      currentModal = modal;
+    }
+  });
 });
-
-// openModalSing.addEventListener("click", () => {
-//   modal.showModal();
-// });
-
-closeModal.addEventListener("click", () => {
-  modal.close();
+closeButtons.forEach(button => {
+  button.addEventListener("click", event => {
+    const modal = event.target.closest('dialog');
+    if (modal && modal === currentModal) {
+      modal.close();
+      currentModal = null;
+    }
+  });
 });
 
 /***/ }),
@@ -505,14 +530,12 @@ closeModal.addEventListener("click", () => {
   \****************************************/
 /***/ (() => {
 
-const passwordInput = document.getElementById('password');
-const showPasswordCheckbox = document.getElementById('show-password-checkbox');
-showPasswordCheckbox.addEventListener('change', function () {
-  if (showPasswordCheckbox.checked) {
-    passwordInput.type = 'text';
-  } else {
-    passwordInput.type = 'password';
-  }
+const showPasswordCheckboxes = document.querySelectorAll('.show-password__input');
+showPasswordCheckboxes.forEach(function (checkbox) {
+  checkbox.addEventListener('change', function () {
+    const passwordInput = checkbox.parentNode.parentNode.querySelector('.form__input--password');
+    passwordInput.type = checkbox.checked ? 'text' : 'password';
+  });
 });
 
 /***/ }),
