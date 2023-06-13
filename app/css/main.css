@@ -1918,6 +1918,7 @@ h3::first-letter {
   -o-transition-timing-function: linear;
   transition-timing-function: linear;
   overflow: hidden;
+  white-space: nowrap;
   isolation: isolate;
 }
 .btn::after {
@@ -2916,6 +2917,7 @@ h3::first-letter {
   color: var(--color-white);
   background-color: var(--color-green-100);
   border: 100vh;
+  border-radius: var(--br);
   width: 23px;
   height: 20px;
 }
@@ -3857,9 +3859,8 @@ input[type=number]::-webkit-outer-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   font-weight: 400;
   font-size: 14px;
 }
@@ -3873,7 +3874,7 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
 }
 .breadcrumb__list li:not(:last-child) {
-  margin-right: 32px;
+  margin-right: clamp(1rem, 1vw + 1rem, 2rem);
 }
 .breadcrumb__list li:not(:last-child)::after {
   content: "";
@@ -3940,14 +3941,14 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 0.625em 1.25em;
   font-weight: 700;
-  font-size: 16px;
   border-radius: var(--br);
   border-color: transparent;
   border-width: 1px;
   border-style: solid;
   color: var(--color-gray-600);
+  white-space: nowrap;
   -webkit-transition: color 0.3s linear, border-color 0.3s linear;
   -o-transition: color 0.3s linear, border-color 0.3s linear;
   transition: color 0.3s linear, border-color 0.3s linear;

@@ -4,8 +4,9 @@
   background-color: var(--color-gray-200);
 
   &__list {
-    @include flex-a-center;
+    @include flex;
 
+    flex-wrap: wrap;
     font-weight: 400;
     font-size: 14px;
 
@@ -15,7 +16,7 @@
       align-items: center;
 
       &:not(:last-child) {
-        margin-right: 32px;
+        margin-right: clamp(1rem, 1vw + 1rem, 2rem);
 
         &::after {
           content: "";
