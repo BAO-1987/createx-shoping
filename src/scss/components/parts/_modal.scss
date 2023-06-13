@@ -1,5 +1,5 @@
 .modal {
-  padding: clamp(1.1rem, 2vw + 1rem, 3rem);
+  padding: clamp(0.8rem, 2vw + 1rem, 3rem);
   border: 0;
   border-radius: var(--br);
   width: 100%;
@@ -78,6 +78,10 @@
   &__inner {
     .tabs__nav {
       justify-content: center;
+    }
+
+    .tabs__panel--active {
+      flex-direction: column;
     }
   }
 

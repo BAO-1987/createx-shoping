@@ -2,33 +2,6 @@
   width: 100%;
   max-width: 350px;
 
-  &__table {
-    width: 100%;
-    border: 1px solid var(--color-gray-300);
-
-    th,
-    td {
-      padding: 10px;
-    }
-
-    tr:nth-child(2n + 1) {
-      background-color: var(--color-gray-200);
-    }
-
-    caption {
-      font-weight: 700;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    @include for-width(-mobile-md) {
-      th,
-      td {
-        padding: 5px;
-      }
-    }
-  }
-
   &__select {
     display: block;
     grid-area: select;
@@ -113,4 +86,45 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 1rem;
   background-color: var(--color-gray-800);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.table {
+  width: 100%;
+  border: 1px solid var(--color-gray-300);
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  tr:nth-child(2n + 1) {
+    background-color: var(--color-gray-200);
+  }
+
+  caption {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &--size {
+    @include for-width(-mobile-md) {
+      th,
+      td {
+        padding: 5px;
+      }
+      tbody {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      tr {
+        display: grid;
+      }
+
+      td:first-child {
+        min-height: 50px;
+      }
+    }
+  }
 }

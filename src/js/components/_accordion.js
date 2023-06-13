@@ -1,4 +1,4 @@
-const accordion = document.querySelector(".accordion__list");
+const accordion = document?.querySelector(".accordion__list");
 
 accordion.addEventListener("click", (e) => {
   const activePanel = e.target.closest(".accordion__item");
@@ -27,3 +27,5 @@ function toggleAccordion(panelToActivate) {
       .setAttribute("aria-hidden", false);
   }
 }
+
+
