@@ -1,5 +1,7 @@
 .single-reviews {
 
+  width: 100%;
+  max-width: 735px;
 
   &__content {
     @include flex-sb;
@@ -10,7 +12,7 @@
   &__text {
     margin-right: rem(80);
     width: 100%;
-    max-width: 235px;
+    max-width: 305px;
   }
 
   &__title {
@@ -32,11 +34,49 @@
 
   &__sort {
     @include flex-sb;
+    margin-bottom: 50px;
   }
 
-  &__select {
-    border: 1px solid red;
+  &__blockqoute {
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    line-height: 1.6;
+    gap: 50px;
+    color: var(--color-gray-800);
+    margin-bottom: 20px;
   }
+
+  &__author {
+    @include flex-col;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-gray-900);
+
+  }
+
+  &__time {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-gray-700);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      background-image: url("../img/sprite.svg#rating-five");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 78px;
+      height: 14px;
+    }
+  }
+
+
 
 }
 
@@ -64,7 +104,7 @@
 
 @keyframes show {
   0% {
-   opacity: 0;
+    opacity: 0;
   }
 
   100% {

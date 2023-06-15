@@ -389,9 +389,9 @@
 }
 
 .rating {
-  &__list {
-    margin-right: rem(105);
-  }
+  // &__list {
+  //   margin-right: rem(105);
+  // }
 
   &__item {
     @include flex-all-center;

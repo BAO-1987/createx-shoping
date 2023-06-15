@@ -1,6 +1,13 @@
-.size {
+.custom-select {
   width: 100%;
   max-width: 350px;
+
+  &--sort {
+    @include flex-a-center;
+    justify-content: end;
+    gap: 10px;
+    max-width: 235px;
+  }
 
   &__select {
     display: block;
@@ -16,29 +23,23 @@
   }
 
   &__inner {
-    display: grid;
-    grid-template-areas: "select";
-    align-items: center;
     position: relative;
-    padding: 12px 12px 12px 14px;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "select";
     border: 1px solid var(--color-gray-400);
     border-radius: var(--br);
+    padding: 12px 12px 12px 14px;
 
     &::after {
-      grid-area: select;
-      justify-self: end;
-      // content: "";
-      // width: 16px;
-      // height: 16px;
-      // background-color: var(--color-gray-800);
-      // clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-      pointer-events: none;
-
       --rotate: rotate(0);
+
       content: "";
       position: absolute;
-      top: 50%;
       right: 0;
+      top: 50%;
+      justify-self: end;
+      grid-area: select;
       mask-image: url("../img/sprite.svg#arrow-down");
       mask-position: center;
       mask-repeat: no-repeat;
@@ -48,24 +49,10 @@
       background-color: var(--color-gray-800);
       transform: translateY(-50%) var(--rotate);
       transition: background-color 0.3s linear, transform 0.3s linear;
+      pointer-events: none;
     }
   }
 }
-
-// .select {
-//   display: block;
-//   grid-area: select;
-//   width: 100%;
-//   // padding: 0 1rem 0 0;
-//   background-color: var(--color-white);
-//   border: none;
-
-//   option {
-//     white-space: normal;
-
-//     // Only affects Chrome
-//     outline-color: var(--color-green);
-//   }
 
 .input__nubmer {
   width: 100%;
@@ -95,6 +82,7 @@ input[type="number"]::-webkit-outer-spin-button {
   th,
   td {
     padding: 10px;
+    text-align: left;
   }
 
   tr:nth-child(2n + 1) {
@@ -109,10 +97,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
   &--size {
     @include for-width(-mobile-md) {
+
       th,
       td {
         padding: 5px;
       }
+
       tbody {
         display: grid;
         grid-template-columns: repeat(6, 1fr);

@@ -634,12 +634,12 @@
 
               <li class="product-form__item product-form__item--select">
 
-                <div class="size">
+                <div class="size custom-select">
 
-                  <label class="size__lable" for="size">Size</label>
+                  <label class="custom-select__lable" for="size">Size</label>
 
-                  <div class="size__inner">
-                    <select class="size__select" name="select" id="size">
+                  <div class="custom-select__inner">
+                    <select class="custom-select__select" name="select" id="size">
                       <option value disabled selected>Please select</option>
                       <option value="XS">XS</option>
                       <option value="S">S</option>
@@ -650,8 +650,7 @@
                   </div>
                 </div>
 
-                <button class="modal__btn btn btn--size" type="button" data-modal="modalSize">Size
-                  chart</button>
+                <button class="modal__btn btn btn--size" type="button" data-modal="modalSize">Size chart</button>
               </li>
 
               <li class="product-form__item product-form__item--number">
@@ -670,7 +669,7 @@
 
           </form>
 
-          <ul class="accordion__list">
+          <ul class="accordion__list" role="list">
 
             <li class="accordion__item">
               <h3 id="panel1-title">
@@ -1034,44 +1033,46 @@
 
           <div class="single-reviews__sort">
 
-            <button class="btn">Leave a review</button>
-            <!--
-            <select class="single-reviews__select" name="select">
-              <option label="Newest" class="filter" value=".newest" data-filter="newest"></option>
-              <option label="Oldest" class="filter" value=".oldest" data-filter="oldest"></option>
-              <option label="High rating" class="filter" value=".high" data-filter="high"></option>
-              <option label="Low rating" class="filter" value=".low" data-filter="low"></option>
-            </select> -->
+            <button class="btn" type="button">Leave a review</button>
 
-            <div class="single-reviews__select">
-              <span class="filter" data-filter="newest">newest</span>
+            <div class="custom-select custom-select--sort">
 
-              <span class="filter" data-filter="oldest">oldest</span>
+              <label class="custom-select__lable" for="Sort">Sort by</label>
 
-              <span class="filter" data-filter="high">high</span>
-
-              <span class="filter" data-filter="low">low</span>
+              <div class="custom-select__inner">
+                <select class="custom-select__select" name="sort" id="sort">
+                  <option value="Newest">Newest</option>
+                  <option value="Oldest">Oldest</option>
+                  <option value="High rating">High rating</option>
+                  <option value="Low rating">High rating</option>
+                </select>
+              </div>
             </div>
 
           </div>
 
           <ul class="single-reviews__list" role="list">
 
-            <li class="single-reviews__item" data-filter="newest">1</li>
+            <li class="single-reviews__item">
 
-            <li class="single-reviews__item" data-filter="newest">1+</li>
+              <blockquote class="single-reviews__blockqoute">
 
-            <li class="single-reviews__item" data-filter="oldest">2</li>
+                <cite class="single-reviews__author">
+                  Devon Lane
 
-            <li class="single-reviews__item" data-filter="oldest">2+</li>
+                  <span class="single-reviews__time">
+                    3 days ago
+                  </span>
+                </cite>
+                Phasellus varius faucibus ultrices odio in. Massa neque dictum natoque ornare rutrum malesuada et
+                phasellus. Viverra
+                natoque nulla cras vel nisl proin senectus. Tortor sed eleifend ante tristique felis sed urna aliquet.
+                Suspendisse fames
+                egestas sed duis purus diam et.
 
-            <li class="single-reviews__item" data-filter="high">3</li>
+              </blockquote>
 
-            <li class="single-reviews__item" data-filter="high">3+</li>
-
-            <li class="single-reviews__item" data-filter="low">4</li>
-
-            <li class="single-reviews__item" data-filter="low">4+</li>
+            </li>
 
           </ul>
 

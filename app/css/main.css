@@ -545,9 +545,6 @@
   transform: translateY(-50%);
 }
 
-.rating__list {
-  margin-right: 6.5625rem;
-}
 .rating__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2292,7 +2289,7 @@ h3::first-letter {
   fill: var(--color-green);
 }
 .article__icon {
-  width: 17px;
+  width: 16px;
   height: 16px;
   fill: var(--color-gray-700);
   -webkit-transition: fill 0.9s linear;
@@ -3752,45 +3749,57 @@ h3::first-letter {
   }
 }
 
-.size {
+.custom-select {
   width: 100%;
   max-width: 350px;
 }
-.size__select {
+.custom-select--sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  gap: 10px;
+  max-width: 235px;
+}
+.custom-select__select {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   display: block;
   grid-area: select;
   width: 100%;
 }
-.size__select option {
+.custom-select__select option {
   white-space: normal;
   outline-color: var(--color-green);
 }
-.size__inner {
+.custom-select__inner {
+  position: relative;
   display: -ms-grid;
   display: grid;
-  grid-template-areas: "select";
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
-  padding: 12px 12px 12px 14px;
+  grid-template-areas: "select";
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
+  padding: 12px 12px 12px 14px;
 }
-.size__inner::after {
+.custom-select__inner::after {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: select;
-  -ms-grid-column-align: end;
-  justify-self: end;
-  pointer-events: none;
   --rotate: rotate(0);
   content: "";
   position: absolute;
-  top: 50%;
   right: 0;
+  top: 50%;
+  -ms-grid-column-align: end;
+  justify-self: end;
+  grid-area: select;
   -webkit-mask-image: url("../img/sprite.svg#arrow-down");
   mask-image: url("../img/sprite.svg#arrow-down");
   -webkit-mask-position: center;
@@ -3810,6 +3819,7 @@ h3::first-letter {
   -o-transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
+  pointer-events: none;
 }
 
 .input__nubmer {
@@ -3841,6 +3851,7 @@ input[type=number]::-webkit-outer-spin-button {
 .table th,
 .table td {
   padding: 10px;
+  text-align: left;
 }
 .table tr:nth-child(2n+1) {
   background-color: var(--color-gray-200);
@@ -4190,6 +4201,10 @@ input[type=number]::-webkit-outer-spin-button {
   mask-image: url("../img/sprite.svg#no-dry");
 }
 
+.single-reviews {
+  width: 100%;
+  max-width: 735px;
+}
 .single-reviews__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4202,7 +4217,7 @@ input[type=number]::-webkit-outer-spin-button {
 .single-reviews__text {
   margin-right: 5rem;
   width: 100%;
-  max-width: 235px;
+  max-width: 305px;
 }
 .single-reviews__title {
   position: relative;
@@ -4226,9 +4241,48 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
-.single-reviews__select {
-  border: 1px solid red;
+.single-reviews__blockqoute {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+  grid-template-columns: repeat(2, auto);
+  line-height: 1.6;
+  gap: 50px;
+  color: var(--color-gray-800);
+  margin-bottom: 20px;
+}
+.single-reviews__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-gray-900);
+}
+.single-reviews__time {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-gray-700);
+}
+.single-reviews__time::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-image: url("../img/sprite.svg#rating-five");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 78px;
+  height: 14px;
 }
 
 .hide {
