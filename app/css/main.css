@@ -2132,11 +2132,6 @@ h3::first-letter {
     height: 35px;
   }
 }
-@media (max-width: calc(36em - 0.0625em)) {
-  .slider-btn {
-    display: none;
-  }
-}
 
 .slider-btn.swiper-button-disabled {
   pointer-events: none;
@@ -4331,5 +4326,50 @@ input[type=number]::-webkit-outer-spin-button {
   100% {
     opacity: 1;
   }
+}
+.vote__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.vote__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.vote__btn {
+  position: relative;
+}
+.vote__btn::before {
+  content: "";
+  position: absolute;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-image: url("../img/sprite.svg#like");
+  mask-image: url("../img/sprite.svg#like");
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  -webkit-transition: background-color 0.7s linear;
+  -o-transition: background-color 0.7s linear;
+  transition: background-color 0.7s linear;
+}
+.vote__btn:is(:hover, :active)::before {
+  background-color: var(--color-green-100);
+}
+.vote__btn--dislike::before {
+  -webkit-mask-image: url("../img/sprite.svg#dislike");
+  mask-image: url("../img/sprite.svg#dislike");
+}
+.vote__btn--dislike:is(:hover, :active)::before {
+  background-color: var(--color-red);
 }
 /*# sourceMappingURL=main.css.map */

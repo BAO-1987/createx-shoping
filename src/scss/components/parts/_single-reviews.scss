@@ -111,3 +111,51 @@
     opacity: 1;
   }
 }
+
+
+.vote {
+  &__list {
+    @include flex;
+    gap: 1rem;
+
+    li {
+      @include flex-sb;
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-image: url("../img/sprite.svg#like");
+      width: 16px;
+      height: 16px;
+      background-color: currentcolor;
+      transition: background-color 0.7s linear;
+    }
+
+    &:is(:hover, :active) {
+      &::before {
+        background-color: var(--color-green-100);
+      }
+    }
+
+    &--dislike {
+      &::before {
+        mask-image: url("../img/sprite.svg#dislike");
+      }
+
+      &:is(:hover, :active) {
+        &::before {
+          background-color: var(--color-red);
+        }
+      }
+    }
+  }
+
+}

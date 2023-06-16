@@ -222,9 +222,9 @@
     height: 35px;
   }
 
-  @include for-width (-mobile-md) {
-    display: none;
-  }
+  // @include for-width (-mobile-md) {
+  //   display: none;
+  // }
 }
 
 .slider-btn.swiper-button-disabled {
