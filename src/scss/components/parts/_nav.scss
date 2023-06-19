@@ -1,6 +1,10 @@
 .nav {
   @include flex-all-sb;
 
+  &--panigation {
+    justify-content: center;
+  }
+
   &__list {
     @include flex;
 

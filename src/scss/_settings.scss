@@ -121,18 +121,18 @@
   &__input {
     position: absolute;
 
-    &:checked + .checkboxes__label {
+    &:checked+.checkboxes__label {
       background-color: var(--color-green);
       border-color: var(--color-green);
       color: var(--color-white);
     }
 
-    &:focus-visible + .checkboxes__label {
+    &:focus-visible+.checkboxes__label {
       outline: 2px solid var(--color-green);
       outline-offset: 2px;
     }
 
-    &:disabled + .checkboxes__label {
+    &:disabled+.checkboxes__label {
       opacity: 0.4;
       pointer-events: none;
     }
@@ -465,6 +465,108 @@
   }
 }
 
-.js-focus-visible :focus:not(.focus-visible) {
-  outline-color: none;
+.vote {
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    @include flex-all-sb;
+
+    &:not(:last-child) {
+      margin-right: 2.2rem;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+      content: "";
+      left: -20px;
+      transform: translateY(-50%);
+      position: absolute;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-image: url("../img/sprite.svg#like");
+      width: 16px;
+      height: 16px;
+      background-color: currentcolor;
+      transition: background-color 0.3s linear;
+    }
+
+    &:is(:hover, :active) {
+      &::before {
+        background-color: var(--color-green-100);
+      }
+    }
+
+    &--dislike {
+      &::before {
+        mask-image: url("../img/sprite.svg#dislike");
+      }
+
+      &:is(:hover, :active) {
+        &::before {
+          background-color: var(--color-red);
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  @include flex-all-center;
+
+
+  &__btn {
+    @include flex-all-center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      left: 0;
+      // transform: translateY(-50%);
+      position: absolute;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-image: url("../img/sprite.svg#arrow");
+      width: 16px;
+      height: 16px;
+      background-color: currentcolor;
+      transition: background-color 0.3s linear;
+    }
+
+    &--reverse {
+      &::before {
+        rotate: 180deg;
+        right: 0;
+      }
+    }
+  }
+
+  &__list {
+    @include flex-all-center;
+    padding: 0 2rem;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    a {
+      position: relative;
+      font-weight: 700;
+      transition: color 0.3s linear;
+
+      &:is(:hover, [aria-current="page"]) {
+        color: var(--color-green);
+      }
+    }
+  }
 }
