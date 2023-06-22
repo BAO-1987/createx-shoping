@@ -8,6 +8,7 @@
   background-color: var(--color-white);
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
+  color-scheme: light dark;
 
   &__body {
     min-width: 320px;
@@ -108,6 +109,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: var(--color-gray-700);
+    background-color: var(--color-white);
     padding: rem(6) rem(16);
     border-width: 1px;
     border-style: solid;
@@ -116,32 +118,23 @@
     transition-property: color, background-color, border-color;
     transition-duration: 0.3s;
     transition-timing-function: linear;
+
+    &:is(:hover, :focus) {
+      border-color: var(--color-green);
+    }
   }
 
-  &__input {
-    position: absolute;
-
-    &:checked+.checkboxes__label {
-      background-color: var(--color-green);
-      border-color: var(--color-green);
-      color: var(--color-white);
-    }
-
-    &:focus-visible+.checkboxes__label {
-      outline: 2px solid var(--color-green);
-      outline-offset: 2px;
-    }
-
-    &:disabled+.checkboxes__label {
-      opacity: 0.4;
-      pointer-events: none;
-    }
+  input[type="radio"]:checked + .checkboxes__label {
+    border-color: var(--color-green);
+    color: var(--color-white);
+    background-color: var(--color-green);
   }
 }
 
 .login {
   &__btn {
     @include flex-all-center;
+
     position: relative;
     transition: 0.3s color linear;
 
@@ -519,7 +512,6 @@
 
 .pagination {
   @include flex-all-center;
-
 
   &__btn {
     @include flex-all-center;

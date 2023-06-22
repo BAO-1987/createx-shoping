@@ -1932,52 +1932,45 @@
 
     <div class="subscribe__inner">
 
-      <div class="subscribe__content">
+      <form class="subscribe-form" action="#" autocomplete="off" method="get">
 
-        <h2 class="subscribe__title title">Subscribe for updates</h2>
+        <div class="subscribe-form__inner">
 
-        <div class="subscribe__text">
+          <h2 class="subscribe__title title">Subscribe for updates</h2>
+
           <p>Subscribe for exclusive early sale access and new arrivals.</p>
-        </div>
 
-        <fieldset class="checkboxes">
+          <fieldset class="checkboxes">
 
-          <div class="checkboxes__item">
-            <input class="checkboxes__input" type="radio" value="Women" name="gender" id="women">
-            <label class="checkboxes__label" for="women">Women</label>
-          </div>
+            <input class="visually-hidden" type="radio" value="Women" name="gender" id="Women">
+            <label class="checkboxes__label" for="Women">Women</label>
 
-          <div class="checkboxes__item">
-            <input class="checkboxes__input" type="radio" value="Men" name="gender" id="Men">
+            <input class="visually-hidden" type="radio" value="Men" name="gender" id="Men">
             <label class="checkboxes__label" for="Men">Men</label>
-          </div>
 
-          <div class="checkboxes__item">
-            <input class="checkboxes__input" type="radio" value="Girls" name="gender" id="Girls">
+            <input class="visually-hidden" type="radio" value="Girls" name="gender" id="Girls">
             <label class="checkboxes__label" for="Girls">Girls</label>
-          </div>
 
-          <div class="checkboxes__item">
-            <input class="checkboxes__input" type="radio" value="Boys" name="gender" id="Boys">
+            <input class="visually-hidden" type="radio" value="Boys" name="gender" id="Boys">
             <label class="checkboxes__label" for="Boys">Boys</label>
+
+          </fieldset>
+
+          <div class="form__box">
+            <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email"
+              required aria-invalid="true" aria-errormessage="email-error">
+            <label class="form__label" for="email">Email</label>
+            <button class="btn" type="submit">Subscribe</button>
           </div>
 
-        </fieldset>
-
-        <form class="form" action="#" autocomplete="off" method="get">
-  <div class="form__box">
-    <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email" required
-      aria-invalid="true" aria-errormessage="email-error">
-    <label class="form__label" for="email">Email</label>
-    <button class="btn" type="submit">Subscribe</button>
-  </div>
-</form>
+        </div>
 
         <label class="custom-checkbox">
           <input type="checkbox" class="custom-checkbox__field">
           <span class="custom-checkbox__content">I agree to receive communications from Createx Store.</span>
         </label>
-      </div>
+
+      </form>
 
       <div class="subscribe__box">
         <picture>
