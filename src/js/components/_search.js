@@ -23,7 +23,7 @@
   const logo = document.querySelector('[data-logo]');
   const headerAction = document.querySelector('[data-hide]');
   const formSearch = document.querySelector('[data-search]');
-  const formClose = document.querySelector('[data-close]');
+  const formClose = document.querySelector('form-search__close');
 
   formSearch?.addEventListener('click', function (e) {
     formSearch.classList.toggle('open');
