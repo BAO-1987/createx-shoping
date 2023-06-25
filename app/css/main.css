@@ -134,8 +134,10 @@
   flex-shrink: 0;
   margin-right: clamp(1rem, 0.5rem + 2.7vw, 3.75rem);
 }
-.logo.hidden {
-  display: none;
+@media (max-width: calc(29.6875em - 0.0625em)) {
+  .logo.hidden {
+    display: none;
+  }
 }
 
 .visually-hidden {
@@ -183,7 +185,7 @@
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
-  margin-bottom: 2.625rem;
+  margin-bottom: 3.25rem;
   border: none;
   padding: 0;
 }
@@ -2487,9 +2489,12 @@ h3::first-letter {
 }
 .article--single {
   position: sticky;
-  top: 3rem;
+  top: 25%;
   -webkit-box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.16), 0 30px 24px -10px rgba(154, 156, 165, 0.1), 0 12px 10px -6px rgba(154, 156, 165, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
   box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.16), 0 30px 24px -10px rgba(154, 156, 165, 0.1), 0 12px 10px -6px rgba(154, 156, 165, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
+}
+.article--single .btn--article::before {
+  left: 115px;
 }
 
 .card {
@@ -2767,6 +2772,10 @@ h3::first-letter {
 }
 .form-search__icon:hover {
   fill: var(--color-green);
+}
+
+.form-subscribe p {
+  margin-bottom: 2rem;
 }
 
 .form-modal {
@@ -4159,6 +4168,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .tabs__nav-btn:hover {
   color: var(--color-gray-800);
+}
+.tabs__content {
+  position: relative;
 }
 .tabs__panel {
   display: none;

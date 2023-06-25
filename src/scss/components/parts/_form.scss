@@ -106,10 +106,6 @@
   &__close {
     left: 12px;
     display: none;
-
-    // @include for-width(-mobile-sl) {
-    //   display: block;
-    // }
   }
 
   &__icon {
@@ -122,6 +118,12 @@
     &:hover {
       fill: var(--color-green);
     }
+  }
+}
+
+.form-subscribe {
+  p {
+    margin-bottom: 2rem;
   }
 }
 
