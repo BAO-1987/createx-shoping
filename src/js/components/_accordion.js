@@ -1,10 +1,17 @@
 const accordion = document?.querySelector(".accordion__list");
 
-accordion.addEventListener("click", (e) => {
-  const activePanel = e.target.closest(".accordion__item");
-  if (!activePanel) return;
-  toggleAccordion(activePanel);
-});
+// accordion.addEventListener("click", (e) => {
+//   const activePanel = e.target.closest(".accordion__item");
+//   if (!activePanel) return;
+//   toggleAccordion(activePanel);
+// });
+if (accordion) {
+  accordion.addEventListener("click", (e) => {
+    const activePanel = e.target.closest(".accordion__item");
+    if (!activePanel) return;
+    toggleAccordion(activePanel);
+  });
+}
 
 function toggleAccordion(panelToActivate) {
   const activeButton = panelToActivate.querySelector("button");

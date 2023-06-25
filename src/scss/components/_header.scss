@@ -61,6 +61,15 @@
 
   &__action {
     @include flex;
+
+    @include for-width(-mobile-sl) {
+      &.hidden {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 7s linear;
+      }
+    }
   }
 
   &__wrapper {

@@ -80,7 +80,7 @@
 
           </div>
 
-          <button class="login__btn modal__btn  btn-reset" type="button" data-modal="modal1">
+          <button class="login__btn modal__btn btn-reset" type="button" data-modal="modal1">
             Log in / Register
           </button>
 
@@ -98,7 +98,7 @@
 
       <nav class="nav" title="primary navigation">
 
-        <a class="logo" href="#">
+        <a class="logo" href="#" data-logo>
           <img class="logo__img" src="img/logo.svg" alt="logo of ecommerce createx" width="130" height="22"
             loading="lazy">
         </a>
@@ -314,11 +314,18 @@
 
       </nav>
 
-      <form class="form-search" action="#" autocomplete="off" method="get">
+      <form class="form-search" action="#" autocomplete="off" method="get" id="form-search" data-search>
+
+        <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
+          <svg class="form-search__icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
 
         <label class="visually-hidden" for="search"></label>
 
-        <input class="form-search__input" type="search" id="search" placeholder="Search for products..." required>
+        <input class="form-search__input" type="search" id="search" data-search-button
+          placeholder="Search for products..." required>
 
         <button class="form-search__btn btn-reset" type="submit" aria-label="search">
 
@@ -329,7 +336,7 @@
 
       </form>
 
-      <div class="header__action" id="headerAction">
+      <div class="header__action" data-hide>
 
         <div class="wishlist">
           <span class="visually-hidden">wishlist</span>

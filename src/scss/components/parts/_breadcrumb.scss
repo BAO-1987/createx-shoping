@@ -16,7 +16,7 @@
       align-items: center;
 
       &:not(:last-child) {
-        margin-right: clamp(1rem, 1vw + 1rem, 2rem);
+        margin-right: clamp(1.5rem, 1vw + 1rem, 2rem);
 
         &::after {
           content: "";
