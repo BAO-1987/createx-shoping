@@ -503,6 +503,79 @@
 
   </dialog>
 
+  <dialog class="modal modal--review" id="modalReview">
+
+    <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
+      <svg class="modal__icon">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <h2 class="modal__title title">Leave a review</h2>
+
+    <form class="form-modal form" action="#" autocomplete="off" method="get">
+
+      <div class="form-modal__box">
+        <label class="form__label" for="name">Name
+        </label>
+
+        <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your name" required
+          aria-invalid="true" aria-errormessage="name-error">
+      </div>
+
+      <div class="form-modal__box">
+        <label class="form__label" for="emailReview">Email
+        </label>
+        <input class="form__input" type="email" id="emaiReview" autocomplete="username" placeholder="Your working email"
+          required aria-invalid="true" aria-errormessage="email-error">
+      </div>
+
+      <div class="form-modal__box">
+        <div class="custom-select">
+
+          <label class="form__label" for="rating">Rating</label>
+
+          <div class="custom-select__inner">
+            <select class="custom-select__select" name="rating" id="rating">
+              <option value disabled selected>Choose rating</option>
+              <option value="1">1 star</option>
+              <option value="2">2 star</option>
+              <option value="3">3 star</option>
+              <option value="4">4 star</option>
+              <option value="5">5 star</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-modal__box form-modal__box--upload">
+        <label class="form__label" for="rating">Upload a photo or video (optional)</label>
+
+        <span>Drag and drop here to upload</span>
+
+        <input class="form__input form__input--file" type="file" id="rating" accept="image/png, image/jpeg">
+
+        <span class="btn btn--inverse">Or select file</span>
+
+      </div>
+
+      <div class="form-modal__box">
+
+        <label class="form__label" for="reviewText">Review</label>
+
+        <textarea class="form__textarea" name="textarea" id="reviewText" rows="3" placeholder="Your review text" required></textarea>
+
+      </div>
+
+      <button class="btn" type="submit">Submit a review</button>
+
+    </form>
+
+
+
+  </dialog>
+
+
 
 
   </di>

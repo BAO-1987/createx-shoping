@@ -24,8 +24,19 @@
   &--size {
     max-width: 870px;
     overflow-x: scroll;
+
     &::before {
       content: none;
+    }
+  }
+
+  &--review {
+    &::before {
+      content: none;
+    }
+
+    .custom-select {
+      max-width: 100%;
     }
   }
 
