@@ -2876,7 +2876,7 @@ h3::first-letter {
 .form-modal__box--upload:hover .btn {
   color: var(--color-white);
 }
-.form-modal__box--upload:hover .btn::after {
+.form-modal__box--upload:hover .btn ::after {
   -webkit-transform: scale(160%) translateY(0);
   -ms-transform: scale(160%) translateY(0);
   transform: scale(160%) translateY(0);
