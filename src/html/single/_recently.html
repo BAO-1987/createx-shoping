@@ -1,0 +1,96 @@
+<section class="slider section">
+
+  <div class="container">
+
+    <div class="slider__nav">
+
+      <h2 class="slider__title title">Recently viewed</h2>
+
+      <div class="slider__btns">
+        <button class="recently-slider__prev slider-btn" type="button"></button>
+        <button class="recently-slider__next slider-btn slider-btn--reverse" type="button"></button>
+      </div>
+
+    </div>
+
+    <div class="recently-slider">
+
+      <ul class="recently-slider__list swiper-wrapper">
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '',
+        rating: "",
+        image: "card/baby-shoes",
+        imageDescr: "Baby shoes with laces",
+        width: "285",
+        height: "320",
+        title: "Baby shoes with laces",
+        price: "$30.60",
+        priceCurrent: "",
+        priceOld: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '',
+        rating: "img/sprite.svg#rating-for",
+        image: "card/baby-romper",
+        imageDescr: "Green baby romper",
+        width: "285",
+        height: "320",
+        title: "Green baby romper",
+        price: "$20.40",
+        priceCurrent: "",
+        priceOld: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '',
+        rating: "",
+        image: "card/gray-shoes",
+        imageDescr: "Men fashion gray shoes",
+        width: "285",
+        height: "320",
+        title: "Men fashion gray shoes",
+        price: "$85.50",
+        priceCurrent: "",
+        priceOld: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '<span class="article__sale">-50%</span>',
+        rating: "",
+        image: "card/jeans",
+        imageDescr: "Skinny push-up jeans",
+        width: "285",
+        height: "320",
+        title: "Skinny push-up jeans",
+        price: "",
+        priceCurrent: "$40.00",
+        priceOld: "$80.00"
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '<span class="article__sale">-35%</span>',
+        rating: "img/sprite.svg#rating-for",
+        image: "card/shorts-blue",
+        imageDescr: "image of shorts blue",
+        width: "285",
+        height: "320",
+        title: "Shorts blue",
+        price: "",
+        priceCurrent: "$35.16",
+        priceOld: "$89.95"
+        })
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>

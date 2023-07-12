@@ -1,0 +1,96 @@
+<section class="slider slider--interest section">
+
+  <div class="container">
+
+    <div class="slider__nav">
+
+      <h2 class="slider__title title">You may be interested in</h2>
+
+      <div class="slider__btns">
+        <button class="interest-slider__prev slider-btn" type="button"></button>
+        <button class="interest-slider__next slider-btn slider-btn--reverse" type="button"></button>
+      </div>
+
+    </div>
+
+    <div class="interest-slider">
+
+      <ul class="sale-slider__list swiper-wrapper">
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '',
+        rating: "",
+        image: "card/sunglasses",
+        imageDescr: "Metal bridge sunglasses",
+        width: "285",
+        height: "320",
+        title: "Metal bridge sunglasses",
+        price: "$89.50",
+        priceCurrent: "$89.50",
+        priceOld: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '',
+        rating: "",
+        image: "card/baggy-jeans",
+        imageDescr: "Mid-rise slim cropped fit jeans",
+        width: "285",
+        height: "320",
+        title: "Mid-rise slim cropped fit jeans",
+        price: "$40.00",
+        priceCurrent: "",
+        priceOld: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '<span class="article__sale">-50%</span>',
+        rating: "img/sprite.svg#rating-five",
+        image: "card/bags",
+        imageDescr: "Leather crossbody bag with",
+        width: "285",
+        height: "320",
+        title: "Leather crossbody bag with...",
+        price: "",
+        priceCurrent: "$89.50",
+        priceOld: "$179.00"
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '',
+        rating: "img/sprite.svg#rating-five",
+        image: "card/shirt",
+        imageDescr: "Shirt with insertion lace trims",
+        width: "285",
+        height: "320",
+        title: "Shirt with insertion lace trims",
+        price: "$49.50",
+        priceCurrent: "",
+        priceOld: ""
+        })
+
+        @include("../parts/_article.html",{
+        class: "swiper-slide",
+        sale: '<span class="article__sale">-35%</span>',
+        rating: "img/sprite.svg#rating-for",
+        image: "card/shorts-blue",
+        imageDescr: "image of shorts blue",
+        width: "285",
+        height: "320",
+        title: "Shorts blue",
+        price: "",
+        priceCurrent: "$35.16",
+        priceOld: "$89.95"
+        })
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>

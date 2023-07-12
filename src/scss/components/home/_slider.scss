@@ -1,6 +1,7 @@
 .slider {
   position: relative;
 
+  &--interest,
   &--trending {
     padding: clamp(1rem, calc(0.8rem + 3.5vw), 5rem) 0;
     background-color: var(--color-gray-300);
@@ -12,8 +13,6 @@
 
   &__btns {
     @include flex-sb;
-    gap: 1.5rem;
-
     position: relative;
   }
 
@@ -22,6 +21,9 @@
   }
 }
 
+.recently-slider,
+.interest-slider,
+.look-slider,
 .sale-slider,
 .trending-slider {
   overflow: hidden;
@@ -42,5 +44,12 @@
 
   &__prev {
     right: 60px;
+  }
+}
+
+.look-slider {
+  position: relative;
+  &__pagination {
+    bottom: 20% !important;
   }
 }

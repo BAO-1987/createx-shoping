@@ -227,3 +227,62 @@ const looklSlider = new Swiper(".look-slider", {
   //   },
   // },
 });
+
+const interestSlider = new Swiper(".interest-slider", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+  grabCursor: true,
+  loop: true,
+
+  breakpoints: {
+
+    475: {
+      slidesPerView: 2,
+    },
+
+    992: {
+      slidesPerView: 3,
+    },
+
+    1400: {
+      slidesPerView: 4,
+    }
+  },
+
+  navigation: {
+    nextEl: ".interest-slider__next",
+    prevEl: ".interest-slider__prev",
+  },
+});
+
+
+const recentlySlider = new Swiper(".recently-slider", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+  grabCursor: true,
+  loop: true,
+
+  breakpoints: {
+
+    475: {
+      slidesPerView: 2,
+    },
+
+    992: {
+      slidesPerView: 3,
+    },
+
+    1400: {
+      slidesPerView: 4,
+    }
+  },
+
+  navigation: {
+    nextEl: ".recently-slider__next",
+    prevEl: ".recently-slider__prev",
+  },
+});

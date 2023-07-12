@@ -1391,10 +1391,12 @@
     </div>
 
     <div class="look__inner">
+
       <div class="look__box">
         <picture>
           <source srcset="img/look/look.webp" type="image/webp">
-          <img loading="lazy" src="img/look/look.jpg" width="495" height="600" alt="image of your look">
+          <img class="look__img" loading="lazy" src="img/look/look.jpg" width="495" height="600"
+            alt="image of your look">
         </picture>
       </div>
 
@@ -1564,8 +1566,8 @@
       </svg>
 
       <picture>
-        <source srcset="img/card/watch-blue.webp" type="image/webp">
-        <img src="img/card/watch-blue.jpg" class="article__img" width="285" height="320" alt="card/watch-blueDesc" loading="lazy">
+        <source srcset="img/card/watch.webp" type="image/webp">
+        <img src="img/card/watch.jpg" class="article__img" width="285" height="320" alt="card/watchDesc" loading="lazy">
       </picture>
 
       <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
@@ -1605,9 +1607,630 @@
 
         </ul>
 
-        <div class="arrival__pagination swiper-pagination"></div>
+        <div class="look-slider__pagination swiper-pagination"></div>
 
       </div>
+    </div>
+
+  </div>
+
+</section>
+
+      <section class="slider slider--interest section">
+
+  <div class="container">
+
+    <div class="slider__nav">
+
+      <h2 class="slider__title title">You may be interested in</h2>
+
+      <div class="slider__btns">
+        <button class="interest-slider__prev slider-btn" type="button"></button>
+        <button class="interest-slider__next slider-btn slider-btn--reverse" type="button"></button>
+      </div>
+
+    </div>
+
+    <div class="interest-slider">
+
+      <ul class="sale-slider__list swiper-wrapper">
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href=""></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/sunglasses.webp" type="image/webp">
+        <img src="img/card/sunglasses.jpg" class="article__img" width="285" height="320" alt="card/sunglassesDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Metal bridge sunglasses</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$89.50</span>
+
+        <span class="article__price-curent">$89.50</span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href=""></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/baggy-jeans.webp" type="image/webp">
+        <img src="img/card/baggy-jeans.jpg" class="article__img" width="285" height="320" alt="card/baggy-jeansDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Mid-rise slim cropped fit jeans</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$40.00</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <span class="article__sale">-50%</span>
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-five"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/bags.webp" type="image/webp">
+        <img src="img/card/bags.jpg" class="article__img" width="285" height="320" alt="card/bagsDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Leather crossbody bag with…</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new"></span>
+
+        <span class="article__price-curent">$89.50</span>
+
+        <span class="article__price-old">$179.00</span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-five"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/shirt.webp" type="image/webp">
+        <img src="img/card/shirt.jpg" class="article__img" width="285" height="320" alt="card/shirtDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Shirt with insertion lace trims</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$49.50</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <span class="article__sale">-35%</span>
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-for"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/shorts-blue.webp" type="image/webp">
+        <img src="img/card/shorts-blue.jpg" class="article__img" width="285" height="320" alt="card/shorts-blueDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Shorts blue</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new"></span>
+
+        <span class="article__price-curent">$35.16</span>
+
+        <span class="article__price-old">$89.95</span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+      <section class="slider section">
+
+  <div class="container">
+
+    <div class="slider__nav">
+
+      <h2 class="slider__title title">Recently viewed</h2>
+
+      <div class="slider__btns">
+        <button class="recently-slider__prev slider-btn" type="button"></button>
+        <button class="recently-slider__next slider-btn slider-btn--reverse" type="button"></button>
+      </div>
+
+    </div>
+
+    <div class="recently-slider">
+
+      <ul class="recently-slider__list swiper-wrapper">
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href=""></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/baby-shoes.webp" type="image/webp">
+        <img src="img/card/baby-shoes.jpg" class="article__img" width="285" height="320" alt="card/baby-shoesDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Baby shoes with laces</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$30.60</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-for"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/baby-romper.webp" type="image/webp">
+        <img src="img/card/baby-romper.jpg" class="article__img" width="285" height="320" alt="card/baby-romperDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Green baby romper</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$20.40</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href=""></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/gray-shoes.webp" type="image/webp">
+        <img src="img/card/gray-shoes.jpg" class="article__img" width="285" height="320" alt="card/gray-shoesDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Men fashion gray shoes</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$85.50</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <span class="article__sale">-50%</span>
+
+      <svg class="article__rating">
+        <use xlink:href=""></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/jeans.webp" type="image/webp">
+        <img src="img/card/jeans.jpg" class="article__img" width="285" height="320" alt="card/jeansDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Skinny push-up jeans</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new"></span>
+
+        <span class="article__price-curent">$40.00</span>
+
+        <span class="article__price-old">$80.00</span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="swiper-slide">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <span class="article__sale">-35%</span>
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-for"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/card/shorts-blue.webp" type="image/webp">
+        <img src="img/card/shorts-blue.jpg" class="article__img" width="285" height="320" alt="card/shorts-blueDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Shorts blue</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new"></span>
+
+        <span class="article__price-curent">$35.16</span>
+
+        <span class="article__price-old">$89.95</span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+      <section class="subscribe">
+
+  <div class="container">
+
+    <div class="subscribe__inner">
+
+      <form class="form-subscribe" action="#" autocomplete="off" method="get">
+
+        <div class="form-subscribe__inner">
+
+          <h2 class="subscribe__title title">Subscribe for updates</h2>
+
+          <p>Subscribe for exclusive early sale access and new arrivals.</p>
+
+          <fieldset class="checkboxes">
+
+            <input class="visually-hidden" type="radio" value="Women" name="gender" id="Women">
+            <label class="checkboxes__label" for="Women">Women</label>
+
+            <input class="visually-hidden" type="radio" value="Men" name="gender" id="Men">
+            <label class="checkboxes__label" for="Men">Men</label>
+
+            <input class="visually-hidden" type="radio" value="Girls" name="gender" id="Girls">
+            <label class="checkboxes__label" for="Girls">Girls</label>
+
+            <input class="visually-hidden" type="radio" value="Boys" name="gender" id="Boys">
+            <label class="checkboxes__label" for="Boys">Boys</label>
+
+          </fieldset>
+
+          <div class="form__box">
+            <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email"
+              required aria-invalid="true" aria-errormessage="email-error">
+            <label class="form__label" for="email">Email</label>
+            <button class="btn" type="submit">Subscribe</button>
+          </div>
+
+        </div>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field">
+          <span class="custom-checkbox__content">I agree to receive communications from Createx Store.</span>
+        </label>
+
+      </form>
+
+      <div class="subscribe__box">
+        <picture>
+          <source srcset="img/subscribe/subscribe-bg.webp" type="image/webp">
+          <img loading="lazy" src="img/subscribe/subscribe-bg.png" width="461" height="416" alt="image of postman">
+        </picture>
+      </div>
+
     </div>
 
   </div>

@@ -19,32 +19,30 @@
   overflow: hidden;
   white-space: nowrap;
   isolation: isolate;
-  mask: linear-gradient(135deg, #000c 40%, #000c 60%) 100% 100%/250% 250%;
 
-  // &::after {
-  //   background-color: var(--color-white);
-  //   border-radius: 75%;
-  //   content: "";
-  //   position: absolute;
-  //   transform: translateY(67px);
-  //   transition: transform 0.6s linear;
-  //   inset: 0;
-  //   z-index: -1;
-  // }
+  &::after {
+    background-color: var(--color-white);
+    border-radius: 75%;
+    content: "";
+    position: absolute;
+    transform: translateY(67px);
+    transition: transform 0.6s linear;
+    inset: 0;
+    z-index: -1;
+  }
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   mask-position: center;
-  //   mask-repeat: no-repeat;
-  //   mask-size: cover;
-  //   background-color: currentcolor;
-  //   transition: background-color 0.7s linear;
-  // }
+  &::before {
+    content: "";
+    position: absolute;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: currentcolor;
+    transition: background-color 0.7s linear;
+  }
 
   &:hover {
-    // color: var(--color-green);
-    mask-position: 0 0;
+    color: var(--color-green);
 
     &::after {
       transform: scale(160%) translateY(0);
