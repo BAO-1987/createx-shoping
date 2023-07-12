@@ -1,0 +1,14 @@
+.look {
+  &__inner {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__box {
+    flex-shrink: 0;
+  }
+}
+
+.look-slider {
+  overflow: hidden;
+}

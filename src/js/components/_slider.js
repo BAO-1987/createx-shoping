@@ -186,3 +186,44 @@ if (singleImages) {
 //   grabCursor: true,
 //   loop: true,
 // });
+
+
+const looklSlider = new Swiper(".look-slider", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+  grabCursor: true,
+  loop: true,
+
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".look-slider__next",
+    prevEl: ".look-slider__prev",
+  },
+
+  // breakpoints: {
+
+  //   475: {
+  //     slidesPerView: 2,
+  //   },
+
+  //   768: {
+  //     slidesPerView: 3,
+  //   },
+
+  //   1200: {
+  //     slidesPerView: 6,
+  //   },
+  // },
+});

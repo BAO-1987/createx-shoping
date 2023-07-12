@@ -1633,6 +1633,7 @@ h3::first-letter {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  gap: 1.5rem;
   position: relative;
 }
 .slider__btn {
@@ -1825,6 +1826,21 @@ h3::first-letter {
 .single-slider__nav .single-slider__link::before {
   width: 32px;
   height: 32px;
+}
+
+.look__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+.look__box {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.look-slider {
+  overflow: hidden;
 }
 
 .footer {
@@ -2311,7 +2327,6 @@ h3::first-letter {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
 }
 .article a {
   margin-top: auto;
@@ -2625,15 +2640,6 @@ h3::first-letter {
   position: absolute;
   top: -30px;
 }
-.form__textarea {
-  padding: 0.625em 0 0.625em 1em;
-  min-height: 6.6875rem;
-  resize: none;
-  width: 100%;
-  border-color: var(--color-gray-400);
-  border-width: 1px;
-  border-radius: var(--br);
-}
 
 .form-search {
   display: -webkit-box;
@@ -2825,9 +2831,6 @@ h3::first-letter {
   border: 2px dashed var(--color-gray-400);
   padding: 3.75rem 1.5rem 1.5rem;
   text-align: center;
-  -webkit-transition: border-color 0.7s linear;
-  -o-transition: border-color 0.7s linear;
-  transition: border-color 0.7s linear;
 }
 .form-modal__box--upload::before {
   content: "";
@@ -2864,7 +2867,7 @@ h3::first-letter {
 .form-modal__box--upload:hover .btn {
   color: var(--color-white);
 }
-.form-modal__box--upload:hover .btn::after {
+.form-modal__box--upload:hover .btn ::after {
   -webkit-transform: scale(160%) translateY(0);
   -ms-transform: scale(160%) translateY(0);
   transform: scale(160%) translateY(0);
@@ -3031,8 +3034,8 @@ h3::first-letter {
   display: grid;
   place-content: center;
   border-radius: 100vw;
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1rem;
   background-color: var(--radio-color, currentcolor);
   -webkit-transition: background-color 0.3s linear;
   -o-transition: background-color 0.3s linear;
@@ -3085,13 +3088,11 @@ h3::first-letter {
   margin: 0;
 }
 .form-article .checkboxes__label {
-  font-size: 12px;
-  padding-right: 0.1875rem;
-  padding-left: 0.1875rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-weight: 400;
-  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px;
+  min-width: 24px;
+  height: 24px;
 }
 
 .wishlist {
