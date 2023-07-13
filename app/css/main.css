@@ -1691,9 +1691,6 @@ h3::first-letter {
 .look-slider {
   position: relative;
 }
-.look-slider__pagination {
-  bottom: 20% !important;
-}
 
 .single__content {
   display: -webkit-box;
@@ -1863,6 +1860,9 @@ h3::first-letter {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .look__box {
   margin-right: 1rem;
@@ -2379,6 +2379,7 @@ h3::first-letter {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 .article a {
   margin-top: auto;
@@ -2542,6 +2543,10 @@ h3::first-letter {
 }
 .article--single .btn--article::before {
   left: 115px;
+}
+.article:hover {
+  -webkit-box-shadow: 8px 8px 16px #14595a, -8px -8px 16px #1a797a;
+  box-shadow: 8px 8px 16px #14595a, -8px -8px 16px #1a797a;
 }
 
 .card {

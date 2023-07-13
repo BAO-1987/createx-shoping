@@ -3,7 +3,7 @@
 
   position: relative;
   flex-direction: column;
-  // height: 100%;
+  height: 100%;
 
   a {
     margin-top: auto;
@@ -155,5 +155,10 @@
         left: 115px;
       }
     }
+  }
+
+  &:hover {
+    box-shadow: 8px 8px 16px #14595a,
+    -8px -8px 16px #1a797a;
   }
 }
