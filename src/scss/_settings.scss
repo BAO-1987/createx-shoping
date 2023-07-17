@@ -52,7 +52,7 @@
 }
 
 .section {
-  margin-bottom: clamp(3rem, calc(2rem + 8.45vw), 11.25rem);
+  margin-bottom: clamp(2rem, calc(2rem + 8.45vw), 11.25rem);
 }
 
 .logo {
@@ -128,7 +128,7 @@
     }
   }
 
-  input[type="radio"]:checked+.checkboxes__label {
+  input[type="radio"]:checked + .checkboxes__label {
     border-color: var(--color-green);
     color: var(--color-white);
     background-color: var(--color-green);
@@ -555,7 +555,9 @@
   text-underline-offset: 3px;
   text-decoration-skip-ink: solid;
   text-decoration-line: underline;
-  transition: text-decoration-color 0.5s linear, color 0.5s linear;
+  transition:
+    text-decoration-color 0.5s linear,
+    color 0.5s linear;
 
   &:is(:hover, :active) {
     text-decoration-color: transparent;

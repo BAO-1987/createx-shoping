@@ -3,6 +3,18 @@ import Swiper, {
   Pagination,
 } from 'swiper/bundle';
 
+const commonSwiperOptions = {
+  slidesPerView: 1,
+  mousewheelControl: true,
+  keyboardControl: true,
+  grabCursor: true,
+  loop: true,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+};
+
 const heroSliderSpeed = 1500;
 
 const bodyStyles = window.getComputedStyle(document.body);
@@ -11,12 +23,7 @@ const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
 document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');
 
 const heroSlider = new Swiper(".hero-slider", {
-  slidesPerView: 1,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  autoHeight: true,
-  loop: true,
+  ...commonSwiperOptions,
 
   speed: heroSliderSpeed,
   autoplay: {
@@ -33,6 +40,7 @@ const heroSlider = new Swiper(".hero-slider", {
     clickable: true,
     type: 'bullets',
   },
+
   on: {
     init: function () {
       const paginationBullets = document.querySelectorAll('.hero__pagination .swiper-pagination-bullet');
@@ -45,16 +53,12 @@ const heroSlider = new Swiper(".hero-slider", {
 });
 
 const offersSlider = new Swiper(".offers-slider", {
-  slidesPerView: 1,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  loop: true,
+  ...commonSwiperOptions,
 
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4500,
+  //   disableOnInteraction: false,
+  // },
 
 
   navigation: {
@@ -64,47 +68,47 @@ const offersSlider = new Swiper(".offers-slider", {
 });
 
 const arrivalSlider = new Swiper(".arrival-slider", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  loop: true,
-
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
+  ...commonSwiperOptions,
 
 
   pagination: {
-    el: ".swiper-pagination",
+    el: ".arrival-slider__pagination",
     clickable: true,
   },
 
   breakpoints: {
 
-    475: {
+    420: {
+      slidesPerView: 1,
+    },
+
+    425: {
       slidesPerView: 2,
+      spaceBetween: 10,
+    },
+
+    575: {
+      slidesPerView: 3,
     },
 
     768: {
-      slidesPerView: 3,
+      slidesPerView: 4,
+    },
+
+    992: {
+      slidesPerView: 5,
+      spaceBetween: 10,
     },
 
     1200: {
       slidesPerView: 6,
+      spaceBetween: 20,
     },
   },
 });
 
 const trendingSlider = new Swiper(".trending-slider", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  loop: true,
+  ...commonSwiperOptions,
 
   breakpoints: {
 
@@ -124,12 +128,7 @@ const trendingSlider = new Swiper(".trending-slider", {
 });
 
 const saleSlider = new Swiper(".sale-slider", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  loop: true,
+  ...commonSwiperOptions,
 
   breakpoints: {
 
@@ -189,18 +188,8 @@ if (singleImages) {
 
 
 const looklSlider = new Swiper(".look-slider", {
+  ...commonSwiperOptions,
   slidesPerView: 2,
-  spaceBetween: 30,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  loop: true,
-
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
-
 
   pagination: {
     el: ".swiper-pagination",
@@ -229,12 +218,7 @@ const looklSlider = new Swiper(".look-slider", {
 });
 
 const interestSlider = new Swiper(".interest-slider", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  loop: true,
+  ...commonSwiperOptions,
 
   breakpoints: {
 
@@ -259,12 +243,7 @@ const interestSlider = new Swiper(".interest-slider", {
 
 
 const recentlySlider = new Swiper(".recently-slider", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  mousewheelControl: true,
-  keyboardControl: true,
-  grabCursor: true,
-  loop: true,
+  ...commonSwiperOptions,
 
   breakpoints: {
 
