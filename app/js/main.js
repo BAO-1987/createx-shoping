@@ -608,11 +608,10 @@ const heroSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".h
   grabCursor: true,
   autoHeight: true,
   loop: true,
-  // speed: heroSliderSpeed,
-  // autoplay: {
-  //   delay: 2500,
-  // },
-
+  speed: heroSliderSpeed,
+  autoplay: {
+    delay: 2500
+  },
   navigation: {
     nextEl: ".hero-slider__next",
     prevEl: ".hero-slider__prev"

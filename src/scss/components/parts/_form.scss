@@ -7,26 +7,21 @@
 
     position: relative;
     margin-bottom: 50px;
-
-    &---upload {
-      &:hover {
-        .btn {
-          color: red !important;
-        }
-      }
-    }
   }
 
   &__input {
     position: relative;
     outline: 0;
-    border-style: solid;
-    border-color: var(--color-gray-400);
-    border-width: 1px;
+    border: 1px solid var(--color-gray-400);
     border-radius: var(--br);
     padding: em(10) 0 em(10) em(16);
     width: 100%;
     background-color: var(--color-white);
+    transition: border-color 0.3s linear;
+
+    &:focus {
+      border-color: var(--color-green);
+    }
 
     &--file {
       opacity: 0;
@@ -35,15 +30,21 @@
       z-index: 5;
     }
 
-    &:focus {
-      border-color: var(--color-green);
+    &--textarea {
+      padding: em(10) 0 em(10) em(16);
+      min-height: 107px;
+      resize: none;
     }
+
+
   }
 
   &__label {
     position: absolute;
     top: -30px;
   }
+
+
 }
 
 .form-search {
@@ -172,6 +173,7 @@
       border: 2px dashed var(--color-gray-400);
       padding: rem(60) rem(24) rem(24);
       text-align: center;
+      transition: border-color 0.3s linear;
 
       &::before {
         content: "";
@@ -204,7 +206,7 @@
         .btn {
           color: var(--color-white);
 
-          &   ::after {
+          &::after {
             transform: scale(160%) translateY(0);
           }
         }
@@ -348,11 +350,9 @@
   }
 
   .checkboxes__label {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 0.7rem;
     padding: 8px;
     min-width: 24px;
     height: 24px;
   }
 }
-

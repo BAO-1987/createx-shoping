@@ -18,10 +18,10 @@ const heroSlider = new Swiper(".hero-slider", {
   autoHeight: true,
   loop: true,
 
-  // speed: heroSliderSpeed,
-  // autoplay: {
-  //   delay: 2500,
-  // },
+  speed: heroSliderSpeed,
+  autoplay: {
+    delay: 2500,
+  },
 
   navigation: {
     nextEl: ".hero-slider__next",
