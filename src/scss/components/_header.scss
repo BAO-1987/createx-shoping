@@ -61,6 +61,9 @@
 
   &__action {
     @include flex;
+    gap: clamp(0.5rem, calc(1rem + 2.5vw), 2.5rem);
+    flex-shrink: 0;
+    margin-right: 0.5rem;
 
     @include for-width(-mobile-sl) {
       &.hidden {

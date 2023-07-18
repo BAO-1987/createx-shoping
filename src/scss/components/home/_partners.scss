@@ -5,9 +5,9 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(6, 1fr);
-    gap: clamp(1.13rem, calc(2rem + 4vw), 6.4rem);
+    gap: clamp(0.5rem, calc(0.5rem + 5vw), 6.4rem);
 
-    @include for-width(-mobile-l) {
+    @include for-width(-mobile-md) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

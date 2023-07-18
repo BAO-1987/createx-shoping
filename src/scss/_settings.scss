@@ -59,7 +59,7 @@
   @include flex-all-center;
 
   flex-shrink: 0;
-  margin-right: clamp(1rem, calc(0.5rem + 2.7vw), 3.75rem);
+  margin-right: clamp(0.5rem, calc(0.5rem + 2.7vw), 3.75rem);
 
   @include for-width(-mobile-sl) {
     &.hidden {
@@ -562,5 +562,31 @@
   &:is(:hover, :active) {
     text-decoration-color: transparent;
     color: var(--color-green-100);
+  }
+}
+
+.scroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  scrollbar-color: var(--color-green) var(--color-white);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-green);
   }
 }

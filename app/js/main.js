@@ -608,6 +608,21 @@ const commonSwiperOptions = {
     disableOnInteraction: false
   }
 };
+const commonSwiperBreakpoints = {
+  breakpoints: {
+    420: {
+      slidesPerView: 1
+    },
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    800: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+};
 const heroSliderSpeed = 1500;
 const bodyStyles = window.getComputedStyle(document.body);
 const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
@@ -638,6 +653,7 @@ const heroSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".h
 });
 const offersSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".offers-slider", {
   ...commonSwiperOptions,
+  slidesPerView: 1,
   // autoplay: {
   //   delay: 4500,
   //   disableOnInteraction: false,
@@ -680,14 +696,7 @@ const arrivalSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](
 });
 const trendingSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".trending-slider", {
   ...commonSwiperOptions,
-  breakpoints: {
-    475: {
-      slidesPerView: 2
-    },
-    1200: {
-      slidesPerView: 3
-    }
-  },
+  ...commonSwiperBreakpoints,
   navigation: {
     nextEl: ".trending-slider__next",
     prevEl: ".trending-slider__prev"
@@ -695,14 +704,7 @@ const trendingSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
 const saleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".sale-slider", {
   ...commonSwiperOptions,
-  breakpoints: {
-    475: {
-      slidesPerView: 2
-    },
-    1200: {
-      slidesPerView: 3
-    }
-  },
+  ...commonSwiperBreakpoints,
   navigation: {
     nextEl: ".sale-slider__next",
     prevEl: ".sale-slider__prev"

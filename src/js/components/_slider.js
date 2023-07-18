@@ -15,6 +15,25 @@ const commonSwiperOptions = {
   },
 };
 
+const commonSwiperBreakpoints = {
+  breakpoints: {
+
+    420: {
+      slidesPerView: 1,
+    },
+
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+
+    800: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+}
+
 const heroSliderSpeed = 1500;
 
 const bodyStyles = window.getComputedStyle(document.body);
@@ -54,6 +73,7 @@ const heroSlider = new Swiper(".hero-slider", {
 
 const offersSlider = new Swiper(".offers-slider", {
   ...commonSwiperOptions,
+  slidesPerView: 1,
 
   // autoplay: {
   //   delay: 4500,
@@ -109,17 +129,8 @@ const arrivalSlider = new Swiper(".arrival-slider", {
 
 const trendingSlider = new Swiper(".trending-slider", {
   ...commonSwiperOptions,
+  ...commonSwiperBreakpoints,
 
-  breakpoints: {
-
-    475: {
-      slidesPerView: 2,
-    },
-
-    1200: {
-      slidesPerView: 3,
-    },
-  },
 
   navigation: {
     nextEl: ".trending-slider__next",
@@ -129,18 +140,7 @@ const trendingSlider = new Swiper(".trending-slider", {
 
 const saleSlider = new Swiper(".sale-slider", {
   ...commonSwiperOptions,
-
-  breakpoints: {
-
-    475: {
-      slidesPerView: 2,
-    },
-
-
-    1200: {
-      slidesPerView: 3,
-    },
-  },
+  ...commonSwiperBreakpoints,
 
   navigation: {
     nextEl: ".sale-slider__next",
