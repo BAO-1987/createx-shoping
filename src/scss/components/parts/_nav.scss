@@ -13,11 +13,11 @@
       align-items: flex-start;
       position: absolute;
       left: 0;
-      top: var(--header-height);
+      top: calc(var(--header-height) - 1px);
       overflow-y: auto;
       width: 100%;
       max-width: 320px;
-      height: calc(100vh - var(--header-height));
+      height: calc(var(--vh) - var(--header-height) + 1px);
       background-color: var(--color-white);
       transform: translateX(-100%);
       transition: translate 0.3s linear;
@@ -83,17 +83,19 @@
       .nav__list--dropdown {
         opacity: 1;
         visibility: visible;
-        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        transition:
+          opacity 0.3s ease-in-out,
+          visibility 0.3s ease-in-out;
       }
     }
 
-    &.open>.nav__list--dropdown {
+    &.open > .nav__list--dropdown {
       opacity: 1;
       visibility: visible;
       display: flex;
     }
 
-    &.open>.nav__link--dropdown {
+    &.open > .nav__link--dropdown {
       color: var(--color-green);
 
       &::after {
@@ -138,7 +140,9 @@
       left: 50%;
       // margin-left: -5px;
       opacity: 0;
-      transition: opacity 0.3s linear, bottom 0.3s linear;
+      transition:
+        opacity 0.3s linear,
+        bottom 0.3s linear;
     }
 
     &:hover {
@@ -163,7 +167,6 @@
       cursor: pointer;
       color: var(--color-red);
 
-
       &::before {
         content: none;
       }
@@ -182,9 +185,11 @@
         height: 15px;
         background-color: currentcolor;
         transform: translateY(-50%) var(--rotate);
-        transition: background-color 0.3s linear, transform 0.3s linear;
+        transition:
+          background-color 0.3s linear,
+          transform 0.3s linear;
 
-        @include for-width (-mobile-l) {
+        @include for-width(-mobile-l) {
           right: 50%;
         }
       }
@@ -195,8 +200,11 @@
 .dropdown-list {
   @include flex-jc;
   display: none;
-  box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1),
-    0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  box-shadow:
+    0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+    0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+    0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+    0px 4px 4px -4px rgba(30, 33, 44, 0.05);
   border-radius: 0 0 4px 4px;
   border-top: 1px solid var(--color-gray-300);
   font-size: 14px;
@@ -213,7 +221,6 @@
   }
 
   &__item {
-
     &:first-child {
       @include for-width(-tablet) {
         margin: 0 0 20px;
@@ -262,11 +269,13 @@
         height: 427px;
         left: -25%;
         top: 0;
-        background: linear-gradient(rgba(218, 219, 221, 0),
-            rgba(218, 219, 221, 0.5),
-            rgba(218, 219, 221, 1),
-            rgba(218, 219, 221, 0.5),
-            rgba(218, 219, 221, 0));
+        background: linear-gradient(
+          rgba(218, 219, 221, 0),
+          rgba(218, 219, 221, 0.5),
+          rgba(218, 219, 221, 1),
+          rgba(218, 219, 221, 0.5),
+          rgba(218, 219, 221, 0)
+        );
 
         @include for-width(-tablet) {
           content: none;
@@ -280,14 +289,14 @@
   @include for-width(-tablet) {
     box-shadow: none;
 
-    &.open>.dropdown-submenu__list {
+    &.open > .dropdown-submenu__list {
       opacity: 1;
       visibility: visible;
       display: flex;
       flex-direction: column;
     }
 
-    &.open>.dropdown-submenu__title {
+    &.open > .dropdown-submenu__title {
       color: var(--color-green);
 
       &::after {
@@ -303,7 +312,9 @@
         display: none;
         visibility: hidden;
         opacity: 0;
-        transition: opacity 150ms ease-in-out, visibility 150ms ease-in-out;
+        transition:
+          opacity 150ms ease-in-out,
+          visibility 150ms ease-in-out;
       }
     }
 
@@ -342,7 +353,9 @@
         height: 15px;
         background-color: currentcolor;
         transform: translateY(-50%) var(--rotate);
-        transition: background-color 0.3s linear, transform 0.3s linear;
+        transition:
+          background-color 0.3s linear,
+          transform 0.3s linear;
       }
 
       &:not(:last-child) {
