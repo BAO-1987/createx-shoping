@@ -1,6 +1,5 @@
 .subscribe {
-  margin-bottom: 0;
-  padding: rem(65) 0;
+  padding: clamp(2rem, calc(1rem + 4vw), 4.061rem) 0;
   background-color: var(--color-gray-200);
 
   &__inner {

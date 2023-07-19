@@ -2,7 +2,7 @@
   min-height: 100vh;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--color-gray-900);
   background-color: var(--color-white);
@@ -13,22 +13,23 @@
   &__body {
     min-width: 320px;
     min-height: 100%;
-    // scrollbar-width: thin;
-    // scrollbar-color: var(--color-green) var(--color-white);
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+    scrollbar-color: var(--color-green) var(--color-white);
 
-    // &::-webkit-scrollbar {
-    //   width: 6px;
-    //   height: 6px;
-    // }
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
 
-    // &::-webkit-scrollbar-track {
-    //   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    // }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
 
-    // &::-webkit-scrollbar-thumb {
-    //   background-color: var(--color-green);
-    //   outline: 1px solid slategrey;
-    // }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-green);
+      outline: 1px solid slategrey;
+    }
   }
 }
 
@@ -100,7 +101,7 @@
 .checkboxes {
   @include flex;
 
-  gap: 12px;
+  gap: clamp(0.2rem, calc(0.2rem + 1vw), 0.75rem);
   margin-bottom: rem(52);
   border: none;
   padding: 0;
@@ -128,7 +129,7 @@
     }
   }
 
-  input[type="radio"]:checked + .checkboxes__label {
+  input[type="radio"]:checked+.checkboxes__label {
     border-color: var(--color-green);
     color: var(--color-white);
     background-color: var(--color-green);
@@ -184,8 +185,9 @@
     // top: 0;
     z-index: 95;
     width: 100%;
-    // height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    height: 100dvh;
+    // height: calc(var(--vh, 1vh) * 100);
     background-color: rgba(30, 33, 44, 0.75);
   }
 }
