@@ -1,5 +1,5 @@
 .header {
-  position: sticky;
+  position: fixed;
   z-index: 999;
   top: 0;
   width: 100%;
@@ -93,6 +93,10 @@
     background-color: var(--color-green);
     color: var(--color-white);
     text-align: center;
+  }
+
+  &.hide {
+    top: calc(var(--header-height) * -1);
   }
 }
 

@@ -304,6 +304,8 @@
   content: "";
   position: absolute;
   z-index: 95;
+  min-height: 100vh;
+  min-height: 100dvh;
   inset: 0;
   background-color: rgba(30, 33, 44, 0.75);
 }
@@ -809,7 +811,7 @@ h3::first-letter {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   z-index: 999;
   top: 0;
   width: 100%;
@@ -933,6 +935,9 @@ h3::first-letter {
   background-color: var(--color-green);
   color: var(--color-white);
   text-align: center;
+}
+.header.hide {
+  top: calc(var(--header-height) * -1);
 }
 
 .header-top {
@@ -3426,6 +3431,7 @@ h3::first-letter {
     -o-transition: translate 0.3s linear;
     transition: translate 0.3s linear;
     font-size: 20px;
+    z-index: -1;
   }
   .nav__list.menu--active {
     -webkit-transform: translate(0);

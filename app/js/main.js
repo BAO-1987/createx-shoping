@@ -39,24 +39,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_lang__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/_lang */ "./src/js/components/_lang.js");
 /* harmony import */ var _components_lang__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_lang__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_headerHeight__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_headerHeight */ "./src/js/components/_headerHeight.js");
-/* harmony import */ var _components_subList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_subList */ "./src/js/components/_subList.js");
-/* harmony import */ var _components_subList__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_subList__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_sizeModal */ "./src/js/components/_sizeModal.js");
-/* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_sizeModal__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_fancy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/_fancy */ "./src/js/components/_fancy.js");
-/* harmony import */ var _components_colorPicker__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/_colorPicker */ "./src/js/components/_colorPicker.js");
-/* harmony import */ var _components_colorPicker__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_colorPicker__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/_tableAddAria */ "./src/js/components/_tableAddAria.js");
-/* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_tableAddAria__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/_tabs */ "./src/js/components/_tabs.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/_accordion */ "./src/js/components/_accordion.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/_carousel */ "./src/js/components/_carousel.js");
-/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/_filter */ "./src/js/components/_filter.js");
-/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_filter__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/_search */ "./src/js/components/_search.js");
-/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_search__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_headerHide */ "./src/js/components/_headerHide.js");
+/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_headerHide__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_subList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_subList */ "./src/js/components/_subList.js");
+/* harmony import */ var _components_subList__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_subList__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/_sizeModal */ "./src/js/components/_sizeModal.js");
+/* harmony import */ var _components_sizeModal__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_sizeModal__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_fancy__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/_fancy */ "./src/js/components/_fancy.js");
+/* harmony import */ var _components_colorPicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/_colorPicker */ "./src/js/components/_colorPicker.js");
+/* harmony import */ var _components_colorPicker__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_colorPicker__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/_tableAddAria */ "./src/js/components/_tableAddAria.js");
+/* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_tableAddAria__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/_tabs */ "./src/js/components/_tabs.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/_accordion */ "./src/js/components/_accordion.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/_carousel */ "./src/js/components/_carousel.js");
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/_filter */ "./src/js/components/_filter.js");
+/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_filter__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/_search */ "./src/js/components/_search.js");
+/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_components_search__WEBPACK_IMPORTED_MODULE_17__);
+
 
 
 
@@ -472,6 +475,55 @@ getHeaderHeight();
 window.addEventListener("resize", () => {
   getHeaderHeight();
 });
+
+/***/ }),
+
+/***/ "./src/js/components/_headerHide.js":
+/*!******************************************!*\
+  !*** ./src/js/components/_headerHide.js ***!
+  \******************************************/
+/***/ (() => {
+
+(function () {
+  const doc = document.documentElement;
+  const w = window;
+  let curScroll;
+  let prevScroll = w.scrollY || doc.scrollTop;
+  let curDirection = 0;
+  let prevDirection = 0;
+  const header = document.querySelector(".header");
+  let toggled;
+  const threshold = 200;
+  const checkScroll = function () {
+    curScroll = w.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) {
+      // scrolled down
+      curDirection = 2;
+    } else {
+      //scrolled up
+      curDirection = 1;
+    }
+    if (curDirection !== prevDirection) {
+      toggled = toggleHeader();
+    }
+    prevScroll = curScroll;
+    if (toggled) {
+      prevDirection = curDirection;
+    }
+  };
+  const toggleHeader = function () {
+    toggled = true;
+    if (curDirection === 2 && curScroll > threshold) {
+      header.classList.add("hide");
+    } else if (curDirection === 1) {
+      header.classList.remove("hide");
+    } else {
+      toggled = false;
+    }
+    return toggled;
+  };
+  window.addEventListener("scroll", checkScroll);
+})();
 
 /***/ }),
 
