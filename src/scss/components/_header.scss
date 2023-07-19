@@ -3,12 +3,7 @@
   z-index: 999;
   top: 0;
   width: 100%;
-
-  &__inner {
-    @include flex-all-sb;
-
-    padding: 10px 15px;
-  }
+  transition: top 0.3s ease-in-out;
 
   &__middle {
     padding: 20px 0;
