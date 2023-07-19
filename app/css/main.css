@@ -304,8 +304,7 @@
   content: "";
   position: absolute;
   z-index: 95;
-  width: 100%;
-  height: calc(var(--vh) - var(--header-height) + 1px);
+  inset: 0;
   background-color: rgba(30, 33, 44, 0.75);
 }
 
