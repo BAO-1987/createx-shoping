@@ -1,9 +1,8 @@
 .modal {
-  padding: clamp(0.8rem, 2vw + 1rem, 3rem);
+  padding: clamp(0.5rem, 2vw + 1rem, 3rem);
   border: 0;
   border-radius: var(--br);
-  width: 100%;
-  max-width: 486px;
+  width: min(90%, 486px);
   font-size: 14px;
   text-align: center;
   background-color: var(--color-white);
@@ -22,6 +21,7 @@
   }
 
   &--size {
+    width: 100%;
     max-width: 870px;
     overflow-x: scroll;
 
@@ -99,10 +99,10 @@
   &[open] {
     animation: slide-up 1000ms forwards;
   }
-}
 
-.modal[open] {
-  animation: slide-up 1000ms forwards;
+  //   @include for-width(-mobile-sl) {
+  //     max-width: 450px;
+  //   }
 }
 
 @keyframes slide-up {

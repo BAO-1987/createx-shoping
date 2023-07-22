@@ -91,6 +91,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
 /* harmony import */ var _functions_fix_fullheight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/fix-fullheight */ "./src/js/functions/fix-fullheight.js");
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
+/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_functions_burger__WEBPACK_IMPORTED_MODULE_2__);
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
@@ -484,46 +485,53 @@ window.addEventListener("resize", () => {
   \******************************************/
 /***/ (() => {
 
-(function () {
-  const doc = document.documentElement;
-  const w = window;
-  let curScroll;
-  let prevScroll = w.scrollY || doc.scrollTop;
-  let curDirection = 0;
-  let prevDirection = 0;
-  const header = document.querySelector(".header");
-  let toggled;
-  const threshold = 200;
-  const checkScroll = function () {
-    curScroll = w.scrollY || doc.scrollTop;
-    if (curScroll > prevScroll) {
-      // scrolled down
-      curDirection = 2;
-    } else {
-      //scrolled up
-      curDirection = 1;
-    }
-    if (curDirection !== prevDirection) {
-      toggled = toggleHeader();
-    }
-    prevScroll = curScroll;
-    if (toggled) {
-      prevDirection = curDirection;
-    }
-  };
-  const toggleHeader = function () {
-    toggled = true;
-    if (curDirection === 2 && curScroll > threshold) {
-      header.classList.add("hide");
-    } else if (curDirection === 1) {
-      header.classList.remove("hide");
-    } else {
-      toggled = false;
-    }
-    return toggled;
-  };
-  window.addEventListener("scroll", checkScroll);
-})();
+// (function () {
+//   const doc = document.documentElement;
+//   const w = window;
+
+//   let curScroll;
+//   let prevScroll = w.scrollY || doc.scrollTop;
+//   let curDirection = 0;
+//   let prevDirection = 0;
+
+//   const header = document.querySelector(".header");
+//   let toggled;
+//   const threshold = 200;
+
+//   const checkScroll = function () {
+//     curScroll = w.scrollY || doc.scrollTop;
+//     if (curScroll > prevScroll) {
+//       // scrolled down
+//       curDirection = 2;
+//     } else {
+//       //scrolled up
+//       curDirection = 1;
+//     }
+
+//     if (curDirection !== prevDirection) {
+//       toggled = toggleHeader();
+//     }
+
+//     prevScroll = curScroll;
+//     if (toggled) {
+//       prevDirection = curDirection;
+//     }
+//   };
+
+//   const toggleHeader = function () {
+//     toggled = true;
+//     if (curDirection === 2 && curScroll > threshold) {
+//       header.classList.add("hide");
+//     } else if (curDirection === 1) {
+//       header.classList.remove("hide");
+//     } else {
+//       toggled = false;
+//     }
+//     return toggled;
+//   };
+
+//   window.addEventListener("scroll", checkScroll);
+// })();
 
 /***/ }),
 
@@ -958,103 +966,59 @@ const tabsSize = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.size')
 /*!************************************!*\
   !*** ./src/js/functions/burger.js ***!
   \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/disable-scroll */ "./src/js/functions/disable-scroll.js");
-/* harmony import */ var _functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/enable-scroll */ "./src/js/functions/enable-scroll.js");
+// import { disableScroll } from '../functions/disable-scroll';
+// import { enableScroll } from '../functions/enable-scroll';
 
+// (function () {
+//   const burger = document?.querySelector('[data-burger]');
+//   const menu = document?.querySelector('[data-menu]');
+//   const menuItems = document?.querySelectorAll('[data-menu-item]');
 
-(function () {
-  const burger = document?.querySelector('[data-burger]');
-  const menu = document?.querySelector('[data-menu]');
-  const menuItems = document?.querySelectorAll('[data-menu-item]');
-  burger?.addEventListener('click', e => {
-    burger?.classList.toggle('burger--active');
-    menu?.classList.toggle('menu--active');
-    if (menu?.classList.contains('menu--active')) {
-      burger?.setAttribute('aria-expanded', 'true');
-      burger?.setAttribute('aria-label', 'close');
-      (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
-    } else {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'open');
-      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
-    }
-  });
-  menuItems?.forEach(el => {
-    el.addEventListener('click', () => {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'Open menu');
-      burger.classList.remove('burger--active');
-      menu.classList.remove('menu--active');
-      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
-    });
-  });
-})();
+//   burger?.addEventListener('click', (e) => {
+//     burger?.classList.toggle('burger--active');
+//     menu?.classList.toggle('menu--active');
 
-/***/ }),
+//     if (menu?.classList.contains('menu--active')) {
+//       burger?.setAttribute('aria-expanded', 'true');
+//       burger?.setAttribute('aria-label', 'close');
+//       disableScroll();
+//     } else {
+//       burger?.setAttribute('aria-expanded', 'false');
+//       burger?.setAttribute('aria-label', 'open');
+//       enableScroll();
+//     }
+//   });
 
-/***/ "./src/js/functions/disable-scroll.js":
-/*!********************************************!*\
-  !*** ./src/js/functions/disable-scroll.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+//   menuItems?.forEach(el => {
+//     el.addEventListener('click', () => {
+//       burger?.setAttribute('aria-expanded', 'false');
+//       burger?.setAttribute('aria-label', 'Open menu');
+//       burger.classList.remove('burger--active');
+//       menu.classList.remove('menu--active');
+//       enableScroll();
+//     });
+//   });
+// })();
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   disableScroll: () => (/* binding */ disableScroll)
-/* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
-
-const disableScroll = () => {
-  const fixBlocks = document?.querySelectorAll('.fixed-block');
-  const pagePosition = window.scrollY;
-  const paddingOffset = `${window.innerWidth - _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.offsetWidth}px`;
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'none';
-  fixBlocks.forEach(el => {
-    el.style.paddingRight = paddingOffset;
-  });
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.paddingRight = paddingOffset;
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.classList.add('dis-scroll');
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.dataset.position = pagePosition;
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.top = `-${pagePosition}px`;
-};
-
-/***/ }),
-
-/***/ "./src/js/functions/enable-scroll.js":
-/*!*******************************************!*\
-  !*** ./src/js/functions/enable-scroll.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   enableScroll: () => (/* binding */ enableScroll)
-/* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
-
-const enableScroll = () => {
-  const fixBlocks = document?.querySelectorAll('.fixed-block');
-  const body = document.body;
-  const pagePosition = parseInt(_vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.dataset.position, 10);
-  fixBlocks.forEach(el => {
-    el.style.paddingRight = '0px';
-  });
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.paddingRight = '0px';
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.top = 'auto';
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.classList.remove('dis-scroll');
-  window.scroll({
-    top: pagePosition,
-    left: 0
-  });
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.removeAttribute('data-position');
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'smooth';
-};
+const navigation = document.querySelector(".header");
+const page = document.querySelector(".page");
+navigation.addEventListener("click", BurgerBtnClick);
+function BurgerBtnClick(e) {
+  if (!e.target.parentNode.matches(".burger") && !e.target.matches(".burger")) return;
+  e.addEventListener;
+  this.classList.remove("closed");
+  page.classList.add("open");
+  if (this.matches(".opened")) {
+    this.classList.add("closed");
+    page.classList.remove("open");
+    setTimeout(() => {
+      this.classList.remove("opened");
+    }, 500);
+  }
+  this.classList.add("opened");
+}
 
 /***/ }),
 

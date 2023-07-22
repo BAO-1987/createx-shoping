@@ -3,7 +3,15 @@
 
   display: none;
 
-  @include for-width (-mobile-l) {
+  @include for-width(-mobile-l) {
     display: flex;
   }
 }
+
+// .opened .nav__list {
+//   transform: translateX(var(--container-offset));
+// }
+
+// .closed .nav__list {
+//   transform: translateX(150%);
+// }
