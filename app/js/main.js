@@ -2436,7 +2436,7 @@ __webpack_require__.r(__webpack_exports__);
 class GraphTabs {
   constructor(selector, options) {
     let defaultOptions = {
-      isChanged: () => {}
+      isChanged: () => { }
     }
     this.options = Object.assign(defaultOptions, options);
     this.selector = selector;
@@ -2446,7 +2446,7 @@ class GraphTabs {
       this.tabsBtns = this.tabList.querySelectorAll('.tabs__nav-btn');
       this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
     } else {
-      console.error('Селектор data-tabs не существует!');
+      // console.error('Селектор data-tabs не существует!');
       return;
     }
 
@@ -2546,6 +2546,7 @@ class GraphTabs {
     this.options.isChanged(this);
   }
 }
+
 
 /***/ }),
 
