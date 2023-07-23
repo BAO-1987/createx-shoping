@@ -41,7 +41,6 @@
     position: absolute;
     top: -30px;
   }
-
 }
 
 .form-search {
@@ -52,7 +51,7 @@
   max-width: 385px;
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
-  margin-right: clamp(0.5rem, calc(1.8vw + 1rem), 3.25rem);
+  margin-right: clamp(0.5rem, calc(2.2vw + 0.5rem), 3rem);
   margin-left: auto;
 
   @include for-width(-desktop-s) {
@@ -61,7 +60,7 @@
   }
 
   @include for-width(-tablet) {
-    max-width: 175px;
+    max-width: 165px;
   }
 
   @include for-width(-mobile-sl) {
@@ -92,8 +91,11 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 20px 20px -20px rgba(23, 105, 106, 0.16), 0px 26px 24px -10px rgba(23, 105, 106, 0.1),
-        0px 12px 10px -6px rgba(23, 105, 106, 0.08), 0px 4px 4px -4px rgba(23, 105, 106, 0.05);
+      box-shadow:
+        0 20px 20px -20px rgba(23, 105, 106, 0.16),
+        0px 26px 24px -10px rgba(23, 105, 106, 0.1),
+        0px 12px 10px -6px rgba(23, 105, 106, 0.08),
+        0px 4px 4px -4px rgba(23, 105, 106, 0.05);
       background-color: var(--color-white);
     }
 
@@ -243,7 +245,9 @@
       mask-size: cover;
       mask-repeat: no-repeat;
       background-color: var(--color-gray-800);
-      transition: mask-image 0.3s linear, background-color 0.3s linear;
+      transition:
+        mask-image 0.3s linear,
+        background-color 0.3s linear;
     }
 
     &:checked::before {
@@ -261,6 +265,10 @@
 .product-form {
   margin-bottom: rem(24);
 
+  .btn--article {
+    max-width: 244px;
+  }
+
   &__list {
     @include flex-col;
     gap: 2rem;
@@ -274,7 +282,7 @@
 
     &--number {
       @include flex-all-sb;
-      gap: 2rem;
+      gap: clamp(0.5rem, calc(0.3rem + 1vw), 1.5rem);
     }
   }
 }

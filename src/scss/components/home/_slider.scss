@@ -16,6 +16,12 @@
     position: relative;
   }
 
+  &__title {
+    @include for-width(-mobile-sl) {
+      max-width: 275px;
+    }
+  }
+
   &__btn {
     margin: 0 auto;
   }
@@ -49,4 +55,8 @@
 
 .look-slider {
   position: relative;
+}
+
+.recently-slider {
+  padding: 0;
 }

@@ -120,7 +120,7 @@
     z-index: 10;
 
     &::before {
-      left: clamp(5px, 65px, 70px);
+      left: clamp(0.5rem, calc(0.3rem + 4.5vw), 4.07rem);
       bottom: 16px;
       mask-image: url("../img/sprite.svg#cart");
       width: 16px;
@@ -152,7 +152,7 @@
     color: var(--color-green);
 
     &::before {
-      left: 25px;
+      left: clamp(0.5rem, calc(0.3rem + 1.3vw), 1.5rem);
       bottom: 16px;
       mask-image: url("../img/sprite.svg#heart");
       width: 18px;
@@ -192,7 +192,9 @@
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
-  transition: opacity 0.3s linear, background-color 0.3s linear;
+  transition:
+    opacity 0.3s linear,
+    background-color 0.3s linear;
 
   &::before {
     content: "";

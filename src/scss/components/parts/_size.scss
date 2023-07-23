@@ -1,4 +1,5 @@
 .custom-select {
+  margin-right: 1rem;
   width: 100%;
   max-width: 350px;
 
@@ -48,19 +49,21 @@
       height: 15px;
       background-color: var(--color-gray-800);
       transform: translateY(-50%) var(--rotate);
-      transition: background-color 0.3s linear, transform 0.3s linear;
+      transition:
+        background-color 0.3s linear,
+        transform 0.3s linear;
       pointer-events: none;
     }
   }
 }
 
-.input__nubmer {
+.input__number {
   width: 100%;
   max-width: 80px;
   position: relative;
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
-  padding: 12px 15px;
+  padding: em(12) em(15);
   outline-color: transparent;
 }
 
@@ -97,7 +100,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
   &--size {
     @include for-width(-mobile-md) {
-
       th,
       td {
         padding: 5px;

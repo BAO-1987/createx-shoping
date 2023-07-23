@@ -774,7 +774,6 @@ const saleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".s
 const singleImages = document.querySelector('.single-slider');
 if (singleImages) {
   const singleSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.single-slider__nav', {
-    spaceBetween: 20,
     slidesPerView: 5,
     freeMode: true,
     watchSlidesProgress: true,
@@ -810,7 +809,7 @@ if (singleImages) {
 
 const looklSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".look-slider", {
   ...commonSwiperOptions,
-  slidesPerView: 2,
+  slidesPerView: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true
@@ -818,34 +817,30 @@ const looklSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".
   navigation: {
     nextEl: ".look-slider__next",
     prevEl: ".look-slider__prev"
+  },
+  breakpoints: {
+    650: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    775: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
   }
-
-  // breakpoints: {
-
-  //   475: {
-  //     slidesPerView: 2,
-  //   },
-
-  //   768: {
-  //     slidesPerView: 3,
-  //   },
-
-  //   1200: {
-  //     slidesPerView: 6,
-  //   },
-  // },
 });
-
 const interestSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".interest-slider", {
   ...commonSwiperOptions,
   breakpoints: {
-    475: {
-      slidesPerView: 2
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 10
     },
-    992: {
-      slidesPerView: 3
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 20
     },
-    1400: {
+    1200: {
       slidesPerView: 4
     }
   },

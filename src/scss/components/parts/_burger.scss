@@ -7,11 +7,10 @@
     display: flex;
   }
 }
+.open .nav__list {
+  transform: translate(0);
+}
 
-// .opened .nav__list {
-//   transform: translateX(var(--container-offset));
-// }
-
-// .closed .nav__list {
-//   transform: translateX(150%);
-// }
+.closed .nav__list {
+  transform: translateX(-100%);
+}

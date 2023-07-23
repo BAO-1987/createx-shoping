@@ -152,7 +152,6 @@ const singleImages = document.querySelector('.single-slider');
 
 if (singleImages) {
   const singleSlider = new Swiper('.single-slider__nav', {
-    spaceBetween: 20,
     slidesPerView: 5,
     freeMode: true,
     watchSlidesProgress: true,
@@ -189,7 +188,7 @@ if (singleImages) {
 
 const looklSlider = new Swiper(".look-slider", {
   ...commonSwiperOptions,
-  slidesPerView: 2,
+  slidesPerView: 1,
 
   pagination: {
     el: ".swiper-pagination",
@@ -201,20 +200,20 @@ const looklSlider = new Swiper(".look-slider", {
     prevEl: ".look-slider__prev",
   },
 
-  // breakpoints: {
+  breakpoints: {
 
-  //   475: {
-  //     slidesPerView: 2,
-  //   },
+    650: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
 
-  //   768: {
-  //     slidesPerView: 3,
-  //   },
+    775: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
 
-  //   1200: {
-  //     slidesPerView: 6,
-  //   },
-  // },
+
+  },
 });
 
 const interestSlider = new Swiper(".interest-slider", {
@@ -222,15 +221,17 @@ const interestSlider = new Swiper(".interest-slider", {
 
   breakpoints: {
 
-    475: {
+    425: {
       slidesPerView: 2,
+      spaceBetween: 10,
     },
 
-    992: {
+    600: {
       slidesPerView: 3,
+      spaceBetween: 20,
     },
 
-    1400: {
+    1200: {
       slidesPerView: 4,
     }
   },
