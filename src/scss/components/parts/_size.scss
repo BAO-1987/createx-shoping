@@ -1,7 +1,6 @@
 .custom-select {
   margin-right: 1rem;
-  width: 100%;
-  max-width: 350px;
+  width: min(80%, 350px);
 
   &--sort {
     @include flex-a-center;
@@ -65,6 +64,10 @@
   border-radius: var(--br);
   padding: em(12) em(15);
   outline-color: transparent;
+
+  @include for-width (-mobile-s) {
+    order: -2;
+  }
 }
 
 input[type="number"]::-webkit-outer-spin-button {
@@ -100,6 +103,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
   &--size {
     @include for-width(-mobile-md) {
+
       th,
       td {
         padding: 5px;

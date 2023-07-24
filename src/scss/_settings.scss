@@ -48,11 +48,39 @@
 
   &.open {
     overflow: hidden;
+
     > .page__body::before {
       width: 100%;
     }
   }
 }
+
+// .scroll {
+//   overflow: auto;
+//   scroll-behavior: smooth;
+//   overscroll-behavior-y: none;
+//   scrollbar-width: thin;
+//   overscroll-behavior-inline: contain;
+//   scrollbar-color: var(--color-green) var(--color-white);
+
+//   &::-webkit-scrollbar {
+//     width: 6px;
+//     height: 6px;
+//   }
+
+//   &::-webkit-scrollbar-track {
+//     -webkit-border-radius: var(--br);
+//     border-radius: 100vw;
+//     background-color: var(--color-white);
+//   }
+
+//   &::-webkit-scrollbar-thumb {
+//     -webkit-border-radius: 100vw;
+//     border-radius: 100vw;
+//     background-color: var(--color-green);
+//   }
+
+// }
 
 // .main {
 //   padding-top: calc(var(--header-height));
@@ -190,27 +218,27 @@
   }
 }
 
-.dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  overscroll-behavior: none;
+// .dis-scroll {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   overflow: hidden;
+//   width: 100%;
+//   height: 100vh;
+//   height: 100dvh;
+//   overscroll-behavior: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: 95;
-    width: 100%;
-    // height: calc(var(--vh, 1vh) * 100);
-    height: calc(var(--vh) - var(--header-height) + 1px);
-    background-color: rgba(30, 33, 44, 0.75);
-  }
-}
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     z-index: 95;
+//     width: 100%;
+//     // height: calc(var(--vh, 1vh) * 100);
+//     height: calc(var(--vh) - var(--header-height) + 1px);
+//     background-color: rgba(30, 33, 44, 0.75);
+//   }
+// }
 
 .offers-slider {
   position: relative;
@@ -588,8 +616,7 @@
 }
 
 .scroll {
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
+  overflow: inherit;
   padding-right: 10px;
   padding-bottom: 10px;
   scrollbar-color: var(--color-green) var(--color-white);
@@ -610,5 +637,9 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background-color: var(--color-green);
+  }
+
+  @include for-width(-mobile-sl) {
+    overflow: auto hidden;
   }
 }

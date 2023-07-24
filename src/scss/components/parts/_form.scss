@@ -267,6 +267,10 @@
 
   .btn--article {
     max-width: 244px;
+
+    @include for-width (-mobile-s) {
+      max-width: 100%;
+    }
   }
 
   &__list {
@@ -282,7 +286,11 @@
 
     &--number {
       @include flex-all-sb;
-      gap: clamp(0.5rem, calc(0.3rem + 1vw), 1.5rem);
+      gap: clamp(0.8rem, calc(0.3rem + 1vw), 1.5rem);
+
+      @include for-width (-mobile-s) {
+        flex-wrap: wrap;
+      }
     }
   }
 }

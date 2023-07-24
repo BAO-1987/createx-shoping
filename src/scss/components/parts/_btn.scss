@@ -130,7 +130,7 @@
 
   &--size {
     border: 0;
-    padding: 0 0 0 24px;
+    padding: 0 0 0 em(24);
     color: var(--color-gray-800);
     background-color: var(--color-white);
 
@@ -169,6 +169,9 @@
       &::after {
         transform: scale(150%) translateY(0);
       }
+    }
+    @include for-width (-mobile-s) {
+      order: -1;
     }
   }
 }
