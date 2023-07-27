@@ -177,14 +177,6 @@ if (singleImages) {
   });
 }
 
-// const articleSlider = new Swiper(".article-slider", {
-//   slidesPerView: 1,
-//   mousewheelControl: true,
-//   keyboardControl: true,
-//   grabCursor: true,
-//   loop: true,
-// });
-
 
 const looklSlider = new Swiper(".look-slider", {
   ...commonSwiperOptions,
@@ -246,20 +238,22 @@ const interestSlider = new Swiper(".interest-slider", {
 const recentlySlider = new Swiper(".recently-slider", {
   ...commonSwiperOptions,
 
-  breakpoints: {
+ breakpoints: {
 
-    475: {
-      slidesPerView: 2,
-    },
+   425: {
+     slidesPerView: 2,
+     spaceBetween: 10,
+   },
 
-    992: {
-      slidesPerView: 3,
-    },
+   600: {
+     slidesPerView: 3,
+     spaceBetween: 20,
+   },
 
-    1400: {
-      slidesPerView: 4,
-    }
-  },
+   1200: {
+     slidesPerView: 4,
+   }
+ },
 
   navigation: {
     nextEl: ".recently-slider__next",

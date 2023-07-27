@@ -165,15 +165,15 @@
       &::before {
         left: 115px;
       }
-
-      @include for-width (-mobile-l) {
-        position: relative;
-        order: 1;
-      }
     }
 
     .article__price {
       margin-bottom: 1.25rem;
+    }
+
+    @include for-width (-mobile-l) {
+      position: relative;
+      order: -1;
     }
   }
 }

@@ -64,6 +64,7 @@
 
     &--active {
       @include flex-sb;
+      gap: 1rem;
       visibility: visible;
       animation:
         slide-up 0.9s forwards,

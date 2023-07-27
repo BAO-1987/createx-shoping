@@ -798,15 +798,6 @@ if (singleImages) {
     }
   });
 }
-
-// const articleSlider = new Swiper(".article-slider", {
-//   slidesPerView: 1,
-//   mousewheelControl: true,
-//   keyboardControl: true,
-//   grabCursor: true,
-//   loop: true,
-// });
-
 const looklSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".look-slider", {
   ...commonSwiperOptions,
   slidesPerView: 1,
@@ -852,13 +843,15 @@ const interestSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]
 const recentlySlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".recently-slider", {
   ...commonSwiperOptions,
   breakpoints: {
-    475: {
-      slidesPerView: 2
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 10
     },
-    992: {
-      slidesPerView: 3
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 20
     },
-    1400: {
+    1200: {
       slidesPerView: 4
     }
   },
