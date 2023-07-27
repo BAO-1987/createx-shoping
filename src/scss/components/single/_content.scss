@@ -1,8 +1,8 @@
 .single {
   &__content {
     @include flex-sb;
-
     margin-bottom: rem(32);
+    gap: 1rem;
   }
 
   &__product {

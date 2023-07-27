@@ -55,6 +55,12 @@
 
 .look-slider {
   position: relative;
+
+  &__pagination {
+    @include for-width (-mobile-md) {
+      display: none;
+    }
+  }
 }
 
 .recently-slider {
