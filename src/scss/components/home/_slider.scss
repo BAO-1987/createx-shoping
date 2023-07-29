@@ -66,3 +66,30 @@
 .recently-slider {
   padding: 0;
 }
+
+
+.offers-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 530px;
+
+  &__item {
+    font-weight: 900;
+    font-size: 12px;
+
+    a {
+      padding-left: 4px;
+      font-weight: 400;
+    }
+  }
+
+  .offers-btn {
+    opacity: 0;
+    transition: opacity 0.3s liner;
+  }
+
+  &:hover .offers-btn {
+    opacity: 1;
+  }
+}

@@ -240,32 +240,6 @@
 //   }
 // }
 
-.offers-slider {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 530px;
-
-  &__item {
-    font-weight: 900;
-    font-size: 12px;
-
-    a {
-      padding-left: 4px;
-      font-weight: 400;
-    }
-  }
-
-  .offers-btn {
-    opacity: 0;
-    transition: opacity 0.3s liner;
-  }
-
-  &:hover .offers-btn {
-    opacity: 1;
-  }
-}
-
 .countdown {
   padding-top: clamp(2rem, calc(1rem + 3.3vw), 5rem);
 
@@ -292,7 +266,7 @@
   list-style-type: disc;
 
   li {
-    padding-left: 16px;
+    padding-left: 1rem;
     position: relative;
 
     &::before {
@@ -429,6 +403,7 @@
     position: relative;
     font-size: rem(14);
     color: var(--color-gray-700);
+    width: 420px;
 
     &::before {
       content: "";
@@ -446,60 +421,57 @@
     &:not(:last-child) {
       margin-bottom: rem(25);
     }
-  }
 
-  &__progress {
-    margin: 0 16px 0 30px;
-    appearance: none;
-    height: 4px;
-    width: 365px;
-    border: none;
-    border-radius: 40px;
-    background-color: var(--color-gray-300);
-    animation: bg linear 0.3 infinite;
-
-    &--five {
-      --bg-color: #03cea4;
+    span[data-progress] {
+      margin: 0 16px 0 30px;
+      height: 4px;
+      width: 356px;
+      border-radius: em(45);
+      background-color: var(--color-gray-300);
+      overflow: hidden;
     }
 
-    &--four {
+    span[data-progress]::after {
+      --bg-color: #03cea4;
+      content: "";
+      @include flex;
+      background-color: var(--bg-color);
+      width: 0;
+      height: 100%;
+      font-size: 0;
+      border-radius: 40px 0 0 40px;
+      animation: progressAnimation 3s linear forwards;
+    }
+
+    &:nth-child(2)span[data-progress]::after {
       --bg-color: #1fdf58;
     }
 
-    &--three {
+    &:nth-child(3)span[data-progress]::after {
       --bg-color: #f2ea2b;
     }
 
-    &--two {
+    &:nth-child(4)span[data-progress]::after {
       --bg-color: #f89828;
     }
 
-    &--one {
+    &:nth-child(5)span[data-progress]::after {
       --bg-color: #ff4242;
     }
 
-    &[value]::-webkit-progress-bar {
-      background-color: var(--color-gray-300);
-      border-radius: 40px;
+    span[data-progress].animate-progress::after {
+      content: attr(data-progress) "%";
+      width: var(--animate-progress);
     }
 
-    &[value]::-webkit-progress-value {
-      background-color: var(--bg-color, currentcolor);
-      border-radius: 40px 0 0 40px;
-    }
+    @keyframes progressAnimation {
+      from {
+        width: 0;
+      }
 
-    &[value]::-moz-progress-bar {
-      background-color: var(--bg-color, currentcolor);
-      border-radius: 40px 0 0 40px;
-    }
-  }
-  @keyframes bg {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
+      to {
+        width: var(--animate-progress, 0%);
+      }
     }
   }
 }
@@ -651,5 +623,32 @@
 
   @include for-width(-mobile-sl) {
     overflow: auto hidden;
+  }
+}
+
+// @keyframes gradient-animation {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+
+//   50% {
+//     background-position: 100% 50%;
+//   }
+
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
+
+@keyframes animateProgressBar {
+
+  /* Set the animation from 0% to 100% */
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: var(--animate-progress);
+    /* This will be dynamically set based on the 'data-progress' attribute value */
   }
 }

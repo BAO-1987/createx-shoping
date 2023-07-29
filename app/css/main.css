@@ -35,8 +35,7 @@
   };
 }
 */
-/* stylelint-disable */
-/* stylelint-disable */
+/* stylelint-disable */ /* stylelint-disable */
 .custom-checkbox__field:checked + .custom-checkbox__content::after {
   opacity: 1;
 }
@@ -51,10 +50,7 @@
   pointer-events: none;
 }
 
-/* stylelint-disable */
-/* stylelint-disable */
-/* stylelint-disable value-keyword-case */
-/* stylelint-disable-next-line at-rule-blacklist */
+/* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable value-keyword-case */ /* stylelint-disable-next-line at-rule-blacklist */
 @font-face {
   font-family: "Lato";
   src: url("../fonts/../fonts/Lato-Regular.woff2") format("woff2");
@@ -245,10 +241,13 @@
   border-color: var(--color-gray-400);
   border-radius: var(--br);
   -webkit-transition-property: color, background-color, border-color;
+  -o-transition-property: color, background-color, border-color;
   transition-property: color, background-color, border-color;
   -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
   transition-timing-function: linear;
 }
 .checkboxes__label:is(:hover, :focus) {
@@ -272,6 +271,7 @@
   justify-content: center;
   position: relative;
   -webkit-transition: 0.3s color linear;
+  -o-transition: 0.3s color linear;
   transition: 0.3s color linear;
 }
 .login__btn::before {
@@ -294,6 +294,7 @@
   height: 16px;
   background-color: currentColor;
   -webkit-transition: background-color 0.6s linear;
+  -o-transition: background-color 0.6s linear;
   transition: background-color 0.6s linear;
 }
 @media (max-width: calc(48em - 0.0625em)) {
@@ -303,29 +304,6 @@
 }
 .login__btn:hover {
   color: var(--color-white);
-}
-
-.offers-slider {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 530px;
-}
-.offers-slider__item {
-  font-weight: 900;
-  font-size: 12px;
-}
-.offers-slider__item a {
-  padding-left: 4px;
-  font-weight: 400;
-}
-.offers-slider .offers-btn {
-  opacity: 0;
-  -webkit-transition: opacity 0.3s liner;
-  transition: opacity 0.3s liner;
-}
-.offers-slider:hover .offers-btn {
-  opacity: 1;
 }
 
 .countdown {
@@ -363,7 +341,7 @@
   list-style-type: disc;
 }
 .return__list li {
-  padding-left: 16px;
+  padding-left: 1rem;
   position: relative;
 }
 .return__list li::before {
@@ -446,14 +424,17 @@
   inset: 0;
   opacity: 0;
   -webkit-transition: 200ms opacity ease-in-out;
+  -o-transition: 200ms opacity ease-in-out;
   transition: 200ms opacity ease-in-out;
   -webkit-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
   transition-delay: 200ms;
 }
 .carousel__item[data-active] {
   opacity: 1;
   z-index: 1;
   -webkit-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
   transition-delay: 0ms;
 }
 .carousel-btn {
@@ -480,6 +461,7 @@
   mask-size: cover;
   background-color: var(--color-gray-800);
   -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
   -webkit-mask-image: url("../img/sprite.svg#chevron");
   mask-image: url("../img/sprite.svg#chevron");
@@ -529,6 +511,7 @@
   position: relative;
   font-size: 0.875rem;
   color: var(--color-gray-700);
+  width: 420px;
 }
 .rating__item::before {
   content: "";
@@ -549,60 +532,58 @@
 .rating__item:not(:last-child) {
   margin-bottom: 1.5625rem;
 }
-.rating__progress {
+.rating__item span[data-progress] {
   margin: 0 16px 0 30px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   height: 4px;
-  width: 365px;
-  border: none;
-  border-radius: 40px;
+  width: 356px;
+  border-radius: 2.8125em;
   background-color: var(--color-gray-300);
-  -webkit-animation: bg linear 0.3 infinite;
-  animation: bg linear 0.3 infinite;
+  overflow: hidden;
 }
-.rating__progress--five {
+.rating__item span[data-progress]::after {
   --bg-color: #03cea4;
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--bg-color);
+  width: 0;
+  height: 100%;
+  font-size: 0;
+  border-radius: 40px 0 0 40px;
+  -webkit-animation: progressAnimation 3s linear forwards;
+  animation: progressAnimation 3s linear forwards;
 }
-.rating__progress--four {
+.rating__item:nth-child(2) span[data-progress]::after {
   --bg-color: #1fdf58;
 }
-.rating__progress--three {
+.rating__item:nth-child(3) span[data-progress]::after {
   --bg-color: #f2ea2b;
 }
-.rating__progress--two {
+.rating__item:nth-child(4) span[data-progress]::after {
   --bg-color: #f89828;
 }
-.rating__progress--one {
+.rating__item:nth-child(5) span[data-progress]::after {
   --bg-color: #ff4242;
 }
-.rating__progress[value]::-webkit-progress-bar {
-  background-color: var(--color-gray-300);
-  border-radius: 40px;
+.rating__item span[data-progress].animate-progress::after {
+  content: attr(data-progress) "%";
+  width: var(--animate-progress);
 }
-.rating__progress[value]::-webkit-progress-value {
-  background-color: var(--bg-color, currentcolor);
-  border-radius: 40px 0 0 40px;
-}
-.rating__progress[value]::-moz-progress-bar {
-  background-color: var(--bg-color, currentcolor);
-  border-radius: 40px 0 0 40px;
-}
-@-webkit-keyframes bg {
-  0% {
-    opacity: 0;
+@-webkit-keyframes progressAnimation {
+  from {
+    width: 0;
   }
-  100% {
-    opacity: 1;
+  to {
+    width: var(--animate-progress, 0%);
   }
 }
-@keyframes bg {
-  0% {
-    opacity: 0;
+@keyframes progressAnimation {
+  from {
+    width: 0;
   }
-  100% {
-    opacity: 1;
+  to {
+    width: var(--animate-progress, 0%);
   }
 }
 
@@ -648,6 +629,7 @@
   height: 16px;
   background-color: currentcolor;
   -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
 .vote__btn:is(:hover, :active)::before {
@@ -700,6 +682,7 @@
   height: 16px;
   background-color: currentcolor;
   -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
 .pagination__btn--reverse::before {
@@ -725,6 +708,7 @@
   position: relative;
   font-weight: 700;
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .pagination__list a:is(:hover, [aria-current=page]) {
@@ -742,6 +726,7 @@
   text-decoration-line: underline;
   -webkit-transition: color 0.5s linear, -webkit-text-decoration-color 0.5s linear;
   transition: color 0.5s linear, -webkit-text-decoration-color 0.5s linear;
+  -o-transition: text-decoration-color 0.5s linear, color 0.5s linear;
   transition: text-decoration-color 0.5s linear, color 0.5s linear;
   transition: text-decoration-color 0.5s linear, color 0.5s linear, -webkit-text-decoration-color 0.5s linear;
 }
@@ -776,6 +761,27 @@
   }
 }
 
+@-webkit-keyframes animateProgressBar {
+  /* Set the animation from 0% to 100% */
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--animate-progress);
+    /* This will be dynamically set based on the 'data-progress' attribute value */
+  }
+}
+
+@keyframes animateProgressBar {
+  /* Set the animation from 0% to 100% */
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--animate-progress);
+    /* This will be dynamically set based on the 'data-progress' attribute value */
+  }
+}
 .title {
   margin-bottom: clamp(1.5rem, 0.5rem + 2.7vw, 3.75rem);
   font-weight: 900;
@@ -824,6 +830,7 @@ h3::first-letter {
   top: 0;
   width: 100%;
   -webkit-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out;
 }
 .header__middle {
@@ -834,6 +841,7 @@ h3::first-letter {
   position: relative;
   font-weight: 900;
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .header__link::before {
@@ -851,6 +859,7 @@ h3::first-letter {
   height: 20px;
   background-color: currentcolor;
   -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
   display: none;
   top: 50%;
@@ -896,6 +905,7 @@ h3::first-letter {
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity 7s linear;
+    -o-transition: opacity 7s linear;
     transition: opacity 7s linear;
   }
 }
@@ -964,6 +974,7 @@ h3::first-letter {
 }
 .header-top__link {
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .header-top__link:is(:hover, :active) {
@@ -1033,6 +1044,7 @@ h3::first-letter {
   color: var(--color-gray-800);
   opacity: 0.6;
   -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .hero__pagination .swiper-pagination-bullet:hover::before {
@@ -1076,6 +1088,7 @@ h3::first-letter {
   transform: scaleX(1);
   -webkit-transition: -webkit-transform var(--hero-slider-speed) ease-in-out;
   transition: -webkit-transform var(--hero-slider-speed) ease-in-out;
+  -o-transition: transform var(--hero-slider-speed) ease-in-out;
   transition: transform var(--hero-slider-speed) ease-in-out;
   transition: transform var(--hero-slider-speed) ease-in-out, -webkit-transform var(--hero-slider-speed) ease-in-out;
 }
@@ -1143,6 +1156,7 @@ h3::first-letter {
 .gender__item img {
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
@@ -1170,6 +1184,7 @@ h3::first-letter {
   position: relative;
   color: var(--color-green);
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .arrival__text a::before {
@@ -1247,6 +1262,7 @@ h3::first-letter {
 .categories__item img {
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
@@ -1296,6 +1312,7 @@ h3::first-letter {
 }
 .mobile-app__link {
   -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
 }
 .mobile-app__link:hover {
@@ -1349,6 +1366,7 @@ h3::first-letter {
   height: 48px;
   background-color: var(--color-green);
   -webkit-transition: background-color 2s linear;
+  -o-transition: background-color 2s linear;
   transition: background-color 2s linear;
 }
 @media (max-width: calc(36em - 0.0625em)) {
@@ -1364,6 +1382,7 @@ h3::first-letter {
   width: 1px;
   height: 136px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(218, 219, 221, 0)), color-stop(rgba(218, 219, 221, 0.5)), color-stop(rgb(218, 219, 221)), color-stop(rgba(218, 219, 221, 0.5)), to(rgba(218, 219, 221, 0)));
+  background: -o-linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
   background: linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
 }
 @media (max-width: calc(48em - 0.0625em)) {
@@ -1588,6 +1607,7 @@ h3::first-letter {
   filter: grayscale(100%);
   -webkit-transition: -webkit-filter 0.3s linear;
   transition: -webkit-filter 0.3s linear;
+  -o-transition: filter 0.3s linear;
   transition: filter 0.3s linear;
   transition: filter 0.3s linear, -webkit-filter 0.3s linear;
 }
@@ -1727,6 +1747,30 @@ h3::first-letter {
   padding: 0;
 }
 
+.offers-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 530px;
+}
+.offers-slider__item {
+  font-weight: 900;
+  font-size: 12px;
+}
+.offers-slider__item a {
+  padding-left: 4px;
+  font-weight: 400;
+}
+.offers-slider .offers-btn {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s liner;
+  -o-transition: opacity 0.3s liner;
+  transition: opacity 0.3s liner;
+}
+.offers-slider:hover .offers-btn {
+  opacity: 1;
+}
+
 .single__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1857,6 +1901,7 @@ h3::first-letter {
   height: 55px;
   background-color: var(--color-white);
   -webkit-transition: background-color 0.6s linear;
+  -o-transition: background-color 0.6s linear;
   transition: background-color 0.6s linear;
 }
 .single-slider__link:hover::before {
@@ -1888,6 +1933,7 @@ h3::first-letter {
   border: 1px solid transparent;
   border-radius: var(--br);
   -webkit-transition: border-color 0.3s linear;
+  -o-transition: border-color 0.3s linear;
   transition: border-color 0.3s linear;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -1901,6 +1947,7 @@ h3::first-letter {
   background-color: var(--color-gray-900);
   opacity: 0.6;
   -webkit-transition: opacity 0.3s linear background-color 0.3s linear;
+  -o-transition: opacity 0.3s linear background-color 0.3s linear;
   transition: opacity 0.3s linear background-color 0.3s linear;
   inset: 0;
 }
@@ -1986,6 +2033,7 @@ h3::first-letter {
   position: relative;
   padding-left: 20px;
   -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 .footer__copyright a::before {
@@ -2037,6 +2085,7 @@ h3::first-letter {
 .footer-nav__link {
   position: relative;
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .footer-nav__link::before {
@@ -2055,6 +2104,7 @@ h3::first-letter {
   transform-origin: center;
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
@@ -2087,6 +2137,7 @@ h3::first-letter {
 }
 .footer-address__link {
   -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 .footer-address__link span {
@@ -2137,10 +2188,13 @@ h3::first-letter {
   color: var(--color-white);
   background-color: var(--color-green);
   -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
   transition-property: color, background-color;
   -webkit-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
   transition-duration: 0.7s;
   -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
   transition-timing-function: linear;
   overflow: hidden;
   white-space: nowrap;
@@ -2156,6 +2210,7 @@ h3::first-letter {
   transform: translateY(67px);
   -webkit-transition: -webkit-transform 0.6s linear;
   transition: -webkit-transform 0.6s linear;
+  -o-transition: transform 0.6s linear;
   transition: transform 0.6s linear;
   transition: transform 0.6s linear, -webkit-transform 0.6s linear;
   inset: 0;
@@ -2172,6 +2227,7 @@ h3::first-letter {
   mask-size: cover;
   background-color: currentcolor;
   -webkit-transition: background-color 0.7s linear;
+  -o-transition: background-color 0.7s linear;
   transition: background-color 0.7s linear;
 }
 .btn:hover {
@@ -2330,6 +2386,7 @@ h3::first-letter {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: opacity 0.3s linear, background-color 0.3s linear;
+  -o-transition: opacity 0.3s linear, background-color 0.3s linear;
   transition: opacity 0.3s linear, background-color 0.3s linear;
 }
 .slider-btn::before {
@@ -2347,6 +2404,7 @@ h3::first-letter {
   height: 24px;
   background-color: var(--color-gray-800);
   -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
 .slider-btn--reverse::before {
@@ -2393,6 +2451,7 @@ h3::first-letter {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: background-color 0.9s linear opacity 0.9s linear;
+  -o-transition: background-color 0.9s linear opacity 0.9s linear;
   transition: background-color 0.9s linear opacity 0.9s linear;
 }
 .offers-btn::before {
@@ -2411,6 +2470,7 @@ h3::first-letter {
   background-color: var(--color-white);
   opacity: 0.6;
   -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
 }
 .offers-btn--reverse::before {
@@ -2445,6 +2505,7 @@ h3::first-letter {
   height: 100%;
   -webkit-transition: border-color 0.3s linear, -webkit-box-shadow 0.3s linear;
   transition: border-color 0.3s linear, -webkit-box-shadow 0.3s linear;
+  -o-transition: border-color 0.3s linear, box-shadow 0.3s linear;
   transition: border-color 0.3s linear, box-shadow 0.3s linear;
   transition: border-color 0.3s linear, box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
 }
@@ -2452,6 +2513,7 @@ h3::first-letter {
   margin-top: auto;
   margin-bottom: 8px;
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .article a::before {
@@ -2522,6 +2584,7 @@ h3::first-letter {
   height: 1rem;
   fill: var(--color-gray-700);
   -webkit-transition: fill 0.9s linear;
+  -o-transition: fill 0.9s linear;
   transition: fill 0.9s linear;
 }
 .article__icon--filled {
@@ -2557,6 +2620,7 @@ h3::first-letter {
   font-weight: 400;
   font-size: 18px;
   text-align: left;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-transform: none;
   -webkit-box-orient: vertical;
@@ -2646,6 +2710,7 @@ h3::first-letter {
 }
 .card__content a {
   -webkit-transition: color 3s linear;
+  -o-transition: color 3s linear;
   transition: color 3s linear;
 }
 .card__content a ::before {
@@ -2723,6 +2788,7 @@ h3::first-letter {
   background-color: currentcolor;
 }
 .card__text {
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -2753,6 +2819,7 @@ h3::first-letter {
   width: 100%;
   background-color: var(--color-white);
   -webkit-transition: border-color 0.3s linear;
+  -o-transition: border-color 0.3s linear;
   transition: border-color 0.3s linear;
 }
 .form__input:focus {
@@ -2902,6 +2969,7 @@ h3::first-letter {
   height: 16px;
   fill: var(--color-gray-800);
   -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
   transition: fill 0.3s linear;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2964,6 +3032,7 @@ h3::first-letter {
   padding: 3.75rem 1.5rem 1.5rem;
   text-align: center;
   -webkit-transition: border-color 0.3s linear;
+  -o-transition: border-color 0.3s linear;
   transition: border-color 0.3s linear;
 }
 .form-modal__box--upload::before {
@@ -3050,6 +3119,7 @@ h3::first-letter {
   background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -3093,6 +3163,7 @@ h3::first-letter {
   background-color: var(--color-gray-800);
   -webkit-transition: background-color 0.3s linear, -webkit-mask-image 0.3s linear;
   transition: background-color 0.3s linear, -webkit-mask-image 0.3s linear;
+  -o-transition: mask-image 0.3s linear, background-color 0.3s linear;
   transition: mask-image 0.3s linear, background-color 0.3s linear;
   transition: mask-image 0.3s linear, background-color 0.3s linear, -webkit-mask-image 0.3s linear;
 }
@@ -3172,6 +3243,7 @@ h3::first-letter {
   text-transform: capitalize;
   color: var(--color-gray-600);
   -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 .color-picker__input {
@@ -3183,6 +3255,7 @@ h3::first-letter {
   height: 1rem;
   background-color: var(--radio-color, currentcolor);
   -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
   cursor: pointer;
 }
@@ -3197,6 +3270,7 @@ h3::first-letter {
   transform: scale(0);
   -webkit-transition: 120ms -webkit-transform ease-in-out;
   transition: 120ms -webkit-transform ease-in-out;
+  -o-transition: 120ms transform ease-in-out;
   transition: 120ms transform ease-in-out;
   transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
 }
@@ -3248,6 +3322,7 @@ h3::first-letter {
   height: 20px;
   fill: var(--color-gray-800);
   -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
   transition: fill 0.3s linear;
 }
 .wishlist__icon:hover {
@@ -3309,6 +3384,7 @@ h3::first-letter {
   justify-content: center;
   position: relative;
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
   cursor: pointer;
 }
@@ -3349,6 +3425,7 @@ h3::first-letter {
   transform: translateY(-50%) var(--rotate);
   -webkit-transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
   transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+  -o-transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
 }
@@ -3371,10 +3448,13 @@ h3::first-letter {
   opacity: 0;
   visibility: hidden;
   -webkit-transition-property: visibility, display;
+  -o-transition-property: visibility, display;
   transition-property: visibility, display;
   -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
 .languages__list.open {
@@ -3397,6 +3477,7 @@ h3::first-letter {
   -ms-flex-align: center;
   align-items: center;
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .languages a img {
@@ -3448,6 +3529,7 @@ h3::first-letter {
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
     -webkit-transition: translate 0.3s linear;
+    -o-transition: translate 0.3s linear;
     transition: translate 0.3s linear;
     font-size: 20px;
     z-index: -1;
@@ -3465,10 +3547,13 @@ h3::first-letter {
   opacity: 0;
   visibility: hidden;
   -webkit-transition-property: opacity, visibility;
+  -o-transition-property: opacity, visibility;
   transition-property: opacity, visibility;
   -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
   transition-timing-function: linear;
 }
 @media (max-width: calc(48em - 0.0625em)) {
@@ -3514,6 +3599,7 @@ h3::first-letter {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .nav__item.open > .nav__list--dropdown {
@@ -3553,6 +3639,7 @@ h3::first-letter {
   text-transform: capitalize;
   color: var(--color-gray-800);
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .nav__link:before {
@@ -3567,6 +3654,7 @@ h3::first-letter {
   left: 50%;
   opacity: 0;
   -webkit-transition: opacity 0.3s linear, bottom 0.3s linear;
+  -o-transition: opacity 0.3s linear, bottom 0.3s linear;
   transition: opacity 0.3s linear, bottom 0.3s linear;
 }
 .nav__link:hover {
@@ -3615,6 +3703,7 @@ h3::first-letter {
   transform: translateY(-50%) var(--rotate);
   -webkit-transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
   transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+  -o-transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
 }
@@ -3710,6 +3799,7 @@ h3::first-letter {
   left: -25%;
   top: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(218, 219, 221, 0)), color-stop(rgba(218, 219, 221, 0.5)), color-stop(rgb(218, 219, 221)), color-stop(rgba(218, 219, 221, 0.5)), to(rgba(218, 219, 221, 0)));
+  background: -o-linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
   background: linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
 }
 @media (max-width: calc(62em - 0.0625em)) {
@@ -3751,6 +3841,7 @@ h3::first-letter {
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity 150ms ease-in-out, visibility 150ms ease-in-out;
+    -o-transition: opacity 150ms ease-in-out, visibility 150ms ease-in-out;
     transition: opacity 150ms ease-in-out, visibility 150ms ease-in-out;
   }
 }
@@ -3797,6 +3888,7 @@ h3::first-letter {
     transform: translateY(-50%) var(--rotate);
     -webkit-transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
     transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+    -o-transition: background-color 0.3s linear, transform 0.3s linear;
     transition: background-color 0.3s linear, transform 0.3s linear;
     transition: background-color 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
   }
@@ -3816,6 +3908,7 @@ h3::first-letter {
 .dropdown-submenu__link {
   position: relative;
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
   cursor: pointer;
 }
@@ -3835,6 +3928,7 @@ h3::first-letter {
   transform-origin: center;
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
@@ -3933,6 +4027,7 @@ h3::first-letter {
   height: 16px;
   fill: var(--color-gray-700);
   -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
   transition: fill 0.3s linear;
 }
 .modal__icon:hover {
@@ -3998,6 +4093,7 @@ h3::first-letter {
   height: 32px;
   background-color: rgba(120, 122, 128, 0.12);
   -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
 .social__link:hover {
@@ -4011,6 +4107,7 @@ h3::first-letter {
   height: 16px;
   fill: var(--color-gray-700);
   -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
   transition: fill 0.3s linear;
 }
 .social__text {
@@ -4041,6 +4138,7 @@ h3::first-letter {
   background-color: currentColor;
   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
@@ -4062,6 +4160,7 @@ h3::first-letter {
   transform: translateY(-50%);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
@@ -4072,6 +4171,7 @@ h3::first-letter {
   transform: rotate(45deg);
   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
@@ -4082,6 +4182,7 @@ h3::first-letter {
   transform: rotate(-45deg);
   -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
@@ -4091,6 +4192,7 @@ h3::first-letter {
   transform: scale(0);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
@@ -4181,6 +4283,7 @@ h3::first-letter {
   transform: translateY(-50%) var(--rotate);
   -webkit-transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
   transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+  -o-transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear;
   transition: background-color 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
   pointer-events: none;
@@ -4298,6 +4401,7 @@ input[type=number]::-webkit-outer-spin-button {
 .breadcrumb__list li a {
   color: var(--color-gray-800);
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .breadcrumb__list li a:is(:hover, :active) {
@@ -4308,6 +4412,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 17px;
   fill: var(--color-gray-800);
   -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
   transition: fill 0.3s linear;
 }
 .breadcrumb__icon:hover {
@@ -4353,6 +4458,7 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--color-gray-600);
   white-space: nowrap;
   -webkit-transition: color 0.3s linear, border-color 0.3s linear;
+  -o-transition: color 0.3s linear, border-color 0.3s linear;
   transition: color 0.3s linear, border-color 0.3s linear;
 }
 .tabs__nav-btn sup {
@@ -4378,6 +4484,7 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: visibility 0.3s linear;
+  -o-transition: visibility 0.3s linear;
   transition: visibility 0.3s linear;
 }
 .tabs__panel--active {
@@ -4433,6 +4540,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
   color: var(--color-gray-800);
   -webkit-transition: grid-template-rows 0.5s ease-in-out;
+  -o-transition: grid-template-rows 0.5s ease-in-out;
   transition: grid-template-rows 0.5s ease-in-out;
   transition: grid-template-rows 0.5s ease-in-out, -ms-grid-rows 0.5s ease-in-out;
 }
@@ -4451,6 +4559,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: left;
   color: var(--color-gray-900);
   -webkit-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
   transition: color 0.5s linear;
 }
 .accordion__btn::before {
@@ -4470,6 +4579,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: var(--color-green);
   -webkit-transition: -webkit-mask-image 0.1s linear;
   transition: -webkit-mask-image 0.1s linear;
+  -o-transition: mask-image 0.1s linear;
   transition: mask-image 0.1s linear;
   transition: mask-image 0.1s linear, -webkit-mask-image 0.1s linear;
 }
@@ -4504,6 +4614,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   height: 1px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(218, 219, 221, 0)), color-stop(rgba(218, 219, 221, 0.5)), color-stop(rgb(218, 219, 221)), color-stop(rgba(218, 219, 221, 0.5)), to(rgba(218, 219, 221, 0)));
+  background: -o-linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
   background: linear-gradient(rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgb(218, 219, 221), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
 }
 .accordion-table__title {
@@ -4700,6 +4811,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
   color: var(--color-gray-700);
   -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 .single-reviews__btn::before {
@@ -4718,6 +4830,7 @@ input[type=number]::-webkit-outer-spin-button {
   mask-size: cover;
   background-color: currentcolor;
   -webkit-transition: background-color 0.7s linear;
+  -o-transition: background-color 0.7s linear;
   transition: background-color 0.7s linear;
 }
 .single-reviews__btn:hover {
