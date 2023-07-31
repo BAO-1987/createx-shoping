@@ -7,16 +7,27 @@
     @include flex-sb;
 
     margin-bottom: clamp(2rem, calc(0.5rem + 4vw), 5rem);
+
+    @include for-width (-mobile-sl) {
+      display: grid;
+      place-content: center;
+      gap: 2rem;
+    }
   }
 
   &__text {
     margin-right: clamp(2rem, calc(0.5rem + 4vw), 5rem);
-    width: 100%;
-    max-width: 235px;
+    width: min(80%, 235px);
 
     p {
       font-size: rem(14);
       color: var(--color-gray-700);
+    }
+
+    @include for-width (-mobile-sl) {
+      margin: 0;
+      width: fit-content;
+      text-align: center;
     }
   }
 
@@ -52,13 +63,17 @@
     color: var(--color-gray-800);
     margin-bottom: 2rem;
 
-   &:not(:last-child)::before {
+    &:not(:last-child)::before {
       content: "";
       position: absolute;
       bottom: 0;
       width: 100%;
       height: 1px;
       background-color: var(--color-gray-300);
+    }
+
+    @include for-width (-tablet) {
+      flex-direction: column;
     }
 
   }
