@@ -12,17 +12,23 @@
   &__text {
     margin-right: clamp(2rem, calc(0.5rem + 4vw), 5rem);
     width: 100%;
-    max-width: 305px;
+    max-width: 235px;
+
+    p {
+      font-size: rem(14);
+      color: var(--color-gray-700);
+    }
   }
 
   &__title {
     position: relative;
     margin-bottom: rem(55);
+    text-align: left;
 
     &::before {
       content: "";
       position: absolute;
-      bottom: rem(-20);
+      bottom: -1.8rem;
       background-image: url("../img/sprite.svg#rating-for");
       background-position: center;
       background-repeat: no-repeat;

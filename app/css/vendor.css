@@ -176,7 +176,6 @@ table {
   *::before,
   *::after {
     -webkit-transition-duration: 0.01ms !important;
-    -o-transition-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
@@ -234,7 +233,6 @@ table {
   display: flex;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
@@ -265,7 +263,6 @@ table {
   position: relative;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
@@ -286,7 +283,6 @@ table {
   align-items: flex-start;
   -webkit-transition-property: height, -webkit-transform;
   transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
   transition-property: transform, height, -webkit-transform;
 }
@@ -330,25 +326,21 @@ table {
 
 .swiper-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -522,7 +514,6 @@ table {
   position: absolute;
   text-align: center;
   -webkit-transition: 300ms opacity;
-  -o-transition: 300ms opacity;
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -653,7 +644,6 @@ button.swiper-pagination-bullet {
   display: inline-block;
   -webkit-transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms top, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top, 200ms -webkit-transform;
 }
@@ -676,7 +666,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms left, 200ms -webkit-transform;
   transition: 200ms left, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left, 200ms -webkit-transform;
 }
@@ -684,7 +673,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms right, 200ms -webkit-transform;
   transition: 200ms right, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right, 200ms -webkit-transform;
 }
@@ -873,7 +861,6 @@ button.swiper-pagination-bullet {
 
 .swiper-free-mode > .swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
@@ -894,14 +881,12 @@ button.swiper-pagination-bullet {
 
 .swiper-fade.swiper-free-mode .swiper-slide {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-fade .swiper-slide {
   pointer-events: none;
   -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -1020,7 +1005,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   -webkit-transition-property: opacity, height, -webkit-transform;
   transition-property: opacity, height, -webkit-transform;
-  -o-transition-property: transform, opacity, height;
   transition-property: transform, opacity, height;
   transition-property: transform, opacity, height, -webkit-transform;
 }
@@ -1117,14 +1101,53 @@ button.swiper-pagination-bullet {
     stroke-dashoffset: -124;
   }
 }
+.f-throwOutUp {
+  -webkit-animation: 0.175s ease-out both f-throwOutUp;
+  animation: 0.175s ease-out both f-throwOutUp;
+}
+
+.f-throwOutDown {
+  -webkit-animation: 0.175s ease-out both f-throwOutDown;
+  animation: 0.175s ease-out both f-throwOutDown;
+}
+
+@-webkit-keyframes f-throwOutUp {
+  to {
+    -webkit-transform: translate3d(0, -150px, 0);
+    transform: translate3d(0, -150px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes f-throwOutUp {
+  to {
+    -webkit-transform: translate3d(0, -150px, 0);
+    transform: translate3d(0, -150px, 0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes f-throwOutDown {
+  to {
+    -webkit-transform: translate3d(0, 150px, 0);
+    transform: translate3d(0, 150px, 0);
+    opacity: 0;
+  }
+}
+@keyframes f-throwOutDown {
+  to {
+    -webkit-transform: translate3d(0, 150px, 0);
+    transform: translate3d(0, 150px, 0);
+    opacity: 0;
+  }
+}
 .f-zoomInUp {
-  -webkit-animation: 0.2s ease-out 0.1s both f-zoomInUp;
-  animation: 0.2s ease-out 0.1s both f-zoomInUp;
+  -webkit-animation: var(--f-transition-duration, 0.2s) ease-out 0.1s both f-zoomInUp;
+  animation: var(--f-transition-duration, 0.2s) ease-out 0.1s both f-zoomInUp;
 }
 
 .f-zoomOutDown {
-  -webkit-animation: 0.2s ease-out both f-zoomOutDown;
-  animation: 0.2s ease-out both f-zoomOutDown;
+  -webkit-animation: var(--f-transition-duration, 0.2s) ease-out both f-zoomOutDown;
+  animation: var(--f-transition-duration, 0.2s) ease-out both f-zoomOutDown;
 }
 
 @-webkit-keyframes f-zoomInUp {
@@ -1166,54 +1189,15 @@ button.swiper-pagination-bullet {
     opacity: 0;
   }
 }
-.f-throwOutUp {
-  -webkit-animation: 0.175s ease-out both f-throwOutUp;
-  animation: 0.175s ease-out both f-throwOutUp;
-}
-
-.f-throwOutDown {
-  -webkit-animation: 0.175s ease-out both f-throwOutDown;
-  animation: 0.175s ease-out both f-throwOutDown;
-}
-
-@-webkit-keyframes f-throwOutUp {
-  to {
-    -webkit-transform: translate3d(0, -150px, 0);
-    transform: translate3d(0, -150px, 0);
-    opacity: 0;
-  }
-}
-
-@keyframes f-throwOutUp {
-  to {
-    -webkit-transform: translate3d(0, -150px, 0);
-    transform: translate3d(0, -150px, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes f-throwOutDown {
-  to {
-    -webkit-transform: translate3d(0, 150px, 0);
-    transform: translate3d(0, 150px, 0);
-    opacity: 0;
-  }
-}
-@keyframes f-throwOutDown {
-  to {
-    -webkit-transform: translate3d(0, 150px, 0);
-    transform: translate3d(0, 150px, 0);
-    opacity: 0;
-  }
-}
 .f-fadeIn {
-  -webkit-animation: 0.2s ease both f-fadeIn;
-  animation: 0.2s ease both f-fadeIn;
+  -webkit-animation: var(--f-transition-duration, 0.2s) ease both f-fadeIn;
+  animation: var(--f-transition-duration, 0.2s) ease both f-fadeIn;
   z-index: 2;
 }
 
 .f-fadeOut {
-  -webkit-animation: 0.2s ease both f-fadeOut;
-  animation: 0.2s ease both f-fadeOut;
+  -webkit-animation: var(--f-transition-duration, 0.2s) ease both f-fadeOut;
+  animation: var(--f-transition-duration, 0.2s) ease both f-fadeOut;
   z-index: 1;
 }
 
@@ -1245,14 +1229,14 @@ button.swiper-pagination-bullet {
   }
 }
 .f-fadeSlowIn {
-  -webkit-animation: 0.5s ease both f-fadeSlowIn;
-  animation: 0.5s ease both f-fadeSlowIn;
+  -webkit-animation: var(--f-transition-duration, 0.5s) ease both f-fadeSlowIn;
+  animation: var(--f-transition-duration, 0.5s) ease both f-fadeSlowIn;
   z-index: 2;
 }
 
 .f-fadeSlowOut {
-  -webkit-animation: 0.5s ease both f-fadeSlowOut;
-  animation: 0.5s ease both f-fadeSlowOut;
+  -webkit-animation: var(--f-transition-duration, 0.5s) ease both f-fadeSlowOut;
+  animation: var(--f-transition-duration, 0.5s) ease both f-fadeSlowOut;
   z-index: 1;
 }
 
@@ -1284,14 +1268,14 @@ button.swiper-pagination-bullet {
   }
 }
 .f-fadeFastIn {
-  -webkit-animation: 0.2s ease-out both f-fadeFastIn;
-  animation: 0.2s ease-out both f-fadeFastIn;
+  -webkit-animation: var(--f-transition-duration, 0.2s) ease-out both f-fadeFastIn;
+  animation: var(--f-transition-duration, 0.2s) ease-out both f-fadeFastIn;
   z-index: 2;
 }
 
 .f-fadeFastOut {
-  -webkit-animation: 0.2s ease-out both f-fadeFastOut;
-  animation: 0.2s ease-out both f-fadeFastOut;
+  -webkit-animation: var(--f-transition-duration, 0.2s) ease-out both f-fadeFastOut;
+  animation: var(--f-transition-duration, 0.2s) ease-out both f-fadeFastOut;
   z-index: 2;
 }
 
@@ -1323,14 +1307,14 @@ button.swiper-pagination-bullet {
   }
 }
 .f-crossfadeIn {
-  -webkit-animation: 0.2s ease-out both f-crossfadeIn;
-  animation: 0.2s ease-out both f-crossfadeIn;
+  -webkit-animation: var(--f-transition-duration, 0.2s) ease-out both f-crossfadeIn;
+  animation: var(--f-transition-duration, 0.2s) ease-out both f-crossfadeIn;
   z-index: 2;
 }
 
 .f-crossfadeOut {
-  -webkit-animation: 0.1s linear 0.1s both f-crossfadeOut;
-  animation: 0.1s linear 0.1s both f-crossfadeOut;
+  -webkit-animation: calc(var(--f-transition-duration, 0.2s) * 0.5) linear 0.1s both f-crossfadeOut;
+  animation: calc(var(--f-transition-duration, 0.2s) * 0.5) linear 0.1s both f-crossfadeOut;
   z-index: 1;
 }
 
@@ -1362,23 +1346,23 @@ button.swiper-pagination-bullet {
   }
 }
 .f-slideIn.from-next {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideInNext;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideInNext;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideInNext;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideInNext;
 }
 
 .f-slideIn.from-prev {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideInPrev;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideInPrev;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideInPrev;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideInPrev;
 }
 
 .f-slideOut.to-next {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideOutNext;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideOutNext;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideOutNext;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideOutNext;
 }
 
 .f-slideOut.to-prev {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideOutPrev;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-slideOutPrev;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideOutPrev;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-slideOutPrev;
 }
 
 @-webkit-keyframes f-slideInPrev {
@@ -1447,26 +1431,26 @@ button.swiper-pagination-bullet {
   }
 }
 .f-classicIn.from-next {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicInNext;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicInNext;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicInNext;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicInNext;
   z-index: 2;
 }
 
 .f-classicIn.from-prev {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicInPrev;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicInPrev;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicInPrev;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicInPrev;
   z-index: 2;
 }
 
 .f-classicOut.to-next {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicOutNext;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicOutNext;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicOutNext;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicOutNext;
   z-index: 1;
 }
 
 .f-classicOut.to-prev {
-  -webkit-animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicOutPrev;
-  animation: 0.85s cubic-bezier(0.16, 1, 0.3, 1) f-classicOutPrev;
+  -webkit-animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicOutPrev;
+  animation: var(--f-transition-duration, 0.85s) cubic-bezier(0.16, 1, 0.3, 1) f-classicOutPrev;
   z-index: 1;
 }
 
@@ -1593,7 +1577,6 @@ button.swiper-pagination-bullet {
   pointer-events: all;
   cursor: pointer;
   -webkit-transition: var(--f-button-transition);
-  -o-transition: var(--f-button-transition);
   transition: var(--f-button-transition);
 }
 
@@ -1626,7 +1609,6 @@ button.swiper-pagination-bullet {
   stroke-linecap: round;
   stroke-linejoin: round;
   -webkit-transition: opacity 0.15s ease;
-  -o-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;
   -webkit-transform: var(--f-button-transform);
   -ms-transform: var(--f-button-transform);
@@ -1909,7 +1891,6 @@ html.with-fancybox body.hide-scrollbar {
   background-size: contain;
   background-position: center center;
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -2021,7 +2002,6 @@ html.with-fancybox body.hide-scrollbar {
   padding: 24px;
   opacity: var(--fancybox-opacity, 1);
   -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -2278,7 +2258,6 @@ html.with-fancybox body.hide-scrollbar {
   height: 100%;
   border-radius: 2px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ebeff2), to(#e2e8f0));
-  background-image: -o-linear-gradient(#ebeff2, #e2e8f0);
   background-image: linear-gradient(#ebeff2, #e2e8f0);
   z-index: -1;
 }
@@ -2358,7 +2337,6 @@ html.with-fancybox body.hide-scrollbar {
   -webkit-transform: translate3d(calc(var(--shift, 0) * -1px), 0, 0);
   transform: translate3d(calc(var(--shift, 0) * -1px), 0, 0);
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
   pointer-events: none;
 }
@@ -2380,13 +2358,11 @@ html.with-fancybox body.hide-scrollbar {
 
 .is-modern.is-resting .f-thumbs__slide {
   -webkit-transition: all 0.33s ease;
-  -o-transition: all 0.33s ease;
   transition: all 0.33s ease;
 }
 
 .is-modern.is-resting .f-thumbs__slide > * {
   -webkit-transition: all 0.33s ease;
-  -o-transition: all 0.33s ease;
   transition: all 0.33s ease;
 }
 
@@ -2410,7 +2386,6 @@ html.with-fancybox body.hide-scrollbar {
   touch-action: manipulation;
   opacity: var(--f-thumb-opacity);
   -webkit-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 
@@ -2492,7 +2467,6 @@ html.with-fancybox body.hide-scrollbar {
   position: relative;
   opacity: var(--fancybox-opacity, 1);
   -webkit-transition: max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   transition: max-height 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -2504,7 +2478,6 @@ html.with-fancybox body.hide-scrollbar {
 
 .fancybox__thumbs.is-classic .f-spinner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.05)));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
 
@@ -2518,7 +2491,6 @@ html.with-fancybox body.hide-scrollbar {
 
 .fancybox__thumbs.is-modern .f-spinner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.05)));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
 
@@ -2537,13 +2509,12 @@ html.with-fancybox body.hide-scrollbar {
   --f-thumb-extra-gap: 10px;
 }
 
-.fancybox__thumbs.is-hidden {
+.fancybox__thumbs.is-masked {
   max-height: 0px !important;
 }
 
 .is-closing .fancybox__thumbs {
   -webkit-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
@@ -2736,11 +2707,9 @@ html.with-fancybox body.hide-scrollbar {
   transform-origin: 0;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
   transition-timing-function: linear;
   background: var(--f-progress-color, var(--f-carousel-theme-color, #0091ff));
   z-index: 30;

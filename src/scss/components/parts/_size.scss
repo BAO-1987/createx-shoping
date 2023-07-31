@@ -4,6 +4,8 @@
 
   &--sort {
     @include flex-a-center;
+    
+    margin: 0;
     justify-content: end;
     gap: 10px;
     max-width: 235px;
