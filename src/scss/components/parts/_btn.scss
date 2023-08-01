@@ -242,47 +242,4 @@
   }
 }
 
-.offers-btn {
-  @include flex-all-center;
 
-  position: absolute;
-  z-index: 10;
-  width: 16px;
-  height: 16px;
-  background-color: transparent;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: background-color 0.9s linear opacity 0.9s linear;
-
-  &::before {
-    content: "";
-    position: absolute;
-    mask-image: url("../img/sprite.svg#chevron");
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: cover;
-    width: 16px;
-    height: 16px;
-    background-color: var(--color-white);
-    opacity: 0.6;
-    transition: opacity 0.3s linear;
-  }
-
-  &--reverse {
-    &::before {
-      transform: rotate(180deg);
-    }
-  }
-
-  &:hover::before {
-    opacity: 1;
-  }
-
-  &__prev {
-    left: 24%;
-  }
-
-  &__next {
-    right: 24%;
-  }
-}

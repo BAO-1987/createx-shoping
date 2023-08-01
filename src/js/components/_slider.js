@@ -72,14 +72,13 @@ const heroSlider = new Swiper(".hero-slider", {
 });
 
 const offersSlider = new Swiper(".offers-slider", {
-  ...commonSwiperOptions,
+  // ...commonSwiperOptions,
   slidesPerView: 1,
 
   // autoplay: {
   //   delay: 4500,
   //   disableOnInteraction: false,
   // },
-
 
   navigation: {
     nextEl: ".offers-btn__next",
@@ -238,22 +237,22 @@ const interestSlider = new Swiper(".interest-slider", {
 const recentlySlider = new Swiper(".recently-slider", {
   ...commonSwiperOptions,
 
- breakpoints: {
+  breakpoints: {
 
-   425: {
-     slidesPerView: 2,
-     spaceBetween: 10,
-   },
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
 
-   600: {
-     slidesPerView: 3,
-     spaceBetween: 20,
-   },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
 
-   1200: {
-     slidesPerView: 4,
-   }
- },
+    1200: {
+      slidesPerView: 4,
+    }
+  },
 
   navigation: {
     nextEl: ".recently-slider__next",

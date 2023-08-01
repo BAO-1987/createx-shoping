@@ -57,7 +57,7 @@
   position: relative;
 
   &__pagination {
-    @include for-width (-mobile-md) {
+    @include for-width(-mobile-md) {
       display: none;
     }
   }
@@ -67,16 +67,15 @@
   padding: 0;
 }
 
-
 .offers-slider {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 530px;
+  max-width: 300px;
 
   &__item {
     font-weight: 900;
-    font-size: 12px;
+    font-size: rem(14);
 
     a {
       padding-left: 4px;
@@ -91,5 +90,50 @@
 
   &:hover .offers-btn {
     opacity: 1;
+  }
+}
+
+.offers-btn {
+  @include flex-all-center;
+
+  position: absolute;
+  z-index: 10;
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.9s linear opacity 0.9s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    mask-image: url("../img/sprite.svg#chevron");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-white);
+    opacity: 0.6;
+    transition: opacity 0.3s linear;
+  }
+
+  &--reverse {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
   }
 }
