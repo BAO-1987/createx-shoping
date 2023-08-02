@@ -153,6 +153,7 @@
   }
 
   &--single {
+    width: min(95%, 390px);
     position: sticky;
     top: 25%;
     box-shadow:
@@ -163,7 +164,7 @@
 
     .btn--article {
       &::before {
-        left: 115px;
+        left: clamp(1rem, calc(1rem + 5.5vw), 7.2rem);
       }
     }
 

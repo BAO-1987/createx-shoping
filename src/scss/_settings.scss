@@ -49,7 +49,7 @@
   &.open {
     overflow: hidden;
 
-    >.page__body::before {
+    > .page__body::before {
       width: 100%;
     }
   }
@@ -151,7 +151,7 @@
     }
   }
 
-  input[type="radio"]:checked+.checkboxes__label {
+  input[type="radio"]:checked + .checkboxes__label {
     border-color: var(--color-green);
     color: var(--color-white);
     background-color: var(--color-green);
@@ -268,8 +268,7 @@
 
 .carousel {
   position: relative;
-  width: 390px;
-  height: 440px;
+  min-height: 440px;
 
   &__item {
     position: absolute;
@@ -322,9 +321,9 @@
     min-height: 440px;
   }
 
-  @include for-width (-mobile-sl) {
-    width: calc(100vw - 30px);
-  }
+  // @include for-width(-mobile-sl) {
+  //   width: calc(100vw - 30px);
+  // }
 }
 
 .list {
@@ -396,7 +395,7 @@
       height: 100%;
       font-size: 0;
       border-radius: 40px 0 0 40px;
-      animation: progressAnimation 3s linear forwards;
+      animation: progressAnimation 2s linear forwards;
     }
 
     &:nth-child(2)span[data-progress]::after {
@@ -543,9 +542,7 @@
   text-underline-offset: 3px;
   text-decoration-skip-ink: solid;
   text-decoration-line: underline;
-  transition:
-    text-decoration-color 0.5s linear,
-    color 0.5s linear;
+  transition: text-decoration-color 0.5s linear, color 0.5s linear;
 
   &:is(:hover, :active) {
     text-decoration-color: transparent;
@@ -579,32 +576,5 @@
 
   @include for-width(-mobile-sl) {
     overflow: auto hidden;
-  }
-}
-
-// @keyframes gradient-animation {
-//   0% {
-//     background-position: 0% 50%;
-//   }
-
-//   50% {
-//     background-position: 100% 50%;
-//   }
-
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
-
-@keyframes animateProgressBar {
-
-  /* Set the animation from 0% to 100% */
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: var(--animate-progress);
-    /* This will be dynamically set based on the 'data-progress' attribute value */
   }
 }

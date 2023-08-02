@@ -414,8 +414,7 @@
 }
 .carousel {
   position: relative;
-  width: 390px;
-  height: 440px;
+  min-height: 440px;
 }
 .carousel__item {
   position: absolute;
@@ -472,11 +471,6 @@
 }
 .carousel .article__img {
   min-height: 440px;
-}
-@media (max-width: calc(29.6875em - 0.0625em)) {
-  .carousel {
-    width: calc(100vw - 30px);
-  }
 }
 
 .list li {
@@ -555,8 +549,8 @@
   height: 100%;
   font-size: 0;
   border-radius: 40px 0 0 40px;
-  -webkit-animation: progressAnimation 3s linear forwards;
-  animation: progressAnimation 3s linear forwards;
+  -webkit-animation: progressAnimation 2s linear forwards;
+  animation: progressAnimation 2s linear forwards;
 }
 .rating__item:nth-child(2) span[data-progress]::after {
   --bg-color: #1fdf58;
@@ -761,27 +755,6 @@
   }
 }
 
-@-webkit-keyframes animateProgressBar {
-  /* Set the animation from 0% to 100% */
-  from {
-    width: 0%;
-  }
-  to {
-    width: var(--animate-progress);
-    /* This will be dynamically set based on the 'data-progress' attribute value */
-  }
-}
-
-@keyframes animateProgressBar {
-  /* Set the animation from 0% to 100% */
-  from {
-    width: 0%;
-  }
-  to {
-    width: var(--animate-progress);
-    /* This will be dynamically set based on the 'data-progress' attribute value */
-  }
-}
 .title {
   margin-bottom: clamp(1.5rem, 0.5rem + 2.7vw, 3.75rem);
   font-weight: 900;
@@ -2640,13 +2613,14 @@ h3::first-letter {
   }
 }
 .article--single {
+  width: min(95%, 390px);
   position: sticky;
   top: 25%;
   -webkit-box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.16), 0 30px 24px -10px rgba(154, 156, 165, 0.1), 0 12px 10px -6px rgba(154, 156, 165, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
   box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.16), 0 30px 24px -10px rgba(154, 156, 165, 0.1), 0 12px 10px -6px rgba(154, 156, 165, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
 }
 .article--single .btn--article::before {
-  left: 115px;
+  left: clamp(1rem, 1rem + 5.5vw, 7.2rem);
 }
 .article--single .article__price {
   margin-bottom: 1.25rem;
