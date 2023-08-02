@@ -49,7 +49,7 @@
   &.open {
     overflow: hidden;
 
-    > .page__body::before {
+    >.page__body::before {
       width: 100%;
     }
   }
@@ -75,7 +75,8 @@
 }
 
 .section {
-  margin-bottom: clamp(2rem, calc(2rem + 8.45vw), 11.25rem);
+  // margin-bottom: clamp(2rem, calc(2rem + 8.45vw), 11.25rem);
+  margin-bottom: clamp(2rem, calc(-0.28rem + 9.61vw), 11.25rem);
 }
 
 .logo {
@@ -129,9 +130,8 @@
   padding: 0;
 
   &__label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-all-center;
+
     position: relative;
     cursor: pointer;
     font-weight: 700;
@@ -151,7 +151,7 @@
     }
   }
 
-  input[type="radio"]:checked + .checkboxes__label {
+  input[type="radio"]:checked+.checkboxes__label {
     border-color: var(--color-green);
     color: var(--color-white);
     background-color: var(--color-green);
@@ -576,5 +576,16 @@
 
   @include for-width(-mobile-sl) {
     overflow: auto hidden;
+  }
+}
+
+
+@keyframes carousel-home {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translate(0);
   }
 }
