@@ -4,7 +4,7 @@
 
   &--sort {
     @include flex-a-center;
-    
+
     margin: 0;
     justify-content: end;
     gap: 10px;
@@ -89,7 +89,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
   th,
   td {
-    padding: 10px;
+    padding: 12px 2px;
     text-align: left;
   }
 
@@ -103,26 +103,26 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
   }
 
-  &--size {
-    @include for-width(-mobile-md) {
+  // &--size {
+  //   @include for-width(-mobile-md) {
 
-      th,
-      td {
-        padding: 5px;
-      }
+  //     th,
+  //     td {
+  //       padding: 5px;
+  //     }
 
-      tbody {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-      }
+  //     tbody {
+  //       display: grid;
+  //       grid-template-columns: repeat(6, 1fr);
+  //     }
 
-      tr {
-        display: grid;
-      }
+  //     tr {
+  //       display: grid;
+  //     }
 
-      td:first-child {
-        min-height: 50px;
-      }
-    }
-  }
+  //     td:first-child {
+  //       min-height: 50px;
+  //     }
+  //   }
+  // }
 }

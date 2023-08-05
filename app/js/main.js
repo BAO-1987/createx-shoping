@@ -61,6 +61,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_components_search__WEBPACK_IMPORTED_MODULE_17__);
 /* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/_progress */ "./src/js/components/_progress.js");
 /* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_components_progress__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/_burger */ "./src/js/components/_burger.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_19__);
+
 
 
 
@@ -93,8 +96,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
 /* harmony import */ var _functions_fix_fullheight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/fix-fullheight */ "./src/js/functions/fix-fullheight.js");
-/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
-/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_functions_burger__WEBPACK_IMPORTED_MODULE_2__);
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
@@ -118,7 +119,7 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 
 
 // Реализация бургер-меню
-
+// import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -250,6 +251,45 @@ function toggleAccordion(panelToActivate) {
     panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", false);
   }
 }
+
+/***/ }),
+
+/***/ "./src/js/components/_burger.js":
+/*!**************************************!*\
+  !*** ./src/js/components/_burger.js ***!
+  \**************************************/
+/***/ (() => {
+
+const navigation = document.querySelector(".header");
+const page = document.querySelector(".page");
+navigation.addEventListener("click", BurgerBtnClick);
+function BurgerBtnClick(e) {
+  if (!e.target.parentNode.matches(".burger") && !e.target.matches(".burger")) return;
+  e.addEventListener;
+  this.classList.remove("closed");
+  page.classList.add("open");
+  if (this.matches(".opened")) {
+    this.classList.add("closed");
+    page.classList.remove("open");
+    setTimeout(() => {
+      this.classList.remove("opened");
+    }, 500);
+  }
+  this.classList.add("opened");
+}
+const buttons = document.querySelectorAll(".burger");
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const currentState = button.getAttribute("data-state");
+    if (!currentState || currentState === "closed") {
+      button.setAttribute("data-state", "opened");
+      button.setAttribute("aria-expanded", "true");
+    } else {
+      button.setAttribute("data-state", "closed");
+      button.setAttribute("aria-expanded", "false");
+    }
+  });
+});
 
 /***/ }),
 
@@ -485,53 +525,89 @@ window.addEventListener("resize", () => {
   \******************************************/
 /***/ (() => {
 
-// (function () {
-//   const doc = document.documentElement;
-//   const w = window;
+// "use strict";
 
-//   let curScroll;
-//   let prevScroll = w.scrollY || doc.scrollTop;
-//   let curDirection = 0;
-//   let prevDirection = 0;
+// function optimizeNavbar() {
+//   const navbarSticky = document.querySelector(".header__middle");
 
-//   const header = document.querySelector(".header");
-//   let toggled;
-//   const threshold = 200;
+//   if (navbarSticky) {
+//     const offsetHeight = navbarSticky.offsetHeight;
+//     const navbarClassList = navbarSticky.classList;
 
-//   const checkScroll = function () {
-//     curScroll = w.scrollY || doc.scrollTop;
-//     if (curScroll > prevScroll) {
-//       // scrolled down
-//       curDirection = 2;
-//     } else {
-//       //scrolled up
-//       curDirection = 1;
+//     function updateNavbarStuckClass() {
+//       const scrollTop = window.pageYOffset;
+
+//       if (scrollTop > 500) {d
+//         if (navbarClassList.contains("navbar-floating")) {
+//           if (navbarClassList.contains("navbar-dark")) {
+//             navbarClassList.remove("navbar-dark");
+//             navbarClassList.add("navbar-light");
+//          }
+//         }
+//         else if (navbarClassList.contains("header__middle")) {
+//           navbarClassList.add("navbar-stuck");
+//         }
+//       } else {
+//         navbarClassList.remove("navbar-stuck");
+//         if (navbarClassList.contains("navbar-floating")) {
+//           if (navbarClassList.contains("navbar-light")) {
+//             navbarClassList.remove("navbar-light");
+//             navbarClassList.add("navbar-dark");
+//           }
+//         }
+//       }
 //     }
 
-//     if (curDirection !== prevDirection) {
-//       toggled = toggleHeader();
-//     }
+//     window.addEventListener("scroll", updateNavbarStuckClass);
 
-//     prevScroll = curScroll;
-//     if (toggled) {
-//       prevDirection = curDirection;
-//     }
-//   };
+//     // Set initial state
+//     updateNavbarStuckClass();
+//   }
+// }
 
-//   const toggleHeader = function () {
-//     toggled = true;
-//     if (curDirection === 2 && curScroll > threshold) {
-//       header.classList.add("hide");
-//     } else if (curDirection === 1) {
-//       header.classList.remove("hide");
-//     } else {
-//       toggled = false;
-//     }
-//     return toggled;
-//   };
+// // Call the function to optimize the navbar behavior
+// optimizeNavbar();
 
-//   window.addEventListener("scroll", checkScroll);
-// })();
+(function () {
+  const doc = document.documentElement;
+  const w = window;
+  let curScroll;
+  let prevScroll = w.scrollY || doc.scrollTop;
+  let curDirection = 0;
+  let prevDirection = 0;
+  const header = document.querySelector(".header");
+  let toggled;
+  const threshold = 200;
+  const checkScroll = function () {
+    curScroll = w.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) {
+      // scrolled down
+      curDirection = 2;
+    } else {
+      //scrolled up
+      curDirection = 1;
+    }
+    if (curDirection !== prevDirection) {
+      toggled = toggleHeader();
+    }
+    prevScroll = curScroll;
+    if (toggled) {
+      prevDirection = curDirection;
+    }
+  };
+  const toggleHeader = function () {
+    toggled = true;
+    if (curDirection === 2 && curScroll > threshold) {
+      header.classList.add("hidden");
+    } else if (curDirection === 1) {
+      header.classList.remove("hidden");
+    } else {
+      toggled = false;
+    }
+    return toggled;
+  };
+  window.addEventListener("scroll", checkScroll);
+})();
 
 /***/ }),
 
@@ -989,66 +1065,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.single');
 const tabsSize = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.size');
-
-/***/ }),
-
-/***/ "./src/js/functions/burger.js":
-/*!************************************!*\
-  !*** ./src/js/functions/burger.js ***!
-  \************************************/
-/***/ (() => {
-
-// import { disableScroll } from '../functions/disable-scroll';
-// import { enableScroll } from '../functions/enable-scroll';
-
-// (function () {
-//   const burger = document?.querySelector('[data-burger]');
-//   const menu = document?.querySelector('[data-menu]');
-//   const menuItems = document?.querySelectorAll('[data-menu-item]');
-
-//   burger?.addEventListener('click', (e) => {
-//     burger?.classList.toggle('burger--active');
-//     menu?.classList.toggle('menu--active');
-
-//     if (menu?.classList.contains('menu--active')) {
-//       burger?.setAttribute('aria-expanded', 'true');
-//       burger?.setAttribute('aria-label', 'close');
-//       disableScroll();
-//     } else {
-//       burger?.setAttribute('aria-expanded', 'false');
-//       burger?.setAttribute('aria-label', 'open');
-//       enableScroll();
-//     }
-//   });
-
-//   menuItems?.forEach(el => {
-//     el.addEventListener('click', () => {
-//       burger?.setAttribute('aria-expanded', 'false');
-//       burger?.setAttribute('aria-label', 'Open menu');
-//       burger.classList.remove('burger--active');
-//       menu.classList.remove('menu--active');
-//       enableScroll();
-//     });
-//   });
-// })();
-
-const navigation = document.querySelector(".header");
-const page = document.querySelector(".page");
-navigation.addEventListener("click", BurgerBtnClick);
-function BurgerBtnClick(e) {
-  if (!e.target.parentNode.matches(".burger") && !e.target.matches(".burger")) return;
-  e.addEventListener;
-  this.classList.remove("closed");
-  page.classList.add("open");
-  if (this.matches(".opened")) {
-    this.classList.add("closed");
-    page.classList.remove("open");
-    setTimeout(() => {
-      this.classList.remove("opened");
-    }, 500);
-  }
-  this.classList.add("opened");
-}
 
 /***/ }),
 

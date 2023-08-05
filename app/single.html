@@ -105,7 +105,7 @@
             loading="lazy">
         </a>
 
-        <ul class="nav__list" data-menu>
+        <ul class="nav__list">
 
           <li class="nav__item">
             <a class="nav__link" href="#">women</a>
@@ -364,9 +364,20 @@
         </div>
 
       </div>
-
-      <button class="burger" aria-expanded="false" data-burger>
+      <!--
+      <button class="burger" aria-label="mobile menu" aria-expanded="false" data-burger>
         <span class="burger__line"></span>
+      </button> -->
+
+      <button class="burger" aria-expanded="false">
+        <svg stroke="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="250">
+          <line class="line top" x1="90" x2="10" y1="40" y2="40" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="80" stroke-dashoffset="0">
+          </line>
+          <line class="line bottom" x1="10" x2="90" y1="60" y2="60" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="80" stroke-dashoffset="0">
+          </line>
+        </svg>
       </button>
 
     </div>
