@@ -16,9 +16,9 @@ function BurgerBtnClick(e) {
   this.classList.add("opened");
 }
 
-const buttons = document.querySelectorAll(".burger");
+const buttonBurger = document.querySelectorAll(".burger");
 
-buttons.forEach((button) => {
+buttonBurger.forEach((button) => {
   button.addEventListener("click", () => {
     const currentState = button.getAttribute("data-state");
 
@@ -31,4 +31,7 @@ buttons.forEach((button) => {
     }
   });
 });
+
+
+
 

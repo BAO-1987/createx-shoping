@@ -277,8 +277,8 @@ function BurgerBtnClick(e) {
   }
   this.classList.add("opened");
 }
-const buttons = document.querySelectorAll(".burger");
-buttons.forEach(button => {
+const buttonBurger = document.querySelectorAll(".burger");
+buttonBurger.forEach(button => {
   button.addEventListener("click", () => {
     const currentState = button.getAttribute("data-state");
     if (!currentState || currentState === "closed") {

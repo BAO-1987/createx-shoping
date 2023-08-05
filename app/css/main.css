@@ -4144,9 +4144,18 @@ h3::first-letter {
 @media (max-width: calc(48em - 0.0625em)) {
   .burger {
     --button-color: var(--color-green);
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: 33px;
     height: 33px;
+    border: 1px solid red;
   }
   .burger[data-state=closed] :is(.top, .bottom) {
     -webkit-animation: to-open-icon 1s forwards;
@@ -4155,6 +4164,9 @@ h3::first-letter {
   .burger[data-state=opened] :is(.top, .bottom) {
     -webkit-animation: to-close-icon 1s forwards;
     animation: to-close-icon 1s forwards;
+  }
+  .burger[data-state=opened] :is(.middle) {
+    opacity: 0;
   }
   .burger .hamburger {
     -webkit-transition: rotate 0.3s 0.1s linear;
@@ -4172,9 +4184,15 @@ h3::first-letter {
   }
   .burger .line.bottom {
     --rotation: 45deg;
-    -webkit-transform-origin: 60px 55px;
-    -ms-transform-origin: 60px 55px;
-    transform-origin: 60px 55px;
+    -webkit-transform-origin: 70px 60px;
+    -ms-transform-origin: 70px 60px;
+    transform-origin: 70px 60px;
+  }
+  .burger .line.middle {
+    --rotation: 45deg;
+    -webkit-transform-origin: 70px 60px;
+    -ms-transform-origin: 70px 60px;
+    transform-origin: 70px 60px;
   }
   @-webkit-keyframes to-close-icon {
     0% {
