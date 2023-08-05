@@ -127,6 +127,10 @@
   width: 100%;
 }
 
+.main {
+  padding-top: calc(var(--header-height));
+}
+
 .site-container {
   display: -ms-grid;
   display: grid;
@@ -4141,8 +4145,8 @@ h3::first-letter {
   .burger {
     --button-color: var(--color-green);
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
   }
   .burger[data-state=closed] :is(.top, .bottom) {
     -webkit-animation: to-open-icon 1s forwards;
@@ -4153,9 +4157,9 @@ h3::first-letter {
     animation: to-close-icon 1s forwards;
   }
   .burger .hamburger {
-    -webkit-transition: rotate 800ms 100ms;
-    -o-transition: rotate 800ms 100ms;
-    transition: rotate 800ms 100ms;
+    -webkit-transition: rotate 0.3s 0.1s linear;
+    -o-transition: rotate 0.3s 0.1s linear;
+    transition: rotate 0.3s 0.1s linear;
   }
   .burger[data-state=opened] .hamburger {
     rotate: 1turn;

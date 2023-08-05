@@ -3,9 +3,10 @@
 
   @include for-width(-mobile-l) {
     --button-color: var(--color-green);
+
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
 
     &[data-state="closed"] :is(.top, .bottom) {
       animation: to-open-icon 1s forwards;
@@ -16,7 +17,7 @@
     }
 
     & .hamburger {
-      transition: rotate 800ms 100ms;
+      transition: rotate 0.3s 0.1s linear;
     }
 
     &[data-state="opened"] .hamburger {
@@ -72,7 +73,6 @@
         stroke-dashoffset: 0;
       }
     }
-
   }
 }
 
