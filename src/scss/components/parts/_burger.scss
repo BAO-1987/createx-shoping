@@ -74,12 +74,12 @@
     }
 
   }
+}
 
-  .open .nav__list {
-    transform: translate(0);
-  }
+.open .nav__list {
+  transform: translate(0);
+}
 
-  .closed .nav__list {
-    transform: translateX(-100%);
-  }
+.closed .nav__list {
+  transform: translateX(-100%);
 }

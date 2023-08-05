@@ -4237,12 +4237,14 @@ h3::first-letter {
     }
   }
 }
-.burger .open .nav__list {
+
+.open .nav__list {
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
   transform: translate(0);
 }
-.burger .closed .nav__list {
+
+.closed .nav__list {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
