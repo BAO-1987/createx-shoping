@@ -844,6 +844,11 @@ h3::first-letter {
   padding: 20px 0;
   background-color: var(--color-white);
 }
+@media (max-width: calc(48em - 0.0625em)) {
+  .header__middle {
+    padding: 10px 0;
+  }
+}
 .header__link {
   position: relative;
   font-weight: 900;
@@ -4153,9 +4158,8 @@ h3::first-letter {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 33px;
-    height: 33px;
-    border: 1px solid red;
+    width: 24px;
+    height: 24px;
   }
   .burger[data-state=closed] :is(.top, .bottom) {
     -webkit-animation: to-open-icon 1s forwards;
@@ -4168,12 +4172,12 @@ h3::first-letter {
   .burger[data-state=opened] :is(.middle) {
     opacity: 0;
   }
-  .burger .hamburger {
+  .burger .burger__body {
     -webkit-transition: rotate 0.3s 0.1s linear;
     -o-transition: rotate 0.3s 0.1s linear;
     transition: rotate 0.3s 0.1s linear;
   }
-  .burger[data-state=opened] .hamburger {
+  .burger[data-state=opened] .burger__body {
     rotate: 1turn;
   }
   .burger .line.top {

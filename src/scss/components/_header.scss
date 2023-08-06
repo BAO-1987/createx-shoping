@@ -8,6 +8,10 @@
   &__middle {
     padding: 20px 0;
     background-color: var(--color-white);
+
+    @include for-width (-mobile-l) {
+      padding: 10px 0;
+    }
   }
 
   &__link {

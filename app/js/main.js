@@ -63,6 +63,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_components_progress__WEBPACK_IMPORTED_MODULE_18__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/_burger */ "./src/js/components/_burger.js");
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _components_burgerAnimation__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/_burgerAnimation */ "./src/js/components/_burgerAnimation.js");
+/* harmony import */ var _components_burgerAnimation__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_components_burgerAnimation__WEBPACK_IMPORTED_MODULE_20__);
+
 
 
 
@@ -264,7 +267,7 @@ const navigation = document.querySelector(".header");
 const page = document.querySelector(".page");
 navigation.addEventListener("click", BurgerBtnClick);
 function BurgerBtnClick(e) {
-  if (!e.target.parentNode.matches(".burger") && !e.target.matches(".burger")) return;
+  if (!e.target.parentNode.matches(".burger__body") && !e.target.matches(".burger__body")) return;
   e.addEventListener;
   this.classList.remove("closed");
   page.classList.add("open");
@@ -277,8 +280,17 @@ function BurgerBtnClick(e) {
   }
   this.classList.add("opened");
 }
-const buttonBurger = document.querySelectorAll(".burger");
-buttonBurger.forEach(button => {
+
+/***/ }),
+
+/***/ "./src/js/components/_burgerAnimation.js":
+/*!***********************************************!*\
+  !*** ./src/js/components/_burgerAnimation.js ***!
+  \***********************************************/
+/***/ (() => {
+
+const buttonsBurger = document.querySelectorAll(".burger");
+buttonsBurger.forEach(button => {
   button.addEventListener("click", () => {
     const currentState = button.getAttribute("data-state");
     if (!currentState || currentState === "closed") {

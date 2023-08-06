@@ -2,7 +2,7 @@ const navigation = document.querySelector(".header");
 const page = document.querySelector(".page");
 navigation.addEventListener("click", BurgerBtnClick);
 function BurgerBtnClick(e) {
-  if (!e.target.parentNode.matches(".burger") && !e.target.matches(".burger")) return;
+  if (!e.target.parentNode.matches(".burger__body") && !e.target.matches(".burger__body")) return;
   e.addEventListener;
   this.classList.remove("closed");
   page.classList.add("open");
@@ -16,21 +16,6 @@ function BurgerBtnClick(e) {
   this.classList.add("opened");
 }
 
-const buttonBurger = document.querySelectorAll(".burger");
-
-buttonBurger.forEach((button) => {
-  button.addEventListener("click", () => {
-    const currentState = button.getAttribute("data-state");
-
-    if (!currentState || currentState === "closed") {
-      button.setAttribute("data-state", "opened");
-      button.setAttribute("aria-expanded", "true");
-    } else {
-      button.setAttribute("data-state", "closed");
-      button.setAttribute("aria-expanded", "false");
-    }
-  });
-});
 
 
 
