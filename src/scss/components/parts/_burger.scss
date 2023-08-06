@@ -5,9 +5,9 @@
     --button-color: var(--color-green);
 
     @include flex-all-center;
+
     width: 24px;
     height: 24px;
-
 
     &[data-state="closed"] :is(.top, .bottom) {
       animation: to-open-icon 1s forwards;
@@ -19,6 +19,7 @@
 
     &[data-state="opened"] :is(.middle) {
       opacity: 0;
+      transition: opacity 0.1s linear;
     }
 
     & .burger__body {
@@ -36,12 +37,7 @@
 
     & .line.bottom {
       --rotation: 45deg;
-      transform-origin: 70px 60px;
-    }
-
-    & .line.middle {
-      --rotation: 45deg;
-      transform-origin: 70px 60px;
+      transform-origin: 80px 60px;
     }
 
     @keyframes to-close-icon {

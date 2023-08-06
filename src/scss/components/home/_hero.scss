@@ -38,7 +38,7 @@
 
       &::before {
         counter-increment: pag;
-        content: "0" counter(pag);
+        content: "0"counter(pag);
         font-family: var(--font-second);
         font-weight: 700;
         font-size: clamp(1.25rem, calc(1.15rem + 0.5vw), 1.75rem);
@@ -99,7 +99,6 @@
 
   &__item {
     @include bg-cover;
-
     min-height: 800px;
 
     @include for-width(-tablet) {

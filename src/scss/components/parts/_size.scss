@@ -86,12 +86,24 @@ input[type="number"]::-webkit-outer-spin-button {
 .table {
   width: 100%;
   border: 1px solid var(--color-gray-300);
+  overflow: hidden;
+
 
   th,
   td {
     padding: 12px 2px;
     text-align: left;
+
+    @include for-width(-mobile-md) {
+      padding: 2px;
+      text-align: center;
+    }
   }
+
+  th {
+    padding: 12px;
+  }
+
 
   tr:nth-child(2n + 1) {
     background-color: var(--color-gray-200);
@@ -106,7 +118,7 @@ input[type="number"]::-webkit-outer-spin-button {
   // &--size {
   //   @include for-width(-mobile-md) {
 
-  //     th,
+
   //     td {
   //       padding: 5px;
   //     }

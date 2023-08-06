@@ -44,12 +44,9 @@
 }
 
 .form-search {
- @include flex-a-center;
+  @include flex-a-center;
 
   position: relative;
-  // width: 100%;
-  // max-width: 385px;
-
   width: min(80%, 385px);
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
@@ -74,6 +71,7 @@
       max-width: 100%;
       z-index: 999;
       border-color: var(--color-gray-400);
+      animation: slide-up 0.3s forwards;
 
       .form-search__close {
         @include flex-all-center;

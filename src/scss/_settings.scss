@@ -578,14 +578,3 @@
     overflow: auto hidden;
   }
 }
-
-
-@keyframes carousel-home {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translate(0);
-  }
-}

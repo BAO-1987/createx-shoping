@@ -17,7 +17,7 @@
     background-color: var(--color-gray-300);
     right: 0;
     left: 0;
-    bottom: 141px;
+    bottom: 20%;
   }
 
   &--size {
@@ -25,10 +25,6 @@
 
     &::before {
       content: none;
-    }
-
-    @include for-width(-mobile-md) {
-      overflow: auto hidden;
     }
   }
 
@@ -95,6 +91,7 @@
 
     .tabs__panel--active {
       flex-direction: column;
+
     }
   }
 
@@ -103,10 +100,6 @@
   &[open] {
     animation: slide-up 1000ms forwards;
   }
-
-  //   @include for-width(-mobile-sl) {
-  //     max-width: 450px;
-  //   }
 }
 
 @keyframes slide-up {
@@ -117,4 +110,9 @@
   100% {
     transform: translateY(0%);
   }
+}
+
+.table__wrapper {
+  overflow: scroll hidden;
+  width: 100%;
 }
