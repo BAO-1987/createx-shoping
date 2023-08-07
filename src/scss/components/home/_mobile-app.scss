@@ -31,7 +31,7 @@
   &__list {
     @include flex;
 
-    gap: 25px;
+    gap: rem(25);
   }
 
   &__link {

@@ -1305,7 +1305,7 @@ h3::first-letter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 25px;
+  gap: 1.5625rem;
 }
 .mobile-app__link {
   -webkit-transition: opacity 0.3s linear;
@@ -1316,12 +1316,16 @@ h3::first-letter {
   opacity: 0.7;
 }
 
+.services {
+  margin: 0;
+  padding: clamp(2rem, 0.64rem + 5.715vw, 7.5rem) 0;
+}
 .services__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1.13rem, 2rem + 3vw, 6rem);
+  gap: clamp(1.56rem, -1rem + 6vw, 6.25rem);
 }
 @media (max-width: calc(36em - 0.0625em)) {
   .services__list {
@@ -1346,11 +1350,13 @@ h3::first-letter {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+  isolation: isolate;
 }
 .services__item::before {
   content: "";
-  top: -70px;
-  position: absolute;
+  -webkit-transform: translateY(-24px);
+  -ms-transform: translateY(-24px);
+  transform: translateY(-24px);
   -webkit-mask-image: url("../img/sprite.svg#delivery");
   mask-image: url("../img/sprite.svg#delivery");
   -webkit-mask-position: center;
@@ -1366,15 +1372,10 @@ h3::first-letter {
   -o-transition: background-color 2s linear;
   transition: background-color 2s linear;
 }
-@media (max-width: calc(36em - 0.0625em)) {
-  .services__item::before {
-    top: -50px;
-  }
-}
 .services__item:not(:last-child)::after {
   content: "";
   position: absolute;
-  right: -25%;
+  right: calc(0.2rem - 2.78vw);
   bottom: 0;
   width: 1px;
   height: 136px;
@@ -1403,11 +1404,6 @@ h3::first-letter {
   -webkit-mask-image: url("../img/sprite.svg#credit-card");
   mask-image: url("../img/sprite.svg#credit-card");
 }
-@media (max-width: calc(36em - 0.0625em)) {
-  .services__item:nth-child(-n+2) {
-    margin-bottom: 30px;
-  }
-}
 .services__item h3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1418,11 +1414,12 @@ h3::first-letter {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 15px;
-  min-height: 40px;
+  margin-bottom: 10px;
+  min-height: 45px;
 }
 .services__item p {
   min-height: 50px;
+  margin-bottom: 1rem;
 }
 
 .instagram {
@@ -1503,7 +1500,7 @@ h3::first-letter {
   grid-template-rows: repeat(2, 1fr);
   gap: 16px;
 }
-@media (max-width: calc(62em - 0.0625em)) {
+@media (max-width: calc(48em - 0.0625em)) {
   .banners__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1515,7 +1512,7 @@ h3::first-letter {
   }
 }
 .banners__title {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   text-align: left;
 }
 .banners__content {

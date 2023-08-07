@@ -1,8 +1,11 @@
 .services {
+  margin: 0;
+  padding: clamp(2rem, calc(0.64rem + 5.715vw), 7.5rem) 0;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(1.13rem, calc(2rem + 3vw), 6rem);
+    gap: clamp(1.56rem, calc(-1rem + 6vw), 6.25rem);
 
     @include for-width(-mobile-md) {
       place-items: center;
@@ -16,11 +19,11 @@
     position: relative;
     flex-direction: column;
     text-align: center;
+    isolation: isolate;
 
     &::before {
       content: "";
-      top: -70px;
-      position: absolute;
+      transform: translateY(-24px);
       mask-image: url("../img/sprite.svg#delivery");
       mask-position: center;
       mask-repeat: no-repeat;
@@ -30,16 +33,16 @@
       background-color: var(--color-green);
       transition: background-color 2s linear;
 
-      @include for-width(-mobile-md) {
-        top: -50px;
-      }
+      // @include for-width(-mobile-md) {
+      //   top: -50px;
+      // }
     }
 
     &:not(:last-child) {
       &::after {
         content: "";
         position: absolute;
-        right: -25%;
+        right: calc(0.2rem - 2.78vw);
         bottom: 0;
         width: 1px;
         height: 136px;
@@ -48,6 +51,7 @@
             rgba(218, 219, 221, 1),
             rgba(218, 219, 221, 0.5),
             rgba(218, 219, 221, 0));
+
 
         @include for-width(-mobile-l) {
           content: none;
@@ -79,22 +83,18 @@
       }
     }
 
-    &:nth-child(-n + 2) {
-      @include for-width(-mobile-md) {
-        margin-bottom: 30px;
-      }
-    }
 
     h3 {
       @include flex-all-center;
-      
-      margin-bottom: 15px;
-      min-height: 40px;
+
+      margin-bottom: 10px;
+      min-height: 45px;
 
     }
 
     p {
       min-height: 50px;
+      margin-bottom: 1rem;
     }
   }
 }

@@ -5,14 +5,14 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 16px;
 
-    @include for-width(-tablet) {
-      display: flex;
+    @include for-width(-mobile-l) {
+      @include flex;
       flex-direction: column;
     }
   }
 
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
     text-align: left;
   }
 
