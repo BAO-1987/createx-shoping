@@ -1,18 +1,13 @@
 .slider {
   position: relative;
 
-  &--interest,
-  &--trending {
-    padding: clamp(1rem, calc(0.8rem + 3.5vw), 5rem) 0;
-    background-color: var(--color-gray-300);
-  }
-
   &__nav {
     @include flex-all-sb;
   }
 
   &__btns {
     @include flex-sb;
+
     position: relative;
   }
 
@@ -24,6 +19,12 @@
 
   &__btn {
     margin: 0 auto;
+  }
+
+  &--interest,
+  &--trending {
+    padding: clamp(1rem, calc(0.8rem + 3.5vw), 5rem) 0;
+    background-color: var(--color-gray-300);
   }
 }
 
@@ -97,11 +98,11 @@
   @include flex-all-center;
 
   position: absolute;
+  top: 50%;
   z-index: 10;
   width: 1rem;
   height: 1rem;
   background-color: transparent;
-  top: 50%;
   transform: translateY(-50%);
   transition: background-color 0.9s linear opacity 0.9s linear;
 

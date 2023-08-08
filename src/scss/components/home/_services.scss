@@ -23,7 +23,6 @@
 
     &::before {
       content: "";
-      transform: translateY(-24px);
       mask-image: url("../img/sprite.svg#delivery");
       mask-position: center;
       mask-repeat: no-repeat;
@@ -31,11 +30,8 @@
       width: 48px;
       height: 48px;
       background-color: var(--color-green);
+      transform: translateY(-24px);
       transition: background-color 2s linear;
-
-      // @include for-width(-mobile-md) {
-      //   top: -50px;
-      // }
     }
 
     &:not(:last-child) {
@@ -51,7 +47,6 @@
             rgba(218, 219, 221, 1),
             rgba(218, 219, 221, 0.5),
             rgba(218, 219, 221, 0));
-
 
         @include for-width(-mobile-l) {
           content: none;
@@ -83,18 +78,16 @@
       }
     }
 
-
     h3 {
       @include flex-all-center;
 
       margin-bottom: 10px;
       min-height: 45px;
-
     }
 
     p {
-      min-height: 50px;
       margin-bottom: 1rem;
+      min-height: 50px;
     }
   }
 }

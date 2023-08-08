@@ -153,9 +153,9 @@
   }
 
   &--single {
-    width: min(95%, 390px);
     position: sticky;
     top: 25%;
+    width: min(95%, 390px);
     box-shadow:
       0 80px 80px -20px rgba(154, 156, 165, 0.16),
       0 30px 24px -10px rgba(154, 156, 165, 0.1),

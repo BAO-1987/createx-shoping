@@ -1,6 +1,6 @@
 .accordion {
   &__list {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
   }
 
   &__item {
@@ -23,7 +23,7 @@
   &__content {
     display: grid;
     grid-template-rows: 0fr;
-    font-size: 14px;
+    font-size: rem(14);
     color: var(--color-gray-800);
     transition: grid-template-rows 0.5s ease-in-out;
 
