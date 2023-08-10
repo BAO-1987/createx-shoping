@@ -421,7 +421,7 @@
 
     <main class="main">
 
-      <section class="filter section">
+      <section class="catalog section">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
 
@@ -453,7 +453,7 @@
 
   <div class="container">
 
-    <div class="filter__nav">
+    <div class="catalog__nav">
 
       <button class="btn btn--filter" type="button">Hide filters</button>
 
@@ -529,102 +529,634 @@
 
     </div>
 
-    <div class="filter__wrapper">
+    <div class="catalog__wrapper">
 
-      <ul class="accordion__list accordion__list--filter" role="list">
+      <div class="filter">
 
-        <li class="accordion__item">
-          <h3 id="panel1-title">
-            <button class="accordion__btn" aria-expanded="true" aria-controls="accordion1__content">
-              Clothes
-            </button>
-          </h3>
+        <ul class="accordion__list accordion__list--filter" role="list">
 
-          <div class="accordion__content" role="region" aria-labelledby="panel1-title" aria-hidden="false"
-            id="panel1-content">
-            <div>
+          <li class="accordion__item">
+            <h3 id="panel1-title">
+              <button class="accordion__btn" aria-expanded="true" aria-controls="accordion1__content">
+                Clothes
+              </button>
+            </h3>
 
-              <form class="form-search" action="#" autocomplete="off" method="get" id="form-filter">
+            <div class="accordion__content" role="region" aria-labelledby="panel1-title" aria-hidden="false"
+              id="panel1-content">
+              <div>
 
-                <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
-                  <svg class="form-search__icon">
-                    <use xlink:href="img/sprite.svg#close"></use>
-                  </svg>
-                </button>
+                <form class="form-search" action="#" autocomplete="off" method="get" id="filter-search">
 
-                <label class="visually-hidden" for="search-filter"></label>
+                  <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
+                    <svg class="form-search__icon">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </button>
 
-                <input class="form-search__input" type="search" id="search-filter"
-                  placeholder="Search the clothes type">
+                  <label class="visually-hidden" for="filter-clothes"></label>
 
-                <button class="form-search__btn btn-reset" type="submit" aria-label="search">
+                  <input class="form-search__input" type="search" id="filter-clothes"
+                    placeholder="Search the clothes type">
 
-                  <svg class="form-search__icon">
-                    <use xlink:href="img/sprite.svg#search"></use>
-                  </svg>
-                </button>
+                  <button class="form-search__btn btn-reset" type="submit" aria-label="search">
 
-              </form>
+                    <svg class="form-search__icon">
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                  </button>
 
-              <ul class="filter-list scroll" role="list">
+                </form>
 
-                <li class="filter-list__item">
-                  <label class="custom-checkbox">
-                    <input type="checkbox" class="custom-checkbox__field">
-                    <span class="custom-checkbox__content">Coats (16)
-                    </span>
-                  </label>
-                </li>
+                <ul class="filter-list" role="list">
 
-                <li class="filter-list__item">
-                  <label class="custom-checkbox">
-                    <input type="checkbox" class="custom-checkbox__field">
-                    <span class="custom-checkbox__content">Jackets (12)
-                    </span>
-                  </label>
-                </li>
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">Coats <span>(16)</span>
+                      </span>
+                    </label>
+                  </li>
 
-                <li class="filter-list__item">
-                  <label class="custom-checkbox">
-                    <input type="checkbox" class="custom-checkbox__field">
-                    <span class="custom-checkbox__content">Suits (5)
-                    </span>
-                  </label>
-                </li>
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">Jackets <span>(12)</span>
+                      </span>
+                    </label>
+                  </li>
 
-                <li class="filter-list__item">
-                  <label class="custom-checkbox">
-                    <input type="checkbox" class="custom-checkbox__field">
-                    <span class="custom-checkbox__content">Dresses (11)
-                    </span>
-                  </label>
-                </li>
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">Suits <span>(5)</span>
+                      </span>
+                    </label>
+                  </li>
 
-                <li class="filter-list__item">
-                  <label class="custom-checkbox">
-                    <input type="checkbox" class="custom-checkbox__field">
-                    <span class="custom-checkbox__content">Cardigans & sweaters (18)
-                    </span>
-                  </label>
-                </li>
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">Dresses <span>(11)</span>
+                      </span>
+                    </label>
+                  </li>
 
-                <li class="filter-list__item">
-                  <label class="custom-checkbox">
-                    <input type="checkbox" class="custom-checkbox__field">
-                    <span class="custom-checkbox__content">Sweatshirts & hoodies (21)
-                    </span>
-                  </label>
-                </li>
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">Cardigans & sweaters <span>(18)</span>
+                      </span>
+                    </label>
+                  </li>
 
-              </ul>
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">Sweatshirts & hoodies <span>(21)</span>
+                      </span>
+                    </label>
+                  </li>
+
+                </ul>
+
+              </div>
 
             </div>
 
-          </div>
+          </li>
 
-        </li>
+          <li class="accordion__item">
+            <h3 id="panel1-title">
+              <button class="accordion__btn" aria-expanded="true" aria-controls="accordion1__content">
+                Size
+              </button>
+            </h3>
 
-      </ul>
+            <div class="accordion__content" role="region" aria-labelledby="panel1-title" aria-hidden="false"
+              id="panel1-content">
+              <div>
+
+                <ul class="filter-list" role="list">
+
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">XS <span>(16)</span>
+                      </span>
+                    </label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">S <span>(12)</span>
+                      </span>
+                    </label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">M <span>(5)</span>
+                      </span>
+                    </label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">L <span>(11)</span>
+                      </span>
+                    </label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">XL <span>(18)</span>
+                      </span>
+                    </label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__field">
+                      <span class="custom-checkbox__content">Plus Size <span>(4)</span>
+                      </span>
+                    </label>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="accordion__item">
+            <h3 id="panel1-title">
+              <button class="accordion__btn" aria-expanded="true" aria-controls="accordion1__content">
+                Size
+              </button>
+            </h3>
+
+            <div class="accordion__content" role="region" aria-labelledby="panel1-title" aria-hidden="false"
+              id="panel1-content">
+              <div>
+
+                <ul class="filter-list" role="list">
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                  <li class="filter-list__item">
+                    <input class="color-picker__input" type="radio" id="pink" name="color" value="black">
+                    <label class="color-picker__label" for="black">black</label>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="catalog__content">
+
+        <li class="@class">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-five"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/article/caps.webp" type="image/webp">
+        <img src="img/article/caps.jpg" class="article__img" width="285" height="320" alt="article/capsDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Black and white sport cap</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$18.15</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="@class">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <span class="article__sale">-50%</span>
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-five"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/article/sunglasses.webp" type="image/webp">
+        <img src="img/article/sunglasses.jpg" class="article__img" width="285" height="320" alt="article/sunglassesDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Metal bridge sunglasses</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$89.95</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="@class">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-five"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/article/baby-romper.webp" type="image/webp">
+        <img src="img/article/baby-romper.jpg" class="article__img" width="285" height="320" alt="article/baby-romperDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Green baby romper</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$20.40</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="@class">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <span class="article__sale">-15%</span>
+
+      <svg class="article__rating">
+        <use xlink:href=""></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/article/jeans.webp" type="image/webp">
+        <img src="img/article/jeans.jpg" class="article__img" width="285" height="320" alt="article/jeansDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Mid-rise slim cropped fit jeans</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$40.00</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="@class">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-five"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/arrival/earrings.webp" type="image/webp">
+        <img src="img/arrival/earrings.jpg" class="article__img" width="285" height="320" alt="arrival/earringsDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Red dangle earrings</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$29.95</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="@class">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href="img/sprite.svg#rating-five"></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/article/baby-shoes.webp" type="image/webp">
+        <img src="img/article/baby-shoes.jpg" class="article__img" width="285" height="320" alt="article/baby-shoesDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Baby shoes with laces</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$30.60</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+        <li class="@class">
+
+  <article class="article">
+
+    <div class="article__box">
+
+      <svg class="article__rating">
+        <use xlink:href=""></use>
+      </svg>
+
+      <picture>
+        <source srcset="img/article/shoes.webp" type="image/webp">
+        <img src="img/article/shoes.jpg" class="article__img" width="285" height="320" alt="article/shoesDesc" loading="lazy">
+      </picture>
+
+      <button class="article__wish btn-reset" type="button" aria-label="add to wish list">
+
+       <svg class="article__icon">
+         <use xlink:href="img/sprite.svg#heart"></use>
+       </svg>
+
+       <svg class="article__icon article__icon--filled">
+         <use xlink:href="img/sprite.svg#heart-filled"></use>
+       </svg>
+      </button>
+
+    </div>
+
+    <div class="article__content">
+
+      <a href="#">
+        <h3 class="article__title">Men fashion gray shoes</h3>
+      </a>
+
+      <div class="article__price">
+
+        <span class="article__price-new">$85.60</span>
+
+        <span class="article__price-curent"></span>
+
+        <span class="article__price-old"></span>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</li>
+
+      </div>
 
     </div>
 

@@ -1,0 +1,31 @@
+.catalog {
+  &__nav {
+    @include flex-a-center;
+    margin-bottom: 2rem;
+    gap: 60px;
+  }
+
+  .pagination {
+    margin-left: auto;
+  }
+
+  .custom-select__inner {
+    padding: 11px 45px 11px 16px;
+
+    &::after {
+      right: -35px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 60px;
+  }
+
+  &__content {
+    @include flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
