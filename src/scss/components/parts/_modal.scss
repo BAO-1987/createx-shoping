@@ -26,6 +26,10 @@
     &::before {
       content: none;
     }
+
+    @include for-width(-mobile-md) {
+      width: 570px;
+    }
   }
 
   &--review {
