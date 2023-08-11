@@ -8,8 +8,35 @@
   flex-direction: column;
 
   &__item {
+    cursor: pointer;
+
     &:not(:last-child) {
       margin-bottom: 8px;
+    }
+  }
+
+  &--color {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   gap: 8px;
+    place-content: center;
+
+
+    .color-picker__input {
+      width: 24px;
+      height: 24px;
+
+      &::before {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .filter-list__item {
+      @include flex-col;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
     }
   }
 }

@@ -7,10 +7,15 @@
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --color-white: #fff;
+   --color-white-100: #f1f1f1;
   --color-green: #17696a;
   --color-green-100: #03cea4;
+  --color-green-200: #67ba92;
   --color-brown: #b58269;
+  --color-beige: #d8c1ad;
+  --color-brown-200: #874e19;
   --color-pink: #e0aea2;
+  --color-dark-blue: #0c2c7e;
   --color-blue: #5a87fc;
   --color-blue-100: #c0dded;
   --color-gray-100: #f9f9f9;
@@ -25,6 +30,10 @@
   --color-black: #000;
   --color-red: #ff4242;
   --color-yellow: #fede41;
-  --br: 0.25rem;
+  --color-yellow-100: #fcd164;
+  --color-blue-gray: #c0dded;
+  --color-purple: #a27ac9;
+  --color-orange: #fb9620;
+  --br: 0.25em;
   --grid-gap: 30px;
 }

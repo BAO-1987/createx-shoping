@@ -293,62 +293,6 @@
   }
 }
 
-.color-picker {
-  @include flex;
-  gap: 1rem;
-
-  &__title {
-    margin-bottom: 12px;
-    color: var(--color-gray-800);
-  }
-
-  &__item {
-    &--value {
-      font-size: 14px;
-      text-transform: capitalize;
-      color: var(--color-gray-600);
-      transition: all 0.3s linear;
-    }
-  }
-
-  &__input {
-    display: grid;
-    place-content: center;
-    border-radius: 100vw;
-    width: 1em;
-    height: 1rem;
-    background-color: var(--radio-color, currentcolor);
-    transition: background-color 0.3s linear;
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      border: 1px solid var(--radio-color, currentcolor);
-      border-radius: 100vw;
-      width: 24px;
-      height: 24px;
-      transform: scale(0);
-      transition: 120ms transform ease-in-out;
-    }
-
-    &:checked::before {
-      transform: scale(1);
-    }
-
-    &#pink {
-      --radio-color: var(--color-pink);
-    }
-
-    &#blue {
-      --radio-color: var(--color-blue-100);
-    }
-
-    &#yellow {
-      --radio-color: var(--color-yellow);
-    }
-  }
-}
-
 .form-article {
   &__inner {
     @include flex-all-sb;
