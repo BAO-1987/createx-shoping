@@ -3,6 +3,7 @@
 @mixin custom-checkbox {
   position: relative;
   font-size: 14px;
+  cursor: pointer;
 
   &__field {
     appearance: none;
@@ -11,7 +12,6 @@
 
   &__content {
     padding-left: 25px;
-    cursor: pointer;
     color: var(--color-gray-800);
 
     &::before {
@@ -24,7 +24,6 @@
       border-radius: var(--br);
       width: 16px;
       height: 16px;
-      box-sizing: border-box;
     }
 
     &::after {
@@ -34,7 +33,6 @@
       top: 4px;
       width: 10px;
       height: 8px;
-      box-sizing: border-box;
       background-image: url("../img/sprite.svg#check");
       background-position: center;
       background-size: cover;
@@ -42,6 +40,10 @@
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
+  }
+
+  &__counter {
+    color: var(--color-gray-600)
   }
 }
 

@@ -25,24 +25,24 @@
 
 //   });
 
-const filters = document.querySelectorAll('.filter');
-const items = document.querySelectorAll('.single-reviews__item');
+// const filters = document.querySelectorAll('.filter');
+// const items = document.querySelectorAll('.single-reviews__item');
 
-filters.forEach(filter => {
-  filter.addEventListener('click', function () {
-    const selectedFilter = filter.getAttribute('data-filter');
+// filters.forEach(filter => {
+//   filter.addEventListener('click', function () {
+//     const selectedFilter = filter.getAttribute('data-filter');
 
-    items.forEach(item => {
-      if (selectedFilter === 'all' || item.getAttribute('data-filter') === selectedFilter) {
-        item.classList.remove('hide');
-        item.classList.add('show');
-      } else {
-        item.classList.remove('show');
-        item.classList.add('hide');
-      }
-    });
-  });
-});
+//     items.forEach(item => {
+//       if (selectedFilter === 'all' || item.getAttribute('data-filter') === selectedFilter) {
+//         item.classList.remove('hide');
+//         item.classList.add('show');
+//       } else {
+//         item.classList.remove('show');
+//         item.classList.add('hide');
+//       }
+//     });
+//   });
+// });
 
 
 
