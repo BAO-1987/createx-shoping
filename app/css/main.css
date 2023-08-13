@@ -2220,22 +2220,25 @@ h3::first-letter {
   right: -35px;
 }
 .catalog__wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (auto)[2];
-  grid-template-columns: repeat(2, auto);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 60px;
 }
 .catalog__content {
   --catalog-grid: 3;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[var(--catalog-grid)];
-  grid-template-columns: repeat(var(--catalog-grid), 1fr);
-  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 25px;
   -webkit-transition: 25s linear;
   -o-transition: 25s linear;
   transition: 25s linear;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .catalog__content.active {
   --catalog-grid: 4;
@@ -2266,8 +2269,9 @@ h3::first-letter {
   height: 1px;
   background-color: var(--color-gray-300);
 }
-.filter__btn.d-lg-none {
-  display: none !important;
+.filter__btn {
+  width: 100%;
+  max-width: 255px !important;
 }
 
 .filter-group__list {

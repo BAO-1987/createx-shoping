@@ -18,17 +18,17 @@
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+   @include flex;
     gap: 60px;
   }
 
   &__content {
     --catalog-grid: 3;
-    display: grid;
-    grid-template-columns: repeat(var(--catalog-grid), 1fr);
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
     transition: 25s linear;
+    flex: 1;
 
     &.active {
       --catalog-grid: 4;
