@@ -32,7 +32,10 @@
 
     <div class="catalog__nav">
 
-      <button class="btn btn--filter" type="button">Hide filters</button>
+      <button class="btn filter__btn hide show" type="button" data-filters-hide="#filtersSidebar">Hide filters</button>
+
+        <button class="btn filter__btn hide" type="button" data-filters-show="#filtersSidebar">Show
+          filters</button>
 
       <div class="custom-select custom-select--sort">
 
@@ -108,7 +111,7 @@
 
     <div class="catalog__wrapper">
 
-      <div class="filter">
+      <div class="filter" id="filtersSidebar">
 
         <ul class="filter__list" role="list">
 
@@ -580,7 +583,7 @@
 
       </div>
 
-      <div class="catalog__content">
+      <div class="catalog__content" data-filters-columns>
 
         @include("../parts/_article.html",{
         sale: "",

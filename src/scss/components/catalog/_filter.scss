@@ -2,6 +2,8 @@
   width: 100%;
   max-width: 255px;
 
+
+
   &__list {
     @include flex-col;
     gap: rem(40);
@@ -21,6 +23,16 @@
       }
     }
   }
+
+
+  &__btn {
+    &.d-lg-none {
+      display: none !important;
+    }
+  }
+
+
+
 }
 
 .filter-group {
