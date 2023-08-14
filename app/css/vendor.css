@@ -93,7 +93,6 @@ select {
   border: none;
   border-radius: 0;
   background-color: transparent;
-  cursor: pointer;
 }
 
 input::-webkit-search-decoration,

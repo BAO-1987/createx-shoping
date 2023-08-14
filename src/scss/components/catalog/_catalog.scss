@@ -18,20 +18,21 @@
   }
 
   &__wrapper {
-   @include flex;
+    @include flex;
     gap: 60px;
   }
 
   &__content {
     --catalog-grid: 3;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    transition: 25s linear;
+    display: grid;
+    grid-template-columns: repeat(var(--catalog-grid), 1fr);
+    gap: 30px;
     flex: 1;
+
 
     &.active {
       --catalog-grid: 4;
+      animation: show 0.6s ease-in-out forwards;
     }
   }
 }

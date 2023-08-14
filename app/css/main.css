@@ -930,8 +930,8 @@
 }
 
 .hide {
-  -webkit-animation: hide 0.9s ease-in-out forwards;
-  animation: hide 0.9s ease-in-out forwards;
+  -webkit-animation: hide 0.5s ease-in-out forwards;
+  animation: hide 0.5s ease-in-out forwards;
   display: none !important;
   visibility: hidden !important;
 }
@@ -2274,21 +2274,19 @@ h3::first-letter {
 }
 .catalog__content {
   --catalog-grid: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 25px;
-  -webkit-transition: 25s linear;
-  -o-transition: 25s linear;
-  transition: 25s linear;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[var(--catalog-grid)];
+  grid-template-columns: repeat(var(--catalog-grid), 1fr);
+  gap: 30px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 .catalog__content.active {
   --catalog-grid: 4;
+  -webkit-animation: show 0.6s ease-in-out forwards;
+  animation: show 0.6s ease-in-out forwards;
 }
 
 .filter {
@@ -4744,7 +4742,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .breadcrumb__icon {
   width: 16px;
-  height: 17px;
+  height: 16px;
   fill: var(--color-gray-800);
   -webkit-transition: fill 0.3s linear;
   -o-transition: fill 0.3s linear;
