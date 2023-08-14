@@ -26,11 +26,15 @@
 
 
   &__btn {
-   width: 100%;
-   max-width: 255px !important;
+    width: 100%;
+    max-width: 255px !important;
   }
 
-
+  // &__btn {
+  //   &.hide {
+  //     display: none;
+  //   }
+  // }
 
 }
 

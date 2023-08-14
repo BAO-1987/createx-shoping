@@ -929,6 +929,53 @@
   right: -0.4375rem;
 }
 
+.hide {
+  -webkit-animation: hide 0.9s ease-in-out forwards;
+  animation: hide 0.9s ease-in-out forwards;
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.show {
+  -webkit-animation: show 0.5s ease-in-out forwards;
+  animation: show 0.5s ease-in-out forwards;
+  display: block !important;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .title {
   margin-bottom: clamp(1.5rem, 0.5rem + 2.7vw, 3.75rem);
   font-weight: 900;
@@ -5248,53 +5295,5 @@ details[open] > .details__content {
 }
 .single-reviews__btn:hover::before {
   background-color: var(--color-green);
-}
-
-.hide {
-  /* You can play with the seconds to change the "animation" */
-  -webkit-animation: hide 0.5s ease forwards;
-  animation: hide 0.5s ease forwards;
-  display: none;
-}
-
-.show {
-  /* You can play with the seconds to change the "animation" */
-  -webkit-animation: show 0.5s ease forwards;
-  animation: show 0.5s ease forwards;
-  display: block;
-}
-
-@-webkit-keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -150,34 +150,4 @@
 
 }
 
-.hide {
-  /* You can play with the seconds to change the "animation" */
-  animation: hide 0.5s ease forwards;
-  display: none;
-}
 
-.show {
-  /* You can play with the seconds to change the "animation" */
-  animation: show 0.5s ease forwards;
-  display: block;
-}
-
-@keyframes hide {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
