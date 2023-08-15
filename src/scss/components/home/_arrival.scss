@@ -6,7 +6,7 @@
   }
 
   &__text {
-    margin-bottom: rem(60);
+    margin-bottom: rem-f(60);
     text-align: center;
     color: var(--color-gray-700);
 
@@ -31,7 +31,7 @@
   }
 
   @include for-width(-mobile-md) {
-    padding-top: rem(50);
+    padding-top: rem-f(50);
   }
 }
 

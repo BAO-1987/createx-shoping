@@ -3,7 +3,7 @@
 
   &__content {
     flex-shrink: 0;
-    margin-right: rem(30);
+    margin-right: rem-f(30);
 
     @include for-width(-mobile-l) {
       flex-shrink: inherit;
@@ -27,6 +27,6 @@
 
   @include for-width(-mobile-l) {
     flex-direction: column-reverse;
-    gap: rem(30);
+    gap: rem-f(30);
   }
 }

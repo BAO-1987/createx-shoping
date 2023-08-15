@@ -2,11 +2,9 @@
   width: 100%;
   max-width: 255px;
 
-
-
   &__list {
     @include flex-col;
-    gap: rem(40);
+    gap: rem-f(40);
   }
 
   &__item {
@@ -29,13 +27,6 @@
     width: 100%;
     max-width: 255px !important;
   }
-
-  // &__btn {
-  //   &.hide {
-  //     display: none;
-  //   }
-  // }
-
 }
 
 .filter-group {

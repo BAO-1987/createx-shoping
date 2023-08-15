@@ -3,7 +3,7 @@
     @include flex-sb;
     align-items: center;
 
-    margin-bottom: rem(32);
+    margin-bottom: 2rem;
     gap: 1rem;
   }
 
@@ -50,9 +50,9 @@
     }
 
     &-old {
-      margin-right: rem(33);
+      margin-right: 2rem;
       font-weight: 400;
-      font-size: 18px;
+      font-size: rem-f(18);
       color: var(--color-gray-700);
       text-decoration: line-through;
     }
@@ -67,7 +67,7 @@
 
   &__reviews {
     position: relative;
-    font-size: 14px;
+    font-size: rem-f(14);
     color: var(--color-gray-700);
 
     &::before {
@@ -92,7 +92,7 @@
 
 .single-slider {
   position: relative;
-  margin-bottom: rem(32);
+  margin-bottom: 2rem;
 
   &__item {
     border-radius: var(--br);

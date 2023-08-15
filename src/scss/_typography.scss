@@ -10,7 +10,7 @@
   }
 
   &--banners {
-    margin-bottom: rem(40);
+    margin-bottom: rem-f(40);
     font-size: clamp(1.56rem, calc(1.48rem + 0.44vw), 2rem);
   }
 }
@@ -27,7 +27,7 @@ h3 {
 
 .footer-title {
   margin-bottom: 12px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;

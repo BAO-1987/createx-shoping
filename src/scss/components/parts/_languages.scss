@@ -1,7 +1,7 @@
 .languages {
   @include flex;
   position: relative;
-  margin-right: clamp(25px, rem(98), 105px);
+  margin-right: clamp(25px, rem-f(98), 105px);
   padding-left: 10px;
 
   @include for-width(-tablet) {
@@ -18,8 +18,6 @@
     &::before {
       @include bg-cover;
 
-      content: "";
-      position: absolute;
       left: -28px;
       top: 50%;
       width: 20px;
@@ -30,15 +28,10 @@
 
     &::after {
       --rotate: rotate(0);
-
-      content: "";
-      position: absolute;
+      @include mask;
       left: 50px;
       top: 50%;
       mask-image: url("../img/sprite.svg#arrow-down");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
       width: 12px;
       height: 12px;
       background-color: currentcolor;

@@ -7,6 +7,37 @@
   background-color: var(--color-gray-300);
 }
 
+@mixin mask {
+  content: "";
+  position: absolute;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  transition: background-color 0.5s linear;
+}
+
+@mixin mask-icon {
+  content: "";
+  position: absolute;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.5s linear;
+}
+
+@mixin mask-small {
+  content: "";
+  position: absolute;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.5s linear;
+}
+
 $browser-context: 16; // Default
 
 @function rem($pixels, $context: $browser-context) {

@@ -1,5 +1,5 @@
 .breadcrumb {
-  margin-bottom: rem(32);
+  margin-bottom: 2rem;
   padding: 1rem 0;
   background-color: var(--color-gray-200);
 
@@ -8,7 +8,7 @@
 
     flex-wrap: wrap;
     font-weight: 400;
-    font-size: rem(14);
+    font-size: rem-f(14);
 
     li {
       position: relative;
@@ -16,18 +16,12 @@
       align-items: center;
 
       &:not(:last-child) {
-        margin-right: clamp(1.5rem, 1vw + 1rem, 2rem);
+        margin-right: clamp(1.5rem, calc(1vw + 1rem), 2rem);
 
         &::after {
-          content: "";
-          position: absolute;
+          @include mask-small;
           right: -24px;
           mask-image: url("../img/sprite.svg#chevron");
-          mask-position: center;
-          mask-repeat: no-repeat;
-          mask-size: cover;
-          width: 16px;
-          height: 16px;
           background-color: var(--color-gray-600);
           rotate: 180deg;
         }

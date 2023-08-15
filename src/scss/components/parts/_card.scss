@@ -49,11 +49,9 @@
     position: relative;
 
     &:not(:last-child) {
-      margin-right: clamp(10px, rem(24), 25px);
+      margin-right: clamp(10px, rem-f(24), 25px);
 
       &::after {
-        content: "";
-        position: absolute;
         right: -13px;
         bottom: 5px;
         width: 1px;
@@ -74,13 +72,10 @@
       padding-left: 26px;
 
       &::before {
-        content: "";
-        position: absolute;
+        @include mask;
+
         left: 0;
         mask-image: url("../img/sprite.svg#chat");
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: cover;
         width: 16px;
         height: 16px;
         background-color: currentcolor;

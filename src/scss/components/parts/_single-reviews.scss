@@ -20,7 +20,7 @@
     width: min(80%, 235px);
 
     p {
-      font-size: rem(14);
+      font-size: rem-f(14);
       color: var(--color-gray-700);
     }
 
@@ -33,12 +33,10 @@
 
   &__title {
     position: relative;
-    margin-bottom: rem(55);
+    margin-bottom: rem-f(55);
     text-align: left;
 
     &::before {
-      content: "";
-      position: absolute;
       bottom: -1.8rem;
       background-image: url("../img/sprite.svg#rating-for");
       background-position: center;
@@ -100,8 +98,6 @@
     color: var(--color-gray-700);
 
     &::before {
-      content: "";
-      position: absolute;
       bottom: 0;
       background-image: url("../img/sprite.svg#rating-five");
       background-position: center;
@@ -121,22 +117,17 @@
   &__btn {
     position: relative;
     padding-left: 25px;
-    font-size: 14px;
+    font-size: rem-f(14);
     color: var(--color-gray-700);
     transition: color 0.3s linear;
 
     &::before {
-      content: "";
-      position: absolute;
+      @include mask-small;
+
       left: 0;
-      width: 16px;
-      height: 16px;
       mask-image: url("../img/sprite.svg#share-arrow");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
       background-color: currentcolor;
-      transition: background-color 0.7s linear;
+
     }
 
     &:hover {
@@ -147,7 +138,4 @@
       }
     }
   }
-
 }
-
-

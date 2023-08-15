@@ -85,7 +85,7 @@
     width: 100%;
 
     &::placeholder {
-      font-size: rem(14);
+      font-size: rem-f(14);
       color: var(--color-gray-600);
     }
 
@@ -169,19 +169,14 @@
 
       flex-direction: column;
       border: 2px dashed var(--color-gray-400);
-      padding: rem(60) rem(24) rem(24);
+      padding: rem-f(60) rem-f(24) rem-f(24);
       text-align: center;
       transition: border-color 0.3s linear;
 
       &::before {
-        content: "";
-        position: absolute;
+        @include mask-icon;
+
         mask-image: url("../img/sprite.svg#upload");
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: cover;
-        width: 24px;
-        height: 24px;
         background-color: var(--color-gray-600);
         inset: 14px auto;
       }
@@ -194,7 +189,7 @@
       .btn {
         padding: 0 em(24);
         max-width: 122px;
-        font-size: rem(12);
+        font-size: rem-f(12);
         user-select: none;
       }
 
@@ -235,14 +230,10 @@
     cursor: pointer;
 
     &::before {
-      content: "";
-      position: absolute;
+      @include mask;
+
       right: 14px;
       mask-image: url("../img/sprite.svg#eye");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      width: 16px;
       height: 16px;
       background-color: var(--color-gray-800);
       transition: mask-image 0.3s linear, background-color 0.3s linear;
@@ -261,7 +252,7 @@
 }
 
 .product-form {
-  margin-bottom: rem(24);
+  margin-bottom: rem-f(24);
 
   .btn--article {
     max-width: 244px;
@@ -297,7 +288,7 @@
   &__inner {
     @include flex-all-sb;
 
-    margin-bottom: rem(20);
+    margin-bottom: rem-f(20);
   }
 
   .checkboxes {

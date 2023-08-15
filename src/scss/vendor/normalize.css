@@ -9,6 +9,7 @@ html {
   box-sizing: border-box;
 }
 
+
 *:focus-visible {
   outline: max(1px, 0.1em) solid var(--color-green);
   outline-offset: 0.25em;

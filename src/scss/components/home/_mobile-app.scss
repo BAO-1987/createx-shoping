@@ -23,7 +23,7 @@
   }
 
   &__title {
-    margin-bottom: rem(50);
+    margin-bottom: rem-f(50);
     font-size: clamp(1.56rem, calc(1.48rem + 0.44vw), 2rem);
     color: var(--color-white);
   }
@@ -31,7 +31,7 @@
   &__list {
     @include flex;
 
-    gap: rem(25);
+    gap: rem-f(25);
   }
 
   &__link {

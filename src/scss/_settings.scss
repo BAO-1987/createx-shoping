@@ -125,7 +125,7 @@
   @include flex;
 
   gap: clamp(0.2rem, calc(0.2rem + 1vw), 0.75rem);
-  margin-bottom: rem(52);
+  margin-bottom: rem-f(52);
   border: none;
   padding: 0;
 
@@ -133,11 +133,10 @@
     @include flex-all-center;
 
     position: relative;
-    cursor: pointer;
     font-weight: 700;
     color: var(--color-gray-700);
     background-color: var(--color-white);
-    padding: rem(6) rem(16);
+    padding: rem-f(6) rem-f(16);
     border-width: 1px;
     border-style: solid;
     border-color: var(--color-gray-400);
@@ -145,6 +144,7 @@
     transition-property: color, background-color, border-color;
     transition-duration: 0.3s;
     transition-timing-function: linear;
+    cursor: pointer;
 
     &:is(:hover, :focus) {
       border-color: var(--color-green);
@@ -242,28 +242,8 @@
 }
 
 .payment__list {
-  display: flex;
-  gap: rem(24);
-}
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(-5%);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+ @include flex;
+  gap: rem-f(24);
 }
 
 .carousel {
@@ -356,7 +336,7 @@
     @include flex-all-center;
 
     position: relative;
-    font-size: rem(14);
+    font-size: rem-f(14);
     color: var(--color-gray-700);
 
     &::before {
@@ -600,7 +580,7 @@
   }
 
   &__label {
-    font-size: rem(12);
+    font-size: rem-f(12);
     color: var(--color-gray-700);
     cursor: pointer;
   }
@@ -768,22 +748,3 @@
 
 
 
-@keyframes hide {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}

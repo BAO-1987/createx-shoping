@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 16px;
+    gap: 1rem;
 
     @include for-width(-mobile-l) {
       @include flex;
@@ -12,12 +12,12 @@
   }
 
   &__title {
-    margin-bottom: rem(40);
+    margin-bottom: rem-f(40);
     text-align: left;
   }
 
   &__content {
-    padding: clamp(35px, rem(60), 65px) 15px 0 clamp(35px, rem(60), 65px);
+    padding: clamp(35px, rem-f(60), 65px) 15px 0 clamp(35px, rem-f(60), 65px);
     width: 100%;
     max-width: 400px;
 

@@ -9,7 +9,7 @@
   padding: 0 em(40);
   max-width: fit-content;
   font-weight: 700;
-  font-size: rem(14);
+  font-size: rem-f(14);
   line-height: 3.14;
   letter-spacing: 0.031em;
   white-space: nowrap;
@@ -32,13 +32,9 @@
   }
 
   &::before {
-    content: "";
-    position: absolute;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: cover;
+    @include mask;
+
     background-color: currentcolor;
-    transition: background-color 0.7s linear;
   }
 
   &:hover {
@@ -201,12 +197,8 @@
     background-color 0.3s linear;
 
   &::before {
-    content: "";
-    position: absolute;
+    @include mask;
     mask-image: url("../img/sprite.svg#arrow");
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: cover;
     width: 24px;
     height: 24px;
     background-color: var(--color-gray-800);

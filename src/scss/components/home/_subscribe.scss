@@ -18,12 +18,12 @@
   }
 
   &__title {
-    margin-bottom: rem(24);
+    margin-bottom: rem-f(24);
   }
 
   &__text {
-    margin-bottom: rem(32);
-    font-size: 20px;
+    margin-bottom: 2rem;
+    font-size: rem-f(20);
     color: var(--color-gray-700);
   }
 }
