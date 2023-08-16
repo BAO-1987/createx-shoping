@@ -324,17 +324,20 @@
 
         <label class="visually-hidden" for="search"></label>
 
-        <input class="form-search__input" type="search" id="search" data-search-button
-          placeholder="Search for products..." required>
+        <input class="form-search__input" type="search" id="search" placeholder="Search for products..." required>
 
         <button class="form-search__btn btn-reset" type="submit" aria-label="search">
-
           <svg class="form-search__icon">
             <use xlink:href="img/sprite.svg#search"></use>
           </svg>
         </button>
-
       </form>
+
+      <button class="mobile-search__button btn-reset" type="button" aria-label="mobile search" data-search-button>
+         <svg class="form-search__icon">
+           <use xlink:href="img/sprite.svg#search"></use>
+         </svg>
+      </button>
 
       <div class="header__action" data-hide>
 
@@ -363,22 +366,22 @@
 
       </div>
 
-     <button class="burger" aria-label="open mobile menu" aria-expanded="false" type="button">
-       <svg stroke="var(--button-color)" class="burger__body" viewBox="0 0 100 100" width="24" height="24">
+      <button class="burger" aria-label="open mobile menu" aria-expanded="false" type="button">
+        <svg stroke="var(--button-color)" class="burger__body" viewBox="0 0 100 100" width="24" height="24">
 
-         <line class="line top" x1="90" x2="10" y1="35" y2="35" stroke-width="10" stroke-linecap="round"
-           stroke-dasharray="80" stroke-dashoffset="0">
-         </line>
-         <line class="line middle" x1="90" x2="10" y1="55" y2="55" stroke-width="10" stroke-linecap="round"
-           stroke-dasharray="80" stroke-dashoffset="0">
-         </line>
+          <line class="line top" x1="90" x2="10" y1="35" y2="35" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="80" stroke-dashoffset="0">
+          </line>
+          <line class="line middle" x1="90" x2="10" y1="55" y2="55" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="80" stroke-dashoffset="0">
+          </line>
 
-         <line class="line bottom" x1="10" x2="90" y1="75" y2="75" stroke-width="10" stroke-linecap="round"
-           stroke-dasharray="80" stroke-dashoffset="0">
-         </line>
+          <line class="line bottom" x1="10" x2="90" y1="75" y2="75" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="80" stroke-dashoffset="0">
+          </line>
 
-       </svg>
-     </button>
+        </svg>
+      </button>
 
     </div>
 

@@ -63,11 +63,14 @@
   }
 
   @include for-width(-mobile-sl) {
+    display: none;
     margin-right: 0.5rem;
     border-color: transparent;
     max-width: 50px;
 
+
     &.open {
+      display: flex;
       z-index: 999;
       border-color: var(--color-gray-400);
       max-width: 100%;
