@@ -907,6 +907,11 @@
     opacity: 1;
   }
 }
+.mobile-search__button.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
 
 .title {
   margin-bottom: clamp(1.5rem, 0.5rem + 2.7vw, 3.75rem);
