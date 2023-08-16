@@ -8,6 +8,12 @@
   }
 
   &__item {
+    .form-search {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+
+    }
     &:not(:last-child) {
       position: relative;
 
