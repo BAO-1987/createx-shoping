@@ -861,8 +861,8 @@ __webpack_require__.r(__webpack_exports__);
   for (let e = 0; e < a.length; e++) {
     (function (e) {
       const t = a[e].querySelector(".range-slider__body");
-      const r = a[e].querySelector(".range-slider__min");
-      const n = a[e].querySelector(".range-slider__max");
+      const r = a[e].querySelector(".range-slider__input--min");
+      const n = a[e].querySelector(".range-slider__input--max");
       const dataAttributes = {
         dataStartMin: parseInt(a[e].dataset.startMin, 10),
         dataStartMax: parseInt(a[e].dataset.startMax, 10),

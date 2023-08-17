@@ -124,7 +124,7 @@
 
               <div class="details__content">
 
-                <form class="form-filter" action="#" autocomplete="off" method="get" id="filter-search">
+                <form class="form-search" action="#" autocomplete="off" method="get">
 
                   <label class="visually-hidden" for="filter-clothes"></label>
 
@@ -208,7 +208,7 @@
 
               <div class="details__content">
 
-                <form class="form-search" action="#" autocomplete="off" method="get" id="filter-search">
+                <form class="form-search" action="#" autocomplete="off" method="get">
 
                   <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
                     <svg class="form-search__icon">
@@ -216,10 +216,9 @@
                     </svg>
                   </button>
 
-                  <label class="visually-hidden" for="filter-clothes"></label>
+                  <label class="visually-hidden" for="filter-size"></label>
 
-                  <input class="form-search__input" type="search" id="filter-clothes"
-                    placeholder="Search the clothes type">
+                  <input class="form-search__input" type="search" id="filter-size" placeholder="Search the size">
 
                   <button class="form-search__btn btn-reset" type="submit" aria-label="search">
 
@@ -544,34 +543,42 @@
 
               <div class="details__content">
 
-                <div class="range-slider" data-start-min="200" data-start-max="890" data-min="0" data-max="1000" data-step="1">
+                <div class="range-slider" data-start-min="200" data-start-max="890" data-min="0" data-max="1000"
+                  data-step="1">
 
                   <div class="range-slider__body"></div>
 
-                  <div class="range-slider__counter">
+                  <ul class="range-slider__counter" role="list">
 
-                    <div>
-                      <input class="range-slider__min" type="number">
-                    </div>
+                    <li>
+                      <label class="visually-hidden" for="range-min"></label>
+                      <input class="range-slider__input range-slider__input--min" type="number"  inputmode="numeric" step="1" id="range-min">
+                    </li>
 
-                    <span>-</span>
+                    <li>
+                      <span>—</span>
+                    </li>
 
-                    <div>
-                      <input class="range-slider__max" type="number">
-                    </div>
+                    <li>
+                      <label class="visually-hidden" for="range-max"></label>
+                      <input class="range-slider__input range-slider__input--max" type="number" inputmode="numeric"
+                        step="1" id="range-max">
+                    </li>
 
-                  </div>
+                  </ul>
 
                 </div>
 
               </div>
-            </details>
-          </li>
 
+          </li>
 
         </ul>
 
       </div>
+      </details>
+      </li>
+
 
       <div class="catalog__content" data-filters-columns>
 
@@ -669,6 +676,10 @@
       </div>
 
     </div>
+
+
+
+  </div>
 
 
   </div>

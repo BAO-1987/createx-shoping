@@ -18,7 +18,9 @@
   }
 
   &__wrapper {
-    @include flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     gap: 60px;
   }
 
