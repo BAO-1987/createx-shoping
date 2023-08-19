@@ -9,7 +9,6 @@ html {
   box-sizing: border-box;
 }
 
-
 *:focus-visible {
   outline: max(1px, 0.1em) solid var(--color-green);
   outline-offset: 0.25em;
@@ -171,4 +170,12 @@ table {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
+}
+
+summary::marker {
+  content: none;
+}
+
+summary::-webkit-detailes-marker {
+  background: transparent;
 }

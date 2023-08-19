@@ -7,6 +7,8 @@
     position: relative;
 
     &::before {
+      content: "";
+      position: absolute;
       bottom: -20px;
       width: 100%;
       height: 1px;
@@ -16,48 +18,72 @@
     &:not(:last-child) {
       margin-bottom: rem-f(40);
     }
+
+    details {
+      overflow: hidden;
+    }
+
+    summary {
+      position: relative;
+      outline: none;
+      transition: color 0.3s linear;
+      cursor: pointer;
+
+      h3 {
+        text-align: left;
+      }
+
+      &:hover {
+        color: var(--color-green);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        color: var(--color-green);
+        width: 1rem;
+        height: 0;
+        border-bottom: 1px solid;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        transform: rotate(90deg);
+        transform-origin: 50% 50%;
+      }
+
+      [open]summary::after {
+        transform: rotate(0deg);
+      }
+    }
+
+    details[open] {
+      .accordion__content {
+        animation: open-down 0.5s forwards;
+      }
+
+      summary {
+        color: var(--color-green);
+
+        &::after {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .form-search {
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+    }
   }
 
   &__content {
-    display: grid;
-    grid-template-rows: 0fr;
-    font-size: rem-f(14);
-    color: var(--color-gray-800);
-    transition: grid-template-rows 0.5s ease-in-out;
-
-    & div {
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    &[aria-hidden="false"] {
-      grid-template-rows: 1fr;
-    }
-  }
-
-  &__btn {
-    position: relative;
-    margin-bottom: 1rem;
-    width: 100%;
-    font-weight: 700;
-    text-align: left;
-    color: var(--color-gray-900);
-    transition: color 0.5s linear;
-
-    &::before {
-      @include mask-small;
-      right: 0;
-      background-color: var(--color-green);
-      transition: mask-image 0.1s linear;
-    }
-
-    &[aria-expanded="true"] {
-      color: var(--color-green);
-
-      &::before {
-        mask-image: url("../img/sprite.svg#minus");
-      }
-    }
+    padding-top: 1rem;
   }
 
   &__text {
@@ -103,70 +129,7 @@
   }
 }
 
-details>summary {
-  width: 255px;
-  overflow: hidden;
-}
-
-
-summary {
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  transition: color 0.3s linear;
-
-  h3 {
-    text-align: left;
-  }
-
-  &:hover {
-    color: var(--color-green);
-  }
-
-  &::-webkit-detailes-marker {
-    background: transparent;
-  }
-}
-
-summary::marker {
-  content: none;
-}
-
-summary::before,
-summary::after {
-  content: "";
-  color: var(--color-green);
-}
-
-summary::before,
-summary::after {
-  width: 1rem;
-  height: 0;
-  border-bottom: 1px solid;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: 0;
-  transform: translateY(-50%);
-}
-
-summary::after {
-  transform: rotate(90deg);
-  transform-origin: 50% 50%;
-}
-
-[open] summary::after {
-  transform: rotate(0deg);
-}
-
-details>.details__content {
-  padding-top: 1rem;
-}
-
-details[open]>.details__content {
-  animation: animate 0.5s forwards;
-}
-
-@keyframes animate {
+@keyframes open-down {
   0% {
     transform: translateY(-10%);
     opacity: 0;

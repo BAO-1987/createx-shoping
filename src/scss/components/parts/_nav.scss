@@ -158,7 +158,8 @@
     }
 
     &--dropdown {
-      display: inline-block;
+
+      display: block;
       padding-right: 20px;
       cursor: pointer;
       color: var(--color-red);
@@ -171,7 +172,7 @@
         --rotate: rotate(0);
         content: "";
         position: absolute;
-        top: 50%;
+         top: 50%;
         right: 0;
         mask-image: url("../img/sprite.svg#arrow-down");
         mask-position: center;

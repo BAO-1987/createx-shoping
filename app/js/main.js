@@ -230,25 +230,20 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************************/
 /***/ (() => {
 
-const accordion = document?.querySelector(".accordion__list");
-if (accordion) {
-  accordion.addEventListener("click", e => {
-    const activePanel = e.target.closest(".accordion__item");
-    if (!activePanel) return;
-    toggleAccordion(activePanel);
+//
+const summaries = document.querySelectorAll('summary');
+summaries.forEach(summary => {
+  summary.addEventListener('click', () => {
+    closeOpenedDetails(summary);
   });
-}
-function toggleAccordion(panelToActivate) {
-  const activeButton = panelToActivate.querySelector(".accordion__btn");
-  const activePanel = panelToActivate.querySelectorAll(".accordion__item");
-  const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
-  if (activePanelIsOpened === "true") {
-    panelToActivate.querySelector(".accordion__btn").setAttribute("aria-expanded", false);
-    panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", true);
-  } else {
-    panelToActivate.querySelector(".accordion__btn").setAttribute("aria-expanded", true);
-    panelToActivate.querySelector(".accordion__content").setAttribute("aria-hidden", false);
-  }
+});
+function closeOpenedDetails(clickedSummary) {
+  summaries.forEach(summary => {
+    const detail = summary.parentNode;
+    if (detail !== clickedSummary.parentNode) {
+      detail.removeAttribute('open');
+    }
+  });
 }
 
 /***/ }),
@@ -459,146 +454,7 @@ _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind('[data-fancybox]', {
   \**************************************/
 /***/ (() => {
 
-// const showButton = document.querySelector("[data-filters-show]");
-// const hideButton = document.querySelector("[data-filters-hide]");
-// const filtersColumns = document.querySelector("[data-filters-columns]");
-// if (filtersColumns) {
-//   hideButton.addEventListener("click", function (event) {
-//     const targetSelector = event.target.dataset.filtersHide;
-//     hideButton.classList.remove("hide");
-//     showButton.classList.remove("show");
-//     document.querySelector(targetSelector).classList.add("show");
-//     filtersColumns.className = "catalog__content";
-//   });
-
-//   showButton.addEventListener("click", function (event) {
-//     const targetSelector = event.target.dataset.filtersShow;
-//     hideButton.classList.add("show");
-//     showButton.classList.add("hide");
-//     document.querySelector(targetSelector).classList.remove("show");
-//     filtersColumns.className = "catalog__content";
-//   });
-// }
-
-// const showButton = document.querySelector("[data-filters-show]");
-// const hideButton = document.querySelector("[data-filters-hide]");
-// const columnsContainer = document.querySelector("[data-filters-columns]");
-
-// if (columnsContainer !== null) {
-//   hideButton.addEventListener("click", function (event) {
-//     const targetSelector = event.target.dataset.filtersHide;
-//     hideButton.classList.remove("show");
-//     showButton.classList.remove("hide");
-//     document.querySelector(targetSelector).classList.add("hide");
-//     columnsContainer.className = "catalog__content";
-//   });
-
-//   showButton.addEventListener("click", function (event) {
-//     const targetSelector = event.target.dataset.filtersShow;
-//     hideButton.classList.add("show");
-//     showButton.classList.add("hide");
-//     document.querySelector(targetSelector).classList.remove("hide");
-//     columnsContainer.className = "catalog__content";
-//   });
-// }
-
-// const showButton = document.querySelector("[data-filters-show]");
-// const hideButton = document.querySelector("[data-filters-hide]");
-// const columnsContainer = document.querySelector("[data-filters-columns]");
-
-// if (columnsContainer) {
-//   const toggleColumns = (targetSelector, hide) => {
-//     const targetElement = document.querySelector(targetSelector);
-//     if (targetElement) {
-//       targetElement.classList.toggle("hide", hide);
-//     }
-//     hideButton.classList.toggle("show", hide);
-//     showButton.classList.toggle("hide", !hide);
-//   };
-
-//   hideButton.addEventListener("click", (event) => {
-//     toggleColumns(event.target.dataset.filtersHide, true);
-//   });
-
-//   showButton.addEventListener("click", (event) => {
-//     toggleColumns(event.target.dataset.filtersShow, false);
-//   });
-// }
-
-// const showButton = document.querySelector("[data-filters-show]");
-// const hideButton = document.querySelector("[data-filters-hide]");
-// const columnsContainer = document.querySelector("[data-filters-columns]");
-
-// if (columnsContainer) {
-//   const toggleColumns = (targetSelector, show) => {
-//     const targetElement = document.querySelector(targetSelector);
-//     if (targetElement) {
-//       targetElement.classList.toggle("hide", !show);
-//     }
-//     hideButton.classList.toggle("show", show);
-//     showButton.classList.toggle("hide", !show);
-//   };
-
-//   hideButton.addEventListener("click", (event) => {
-//     toggleColumns(event.target.dataset.filtersHide, false);
-//   });
-
-//   showButton.addEventListener("click", (event) => {
-//     toggleColumns(event.target.dataset.filtersShow, true);
-//   });
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const showButtons = document.querySelectorAll("[data-filters-show]");
-//   const hideButtons = document.querySelectorAll("[data-filters-hide]");
-//   const columnsContainer = document.querySelector("[data-filters-columns]");
-
-//   // showButtons.forEach((showButton) => {
-//   //   showButton.addEventListener("click", () => {
-//   //     const targetSelector = showButton.dataset.filtersShow;
-//   //     const targetElement = document.querySelector(targetSelector);
-//   //     if (targetElement) {
-//   //       targetElement.classList.remove("hide");
-//   //     }
-//   //     hideButton.classList.add("show");
-//   //     showButton.classList.add("hide");
-//   //   });
-//   // });
-
-//   // hideButtons.forEach((hideButton) => {
-//   //   hideButton.addEventListener("click", () => {
-//   //     const targetSelector = hideButton.dataset.filtersHide;
-//   //     const targetElement = document.querySelector(targetSelector);
-//   //     if (targetElement) {
-//   //       targetElement.classList.add("hide");
-//   //     }
-//   //     hideButton.classList.remove("show");
-//   //     showButton.classList.remove("hide");
-//   //   });
-//   // });
-
-//   showButtons.forEach(button => {
-//     button.addEventListener("click", function () {
-//       const targetSelector = button.getAttribute("data-filters-show");
-//       const targetElement = document.querySelector(targetSelector);
-//       if (targetElement) {
-//         targetElement.style.display = "block";
-//       }
-//     });
-//   });
-
-//   hideButtons.forEach(button => {
-//     button.addEventListener("click", function () {
-//       const targetSelector = button.getAttribute("data-filters-hide");
-//       const targetElement = document.querySelector(targetSelector);
-//       if (targetElement) {
-//         targetElement.style.display = "none";
-//       }
-//     });
-//   });
-// });
-
-// Query DOM elements
+const page = document.querySelector(".page");
 const showFiltersButton = document.querySelector("[data-filters-show]");
 const hideFiltersButton = document.querySelector("[data-filters-hide]");
 const filtersColumnsElement = document.querySelector("[data-filters-columns]");
@@ -1043,6 +899,7 @@ const offersSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]("
 });
 const arrivalSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".arrival-slider", {
   ...commonSwiperOptions,
+  spaceBetween: 20,
   pagination: {
     el: ".arrival-slider__pagination",
     clickable: true
@@ -1062,9 +919,10 @@ const arrivalSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](
       slidesPerView: 4
     },
     992: {
-      slidesPerView: 5,
-      spaceBetween: 10
+      slidesPerView: 5
+      // spaceBetween: 10,
     },
+
     1200: {
       slidesPerView: 6,
       spaceBetween: 20

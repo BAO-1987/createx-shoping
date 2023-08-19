@@ -7,13 +7,13 @@
 
     margin: 0;
     gap: 10px;
-    width: min(80%, 235px);
+    width: min(90%, 235px);
   }
 
   &--show {
     @include flex-all-sb;
     margin: 0;
-    width: min(80%, 255px);
+    width: min(90%, 255px);
     gap: 10px;
   }
 
@@ -63,7 +63,7 @@
     }
   }
 
-  &__lable {
+  &__label {
     font-weight: 700;
     line-height: 1.6;
     white-space: nowrap;
@@ -73,6 +73,11 @@
     font-size: 14px;
     color: var(--color-gray-700);
     white-space: nowrap;
+
+    @include for-width(-tablet) {
+      font-size: 0;
+      display: none;
+    }
   }
 }
 

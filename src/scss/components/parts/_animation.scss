@@ -37,3 +37,25 @@
     opacity: 1;
   }
 }
+
+@keyframes hide-away {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// @keyframes open-down {
+//   0% {
+//     transform: translateY(-10%);
+//     opacity: 0;
+//   }
+
+//   100% {
+//     transform: translateY(0%);
+//     opacity: 1;
+//   }
+// }

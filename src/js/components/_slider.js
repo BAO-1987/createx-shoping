@@ -88,6 +88,7 @@ const offersSlider = new Swiper(".offers-slider", {
 
 const arrivalSlider = new Swiper(".arrival-slider", {
   ...commonSwiperOptions,
+  spaceBetween: 20,
 
 
   pagination: {
@@ -116,7 +117,7 @@ const arrivalSlider = new Swiper(".arrival-slider", {
 
     992: {
       slidesPerView: 5,
-      spaceBetween: 10,
+      // spaceBetween: 10,
     },
 
     1200: {
