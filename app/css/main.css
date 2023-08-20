@@ -103,7 +103,6 @@
   scrollbar-width: thin;
   overscroll-behavior-inline: contain;
   scrollbar-color: var(--color-green) var(--color-white);
-  border-radius: 100vw;
 }
 .page::-webkit-scrollbar {
   width: 6px;
@@ -2171,8 +2170,10 @@ h3::first-letter {
     position: absolute;
     width: 100%;
     padding: 0 1rem;
-    margin: 0 auto;
-    inset: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }
 .filter__list {
@@ -2203,6 +2204,7 @@ h3::first-letter {
   -ms-flex-direction: column;
   flex-direction: column;
   padding-left: 5px;
+  gap: 8px;
 }
 .filter-group__list--color {
   display: -ms-grid;
@@ -2247,11 +2249,9 @@ h3::first-letter {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
   white-space: nowrap;
   cursor: pointer;
-}
-.filter-group__item:not(:last-child) {
-  margin-bottom: 8px;
 }
 .filter-group__item .custom-checkbox__content::before {
   background-color: var(--color-white);
