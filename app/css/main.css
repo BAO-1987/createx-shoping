@@ -2108,6 +2108,7 @@ h3::first-letter {
   right: -35px;
 }
 .catalog__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2157,7 +2158,8 @@ h3::first-letter {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 21%;
-  z-index: 65;
+  z-index: 55;
+  background-color: var(--color-white);
 }
 @media (max-width: calc(48em - 0.0625em)) {
   .filter {
@@ -2166,9 +2168,11 @@ h3::first-letter {
 }
 @media (max-width: calc(36em - 0.0625em)) {
   .filter {
+    position: absolute;
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem;
     margin: 0 auto;
+    inset: 0;
   }
 }
 .filter__list {

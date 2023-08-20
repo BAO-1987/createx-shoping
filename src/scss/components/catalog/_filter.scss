@@ -1,33 +1,36 @@
 .filter {
   flex: 0 0 auto;
   width: 21%;
-  z-index: 65;
+  z-index: 55;
+  background-color: var(--color-white);
 
   @include for-width(-mobile-l) {
     width: 165px;
   }
 
   @include for-width(-mobile-md) {
+    position: absolute;
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem;
     margin: 0 auto;
+    inset: 0;
 
   }
 
 
-&__list {
-  @include flex-col;
-  gap: rem-f(40);
-}
-
-&__item {
-  .form-search {
-    margin-bottom: 1.5rem;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
+  &__list {
+    @include flex-col;
+    gap: rem-f(40);
   }
-}
+
+  &__item {
+    .form-search {
+      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+    }
+  }
 }
 
 .filter-group {

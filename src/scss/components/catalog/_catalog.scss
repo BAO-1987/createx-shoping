@@ -41,6 +41,7 @@
   }
 
   &__wrapper {
+    position: relative;
     @include flex;
     gap: clamp(1rem, calc(0.5rem + 2.7vw), 3.8rem);
   }
