@@ -175,7 +175,8 @@
 
 .filter__btn {
   width: min(90%, 255px);
-  max-width: inherit;
+  max-width: 100%;
+  align-self: center;
   &::before {
     mask-image: url("../img/sprite.svg#filter-hide");
     left: clamp(1rem, calc(-0.3rem + 3.7vw), 4.1rem);

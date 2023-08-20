@@ -1,26 +1,33 @@
 .filter {
-  // width: 255px;
   flex: 0 0 auto;
   width: 21%;
+  z-index: 65;
 
   @include for-width(-mobile-l) {
     width: 165px;
   }
 
+  @include for-width(-mobile-md) {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
 
-  &__list {
-    @include flex-col;
-    gap: rem-f(40);
   }
 
-  &__item {
-    .form-search {
-      margin-bottom: 1.5rem;
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-    }
+
+&__list {
+  @include flex-col;
+  gap: rem-f(40);
+}
+
+&__item {
+  .form-search {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
   }
+}
 }
 
 .filter-group {
@@ -59,6 +66,8 @@
   }
 
   &__item {
+    @include flex-a-center;
+    white-space: nowrap;
     cursor: pointer;
 
     &:not(:last-child) {

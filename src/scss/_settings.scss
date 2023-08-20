@@ -13,6 +13,7 @@
   scrollbar-width: thin;
   overscroll-behavior-inline: contain;
   scrollbar-color: var(--color-green) var(--color-white);
+  border-radius: 100vw;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -489,12 +490,8 @@
   &__list {
     @include flex-all-center;
     padding: 0 2rem;
+    gap: clamp(0.8rem, calc(0.05rem + 1vw), 1.3rem);
 
-    li {
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-    }
 
     a {
       position: relative;
@@ -665,7 +662,6 @@
 }
 
 .range-slider {
-  // width: 255px;
 
   &__body {
     height: 0.125rem;
@@ -673,6 +669,7 @@
     border: 0;
     background-color: #dadbdd;
     box-shadow: none;
+    padding: 0 15px;
 
     .noUi-connect {
       background-color: var(--color-green);
@@ -729,6 +726,7 @@
     gap: 12px;
 
     li {
+
       font-size: rem-f(12);
       color: var(--color-gray-800);
     }
@@ -737,6 +735,7 @@
 
   &__input {
     width: min(95%, 110px);
+    // width: 110px;
     padding: 9px 0 9px 12px;
     border: 1px solid var(--color-gray-800);
     border-radius: var(--br);

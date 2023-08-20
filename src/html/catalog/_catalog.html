@@ -37,7 +37,7 @@
       <button class="btn filter__btn filter__btn--show hide" type="button" data-filters-show="#filtersSidebar">Show
         filters</button>
 
-      <div class="catalog__interaction">
+      <div class="catalog__sort">
 
         <div class="custom-select custom-select--sort">
 
@@ -68,53 +68,53 @@
           <span class="custom-select__span">products per page</span>
 
         </div>
+      </div>
 
-        <nav class="pagination" aria-label="Reviews pagination" title="pagination">
+      <nav class="pagination" aria-label="Reviews pagination" title="pagination">
 
-          <button class="pagination__btn btn-rest" type="button">
-            <span class="visually-hidden">Next</span>
+        <button class="pagination__btn btn-rest" type="button">
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <ul class="pagination__list" role="list">
+
+          <li>
+            <a href="#" aria-current="page">
+              <span class="visually-hidden">page</span>1
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="visually-hidden">page</span>2
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="visually-hidden">page</span>3
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="visually-hidden">page</span>...
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="visually-hidden">page</span>10
+            </a>
+          </li>
+
+          <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
+            <span class="visually-hidden">Prev</span>
           </button>
 
-          <ul class="pagination__list" role="list">
+        </ul>
 
-            <li>
-              <a href="#" aria-current="page">
-                <span class="visually-hidden">page</span>1
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <span class="visually-hidden">page</span>2
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <span class="visually-hidden">page</span>3
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <span class="visually-hidden">page</span>...
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <span class="visually-hidden">page</span>10
-              </a>
-            </li>
-
-            <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
-              <span class="visually-hidden">Prev</span>
-            </button>
-
-          </ul>
-
-        </nav>
-      </div>
+      </nav>
 
     </div>
 

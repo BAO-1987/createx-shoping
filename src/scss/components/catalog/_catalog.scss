@@ -1,36 +1,42 @@
 .catalog {
   &__nav {
-
     @include flex;
     justify-content: space-between;
     margin-bottom: 2rem;
-    gap: clamp(1rem, calc(0.5rem + 2.7vw), 3.8rem);
-  }
+    gap: clamp(1rem, calc(0.3rem + 2.8vw), 3.8rem);
 
-  &__interaction {
-    @include flex-a-center;
-    justify-content: end;
-    gap: clamp(1rem, calc(0.5rem + 2.7vw), 3.8rem);
+    @include for-width(-mobile-l) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
 
     .pagination {
       margin-left: auto;
+
+      @include for-width(-mobile-l) {
+        grid-column: 1 / span 2;
+        margin: 0;
+      }
     }
   }
 
+  &__sort {
+    @include flex-a-center;
+    justify-content: end;
+    gap: clamp(1rem, calc(0.5rem + 2.708vw), 3.8rem);
 
+    @include for-width(-mobile-l) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
 
   .custom-select__inner {
     padding: em(11) em(45) em(11) em(16);
 
     &::after {
       right: -35px;
-    }
-  }
-
-  .custom-select__label {
-    @include for-width(-tablet) {
-      font-size: 0;
-      display: none;
     }
   }
 
@@ -50,6 +56,15 @@
     animation: fade-in 0.6s ease-in-out forwards;
 
 
+
+    @include for-width(-mobile-l) {
+      --catalog-grid: 2;
+    }
+
+    @include for-width(-mobile-md) {
+      --catalog-grid: 1;
+    }
+
     &.active {
       --catalog-grid: 4;
       animation: show 0.9s ease-in-out forwards;
@@ -57,10 +72,10 @@
       @include for-width(-mobile-l) {
         --catalog-grid: 3;
       }
-    }
 
-    @include for-width(-mobile-l) {
-      --catalog-grid: 2;
+      @include for-width(-mobile-md) {
+        --catalog-grid: 2;
+      }
     }
   }
 }
