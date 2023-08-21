@@ -13,7 +13,7 @@
   scrollbar-width: thin;
   overscroll-behavior-inline: contain;
   scrollbar-color: var(--color-green) var(--color-white);
-  
+
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -669,7 +669,7 @@
     border: 0;
     background-color: #dadbdd;
     box-shadow: none;
-    padding: 0 15px;
+    padding: 0 5px;
 
     .noUi-connect {
       background-color: var(--color-green);
@@ -722,7 +722,7 @@
   }
 
   &__counter {
-    @include flex-all-sb;
+    @include flex-a-center;
     gap: 12px;
 
     li {

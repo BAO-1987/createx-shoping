@@ -32,13 +32,9 @@
     }
   }
 
-  .custom-select__inner {
-    padding: em(11) em(45) em(11) em(16);
-
-    &::after {
-      right: -35px;
-    }
-  }
+  // .custom-select__inner {
+  //   padding: em(11) em(45) em(11) em(16);
+  // }
 
   &__wrapper {
     position: relative;
