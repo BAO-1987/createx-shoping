@@ -355,17 +355,12 @@
 
         <div class="cart">
 
-          <span class="visually-hidden">cart</span>
-
-          <span class="cart__link">
-            <svg class="cart__icon">
-              <use xlink:href="img/sprite.svg#cart"></use>
-            </svg>
-          </span>
+          <button class="cart__btn modal__btn btn-reset" type="button" data-modal="cart-preview">
+          </button>
 
           <span class="cart__count">4</span>
 
-          <div class="cart__preview cart-preview">
+          <!-- <div class="cart__preview cart-preview">
 
             <div class="cart-preview__header">
 
@@ -395,7 +390,7 @@
 
                   <a href="#">
                     <p class="cart-preview__subtitle">
-                      Basic hooded sweatshirt in pink
+                      Basic hooded sweatshirt in pink
                     </p>
                   </a>
 
@@ -449,7 +444,7 @@
 
                   <a href="#">
                     <p class="cart-preview__subtitle">
-                      Basic hooded sweatshirt in pink
+                      Basic hooded sweatshirt in pink
                     </p>
                   </a>
 
@@ -472,6 +467,7 @@
                     <span class="cart-preview__price">$15.50</span>
 
                   </div>
+
 
                   <button class="wishlist__btn btn-reset" type="button">
                     Move to
@@ -503,7 +499,7 @@
 
                   <a href="#">
                     <p class="cart-preview__subtitle">
-                      Basic hooded sweatshirt in pink
+                      Basic hooded sweatshirt in pink
                     </p>
                   </a>
 
@@ -526,6 +522,7 @@
                     <span class="cart-preview__price">$15.50</span>
 
                   </div>
+
 
                   <button class="wishlist__btn btn-reset" type="button">
                     Move to
@@ -557,7 +554,7 @@
 
                   <a href="#">
                     <p class="cart-preview__subtitle">
-                      Basic hooded sweatshirt in pink
+                      Basic hooded sweatshirt in pink
                     </p>
                   </a>
 
@@ -580,6 +577,7 @@
                     <span class="cart-preview__price">$15.50</span>
 
                   </div>
+
 
                   <button class="wishlist__btn btn-reset" type="button">
                     Move to
@@ -611,7 +609,7 @@
 
             </div>
 
-          </div>
+          </div> -->
 
         </div>
 
@@ -2434,7 +2432,256 @@
 
   </dialog>
 
-  </di>
+   <dialog class=" dialog cart-preview" id="cart-preview">
+
+     <div class="cart-preview__header">
+
+       <span class="cart-preview__title">Your cart (4)
+       </span>
+
+          <button class="modal__close cart-preview__close btn-reset" aria-label="close modal" type="button"
+            data-modal-close>
+            <svg class="modal__icon">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+
+     </div>
+
+     <ul class="cart-preview__list scroll" role="list">
+
+       <li class="cart-preview__item">
+
+         <div class="cart-preview__picture">
+           <picture>
+             <source srcset="/img/article/kenguroo-sweater.webp" type="image/webp">
+             <img src="/img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+           </picture>
+         </div>
+
+         <div class="cart-preview__content">
+
+           <a href="#">
+             <p class="cart-preview__subtitle">
+               Basic hooded sweatshirt in pink
+             </p>
+           </a>
+
+           <div class="cart-preview__color">
+             <span>Color:</span>
+             <span>Pink</span>
+           </div>
+
+           <div class="cart-preview__size">
+             <span>Size:</span>
+             <span>S</span>
+           </div>
+
+           <div class="cart-preview__quality">
+
+             <label class="visually-hidden" for="cart-input"></label>
+             <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
+               placeholder="1">
+
+             <span class="cart-preview__price">$15.50</span>
+
+           </div>
+
+           <button class="wishlist__btn btn-reset" type="button">
+             Move to
+             <svg class="wishlist__icon">
+               <use xlink:href="img/sprite.svg#heart"></use>
+             </svg>
+           </button>
+
+         </div>
+
+         <button class="cart-preview__delete btn-reset" aria-label="cart-preview delete" type="button">
+           <svg class="cart-preview__icon">
+             <use xlink:href="img/sprite.svg#delete"></use>
+           </svg>
+         </button>
+
+       </li>
+
+       <li class="cart-preview__item">
+
+         <div class="cart-preview__picture">
+           <picture>
+             <source srcset="/img/article/kenguroo-sweater.webp" type="image/webp">
+             <img src="/img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+           </picture>
+         </div>
+
+         <div class="cart-preview__content">
+
+           <a href="#">
+             <p class="cart-preview__subtitle">
+               Basic hooded sweatshirt in pink
+             </p>
+           </a>
+
+           <div class="cart-preview__color">
+             <span>Color:</span>
+             <span>Pink</span>
+           </div>
+
+           <div class="cart-preview__size">
+             <span>Size:</span>
+             <span>S</span>
+           </div>
+
+           <div class="cart-preview__quality">
+
+             <label class="visually-hidden" for="cart-input"></label>
+             <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
+               placeholder="1">
+
+             <span class="cart-preview__price">$15.50</span>
+
+           </div>
+
+           <button class="wishlist__btn btn-reset" type="button">
+             Move to
+             <svg class="wishlist__icon">
+               <use xlink:href="img/sprite.svg#heart"></use>
+             </svg>
+           </button>
+
+         </div>
+
+         <button class="cart-preview__delete btn-reset" aria-label="cart-preview delete" type="button">
+           <svg class="cart-preview__icon">
+             <use xlink:href="img/sprite.svg#delete"></use>
+           </svg>
+         </button>
+
+       </li>
+
+       <li class="cart-preview__item">
+
+         <div class="cart-preview__picture">
+           <picture>
+             <source srcset="/img/article/kenguroo-sweater.webp" type="image/webp">
+             <img src="/img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+           </picture>
+         </div>
+
+         <div class="cart-preview__content">
+
+           <a href="#">
+             <p class="cart-preview__subtitle">
+               Basic hooded sweatshirt in pink
+             </p>
+           </a>
+
+           <div class="cart-preview__color">
+             <span>Color:</span>
+             <span>Pink</span>
+           </div>
+
+           <div class="cart-preview__size">
+             <span>Size:</span>
+             <span>S</span>
+           </div>
+
+           <div class="cart-preview__quality">
+
+             <label class="visually-hidden" for="cart-input"></label>
+             <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
+               placeholder="1">
+
+             <span class="cart-preview__price">$15.50</span>
+
+           </div>
+
+           <button class="wishlist__btn btn-reset" type="button">
+             Move to
+             <svg class="wishlist__icon">
+               <use xlink:href="img/sprite.svg#heart"></use>
+             </svg>
+           </button>
+
+         </div>
+
+         <button class="cart-preview__delete btn-reset" aria-label="cart-preview delete" type="button">
+           <svg class="cart-preview__icon">
+             <use xlink:href="img/sprite.svg#delete"></use>
+           </svg>
+         </button>
+
+       </li>
+
+       <li class="cart-preview__item">
+
+         <div class="cart-preview__picture">
+           <picture>
+             <source srcset="/img/article/kenguroo-sweater.webp" type="image/webp">
+             <img src="/img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+           </picture>
+         </div>
+
+         <div class="cart-preview__content">
+
+           <a href="#">
+             <p class="cart-preview__subtitle">
+               Basic hooded sweatshirt in pink
+             </p>
+           </a>
+
+           <div class="cart-preview__color">
+             <span>Color:</span>
+             <span>Pink</span>
+           </div>
+
+           <div class="cart-preview__size">
+             <span>Size:</span>
+             <span>S</span>
+           </div>
+
+           <div class="cart-preview__quality">
+
+             <label class="visually-hidden" for="cart-input"></label>
+             <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
+               placeholder="1">
+
+             <span class="cart-preview__price">$15.50</span>
+
+           </div>
+
+           <button class="wishlist__btn btn-reset" type="button">
+             Move to
+             <svg class="wishlist__icon">
+               <use xlink:href="img/sprite.svg#heart"></use>
+             </svg>
+           </button>
+
+         </div>
+
+         <button class="cart-preview__delete btn-reset" aria-label="cart-preview delete" type="button">
+           <svg class="cart-preview__icon">
+             <use xlink:href="img/sprite.svg#delete"></use>
+           </svg>
+         </button>
+
+       </li>
+
+     </ul>
+
+     <div class="cart-preview__bottom">
+
+       <div class="cart-preview__total">
+         <span>Subtotal:</span>
+         <span>$198.65</span>
+       </div>
+
+       <a class="btn btn--cart" href="#">Checkout</a>
+
+     </div>
+
+   </dialog>
+
+  </div>
 
   </div>
 

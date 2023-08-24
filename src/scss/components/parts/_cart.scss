@@ -1,8 +1,29 @@
 .cart {
-  @include flex;
-  gap: 8px;
+  @include flex-all-sb;
+  gap: 16px;
+
+  &__btn {
+    @include flex-all-center;
+    position: relative;
+    // width: 20px;
+    // height: 20px;
+
+    &::before {
+      @include mask;
+      mask-image: url("../img/sprite.svg#cart");
+      width: 24px;
+      height: 24px;
+      background-color: var(--color-gray-800);
+    }
+
+    &:hover::before {
+      background-color: var(--color-green);
+    }
+
+  }
 
   &__icon {
+    position: absolute;
     width: 22px;
     height: 22px;
     fill: var(--color-gray-800);
@@ -22,14 +43,11 @@
 }
 
 .cart-preview {
-  opacity: 0;
-  visibility: hidden;
   @include footerToBottom;
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-height: 100vh;
+
+   max-height: 100vh;
   height: fit-content;
+  margin-left: auto;
   width: 100%;
   max-width: 352px;
   padding: 2rem 1.5rem;
@@ -37,7 +55,6 @@
   border: 1px solid var(--color-gray-300);
   border-radius: var(--br);
   font-size: rem-f(12);
-  /* stylelint-disable-next-line value-keyword-case */
   box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05),
     0px 12px 10px -6px rgba(30, 33, 44, 0.08),
     0px 26px 24px -10px rgba(30, 33, 44, 0.10),
@@ -46,12 +63,15 @@
     0px 12px 10px -6px rgba(30, 33, 44, 0.08),
     0px 26px 24px -10px rgba(30, 33, 44, 0.10),
     0px 60px 80px -20px rgba(30, 33, 44, 0.16);
-    z-index: 99;
+  z-index: 99;
 
   &__header {
     position: relative;
     @include flex-all-sb;
     margin-bottom: 1.5rem;
+    .modal__close {
+      top: 5px;
+    }
   }
 
   &__title {
@@ -149,5 +169,19 @@
   &__total {
     @include flex-all-sb;
     margin-bottom: 20px;
+  }
+
+  &[open] {
+    animation: slide-open 800ms forwards;
+  }
+}
+
+@keyframes slide-open {
+  0% {
+    transform: translateX(5%);
+  }
+
+  100% {
+    transform: translateY(0%);
   }
 }

@@ -175,6 +175,7 @@
   &--cart {
     width: 100%;
     max-width: 100%;
+
     &::before {
       mask-image: url("../img/sprite.svg#card");
       left: 88px;
@@ -207,6 +208,8 @@
     }
   }
 }
+
+
 
 .btn-reset {
   border: none;
