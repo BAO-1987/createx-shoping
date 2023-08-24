@@ -22,12 +22,6 @@
 
   }
 
-  &__icon {
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    fill: var(--color-gray-800);
-  }
 
   &__count {
     @include flex-all-center;
@@ -44,9 +38,8 @@
 
 .cart-preview {
   @include footerToBottom;
-
-   max-height: 100vh;
-  height: fit-content;
+  //  height: 100vh;
+  // height: fit-content;
   margin-left: auto;
   width: 100%;
   max-width: 352px;
@@ -64,6 +57,10 @@
     0px 26px 24px -10px rgba(30, 33, 44, 0.10),
     0px 60px 80px -20px rgba(30, 33, 44, 0.16);
   z-index: 99;
+
+  .scroll {
+    overflow: auto;
+  }
 
   &__header {
     position: relative;

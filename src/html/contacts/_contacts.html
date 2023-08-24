@@ -24,57 +24,81 @@
 
   </nav>
 
-  <div class="container contacts__wrapper">
+  <div class="container tabs">
 
     <h1 class="visually-hidden">Contacts</h1>
 
-    <div class="tabs">
-      Contact Us
-      Outlet Stores
-      FAQ
-    </div>
+    <ul class="tabs__nav" aria-labelledby="tabs-title">
 
-    <div class="tabs__content">
+      <li>
+        <a class="tabs__link" href="#ContactUs" id="tab-1">Contact Us</a>
+      </li>
 
-      <div class="contacts__content">
+      <li>
+        <a class="tabs__link" href="#OutletStores" id="tab-2">Outlet Stores</a>
+      </li>
+
+      <li>
+        <a class="tabs__link" href="#FAQ" id="tab-3">FAQ</a>
+      </li>
+
+    </ul>
+
+    <div class="tabs__panels">
+
+      <div id="ContactUs" aria-labelledby="tab-1">
         <p>If you have any questions, concerns or comments, we would love to hear from you! Submit your query using any
           of
           the methods below:</p>
+
+
+        <ul class="contacts__list" role="list">
+
+          <li class="contacts__item contacts__item--phone">
+            <a href="tel:+4055550128" target="_blank">(405) 555-0128</a>
+          </li>
+
+          <li class="contacts__item contacts__item--email">
+            <a href="mailto:Send us an email" target="_blank">Send us an email</a>
+          </li>
+
+          <li class="contacts__item contacts__item--messenger">
+            <a href="#" target="_blank">Connect on Messenger</a>
+          </li>
+
+          <li class="contacts__item contacts__item--twitter">
+            <a href="#" target="_blank">Tweet us</a>
+          </li>
+
+        </ul>
+
+
+
+        <form class="contacts-form" action="#">
+
+          <div class="contacts-form__wrapper">
+
+            <p class="contacts-form__text">Or get in touch with us by completing the below form:</p>
+
+
+
+          </div>
+
+        </form>
+
+
       </div>
 
-      <ul class="contacts__list" role="list">
+      <div id="OutletStores" aria-labelledby="tab-2">
+        2
+      </div>
 
-        <li class="contacts__item contacts__item--phone">
-          <a href="tel:+4055550128" target="_blank">(405) 555-0128</a>
-        </li>
-
-        <li class="contacts__item contacts__item--email">
-          <a href="mailto:Send us an email" target="_blank">Send us an email</a>
-        </li>
-
-        <li class="contacts__item contacts__item--messenger">
-          <a href="#" target="_blank">Connect on Messenger</a>
-        </li>
-
-        <li class="contacts__item contacts__item--twitter">
-          <a href="#" target="_blank">Tweet us</a>
-        </li>
-
-      </ul>
-
-      <form class="contacts-form" action="#">
-
-        <div class="contacts-form__wrapper">
-
-          <p class="contacts-form__text">Or get in touch with us by completing the below form:</p>
-
-          
-
-        </div>
-
-      </form>
-
+      <div id="FAQ" aria-labelledby="tab-3">
+        3
+      </div>
 
     </div>
+
+  </div>
 
 </section>

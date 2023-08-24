@@ -1,12 +1,12 @@
-import GraphTabs from 'graph-tabs';
+// import GraphTabs from 'graph-tabs';
 
-// if (document.querySelector('.single')) {
-//   const tabs = new GraphTabs('.single')
-// }
+// // if (document.querySelector('.single')) {
+// //   const tabs = new GraphTabs('.single')
+// // }
 
 
-const tabs = new GraphTabs('.single');
-const tabsSize = new GraphTabs('.size');
+// const tabs = new GraphTabs('.single');
+// const tabsSize = new GraphTabs('.size');
 
 
 

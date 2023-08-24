@@ -51,6 +51,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/_tableAddAria */ "./src/js/components/_tableAddAria.js");
 /* harmony import */ var _components_tableAddAria__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_tableAddAria__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/_tabs */ "./src/js/components/_tabs.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/_accordion */ "./src/js/components/_accordion.js");
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/_carousel */ "./src/js/components/_carousel.js");
@@ -68,6 +69,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/_range-slider */ "./src/js/components/_range-slider.js");
 /* harmony import */ var _components_details__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/_details */ "./src/js/components/_details.js");
 /* harmony import */ var _components_details__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_components_details__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _components_tabs1__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/_tabs1 */ "./src/js/components/_tabs1.js");
+/* harmony import */ var _components_tabs1__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_components_tabs1__WEBPACK_IMPORTED_MODULE_23__);
+
 
 
 
@@ -1132,19 +1136,102 @@ AddTableARIA();
 /*!************************************!*\
   !*** ./src/js/components/_tabs.js ***!
   \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
+// import GraphTabs from 'graph-tabs';
 
+// // if (document.querySelector('.single')) {
+// //   const tabs = new GraphTabs('.single')
+// // }
 
-// if (document.querySelector('.single')) {
-//   const tabs = new GraphTabs('.single')
-// }
+// const tabs = new GraphTabs('.single');
+// const tabsSize = new GraphTabs('.size');
 
-const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.single');
-const tabsSize = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.size');
+/***/ }),
+
+/***/ "./src/js/components/_tabs1.js":
+/*!*************************************!*\
+  !*** ./src/js/components/_tabs1.js ***!
+  \*************************************/
+/***/ (() => {
+
+const tabsContainer = document.querySelector(".tabs");
+const tabsList = tabsContainer.querySelector(".tabs__nav");
+const tabButtons = tabsList.querySelectorAll("a");
+const tabPanels = tabsContainer.querySelectorAll(".tabs__panels > div");
+tabsList.setAttribute("role", "tablist");
+tabsList.querySelectorAll("li").forEach(listitem => {
+  listitem.setAttribute("role", "presentation");
+});
+tabButtons.forEach((tab, index) => {
+  tab.setAttribute("role", "tab");
+  if (index === 0) {
+    tab.setAttribute("aria-selected", "true");
+    // we'll add something here
+  } else {
+    tab.setAttribute("tabindex", "-1");
+    tabPanels[index].setAttribute("hidden", "");
+  }
+});
+tabPanels.forEach(panel => {
+  panel.setAttribute("role", "tabpanel");
+  panel.setAttribute("tabindex", "0");
+});
+tabsContainer.addEventListener("click", e => {
+  const clickedTab = e.target.closest("a");
+  if (!clickedTab) return;
+  e.preventDefault();
+  switchTab(clickedTab);
+});
+tabsContainer.addEventListener("keydown", e => {
+  switch (e.key) {
+    case "ArrowLeft":
+      moveLeft();
+      break;
+    case "ArrowRight":
+      moveRight();
+      break;
+    case "Home":
+      e.preventDefault();
+      switchTab(tabButtons[0]);
+      break;
+    case "End":
+      e.preventDefault();
+      switchTab(tabButtons[tabButtons.length - 1]);
+      break;
+  }
+});
+function moveLeft() {
+  const currentTab = document.activeElement;
+  if (!currentTab.parentElement.previousElementSibling) {
+    switchTab(tabButtons[tabButtons.length - 1]);
+  } else {
+    switchTab(currentTab.parentElement.previousElementSibling.querySelector("a"));
+  }
+}
+function moveRight() {
+  const currentTab = document.activeElement;
+  if (!currentTab.parentElement.nextElementSibling) {
+    switchTab(tabButtons[0]);
+  } else {
+    switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
+  }
+}
+function switchTab(newTab) {
+  const activePanelId = newTab.getAttribute("href");
+  const activePanel = tabsContainer.querySelector(activePanelId);
+  tabButtons.forEach(button => {
+    button.setAttribute("aria-selected", false);
+    button.setAttribute("tabindex", "-1");
+  });
+  tabPanels.forEach(panel => {
+    panel.setAttribute("hidden", true);
+  });
+  activePanel.removeAttribute("hidden", false);
+  newTab.setAttribute("aria-selected", true);
+  newTab.setAttribute("tabindex", "0");
+  newTab.focus();
+}
 
 /***/ }),
 
@@ -1519,133 +1606,6 @@ if (typeof document !== 'undefined') {
   // Apply the polyfill to the global document, so that no JavaScript
   // coordination is required to use the polyfill in the top-level document:
   applyFocusVisiblePolyfill(document);
-}
-
-/***/ }),
-
-/***/ "./node_modules/graph-tabs/src/graph-tabs.js":
-/*!***************************************************!*\
-  !*** ./node_modules/graph-tabs/src/graph-tabs.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ GraphTabs)
-/* harmony export */ });
-class GraphTabs {
-  constructor(selector, options) {
-    let defaultOptions = {
-      isChanged: () => {}
-    }
-    this.options = Object.assign(defaultOptions, options);
-    this.selector = selector;
-    this.tabs = document.querySelector(`[data-tabs="${selector}"]`);
-    if (this.tabs) {
-      this.tabList = this.tabs.querySelector('.tabs__nav');
-      this.tabsBtns = this.tabList.querySelectorAll('.tabs__nav-btn');
-      this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
-    } else {
-      console.error('Селектор data-tabs не существует!');
-      return;
-    }
-
-    this.check();
-    this.init();
-    this.events();
-  }
-
-  check() {
-    if (document.querySelectorAll(`[data-tabs="${this.selector}"]`).length > 1) {
-      console.error('Количество элементов с одинаковым data-tabs больше одного!');
-      return;
-    }
-
-    if (this.tabsBtns.length !== this.tabsPanels.length) {
-      console.error('Количество кнопок и элементов табов не совпадает!');
-      return;
-    }
-  }
-
-  init() {
-    this.tabList.setAttribute('role', 'tablist');
-
-    this.tabsBtns.forEach((el, i) => {
-      el.setAttribute('role', 'tab');
-      el.setAttribute('tabindex', '-1');
-      el.setAttribute('id', `${this.selector}${i + 1}`);
-      el.classList.remove('tabs__nav-btn--active');
-    });
-
-    this.tabsPanels.forEach((el, i) => {
-      el.setAttribute('role', 'tabpanel');
-      el.setAttribute('tabindex', '-1');
-      el.setAttribute('aria-labelledby', this.tabsBtns[i].id);
-      el.classList.remove('tabs__panel--active');
-    });
-
-    this.tabsBtns[0].classList.add('tabs__nav-btn--active');
-    this.tabsBtns[0].removeAttribute('tabindex');
-    this.tabsBtns[0].setAttribute('aria-selected', 'true');
-    this.tabsPanels[0].classList.add('tabs__panel--active');
-  }
-
-  events() {
-    this.tabsBtns.forEach((el, i) => {
-      el.addEventListener('click', (e) => {
-        let currentTab = this.tabList.querySelector('[aria-selected]');
-
-        if (e.currentTarget !== currentTab) {
-          this.switchTabs(e.currentTarget, currentTab);
-        }
-      });
-
-      el.addEventListener('keydown', (e) => {
-        let index = Array.prototype.indexOf.call(this.tabsBtns, e.currentTarget);
-
-        let dir = null;
-
-        if (e.which === 37) {
-          dir = index - 1;
-        } else if (e.which === 39) {
-          dir = index + 1;
-        } else if (e.which === 40) {
-          dir = 'down';
-        } else {
-          dir = null;
-        }
-
-        if (dir !== null) {
-          if (dir === 'down') {
-            this.tabsPanels[i].focus();
-          } else if (this.tabsBtns[dir]) {
-            this.switchTabs(this.tabsBtns[dir], e.currentTarget);
-          }
-        }
-      });
-    });
-  }
-
-  switchTabs(newTab, oldTab = this.tabs.querySelector('[aria-selected]')) {
-    newTab.focus();
-    newTab.removeAttribute('tabindex');
-    newTab.setAttribute('aria-selected', 'true');
-
-    oldTab.removeAttribute('aria-selected');
-    oldTab.setAttribute('tabindex', '-1');
-
-    let index = Array.prototype.indexOf.call(this.tabsBtns, newTab);
-    let oldIndex = Array.prototype.indexOf.call(this.tabsBtns, oldTab);
-
-    this.tabsPanels[oldIndex].classList.remove('tabs__panel--active');
-    this.tabsPanels[index].classList.add('tabs__panel--active');
-
-    this.tabsBtns[oldIndex].classList.remove('tabs__nav-btn--active');
-    this.tabsBtns[index].classList.add('tabs__nav-btn--active');
-
-    this.options.isChanged(this);
-  }
 }
 
 /***/ }),

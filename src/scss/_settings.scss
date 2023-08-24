@@ -776,3 +776,9 @@
     opacity: 0;
   }
 }
+
+[aria-selected="true"] {
+  text-decoration-thickness: 0.25em;
+  text-underline-offset: 0.5em;
+  color: orangered;
+}
