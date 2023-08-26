@@ -1,6 +1,6 @@
 const tabsContainer = document.querySelector(".tabs");
 const tabsList = tabsContainer.querySelector(".tabs__nav");
-const tabButtons = tabsList.querySelectorAll("a");
+const tabButtons = tabsList.querySelectorAll(".tabs__link");
 const tabPanels = tabsContainer.querySelectorAll(".tabs__panels > div");
 
 tabsList.setAttribute("role", "tablist");
