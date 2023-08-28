@@ -45,7 +45,7 @@ const heroSlider = new Swiper(".hero-slider", {
   ...commonSwiperOptions,
 
   speed: heroSliderSpeed,
-   parallax: true,
+  parallax: true,
   autoplay: {
     delay: 2500,
   },
@@ -265,38 +265,42 @@ const recentlySlider = new Swiper(".recently-slider", {
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-    let swiper;
-
-    breakpoint = window.matchMedia(breakpoint);
-
-    const enableSwiper = function (className, settings) {
-      swiper = new Swiper(".banners-slider");
-
-      if (callback) {
-        callback(swiper);
-      }
+  const enableSwiper = (className, settings, callback) => {
+    const swiper = new Swiper(className, settings);
+    if (callback) {
+      callback(swiper);
     }
+    return swiper;
+  };
 
-    const checker = function () {
-      if (breakpoint.matches) {
-        return enableSwiper(swiperClass, swiperSettings);
-      } else {
-        if (swiper !== undefined) swiper.destroy(true, true);
-        return;
+  const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+    let swiper = null;
+    const mq = window.matchMedia(breakpoint);
+
+    const checker = () => {
+      if (mq.matches) {
+        swiper = enableSwiper(swiperClass, swiperSettings, callback);
+      } else if (swiper) {
+        swiper.destroy(true, true);
+        swiper = null;
       }
     };
 
-    breakpoint.addEventListener('change', checker);
+    mq.addEventListener('change', checker);
     checker();
-  }
- 
+  };
+
   resizableSwiper(
     '(max-width: 768px)',
-    '.banners-slider', {
-      ...commonSwiperOptions,
-
+    '.banners', {
+      slidesPerView: 1,
+      mousewheelControl: true,
+      keyboardControl: true,
+      grabCursor: true,
+      pagination: {
+        el: ".banners__pagination",
+        clickable: true,
+      },
     },
   );
 });
-

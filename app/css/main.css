@@ -304,7 +304,7 @@
   mask-size: cover;
   width: 16px;
   height: 16px;
-  background-color: currentColor;
+  background-color: currentcolor;
   -webkit-transition: background-color 0.6s linear;
   transition: background-color 0.6s linear;
 }
@@ -318,7 +318,7 @@
 }
 
 .countdown {
-  padding-top: clamp(2rem, 1rem + 3.3vw, 5rem);
+  padding: clamp(1.5rem, 1rem + 3.3vw, 5rem) 0 1rem 0;
 }
 .countdown__list {
   display: -webkit-box;
@@ -939,16 +939,6 @@
   display: none;
   visibility: hidden;
   opacity: 0;
-}
-
-[aria-selected=true] {
-  text-decoration-thickness: 0.25em;
-  text-underline-offset: 0.5em;
-  color: orangered;
-}
-
-.banners-slider {
-  overflow: hidden;
 }
 
 .title {
@@ -1658,6 +1648,10 @@ h3::first-letter {
   margin-bottom: 60px;
 }
 
+.banners {
+  overflow: hidden;
+  position: relative;
+}
 .banners__list {
   display: -ms-grid;
   display: grid;
@@ -1680,7 +1674,7 @@ h3::first-letter {
   text-align: left;
 }
 .banners__content {
-  padding: clamp(35px, 3.75rem, 65px) 15px 0 clamp(35px, 3.75rem, 65px);
+  padding: clamp(2rem, 1rem + 2.29vw, 4.1rem) 1rem 0 clamp(2rem, 1rem + 2.29vw, 4.1rem);
   width: 100%;
   max-width: 400px;
 }
@@ -1739,6 +1733,10 @@ h3::first-letter {
   position: absolute;
   bottom: 0;
   z-index: 1;
+}
+
+.banners-slider {
+  overflow: hidden;
 }
 
 .partners {
@@ -4894,7 +4892,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 1px;
   background-color: var(--color-gray-300);
 }
-.tabs__nav-btn {
+.tabs__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4915,7 +4913,7 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-transition: color 0.3s linear, border-color 0.3s linear;
   transition: color 0.3s linear, border-color 0.3s linear;
 }
-.tabs__nav-btn sup {
+.tabs__link sup {
   position: relative;
   top: -6px;
   margin-left: 4px;
@@ -4923,49 +4921,22 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 10px;
   line-height: 1.5;
 }
-.tabs__nav-btn--active {
+.tabs__link--active {
   border-color: var(--color-green);
   color: var(--color-green);
 }
-.tabs__nav-btn:hover {
+.tabs__link:hover {
   color: var(--color-gray-800);
+}
+.tabs__link[aria-selected=true] {
+  color: var(--color-green);
 }
 .tabs__content {
   position: relative;
 }
-.tabs__panel {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: visibility 0.3s linear;
-  transition: visibility 0.3s linear;
-}
-.tabs__panel--active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 1rem;
-  visibility: visible;
+.tabs__content {
   -webkit-animation: slide-up 0.9s forwards, fade-in 0.9s forwards;
   animation: slide-up 0.9s forwards, fade-in 0.9s forwards;
-}
-@media (max-width: calc(48em - 0.0625em)) {
-  .tabs__panel--active {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 2rem;
-  }
 }
 
 .accordion__list {

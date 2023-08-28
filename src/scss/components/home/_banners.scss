@@ -1,4 +1,7 @@
 .banners {
+  overflow: hidden;
+  position: relative;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -17,7 +20,7 @@
   }
 
   &__content {
-    padding: clamp(35px, rem-f(60), 65px) 15px 0 clamp(35px, rem-f(60), 65px);
+    padding: clamp(2rem, calc(1rem + 2.29vw), 4.1rem) 1rem 0 clamp(2rem, calc(1rem + 2.29vw), 4.1rem);
     width: 100%;
     max-width: 400px;
 
@@ -66,4 +69,9 @@
     bottom: 0;
     z-index: 1;
   }
+}
+
+
+.banners-slider {
+  overflow: hidden;
 }
