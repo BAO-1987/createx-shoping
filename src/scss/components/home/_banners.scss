@@ -7,7 +7,7 @@
 
     @include for-width(-mobile-l) {
       @include flex;
-      flex-direction: column;
+      gap: 0;
     }
   }
 
@@ -57,7 +57,7 @@
     }
 
     @include for-width(-tablet) {
-      min-height: 350px;
+      min-height: 380px;
     }
   }
 

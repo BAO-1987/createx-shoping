@@ -261,3 +261,42 @@ const recentlySlider = new Swiper(".recently-slider", {
     prevEl: ".recently-slider__prev",
   },
 });
+
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+    let swiper;
+
+    breakpoint = window.matchMedia(breakpoint);
+
+    const enableSwiper = function (className, settings) {
+      swiper = new Swiper(".banners-slider");
+
+      if (callback) {
+        callback(swiper);
+      }
+    }
+
+    const checker = function () {
+      if (breakpoint.matches) {
+        return enableSwiper(swiperClass, swiperSettings);
+      } else {
+        if (swiper !== undefined) swiper.destroy(true, true);
+        return;
+      }
+    };
+
+    breakpoint.addEventListener('change', checker);
+    checker();
+  }
+ 
+  resizableSwiper(
+    '(max-width: 768px)',
+    '.banners-slider', {
+      ...commonSwiperOptions,
+
+    },
+  );
+});
+

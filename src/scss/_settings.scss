@@ -14,7 +14,6 @@
   overscroll-behavior-inline: contain;
   scrollbar-color: var(--color-green) var(--color-white);
 
-
   &::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -50,7 +49,7 @@
   &.open {
     overflow: hidden;
 
-    >.page__body::before {
+    > .page__body::before {
       width: 100%;
     }
   }
@@ -152,7 +151,7 @@
     }
   }
 
-  input[type="radio"]:checked+.checkboxes__label {
+  input[type="radio"]:checked + .checkboxes__label {
     border-color: var(--color-green);
     color: var(--color-white);
     background-color: var(--color-green);
@@ -492,7 +491,6 @@
     padding: 0 2rem;
     gap: clamp(0.8rem, calc(0.05rem + 1vw), 1.3rem);
 
-
     a {
       position: relative;
       font-weight: 700;
@@ -511,9 +509,7 @@
   text-underline-offset: 3px;
   text-decoration-skip-ink: solid;
   text-decoration-line: underline;
-  transition:
-    text-decoration-color 0.5s linear,
-    color 0.5s linear;
+  transition: text-decoration-color 0.5s linear, color 0.5s linear;
 
   &:is(:hover, :active) {
     text-decoration-color: transparent;
@@ -662,7 +658,6 @@
 }
 
 .range-slider {
-
   &__body {
     height: 0.125rem;
     margin: 3rem 0;
@@ -726,11 +721,9 @@
     gap: 12px;
 
     li {
-
       font-size: rem-f(12);
       color: var(--color-gray-800);
     }
-
   }
 
   &__input {
@@ -781,4 +774,8 @@
   text-decoration-thickness: 0.25em;
   text-underline-offset: 0.5em;
   color: orangered;
+}
+
+.banners-slider {
+  overflow: hidden;
 }
