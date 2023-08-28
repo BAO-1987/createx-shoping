@@ -7,6 +7,10 @@
 
     position: relative;
     margin-bottom: 50px;
+
+    &--textarea {
+      grid-column: 2 span;
+    }
   }
 
   &__input {
@@ -40,6 +44,22 @@
   &__label {
     position: absolute;
     top: -30px;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: rem-f(20);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    // display: flex;
+    // flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 10px;
   }
 }
 

@@ -24,401 +24,406 @@
 
   </nav>
 
-  <div class="container tabs">
+  <div class="container">
 
-    <h1 class="visually-hidden">Contacts</h1>
+    <div class="tabs">
 
-    <ul class="tabs__nav">
+      <h1 class="visually-hidden">Contacts</h1>
 
-      <li>
-        <a class="tabs__link" href="#ContactUs" id="tab-1">Contact Us</a>
-      </li>
+      <ul class="tabs__nav">
 
-      <li>
-        <a class="tabs__link" href="#OutletStores" id="tab-2">Outlet Stores</a>
-      </li>
+        <li>
+          <a class="tabs__link" href="#ContactUs" id="tab-1">Contact Us</a>
+        </li>
 
-      <li>
-        <a class="tabs__link" href="#FAQ" id="tab-3">FAQ</a>
-      </li>
+        <li>
+          <a class="tabs__link" href="#OutletStores" id="tab-2">Outlet Stores</a>
+        </li>
 
-    </ul>
+        <li>
+          <a class="tabs__link" href="#FAQ" id="tab-3">FAQ</a>
+        </li>
 
-    <div class="tabs__panels">
+      </ul>
 
-      <div class="tabs__content" id="ContactUs" aria-labelledby="tab-1">
-        <p>If you have any questions, concerns or comments, we would love to hear from you! Submit your query using any
-          of the methods below:</p>
+      <div class="tabs__panels">
 
-        <ul class="contacts__list" role="list">
-          <li class="contacts__item contacts__item--phone">
-            <a href="tel:+4055550128" target="_blank">(405) 555-0128</a>
-          </li>
+        <div class="tabs__content" id="ContactUs" aria-labelledby="tab-1">
+          <p class="contacts__text">If you have any questions, concerns or comments, we would love to hear from you! Submit your query using
+            any
+            of the methods below:</p>
 
-          <li class="contacts__item contacts__item--email">
-            <a href="mailto:Send us an email" target="_blank">Send us an email</a>
-          </li>
+          <ul class="contacts__list" role="list">
+            <li class="contacts__item contacts__item--phone">
+              <a href="tel:+4055550128">(405) 555-0128</a>
+            </li>
 
-          <li class="contacts__item contacts__item--messenger">
-            <a href="#" target="_blank">Connect on Messenger</a>
-          </li>
+            <li class="contacts__item contacts__item--email">
+              <a href="mailto:Send us an email">Send us an email</a>
+            </li>
 
-          <li class="contacts__item contacts__item--twitter">
-            <a href="#" target="_blank">Tweet us</a>
-          </li>
-        </ul>
+            <li class="contacts__item contacts__item--messenger">
+              <a href="#" target="_blank">Connect on Messenger</a>
+            </li>
 
-        <form class="form" action="#" autocomplete="off" method="get">
+            <li class="contacts__item contacts__item--twitter">
+              <a href="#" target="_blank">Tweet us</a>
+            </li>
+          </ul>
 
-          <p class="form__text">Or get in touch with us by completing the below form:</p>
+          <form class="form" action="#" autocomplete="off" method="get">
 
-          <div class="form__wrapper">
+            <p class="form__text">Or get in touch with us by completing the below form:</p>
 
-            <div class="form__box">
-              <label class="form__label" for="name">Full Name*
-              </label>
-              <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your full name"
-                required aria-invalid="true" aria-errormessage="Your full name eror">
-            </div>
+            <div class="form__wrapper">
 
-            <div class="form__box">
-              <label class="form__label" for="phone">Phone
-              </label>
-              <input class="form__input" type="tel" id="phone" name="phone" placeholder="Your phone number" required>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="email">Email*</label>
-              <input class="form__input" type="email" id="email" autocomplete="username"
-                placeholder="Your working email" required aria-invalid="true" aria-errormessage="email-error">
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="name">Subject
-              </label>
-              <input class="form__input" type="text" id="subject" placeholder="Title your message" required
-                aria-invalid="true" aria-errormessage="Your full name eror">
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="message">Message*</label>
-              <textarea class="form__input form__input--textarea" name="message" id="reviewText" rows="3"
-                placeholder="Write your message here" required></textarea>
-            </div>
-
-            <button class="btn" type="submit">Send message</button>
-
-          </div>
-
-        </form>
-
-      </div>
-
-      <div class="tabs__content" id="OutletStores" aria-labelledby="tab-2">
-
-        <ul class="stores__lit" role="list">
-
-          <li class="stores__item">
-            <div class="stores-card">
-
-              <div class="store-card__box">
-                <picture>
-                  <source srcset="img/stores/newyork-stores.webp" type="image/webp">
-                  <img src="img/stores/newyork-stores.png" width="390" height="200" alt="image of stores in New York"
-                    loading="lazy">
-                </picture>
+              <div class="form__box">
+                <label class="form__label" for="name">Full Name*
+                </label>
+                <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your full name"
+                  required aria-invalid="true" aria-errormessage="Your full name eror">
               </div>
 
-              <div class="stored-card__content">
-
-                <h3>New York, USA</h3>
-
-                <ul class="contacts__list" role="list">
-                  <li class="contacts__item contacts__item--phone">
-                    <a href="tel:+4055550128" target="_blank">(405) 555-0128</a>
-                  </li>
-
-                  <li class="contacts__item contacts__item--email">
-                    <a href="mailto:hello@createx.com" target="_blank">hello@createx.com</a>
-                  </li>
-
-                  <li class="contacts__item contacts__item--schedule">
-                    <span>Daily from 9 am to 9 pm</span>
-                  </li>
-
-                  <li class="contacts__item contacts__item--location">
-                    <a href="#" target="_blank">20 W 29th Street New York, NY 10001</a>
-                  </li>
-                </ul>
+              <div class="form__box">
+                <label class="form__label" for="phone">Phone
+                </label>
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="Your phone number" required>
               </div>
 
-            </div>
-          </li>
-
-          <li class="stores__item">
-            <div class="stores-card">
-
-              <div class="store-card__box">
-                <picture>
-                  <source srcset="img/stores/delaware-stores.webp" type="image/webp">
-                  <img src="img/stores/delaware-stores.png" width="390" height="200" alt="image of stores in Delaware"
-                    loading="lazy">
-                </picture>
+              <div class="form__box">
+                <label class="form__label" for="email">Email*</label>
+                <input class="form__input" type="email" id="email" autocomplete="username"
+                  placeholder="Your working email" required aria-invalid="true" aria-errormessage="email-error">
               </div>
 
-              <div class="stored-card__content">
-
-                <h3>Delaware, USA</h3>
-
-                <ul class="contacts__list" role="list">
-                  <li class="contacts__item contacts__item--phone">
-                    <a href="tel:808555-0111" target="_blank">(808) 555-0111</a>
-                  </li>
-
-                  <li class="contacts__item contacts__item--email">
-                    <a href="mailto:delaware@createx.com" target="_blank">delaware@createx.com</a>
-                  </li>
-
-                  <li class="contacts__item contacts__item--schedule">
-                    <span>Daily from 10 am to 9 pm</span>
-                  </li>
-
-                  <li class="contacts__item contacts__item--location">
-                    <a href="#" target="_blank">6391 Elgin St. Celina, Delaware 10299</a>
-                  </li>
-                </ul>
-
+              <div class="form__box">
+                <label class="form__label" for="name">Subject
+                </label>
+                <input class="form__input" type="text" id="subject" placeholder="Title your message" required
+                  aria-invalid="true" aria-errormessage="Your full name eror">
               </div>
+
+              <div class="form__box form__box--textarea">
+                <label class="form__label" for="message">Message*</label>
+                <textarea class="form__input form__input--textarea" name="message" id="reviewText" rows="3"
+                  placeholder="Write your message here" required></textarea>
+              </div>
+
+              <button class="btn" type="submit">Send message</button>
 
             </div>
 
-          </li>
+          </form>
 
-          <li class="stores__item">
-            <div class="stores-card">
+        </div>
 
-              <div class="store-card__box">
-                <picture>
-                  <source srcset="img/stores/newjersey-stores.webp" type="image/webp">
-                  <img src="img/stores/newjersey-stores.png" width="390" height="200"
-                    alt="image of stores in New Jersey" loading="lazy">
-                </picture>
+        <div class="tabs__content" id="OutletStores" aria-labelledby="tab-2">
+
+          <ul class="stores__lit" role="list">
+
+            <li class="stores__item">
+              <div class="stores-card">
+
+                <div class="store-card__box">
+                  <picture>
+                    <source srcset="img/stores/newyork-stores.webp" type="image/webp">
+                    <img src="img/stores/newyork-stores.png" width="390" height="200" alt="image of stores in New York"
+                      loading="lazy">
+                  </picture>
+                </div>
+
+                <div class="stored-card__content">
+
+                  <h3>New York, USA</h3>
+
+                  <ul class="contacts__list" role="list">
+                    <li class="contacts__item contacts__item--phone">
+                      <a href="tel:+4055550128" target="_blank">(405) 555-0128</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--email">
+                      <a href="mailto:hello@createx.com" target="_blank">hello@createx.com</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--schedule">
+                      <span>Daily from 9 am to 9 pm</span>
+                    </li>
+
+                    <li class="contacts__item contacts__item--location">
+                      <a href="#" target="_blank">20 W 29th Street New York, NY 10001</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="stores__item">
+              <div class="stores-card">
+
+                <div class="store-card__box">
+                  <picture>
+                    <source srcset="img/stores/delaware-stores.webp" type="image/webp">
+                    <img src="img/stores/delaware-stores.png" width="390" height="200" alt="image of stores in Delaware"
+                      loading="lazy">
+                  </picture>
+                </div>
+
+                <div class="stored-card__content">
+
+                  <h3>Delaware, USA</h3>
+
+                  <ul class="contacts__list" role="list">
+                    <li class="contacts__item contacts__item--phone">
+                      <a href="tel:808555-0111" target="_blank">(808) 555-0111</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--email">
+                      <a href="mailto:delaware@createx.com" target="_blank">delaware@createx.com</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--schedule">
+                      <span>Daily from 10 am to 9 pm</span>
+                    </li>
+
+                    <li class="contacts__item contacts__item--location">
+                      <a href="#" target="_blank">6391 Elgin St. Celina, Delaware 10299</a>
+                    </li>
+                  </ul>
+
+                </div>
+
               </div>
 
-              <div class="stored-card__content">
+            </li>
 
-                <h3>New York, USA</h3>
+            <li class="stores__item">
+              <div class="stores-card">
 
-                <ul class="contacts__list" role="list">
-                  <li class="contacts__item contacts__item--phone">
-                    <a href="tel:+702555-0122" target="_blank">(702) 555-0122</a>
-                  </li>
+                <div class="store-card__box">
+                  <picture>
+                    <source srcset="img/stores/newjersey-stores.webp" type="image/webp">
+                    <img src="img/stores/newjersey-stores.png" width="390" height="200"
+                      alt="image of stores in New Jersey" loading="lazy">
+                  </picture>
+                </div>
 
-                  <li class="contacts__item contacts__item--email">
-                    <a href="mailto:newjersey@createx.com" target="_blank">newjersey@createx.com</a>
-                  </li>
+                <div class="stored-card__content">
 
-                  <li class="contacts__item contacts__item--schedule">
-                    <span>Daily from 9 am to 8 pm</span>
-                  </li>
+                  <h3>New York, USA</h3>
 
-                  <li class="contacts__item contacts__item--location">
-                    <a href="#" target="_blank">2464 Royal Ln. Mesa, New Jersey 45463</a>
-                  </li>
-                </ul>
+                  <ul class="contacts__list" role="list">
+                    <li class="contacts__item contacts__item--phone">
+                      <a href="tel:+702555-0122" target="_blank">(702) 555-0122</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--email">
+                      <a href="mailto:newjersey@createx.com" target="_blank">newjersey@createx.com</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--schedule">
+                      <span>Daily from 9 am to 8 pm</span>
+                    </li>
+
+                    <li class="contacts__item contacts__item--location">
+                      <a href="#" target="_blank">2464 Royal Ln. Mesa, New Jersey 45463</a>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
+            </li>
 
-            </div>
-          </li>
+            <li class="stores__item">
+              <div class="stores-card">
 
-          <li class="stores__item">
-            <div class="stores-card">
+                <div class="store-card__box">
+                  <picture>
+                    <source srcset="img/stores/maine-stores.webp" type="image/webp">
+                    <img src="img/stores/maine-stores.png" width="390" height="200" alt="image of stores in Main"
+                      loading="lazy">
+                  </picture>
+                </div>
 
-              <div class="store-card__box">
-                <picture>
-                  <source srcset="img/stores/maine-stores.webp" type="image/webp">
-                  <img src="img/stores/maine-stores.png" width="390" height="200" alt="image of stores in Main"
-                    loading="lazy">
-                </picture>
+                <div class="stored-card__content">
+
+                  <h3>Maine, USA</h3>
+
+                  <ul class="contacts__list" role="list">
+                    <li class="contacts__item contacts__item--phone">
+                      <a href="tel:219555-0114" target="_blank">(219) 555-0114</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--email">
+                      <a href="mailto:maine@createx.com" target="_blank">maine@createx.com</a>
+                    </li>
+
+                    <li class="contacts__item contacts__item--schedule">
+                      <span>Daily from 9 am to 9 pm</span>
+                    </li>
+
+                    <li class="contacts__item contacts__item--location">
+                      <a href="#" target="_blank">8502 Preston Rd. Inglewood, Maine 98380</a>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
+            </li>
 
-              <div class="stored-card__content">
+          </ul>
+        </div>
 
-                <h3>Maine, USA</h3>
+        <div class="tabs__content" id="FAQ" aria-labelledby="tab-3">
 
-                <ul class="contacts__list" role="list">
-                  <li class="contacts__item contacts__item--phone">
-                    <a href="tel:219555-0114" target="_blank">(219) 555-0114</a>
-                  </li>
+          <h2 class="visually-hidden">FAQ</h2>
 
-                  <li class="contacts__item contacts__item--email">
-                    <a href="mailto:maine@createx.com" target="_blank">maine@createx.com</a>
-                  </li>
+          <ul class="accordion__list">
 
-                  <li class="contacts__item contacts__item--schedule">
-                    <span>Daily from 9 am to 9 pm</span>
-                  </li>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>Do I need to register to place an order?</h3>
+                </summary>
 
-                  <li class="contacts__item contacts__item--location">
-                    <a href="#" target="_blank">8502 Preston Rd. Inglewood, Maine 98380</a>
-                  </li>
-                </ul>
-              </div>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-            </div>
-          </li>
+              </details>
+            </li>
 
-        </ul>
-      </div>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>What is the estimated delivery time?</h3>
+                </summary>
 
-      <div class="tabs__content" id="FAQ" aria-labelledby="tab-3">
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-        <h2 class="visually-hidden">FAQ</h2>
+              </details>
+            </li>
 
-        <ul class="accordion__list">
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>How can I pay for my order?</h3>
+                </summary>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>Do I need to register to place an order?</h3>
-              </summary>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
+              </details>
+            </li>
 
-            </details>
-          </li>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>Can I get a refund if the price has changed since I ordered it?</h3>
+                </summary>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>What is the estimated delivery time?</h3>
-              </summary>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus
+                    dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
+              </details>
+            </li>
 
-            </details>
-          </li>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>Do you refund delivery charges if I return something?</h3>
+                </summary>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>How can I pay for my order?</h3>
-              </summary>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus
+                    dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
+              </details>
+            </li>
 
-            </details>
-          </li>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>What documents will be provided with the order?</h3>
+                </summary>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>Can I get a refund if the price has changed since I ordered it?</h3>
-              </summary>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus
+                    dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus
-                  dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
+              </details>
+            </li>
 
-            </details>
-          </li>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>Can I return the order to the courier if anything does not suit me?</h3>
+                </summary>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>Do you refund delivery charges if I return something?</h3>
-              </summary>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum
+                    faucibus dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus
-                  dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
+              </details>
+            </li>
 
-            </details>
-          </li>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>What should I do if my order hasn't been delivered yet?</h3>
+                </summary>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>What documents will be provided with the order?</h3>
-              </summary>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum
+                    faucibus dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus
-                  dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
+              </details>
+            </li>
 
-            </details>
-          </li>
+            <li class="accordion__item">
+              <details>
+                <summary>
+                  <h3>What is your Returns Policy?</h3>
+                </summary>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>Can I return the order to the courier if anything does not suit me?</h3>
-              </summary>
+                <div class="accordion__content">
+                  <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum
+                    faucibus dignissim
+                    purus. Fusce
+                    parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+                </div>
 
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum
-                  faucibus dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
+              </details>
+            </li>
 
-            </details>
-          </li>
+          </ul>
 
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>What should I do if my order hasn't been delivered yet?</h3>
-              </summary>
-
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum
-                  faucibus dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
-
-            </details>
-          </li>
-
-          <li class="accordion__item">
-            <details>
-              <summary>
-                <h3>What is your Returns Policy?</h3>
-              </summary>
-
-              <div class="accordion__content">
-                <p>Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum
-                  faucibus dignissim
-                  purus. Fusce
-                  parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
-              </div>
-
-            </details>
-          </li>
-
-        </ul>
+        </div>
 
       </div>
 

@@ -1,0 +1,79 @@
+.contacts {
+  .tabs {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tabs__nav {
+    align-items: flex-start;
+    margin: 0;
+    flex-direction: column;
+    flex-basis: 170px;
+    flex-grow: 999;
+
+    gap: 20px;
+  }
+
+  .tabs__link {
+    padding: 0;
+    border: 0;
+  }
+
+  .tabs__panels {
+    flex-basis: 810px;
+    flex-grow: 1;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: rem-f(20);
+  }
+
+  &__list {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    @include flex-a-center;
+    position: relative;
+    padding-left: 32px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &::before {
+      @include mask;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      mask-image: url("../img/sprite.svg#phone");
+      background-color: var(--color-green);
+    }
+
+    &--phone {
+      &::before {
+        mask-image: url("../img/sprite.svg#phone");
+      }
+    }
+
+    &--email {
+      &::before {
+        mask-image: url("../img/sprite.svg#mail");
+      }
+    }
+
+    &--messenger {
+      &::before {
+        mask-image: url("../img/sprite.svg#messenger");
+      }
+    }
+
+    &--twitter {
+      &::before {
+        mask-image: url("../img/sprite.svg#twitter");
+      }
+    }
+  }
+}

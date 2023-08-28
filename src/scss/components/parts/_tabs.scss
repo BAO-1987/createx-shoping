@@ -81,6 +81,8 @@
 // }
 
 .tabs {
+  @include flex;
+
   &__nav {
     @include flex;
 
@@ -122,10 +124,6 @@
       line-height: 1.5;
     }
 
-    &--active {
-      border-color: var(--color-green);
-      color: var(--color-green);
-    }
 
     &:hover {
       color: var(--color-gray-800);
