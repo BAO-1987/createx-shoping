@@ -1,20 +1,27 @@
 .contacts {
   .tabs {
-    flex-wrap: wrap;
     gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .tabs__nav {
     align-items: flex-start;
     margin: 0;
     flex-direction: column;
-    flex-basis: 170px;
-    flex-grow: 999;
 
     gap: 20px;
 
     &::before {
       content: none;
+    }
+
+    @include for-width(-mobile-l) {
+      flex-direction: initial;
     }
   }
 
@@ -24,8 +31,13 @@
   }
 
   .tabs__panels {
-    flex-basis: 810px;
-    flex-grow: 1;
+    width: min(90%, 810px);
+    justify-self: end;
+
+    @include for-width(-mobile-l) {
+      width: fit-content;
+      justify-self: center;
+    }
   }
 
   &__text {
@@ -107,9 +119,13 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 30px;
-    row-gap: 50px;
+    column-gap: clamp(1rem, calc(0.5rem + 1.14vw), 1.875rem);
+    row-gap: clamp(1rem, calc(1rem + 1.77vw), 3.2rem);
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: repeat(1, 1fr);
+      align-items: center;
+    }
   }
 
   .contacts__list {
@@ -132,11 +148,11 @@
   }
 
   &__content {
-    padding: 24px 63px 32px 24px;
+    padding: 1.5rem clamp(0.8rem, calc(0.5rem + 1.25vw), 2rem) 2rem clamp(0.8rem, calc(0.5rem + 0.83vw), 1.5rem);
     background-color: var(--color-white);
 
     h3 {
-      margin-bottom: rem-f(24);
+      margin-bottom: 1.5rem;
       text-align: left;
     }
   }
