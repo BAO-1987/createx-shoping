@@ -26,7 +26,7 @@ tabPanels.forEach((panel) => {
 });
 
 tabsContainer.addEventListener("click", (e) => {
-  const clickedTab = e.target.closest("a");
+  const clickedTab = e.target.closest(".tabs__link");
   if (!clickedTab) return;
   e.preventDefault();
 
@@ -58,7 +58,7 @@ function moveLeft() {
     switchTab(tabButtons[tabButtons.length - 1]);
   } else {
     switchTab(
-      currentTab.parentElement.previousElementSibling.querySelector("a")
+      currentTab.parentElement.previousElementSibling.querySelector(".tabs__link")
     );
   }
 }
@@ -68,7 +68,7 @@ function moveRight() {
   if (!currentTab.parentElement.nextElementSibling) {
     switchTab(tabButtons[0]);
   } else {
-    switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
+    switchTab(currentTab.parentElement.nextElementSibling.querySelector(".tabs__link"));
   }
 }
 
@@ -91,3 +91,5 @@ function switchTab(newTab) {
   newTab.setAttribute("tabindex", "0");
   newTab.focus();
 }
+
+

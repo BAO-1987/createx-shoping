@@ -12,6 +12,10 @@
     flex-grow: 999;
 
     gap: 20px;
+
+    &::before {
+      content: none;
+    }
   }
 
   .tabs__link {
@@ -36,8 +40,9 @@
 
   &__item {
     @include flex-a-center;
+
     position: relative;
-    padding-left: 32px;
+    padding-left: 25px;
 
     &:not(:last-child) {
       margin-bottom: 12px;
@@ -74,6 +79,65 @@
       &::before {
         mask-image: url("../img/sprite.svg#twitter");
       }
+    }
+
+    &--schedule {
+      &::before {
+        mask-image: url("../img/sprite.svg#clock");
+      }
+    }
+
+    &--location {
+      &::before {
+        mask-image: url("../img/sprite.svg#map");
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+}
+
+.stores {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  .contacts__list {
+    margin-bottom: 0;
+  }
+}
+
+.stores-card {
+  @include flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--br);
+
+  &__box {
+    img {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  &__content {
+    padding: 24px 63px 32px 24px;
+    background-color: var(--color-white);
+
+    h3 {
+      margin-bottom: rem-f(24);
+      text-align: left;
     }
   }
 }
