@@ -1,4 +1,8 @@
 .single {
+  .tabs {
+    display: block;
+  }
+
   &__content {
     @include flex-sb;
     align-items: center;
@@ -7,14 +11,20 @@
     gap: 1rem;
   }
 
+  &__inner {
+    @include flex-sb;
+    gap: 1rem;
+  }
+
   &__title {
     margin-bottom: 0;
   }
 
   &__product {
-    margin-right: 1rem;
+
     overflow: hidden;
-    width: min(80%, 610px);
+    // width: min(80%, 610px);
+    flex-basis: 600px;
 
     @include for-width(-mobile-l) {
       margin: 0 auto;
@@ -135,6 +145,7 @@
 
 .single-slider__nav {
   margin: 0;
+
   .single-slider__list {
     @include flex;
     flex-wrap: wrap;

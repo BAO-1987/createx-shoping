@@ -1,7 +1,13 @@
 .single-reviews {
+  position: relative;
+@include flex-sb;
+ gap: 1rem;
 
-  width: 100%;
-  max-width: 735px;
+  &__inner {
+
+    width: 100%;
+    max-width: 735px;
+  }
 
   &__content {
     @include flex-sb;
