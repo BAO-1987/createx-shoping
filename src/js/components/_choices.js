@@ -2,7 +2,7 @@
 const defaultSelect = () => {
   const element = document.querySelector('.choices-select');
   const choices = new Choices(element, {
-    // searchEnabled: false,
+    searchEnabled: false,
     noResultsText: 'no result'
   });
 

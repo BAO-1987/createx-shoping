@@ -13,7 +13,11 @@
 
   &__inner {
     @include flex-sb;
-    gap: 1rem;
+    gap: 1.5rem;
+
+    @include for-width(-mobile-l) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -23,8 +27,7 @@
   &__product {
 
     overflow: hidden;
-    // width: min(80%, 610px);
-    flex-basis: 600px;
+    width: min(80%, 600px);
 
     @include for-width(-mobile-l) {
       margin: 0 auto;

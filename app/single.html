@@ -656,17 +656,18 @@
 
                 <li class="product-form__item product-form__item--select">
 
-                  <div class="size custom-select">
+                  <div class="custom-select">
 
-                      <select class="choices-select" name="select" id="size">
-                        <option value="">Please select</option>
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                      </select>
+                    <label class="custom-select__label" for="size">Size</label>
 
+                    <select class="choices-select" id="size">
+                      <option value="">Please select</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
                   </div>
 
                   <button class="modal__btn btn btn--size" type="button" data-modal="modalSize">Size chart</button>
@@ -676,7 +677,7 @@
 
                   <label class="visually-hidden" for="number"></label>
 
-                  <input class="input__number" type="number" inputmode="numeric" id="number" step="1" min="1" max="10"
+                  <input class="input-number" type="number" inputmode="numeric" id="number" step="1" min="1" max="10"
                     placeholder="1" value="1">
 
                   <button class="btn btn--article" type="submit">Add to cart</button>
