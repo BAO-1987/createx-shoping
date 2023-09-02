@@ -1053,14 +1053,13 @@
 
                 <label class="custom-select__lable" for="sort">Sort by</label>
 
-                <div class="custom-select__inner">
-                  <select class="custom-select__select" name="sort" id="sort">
+                  <select class="choices-select" name="sort" id="sort">
                     <option value="Newest">Newest</option>
                     <option value="Oldest">Oldest</option>
                     <option value="High rating">High rating</option>
                     <option value="Low rating">High rating</option>
                   </select>
-                </div>
+
               </div>
 
             </div>
@@ -1085,7 +1084,7 @@
 
                   <div class="single-reviews__vote">
 
-                    <button class="single-reviews__btn btn-reset">Reply
+                    <button class="single-reviews__btn">Reply
                     </button>
 
                     <ul class="vote__list" role="list">
@@ -1101,7 +1100,6 @@
                     </ul>
 
                   </div>
-
                 </blockquote>
 
               </li>
@@ -1120,7 +1118,7 @@
 
                   <div class="single-reviews__vote">
 
-                    <button class="single-reviews__btn btn-reset">Reply
+                    <button class="single-reviews__btn">Reply
                     </button>
 
                     <ul class="vote__list" role="list">
@@ -1156,7 +1154,7 @@
 
                   <div class="single-reviews__vote">
 
-                    <button class="single-reviews__btn btn-reset">Reply
+                    <button class="single-reviews__btn">Reply
                     </button>
 
                     <ul class="vote__list" role="list">
@@ -1191,7 +1189,7 @@
 
                   <div class="single-reviews__vote">
 
-                    <button class="single-reviews__btn btn-reset">Reply
+                    <button class="single-reviews__btn">Reply
                     </button>
 
                     <ul class="vote__list" role="list">
@@ -2951,20 +2949,19 @@
       </div>
 
       <div class="form-modal__box">
-        <div class="custom-select">
 
+        <div class="custom-select custom-select--rating">
           <label class="form__label" for="rating">Rating</label>
 
-          <div class="custom-select__inner">
-            <select class="custom-select__select" name="rating" id="rating">
-              <option value disabled selected>Choose rating</option>
-              <option value="1">1 star</option>
-              <option value="2">2 star</option>
-              <option value="3">3 star</option>
-              <option value="4">4 star</option>
-              <option value="5">5 star</option>
-            </select>
-          </div>
+          <select class="choices-select" name="rating" id="rating">
+            <option value>Choose rating</option>
+            <option value="1">1 star</option>
+            <option value="2">2 star</option>
+            <option value="3">3 star</option>
+            <option value="4">4 star</option>
+            <option value="5">5 star</option>
+          </select>
+
         </div>
       </div>
 

@@ -1,13 +1,14 @@
-//  const choices = new Choices('.choices');
-const defaultSelect = () => {
-  const element = document.querySelector('.choices-select');
-  const choices = new Choices(element, {
-    searchEnabled: false,
-    noResultsText: 'no result'
+
+const elementChoices = Array.from(
+  document.querySelectorAll(".choices-select")
+);
+
+if (elementChoices.length > 0) {
+  elementChoices.forEach((el) => {
+    const choicesNum = new Choices(el, {
+      searchEnabled: false,
+      itemSelectText: "",
+    });
   });
+}
 
-  let ariaLabel = element.getAttribute('aria-label');
-  element.closest('.choices').setAttribute('aria-label', ariaLabel);
-};
-
-defaultSelect()
