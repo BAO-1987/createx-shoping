@@ -329,3 +329,21 @@
     font-size: 0.7rem;
   }
 }
+
+.checkout-form {
+  &__list {
+    counter-reset: my-awesome-counter;
+  }
+
+  &__item {
+    counter-increment: my-awesome-counter;
+
+
+    &::before {
+      content: counter(my-awesome-counter) ". ";
+      color: red;
+      font-weight: bold;
+    }
+
+  }
+}
