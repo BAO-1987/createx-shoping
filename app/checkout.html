@@ -422,9 +422,7 @@
       <section class="checkout section">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-
     <div class="container">
-
       <ul class="breadcrumb__list">
 
         <li>
@@ -440,200 +438,338 @@
         </li>
 
       </ul>
-
     </div>
-
   </nav>
 
-  <div class="checkout__content">
+  <div class="container">
 
-    <div class="checkout__text">
-      <h1 class="checkout__iitle title">Checkout</h1>
-      <a class="link checkout__link" href="#">Back to shopping</a>
+    <div class="checkout__content">
+
+      <div class="checkout__text">
+        <h1 class="checkout__title title">Checkout</h1>
+        <a class="link checkout__link" href="#">Back to shopping</a>
+      </div>
+
+      <div class="alert">
+        <p class="alert__text">Already have an account? <button class="modal__btn btn-rest" type="button"
+            data-modal="modal1">Sign in</button> for faster checkout experience</p>
+      </div>
+
     </div>
 
-    <div class="alert">
-      <p class="alert__text">Already have an account? <button class="modal__btn btn-rest" type="button"
-          data-modal="modal1">Sign in</button> for faster checkout experience</p>
-    </div>
+    <form action="#" class="checkout-form">
 
-  </div>
+      <div class="checkout-form__wrapper">
 
-  <form action="#" class="checkout-form">
+        <ol class="checkout-form__list" role="list">
 
-    <div class="checkout-form__wrapper">
+          <li class="checkout-form__item">
+            <span class="checkout-form__title">Item Review</span>
 
-      <ol class="checkout-form__list" role="list">
+            <div class="check-order">
+              <ul class="check-order__list" role="list">
 
-        <li class="checkout-form__item">
-          Item Review
-
-          <div class="check-order">
-            <ul class="check-order__list" role="list">
-
-              <li class="check-order__item">
-
-                <div class="check-order__picture">
-                  <picture>
-                    <source srcset="img/article/kenguroo-sweater.webp" type="image/webp">
-                    <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
-                  </picture>
-                </div>
-
-                <div class="check-order__content">
-
-                  <a href="#">
-                    <p class="check-order__subtitle">
-                      Basic hooded sweatshirt in pink
-                    </p>
-                  </a>
-
-                  <div class="check-order__color">
-                    <span>Color:</span>
-                    <span>Pink</span>
+                <li class="check-order__item">
+                  <div class="check-order__picture">
+                    <picture>
+                      <source srcset="img/article/kenguroo-sweater.webp" type="image/webp">
+                      <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+                    </picture>
                   </div>
 
-                  <div class="check-order__size">
-                    <span>Size:</span>
-                    <span>S</span>
+                  <div class="check-order__content">
+
+                    <a href="#">
+                      <p class="check-order__subtitle">
+                        Basic hooded sweatshirt in pink
+                      </p>
+                    </a>
+
+                    <div class="check-order__color">
+                      <span>Color:</span>
+                      <span>Pink</span>
+                    </div>
+
+                    <div class="check-order__size">
+                      <span>Size:</span>
+                      <span>S</span>
+                    </div>
+
                   </div>
 
-                </div>
+                  <div class="check-order__quality">
 
-                <div class="check-order__quality">
+                    <label class="visually-hidden" for="cart-input"></label>
+                    <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1"
+                      max="10" placeholder="1">
+                    <span class="cart-preview__price">$15.50</span>
 
-                  <label class="visually-hidden" for="cart-input"></label>
-                  <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1"
-                    max="10" placeholder="1">
-                  <span class="cart-preview__price">$15.50</span>
+                  </div>
 
-                </div>
+                  <div class="check-order__btns">
+                    <button class="cart-preview__delete btn-reset" type="button">
+                    Delete
+                    </button>
 
-                <div class="check-order__btns">
-                  <button class="cart-preview__delete btn-reset" aria-label="cart-preview delete" type="button">
-                    <svg class="cart-preview__icon">
-                      <use xlink:href="img/sprite.svg#delete"></use>
-                    </svg>
-                  </button>
+                    <button class="wishlist__btn btn-reset" type="button">
+                      Move to
+                      <svg class="wishlist__icon">
+                        <use xlink:href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
 
-                  <button class="wishlist__btn btn-reset" type="button">
-                    Move to
-                    <svg class="wishlist__icon">
-                      <use xlink:href="img/sprite.svg#heart"></use>
-                    </svg>
-                  </button>
-                </div>
+              </ul>
+            </div>
+          </li>
+
+          <li class="checkout-form__item">
+
+            <span class="checkout-form__title">Shipping & Billing Address</span>
+
+            <div class="shipping-adders">
+
+              <div class="form__box">
+                <label class="form__label" for="name">First Name
+                </label>
+                <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your first name"
+                  required>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="last-name">Last Name
+                </label>
+                <input class="form__input" type="text" id="last-name" autocomplete="username"
+                  placeholder="Your last name" required>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" id="email" autocomplete="username"
+                  placeholder="Your working email" required>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="phone">Phone
+                </label>
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="country">Country</label>
+                <select class="choices-select" id="country">
+                  <option value="">Choose your country</option>
+                  <option value="USA">USA</option>
+                  <option value="France">France</option>
+                  <option value="Germany">Germany</option>
+                </select>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="city">City</label>
+                <select class="choices-select" id="city">
+                  <option value="">choose your city</option>
+                  <option value="New York">New York</option>
+                  <option value="Paris">Paris</option>
+                  <option value="Berlin">Berlin</option>
+                </select>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="address">Address
+                </label>
+                <input class="form__input" type="text" id="address" placeholder="Your address" required>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="address">Address
+                </label>
+                <input class="form__input" type="text" id="address" placeholder="Your address" required>
+              </div>
+
+              <div class="form__box">
+                <label class="form__label" for="zip-code">ZIP Code
+                </label>
+                <input class="form__input" type="text" id="zip-code" placeholder="Your ZIP code" required>
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="checkout-form__item">
+
+            <span class="checkout-form__title">Shipping Method</span>
+
+            <ul class="shipping-method" role="list">
+
+              <li class="shipping-method__item">
+
+                <input class="shipping-method__input" type="radio" id="curier-method" name="shipping"
+                  value="Courier to your address">
+
+                <label for="curier-method">
+                  Courier to your address
+                  <span class="shipping-method__time">Estimated date: September 9</span>
+                  <span class="shipping-method__price">$25.00</span>
+                </label>
+
+              </li>
+
+              <li class="shipping-method__item">
+
+                <input class="shipping-method__input" type="radio" id="store-method" name="shipping"
+                  value="Pick up from store">
+
+                <label for="store-method">
+                  Pick up from store
+                  <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
+                  <span class="shipping-method__price">Free</span>
+                </label>
+
+              </li>
+
+              <li class="shipping-method__item">
+
+                <input class="shipping-method__input" type="radio" id="ups-method" name="shipping"
+                  value="UPS Ground Shipping">
+
+                <label for="ups-method">
+                  UPS Ground Shipping
+                  <span class="shipping-method__time">Up to one week</span>
+                  <span class="shipping-method__price">$10.00</span>
+                </label>
+
+              </li>
+
+              <li class="shipping-method__item">
+                <input class="shipping-method__input" type="radio" id="createx-method" name="shipping"
+                  value="Pick up at Createx Locker">
+
+                <label for="createx-method">
+                  Pick up at Createx Locker
+                  <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
+                  <span class="shipping-method__price">$8.50</span>
+                </label>
+              </li>
+
+              <li class="shipping-method__item">
+                <input class="shipping-method__input" type="radio" id="global-method" name="shipping"
+                  value="Createx Global Export">
+
+                <label for="createx-method">
+                  Createx Global Export
+                  <span class="shipping-method__time">3-4 days</span>
+                  <span class="shipping-method__price">$15.00</span>
+                </label>
               </li>
 
             </ul>
 
+          </li>
+
+          <li class="checkout-form__item">
+
+            <span class="checkout-form__title">Payment Method</span>
+
+            <ul class="accordion__list" role="list">
+
+              <li class="accordion__item">
+                <details>
+                  <summary>
+                    <p>Credit card</p>
+                  </summary>
+
+                  <di class="accordion__content">
+                    <div class="credit-card">
+                      <fieldset class="form__box">
+                        <label class="form__label" for="cc-1">Card Number</label>
+
+                        <input type="tel" maxlength="4" aria-label="Credit Card First 4 Digits" id="cc-1"
+                          placeholder="0000" required pattern="[0-9]{4}" />
+                        <input type="tel" maxlength="4" aria-label="Credit Card Second 4 Digits" placeholder="0000"
+                          required pattern="[0-9]{4}" />
+                        <input type="tel" maxlength="4" aria-label="Credit Card Third 4 Digits" placeholder="0000"
+                          required pattern="[0-9]{4}" />
+                        <input type="tel" maxlength="4" aria-label="Credit Card Last 4 Digits" placeholder="0000"
+                          required pattern="[0-9]{4}" />
+
+                      </fieldset>
+
+                      <div class="form__box">
+                        <label class="form__label" for="expiration-date">Expiry date</label>
+                        <input class="form__input" type="tel" maxlength="4" id="expiration-date"
+                          aria-label="Credit Card expiry" placeholder="mm/yy" />
+                      </div>
+
+                      <div class="form__box">
+                        <label class="form__label" for="cvc">CVC</label>
+                        <input class="form__input" type="tel" maxlength="3" id="cvc" aria-label="Credit Card CVC code"
+                          required />
+                      </div>
+
+                </details>
+              </li>
+
+              <li class="accordion__item">
+                <details>
+                  <summary>
+                    <p>PayPal</p>
+                  </summary>
+
+                  <div class="accordion__content">
+                    Pay paypal
+                  </div>
+
+                </details>
+              </li>
+
+              <li class="accordion__item">
+                <details>
+                  <summary>
+                    <p>Cash on delivery</p>
+                  </summary>
+
+                  <div class="accordion__content">
+                    3
+                  </div>
+
+                </details>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="checkout-form__item">
+            <span>Additional Information (Optional)</span>
+
+            <div class="form__box form__box--textarea">
+              <label class="form__label" for="message">Order notes</label>
+              <textarea class="form__input form__input--textarea" name="message" id="reviewText" rows="3"
+                placeholder="Notes about your order, e.g. special noted for delivery."></textarea>
+            </div>
+          </li>
+
+        </ol>
+
+        <aside class="checkout-form__aside">
+
+          <div class="form__box">
+            <label class="form__label" for="promo">Apply a promo code
+            </label>
+            <input class="form__input" type="text" id="promo" placeholder="Enter promo code">
+            <button class="btn" type="button">Apply</button>
           </div>
 
-        </li>
+         .
 
-        <li class="checkout-form__item">
-          Shipping & Billing Address
+        </aside>
 
-          <div class="shipping-adders">
+      </div>
+    </form>
 
-            <div class="form__box">
-              <label class="form__label" for="name">First Name
-              </label>
-              <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your first name"
-                required>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="last-name">Last Name
-              </label>
-              <input class="form__input" type="text" id="last-name" autocomplete="username" placeholder="Your last name"
-                required>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="email">Email</label>
-              <input class="form__input" type="email" id="email" autocomplete="username"
-                placeholder="Your working email" required>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="phone">Phone
-              </label>
-              <input class="form__input" type="tel" id="phone" name="phone" placeholder="Your phone number" required>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="country">Country</label>
-              <select class="choices-select" id="country">
-                <option value="">Choose your country</option>
-                <option value="USA">USA</option>
-                <option value="France">France</option>
-                <option value="Germany">Germany</option>
-              </select>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="city">City</label>
-              <select class="choices-select" id="city">
-                <option value="">choose your city</option>
-                <option value="New York">New York</option>
-                <option value="Paris">Paris</option>
-                <option value="Berlin">Berlin</option>
-              </select>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="address">Address
-              </label>
-              <input class="form__input" type="text" id="address" placeholder="Your address" required>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="address">Address
-              </label>
-              <input class="form__input" type="text" id="address" placeholder="Your address" required>
-            </div>
-
-            <div class="form__box">
-              <label class="form__label" for="zip-code">ZIP Code
-              </label>
-              <input class="form__input" type="text" id="zip-code" placeholder="Your ZIP code" required>
-            </div>
-
-          </div>
-
-        </li>
-
-        <li class="checkout-form__item">
-          Shipping Method
-
-          <ul class="shipping-method" role="list">
-
-            <li class="shipping-method__item">
-
-              <input class="shipping-method__input" type="radio" id="shipping-method" name="shipping"
-                value="Courier to your address">
-
-                <label for="shipping-method__label">
-                  Courier to your address
-                  <span>Estimated date: September 9</span>
-
-                  <span>$25.00</span>
-                </label>
-
-            </li>
-
-          </ul>
-
-        </li>
-
-      </ol>
-
-      <aside class="checkout-form__aside"></aside>
-
-    </div>
-
-  </form>
+  </div>
 
 </section>
 

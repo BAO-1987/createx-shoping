@@ -330,20 +330,20 @@
   }
 }
 
-.checkout-form {
-  &__list {
-    counter-reset: my-awesome-counter;
-  }
+// .checkout-form {
+//   &__list {
+//     counter-reset: my-awesome-counter;
+//   }
 
-  &__item {
-    counter-increment: my-awesome-counter;
+//   &__item {
+//     counter-increment: my-awesome-counter;
 
 
-    &::before {
-      content: counter(my-awesome-counter) ". ";
-      color: red;
-      font-weight: bold;
-    }
+//     &::before {
+//       content: counter(my-awesome-counter) ". ";
+//       color: red;
+//       font-weight: bold;
+//     }
 
-  }
-}
+//   }
+// }
