@@ -87,7 +87,7 @@
 
                   <div class="check-order__btns">
                     <button class="cart-preview__delete btn-reset" type="button">
-                    Delete
+                      Delete
                     </button>
 
                     <button class="wishlist__btn btn-reset" type="button">
@@ -162,12 +162,6 @@
               </div>
 
               <div class="form__box">
-                <label class="form__label" for="address">Address
-                </label>
-                <input class="form__input" type="text" id="address" placeholder="Your address" required>
-              </div>
-
-              <div class="form__box">
                 <label class="form__label" for="zip-code">ZIP Code
                 </label>
                 <input class="form__input" type="text" id="zip-code" placeholder="Your ZIP code" required>
@@ -188,11 +182,12 @@
                 <input class="shipping-method__input" type="radio" id="curier-method" name="shipping"
                   value="Courier to your address">
 
-                <label for="curier-method">
+                <label class="shipping-method__label" for="curier-method">
                   Courier to your address
                   <span class="shipping-method__time">Estimated date: September 9</span>
-                  <span class="shipping-method__price">$25.00</span>
                 </label>
+
+                <span class="shipping-method__price">$25.00</span>
 
               </li>
 
@@ -201,11 +196,12 @@
                 <input class="shipping-method__input" type="radio" id="store-method" name="shipping"
                   value="Pick up from store">
 
-                <label for="store-method">
+                <label class="shipping-method__label" for="store-method">
                   Pick up from store
-                  <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
-                  <span class="shipping-method__price">Free</span>
                 </label>
+                <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
+                <span class="shipping-method__price">Free</span>
+
 
               </li>
 
@@ -214,7 +210,7 @@
                 <input class="shipping-method__input" type="radio" id="ups-method" name="shipping"
                   value="UPS Ground Shipping">
 
-                <label for="ups-method">
+                <label class="shipping-method__label" for="ups-method">
                   UPS Ground Shipping
                   <span class="shipping-method__time">Up to one week</span>
                   <span class="shipping-method__price">$10.00</span>
@@ -226,7 +222,7 @@
                 <input class="shipping-method__input" type="radio" id="createx-method" name="shipping"
                   value="Pick up at Createx Locker">
 
-                <label for="createx-method">
+                <label class="shipping-method__label" for="createx-method">
                   Pick up at Createx Locker
                   <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
                   <span class="shipping-method__price">$8.50</span>
@@ -237,7 +233,7 @@
                 <input class="shipping-method__input" type="radio" id="global-method" name="shipping"
                   value="Createx Global Export">
 
-                <label for="createx-method">
+                <label class="shipping-method__label" for="createx-method">
                   Createx Global Export
                   <span class="shipping-method__time">3-4 days</span>
                   <span class="shipping-method__price">$15.00</span>
@@ -255,7 +251,7 @@
 
             <ul class="accordion__list" role="list">
 
-              <li class="accordion__item">
+              <li class="accordion__item accordion__item--creddit">
                 <details>
                   <summary>
                     <p>Credit card</p>

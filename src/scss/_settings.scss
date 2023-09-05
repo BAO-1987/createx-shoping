@@ -556,7 +556,7 @@
 
   &__item {
     &--value {
-      font-size: 14px;
+      font-size: rem-f(14);
       text-transform: capitalize;
       color: var(--color-gray-600);
       transition: all 0.3s linear;
