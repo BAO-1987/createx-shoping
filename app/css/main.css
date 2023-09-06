@@ -98,10 +98,8 @@
   color: var(--color-gray-900);
   background-color: var(--color-white);
   scroll-behavior: smooth;
-  overscroll-behavior-y: none;
-  color-scheme: light dark;
+  overscroll-behavior-y: contain;
   scrollbar-width: thin;
-  overscroll-behavior-inline: contain;
   scrollbar-color: var(--color-green) var(--color-white);
 }
 .page::-webkit-scrollbar {

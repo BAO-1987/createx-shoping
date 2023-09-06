@@ -293,6 +293,7 @@ window.addEventListener('DOMContentLoaded', () => {
   resizableSwiper(
     '(max-width: 768px)',
     '.banners', {
+
       slidesPerView: 1,
       mousewheelControl: true,
       keyboardControl: true,
