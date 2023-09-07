@@ -472,6 +472,7 @@
 
     &::before {
       @include mask-small;
+      
       left: 0;
       mask-image: url("../img/sprite.svg#arrow");
       background-color: currentcolor;
