@@ -263,8 +263,52 @@ const recentlySlider = new Swiper(".recently-slider", {
 });
 
 
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
 
+//   const enableSwiper = (className, settings, callback) => {
+//     const swiper = new Swiper(className, settings);
+//     if (callback) {
+//       callback(swiper);
+//     }
+//     return swiper;
+//   };
+
+//   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+//     let swiper = null;
+//     const mq = window.matchMedia(breakpoint);
+
+//     const checker = () => {
+//       if (mq.matches) {
+//         swiper = enableSwiper(swiperClass, swiperSettings, callback);
+//       } else if (swiper) {
+//         swiper.destroy(true, true);
+//         swiper = null;
+//       }
+//     };
+
+//     mq.addEventListener('change', checker);
+//     checker();
+//   };
+
+//   resizableSwiper(
+//     '(max-width: 768px)',
+//     '.banners', {
+
+//       slidesPerView: 1,
+//       mousewheelControl: true,
+//       keyboardControl: true,
+//       grabCursor: true,
+//       pagination: {
+//         el: ".banners__pagination",
+//         clickable: true,
+//       },
+//     },
+//   );
+// });
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
   const enableSwiper = (className, settings, callback) => {
     const swiper = new Swiper(className, settings);
     if (callback) {
@@ -274,15 +318,12 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-    let swiper = null;
     const mq = window.matchMedia(breakpoint);
 
     const checker = () => {
       if (mq.matches) {
-        swiper = enableSwiper(swiperClass, swiperSettings, callback);
-      } else if (swiper) {
-        swiper.destroy(true, true);
-        swiper = null;
+        const swiper = enableSwiper(swiperClass, swiperSettings, callback);
+        mq.removeEventListener('change', checker); // Remove the listener after creating the swiper
       }
     };
 
@@ -293,7 +334,6 @@ window.addEventListener('DOMContentLoaded', () => {
   resizableSwiper(
     '(max-width: 768px)',
     '.banners', {
-
       slidesPerView: 1,
       mousewheelControl: true,
       keyboardControl: true,
@@ -303,5 +343,9 @@ window.addEventListener('DOMContentLoaded', () => {
         clickable: true,
       },
     },
+    (swiper) => {
+      // Optional callback function
+    }
   );
 });
+
