@@ -8,7 +8,6 @@
   &--sort {
     flex-direction: inherit;
     align-items: center;
-
     width: min(70%, 235px);
   }
 
@@ -20,16 +19,16 @@
 
 .choices {
   flex-grow: 1;
-  border-radius: var(--br);
   border: 1px solid var(--color-gray-400);
+  border-radius: var(--br);
   font-size: rem-f(14);
+}
 
-  .choices__inner {
-    border: none;
-    background-color: var(--color-white);
-    border-radius: var(--br);
-    padding: 0;
-  }
+.choices__inner {
+  border: none;
+  border-radius: var(--br);
+  padding: 0 !important;
+  background-color: var(--color-white);
 }
 
 .choices__list--single {

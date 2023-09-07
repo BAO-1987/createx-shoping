@@ -43,7 +43,6 @@
     position: relative;
     counter-increment: --counter;
 
-
     &::before {
       content: counter(--counter) ". ";
       font-weight: 700;
@@ -63,7 +62,6 @@
         top: 0;
       }
     }
-
   }
 
   &__aside {
@@ -93,8 +91,6 @@
   &__item {
     @include flex-sb;
   }
-
-
 }
 
 .shipping-adders {
@@ -102,4 +98,57 @@
   grid-template-columns: repeat(2, 1fr);
   margin-top: 40px;
   column-gap: var(--grid-gap);
+}
+
+.shipping-method {
+  display: grid;
+  gap: 1rem;
+
+  &__item {
+    @include flex-a-center;
+    gap: 12px;
+  }
+
+  &__input {
+    display: grid;
+    place-content: center;
+    border-radius: 100vw;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-white);
+    transition: background-color 120ms ease-in-out;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      border: 1px solid var(--color-gray-500);
+      border-radius: 100vw;
+      width: 1rem;
+      height: 1rem;
+      transition: 120ms border-color ease-in-out;
+    }
+
+
+
+    &:checked {
+      background-color: var(--color-green);
+
+      &::before {
+        border-color: var(--color-green);
+      }
+    }
+  }
+
+  &__label {
+    @include flex-col;
+
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--color-gray-800);
+    cursor: pointer;
+  }
+
+  &__price {
+    margin-left: auto;
+  }
 }
