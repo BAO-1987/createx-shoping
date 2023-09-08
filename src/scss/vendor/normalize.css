@@ -113,6 +113,16 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
 select::-ms-expand {
   display: none;
 }

@@ -12,10 +12,21 @@
       place-items: center;
       grid-template-columns: repeat(3, 1fr);
     }
+
+    @include for-width (-mobile-l) {
+      grid-auto-flow: column;
+      grid-auto-columns: 30%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-snap-align: start;
+      grid-template-columns: none;
+    }
   }
+
 
   &__item {
     position: relative;
+     width: auto;
 
     picture {
       overflow: hidden;
@@ -45,5 +56,15 @@
         transform: scale(1.05);
       }
     }
+
+    @include for-width (-mobile-l) {
+      max-width: 180px;
+      width: 100%;
+    }
   }
+}
+
+.categories-slider {
+  overflow: hidden;
+  position: relative;
 }

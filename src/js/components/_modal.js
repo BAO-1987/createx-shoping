@@ -12,6 +12,7 @@ buttons.forEach((button) => {
       }
       modal.showModal();
       currentModal = modal;
+      document.body.classList.add(".open");
     }
   });
 });
