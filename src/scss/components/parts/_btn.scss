@@ -190,6 +190,7 @@
   width: min(80%, 255px);
   max-width: inherit;
   align-self: center;
+  z-index: 120;
 
   &::before {
     mask-image: url("../img/sprite.svg#filter-hide");
@@ -206,6 +207,12 @@
     &::before {
       mask-image: url("../img/sprite.svg#filter-show");
     }
+  }
+
+  @include for-width(-mobile-sl) {
+    grid-column: 1 / span 2;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
