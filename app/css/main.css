@@ -2459,6 +2459,9 @@ h3::first-letter {
     z-index: 95;
     inset: 0;
     background-color: rgba(30, 33, 44, 0.75);
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
   }
 }
 .catalog__wrapper.active::before {
@@ -2514,6 +2517,7 @@ h3::first-letter {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    border: 1px solid var(--color-green);
   }
 }
 .filter__list {

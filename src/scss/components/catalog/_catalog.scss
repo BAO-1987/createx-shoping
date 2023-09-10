@@ -57,6 +57,7 @@
         z-index: 95;
         inset: 0;
         background-color: rgba(30, 33, 44, 0.75);
+        transition: width 0.3s ease-in-out;
       }
     }
 
