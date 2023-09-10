@@ -37,39 +37,36 @@
       <button class="btn filter__btn filter__btn--show hide" type="button" data-filters-show="#filtersSidebar">Show
         filters</button>
 
+
       <div class="catalog__sort">
 
         <div class="custom-select custom-select--sort">
 
           <label class="custom-select__label" for="sort">Sort by</label>
 
-          <div class="custom-select__inner">
-            <select name="sort" id="sort">
-              <option value="Popularity">Popularity</option>
-              <option value="Low Hight-Price">Low Hight-Price</option>
-              <option value="High Low-Price">High Low-Price</option>
-              <option value="Average rating">Average rating</option>
-            </select>
+          <select class="choices-select" name="sort" id="sort">
+            <option value="Popularity">Popularity</option>
+            <option value="Low Hight-Price">Low Hight-Price</option>
+            <option value="High Low-Price">High Low-Price</option>
+            <option value="Average rating">Average rating</option>
+          </select>
 
-             <span class="custom-select__focus"></span>
-          </div>
         </div>
 
         <div class="custom-select custom-select--show">
 
           <label class="custom-select__label" for="show">Show</label>
 
-          <div class="custom-select__inner">
-            <select class="custom-select__select" name="show" id="show">
-              <option value="12">12</option>
-              <option value="24">24</option>
-              <option value="36">36</option>
-            </select>
-          </div>
+          <select class="choices-select" name="show" id="show">
+            <option value="12">12</option>
+            <option value="24">24</option>
+            <option value="36">36</option>
+          </select>
 
-          <span class="custom-select__span">products per page</span>
+          <span class="custom-select__text">products per page</span>
 
         </div>
+
       </div>
 
       <nav class="pagination" aria-label="Reviews pagination" title="pagination">

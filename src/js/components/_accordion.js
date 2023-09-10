@@ -1,4 +1,4 @@
-//
+
 const summaries = document.querySelectorAll('summary');
 
 summaries.forEach((summary) => {

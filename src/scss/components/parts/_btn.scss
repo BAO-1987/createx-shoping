@@ -187,8 +187,8 @@
 }
 
 .filter__btn {
-  width: min(90%, 255px);
-  max-width: 100%;
+  width: min(80%, 255px);
+  max-width: inherit;
   align-self: center;
 
   &::before {

@@ -350,20 +350,194 @@ const recentlySlider = new Swiper(".recently-slider", {
 // });
 
 
+// window.addEventListener('DOMContentLoaded', () => {
+
+//   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+//     let swiper;
+
+//     breakpoint = window.matchMedia(breakpoint);
+
+//     const enableSwiper = function (className, settings) {
+//       swiper = new Swiper(className, settings);
+
+//       if (callback) {
+//         callback(swiper);
+//       }
+//     }
+
+//     const checker = function () {
+//       if (breakpoint.matches) {
+//         return enableSwiper(swiperClass, swiperSettings);
+//       } else {
+//         if (swiper !== undefined) swiper.destroy(true, true);
+//         return;
+//       }
+//     };
+
+//     breakpoint.addEventListener('change', checker);
+//     checker();
+//   }
+
+//   const someFunc = (instance) => {
+//     if (instance) {
+//       instance.on('slideChange', function (e) {
+//         console.log('*** mySwiper.activeIndex', instance.activeIndex);
+//       });
+//     }
+//   };
+
+//   resizableSwiper(
+//     '(max-width: 768px)',
+//     '.banners', {
+//       loop: true,
+//       grabCursor: true,
+//       spaceBetween: 0,
+//       slidesPerView: 1,
+//       pagination: {
+//         el: '.banners__pagination',
+//         clickable: true,
+//       },
+//     },
+//     someFunc
+//   );
+
+//   // resizableSwiper(
+//   //   '(max-width:768px)',
+//   //   '.categories-slider', {
+//   //     loop: true,
+//   //     grabCursor: true,
+//   //     spaceBetween: 30,
+//   //     slidesPerView: 4,
+//   //     pagination: {
+//   //       el: '.categories__pagination',
+//   //       clickable: true,
+//   //     },
+//   //   }
+//   // );
+
+//   //  resizableSwiper(
+//   //    '(max-width:475px)',
+//   //    '.categories-slider', {
+//   //      loop: true,
+//   //      grabCursor: true,
+//   //      spaceBetween: 20,
+//   //      slidesPerView: 3,
+//   //     //  pagination: {
+//   //     //    el: '.categories__pagination',
+//   //     //    clickable: true,
+//   //     //  },
+//   //    }
+//   //  );
+// });
+
+
+// window.addEventListener('DOMContentLoaded', () => {
+
+//   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+//     let swiper;
+//     const sliderElement = document.querySelector(swiperClass);
+
+//     if (!sliderElement) {
+//       // If the slider element does not exist on the page, return early.
+//       console.error(`Slider element with class '${swiperClass}' not found on the page.`);
+//       return;
+//     }
+
+//     breakpoint = window.matchMedia(breakpoint);
+
+//     const enableSwiper = function (className, settings) {
+//       swiper = new Swiper(className, settings);
+
+//       if (callback) {
+//         callback(swiper);
+//       }
+//     };
+
+//     const checker = function () {
+//       if (breakpoint.matches) {
+//         return enableSwiper(swiperClass, swiperSettings);
+//       } else {
+//         if (swiper !== undefined) swiper.destroy(true, true);
+//         return;
+//       }
+//     };
+
+//     breakpoint.addEventListener('change', checker);
+//     checker();
+//   };
+
+//   const someFunc = (instance) => {
+//     if (instance) {
+//       instance.on('slideChange', function (e) {
+//         console.log('*** mySwiper.activeIndex', instance.activeIndex);
+//       });
+//     }
+//   };
+
+//   resizableSwiper(
+//     '(max-width: 768px)',
+//     '.banners', {
+//       loop: true,
+//       grabCursor: true,
+//       spaceBetween: 0,
+//       slidesPerView: 1,
+//       pagination: {
+//         el: '.banners__pagination',
+//         clickable: true,
+//       },
+//     },
+//     someFunc
+//   );
+
+//   // resizableSwiper(
+//   //   '(max-width:768px)',
+//   //   '.categories-slider', {
+//   //     loop: true,
+//   //     grabCursor: true,
+//   //     spaceBetween: 30,
+//   //     slidesPerView: 4,
+//   //     pagination: {
+//   //       el: '.categories__pagination',
+//   //       clickable: true,
+//   //     },
+//   //   }
+//   // );
+
+//   //  resizableSwiper(
+//   //    '(max-width:475px)',
+//   //    '.categories-slider', {
+//   //      loop: true,
+//   //      grabCursor: true,
+//   //      spaceBetween: 20,
+//   //      slidesPerView: 3,
+//   //     //  pagination: {
+//   //     //    el: '.categories__pagination',
+//   //     //    clickable: true,
+//   //     //  },
+//   //    }
+//   //  );
+// });
+
+
 window.addEventListener('DOMContentLoaded', () => {
 
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
     let swiper;
+    const sliderElement = document.querySelector(swiperClass);
+
 
     breakpoint = window.matchMedia(breakpoint);
 
     const enableSwiper = function (className, settings) {
-      swiper = new Swiper(className, settings);
+      // Check if the slider element with the specified class exists on the page.
+      if (document.querySelector(className)) {
+        swiper = new Swiper(className, settings);
 
-      if (callback) {
-        callback(swiper);
+        if (callback) {
+          callback(swiper);
+        }
       }
-    }
+    };
 
     const checker = function () {
       if (breakpoint.matches) {
@@ -376,15 +550,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     breakpoint.addEventListener('change', checker);
     checker();
-  }
-
-  const someFunc = (instance) => {
-    if (instance) {
-      instance.on('slideChange', function (e) {
-        console.log('*** mySwiper.activeIndex', instance.activeIndex);
-      });
-    }
   };
+
 
   resizableSwiper(
     '(max-width: 768px)',
@@ -398,34 +565,6 @@ window.addEventListener('DOMContentLoaded', () => {
         clickable: true,
       },
     },
-    someFunc
   );
-
-  // resizableSwiper(
-  //   '(max-width:768px)',
-  //   '.categories-slider', {
-  //     loop: true,
-  //     grabCursor: true,
-  //     spaceBetween: 30,
-  //     slidesPerView: 4,
-  //     pagination: {
-  //       el: '.categories__pagination',
-  //       clickable: true,
-  //     },
-  //   }
-  // );
-
-  //  resizableSwiper(
-  //    '(max-width:475px)',
-  //    '.categories-slider', {
-  //      loop: true,
-  //      grabCursor: true,
-  //      spaceBetween: 20,
-  //      slidesPerView: 3,
-  //     //  pagination: {
-  //     //    el: '.categories__pagination',
-  //     //    clickable: true,
-  //     //  },
-  //    }
-  //  );
 });
+

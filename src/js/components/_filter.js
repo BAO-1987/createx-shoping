@@ -1,5 +1,5 @@
-const page = document.querySelector(".page");
 const showFiltersButton = document.querySelector("[data-filters-show]");
+const cataloWrapper = document.querySelector(".catalog__wrapper");
 const hideFiltersButton = document.querySelector("[data-filters-hide]");
 const filtersColumnsElement = document.querySelector("[data-filters-columns]");
 
@@ -11,6 +11,7 @@ if (filtersColumnsElement) {
     showFiltersButton.classList.remove("hide");
     document.querySelector(targetSelector).classList.add("hide");
     filtersColumnsElement.className = "catalog__content active";
+    cataloWrapper.classList.remove("active");
   });
 
   // Add event listener for showing filters
@@ -20,5 +21,6 @@ if (filtersColumnsElement) {
     showFiltersButton.classList.add("hide");
     document.querySelector(targetSelector).classList.remove("hide");
     filtersColumnsElement.className = "catalog__content";
+    cataloWrapper.classList.add("active");
   });
 }

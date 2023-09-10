@@ -1,21 +1,15 @@
 .filter {
-  flex: 0 0 auto;
-  width: 21%;
-  z-index: 55;
+  width: min(90%, 265px);
+  padding: 5px;
+  z-index: 110;
   background-color: var(--color-white);
-
-  @include for-width(-mobile-l) {
-    width: 165px;
-  }
 
   @include for-width(-mobile-md) {
     position: absolute;
-    width: 100%;
-    padding: 0 1rem;
     left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    width: 260px;
+    height: fit-content;
+    // transform: translateX(-200%);
   }
 
 

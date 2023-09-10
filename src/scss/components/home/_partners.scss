@@ -7,8 +7,14 @@
     grid-template-columns: repeat(6, 1fr);
     gap: clamp(0.5rem, calc(0.5rem + 5vw), 6.4rem);
 
-    @include for-width(-mobile-md) {
-      grid-template-columns: repeat(3, 1fr);
+    @include for-width (-mobile-l) {
+      grid-auto-flow: column;
+      grid-auto-columns: 25%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-snap-align: start;
+      grid-template-columns: none;
+      gap: 1.5rem;
     }
   }
 
