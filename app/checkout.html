@@ -599,43 +599,33 @@
             <ul class="shipping-method" role="list">
 
               <li class="shipping-method__item">
-
                 <input class="shipping-method__input" type="radio" id="curier-method" name="shipping"
                   value="Courier to your address">
-
                 <label class="shipping-method__label" for="curier-method">
                   Courier to your address
                   <span class="shipping-method__time">Estimated date: September 9</span>
                 </label>
-
                 <span class="shipping-method__price">$25.00</span>
-
               </li>
 
               <li class="shipping-method__item">
-
                 <input class="shipping-method__input" type="radio" id="store-method" name="shipping"
                   value="Pick up from store">
-
                 <label class="shipping-method__label" for="store-method">
                   Pick up from store
+                  <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
                 </label>
-                <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
                 <span class="shipping-method__price">Free</span>
-
               </li>
 
               <li class="shipping-method__item">
-
                 <input class="shipping-method__input" type="radio" id="ups-method" name="shipping"
                   value="UPS Ground Shipping">
-
                 <label class="shipping-method__label" for="ups-method">
                   UPS Ground Shipping
                   <span class="shipping-method__time">Up to one week</span>
-                  <span class="shipping-method__price">$10.00</span>
                 </label>
-
+                <span class="shipping-method__price">$10.00</span>
               </li>
 
               <li class="shipping-method__item">
@@ -645,21 +635,20 @@
                 <label class="shipping-method__label" for="createx-method">
                   Pick up at Createx Locker
                   <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
-                  <span class="shipping-method__price">$8.50</span>
                 </label>
+                <span class="shipping-method__price">$8.50</span>
               </li>
 
               <li class="shipping-method__item">
                 <input class="shipping-method__input" type="radio" id="global-method" name="shipping"
                   value="Createx Global Export">
 
-                <label class="shipping-method__label" for="createx-method">
+                <label class="shipping-method__label" for="global-method">
                   Createx Global Export
                   <span class="shipping-method__time">3-4 days</span>
-                  <span class="shipping-method__price">$15.00</span>
                 </label>
+                <span class="shipping-method__price">$15.00</span>
               </li>
-
             </ul>
 
           </li>
@@ -674,14 +663,15 @@
                 <details>
                   <summary>
                     <p>Credit card</p>
+                    <img data-logo src="img/visa.svg" alt="pay card" width="48" height="26">
                   </summary>
 
                   <di class="accordion__content">
                     <div class="credit-card">
-                      <fieldset class="form__box">
+                      <fieldset class="form__box form__box--fieldset" data-connected-inputs>
                         <label class="form__label" for="cc-1">Card Number</label>
 
-                        <input type="tel" maxlength="4" aria-label="Credit Card First 4 Digits" id="cc-1"
+                        <input c type="tel" maxlength="4" aria-label="Credit Card First 4 Digits" id="cc-1"
                           placeholder="0000" required pattern="[0-9]{4}" />
                         <input type="tel" maxlength="4" aria-label="Credit Card Second 4 Digits" placeholder="0000"
                           required pattern="[0-9]{4}" />
@@ -689,37 +679,40 @@
                           required pattern="[0-9]{4}" />
                         <input type="tel" maxlength="4" aria-label="Credit Card Last 4 Digits" placeholder="0000"
                           required pattern="[0-9]{4}" />
-
                       </fieldset>
 
-                      <div class="form__box">
-                        <label class="form__label" for="expiration-date">Expiry date</label>
-                        <input class="form__input" type="tel" maxlength="4" id="expiration-date"
-                          aria-label="Credit Card expiry" placeholder="mm/yy" />
+                      <fieldset class="credit-card__interaction">
 
-                          <select id="expiration-month" aria-label="Expiration Month" required>
-                            <option>01</option>
-                            <option>02</option>
-                            <option>03</option>
-                            <option>04</option>
-                            <option>05</option>
-                            <option>06</option>
-                            <option>07</option>
-                            <option>08</option>
-                            <option>09</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                          </select>
-                          <select id="expiration-year" aria-label="Expiration Year" required
-                            data-expiration-year></select>
-                      </div>
+                        <div class="form__box">
+                          <label class="form__label" for="expiration-date">Expiry date
+                            <select id="expiration-month" aria-label="Expiration Month" required>
+                              <option disabled>mm</option>
+                              <option>01</option>
+                              <option>02</option>
+                              <option>03</option>
+                              <option>04</option>
+                              <option>05</option>
+                              <option>06</option>
+                              <option>07</option>
+                              <option>08</option>
+                              <option>09</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                            </select>
+                            <select id="expiration-year" aria-label="Expiration Year" required
+                              data-expiration-year></select>
+                          </label>
 
-                      <div class="form__box">
-                        <label class="form__label" for="cvc">CVC</label>
-                        <input class="form__input" type="tel" maxlength="3" id="cvc" aria-label="Credit Card CVC code"
-                          required />
-                      </div>
+                        </div>
+
+                        <div class="form__box">
+                          <label class="form__label" for="cvc">CVC</label>
+                          <input class="form__input" type="tel" maxlength="3" id="cvc" aria-label="Credit Card CVC code"
+                            required />
+                        </div>
+
+                      </fieldset>
 
                 </details>
               </li>
