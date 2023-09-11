@@ -241,57 +241,29 @@
               <li class="accordion__item accordion__item--creddit">
                 <details>
                   <summary>
-                    <p>Credit card</p>
+                    <p>Credit card (<span class="type">unknown</span>):</p>
                     <img data-logo src="img/visa.svg" alt="pay card" width="48" height="26">
                   </summary>
 
-                  <di class="accordion__content">
-                    <div class="credit-card">
-                      <fieldset class="form__box form__box--fieldset" data-connected-inputs>
-                        <label class="form__label" for="cc-1">Card Number</label>
+                  <div class="accordion__content">
 
-                        <input c type="tel" maxlength="4" aria-label="Credit Card First 4 Digits" id="cc-1"
-                          placeholder="0000" required pattern="[0-9]{4}" />
-                        <input type="tel" maxlength="4" aria-label="Credit Card Second 4 Digits" placeholder="0000"
-                          required pattern="[0-9]{4}" />
-                        <input type="tel" maxlength="4" aria-label="Credit Card Third 4 Digits" placeholder="0000"
-                          required pattern="[0-9]{4}" />
-                        <input type="tel" maxlength="4" aria-label="Credit Card Last 4 Digits" placeholder="0000"
-                          required pattern="[0-9]{4}" />
-                      </fieldset>
+                    <div class="form__box">
+                      <label class="form__label" for="Card-number">Card number</label>
+                      <input class="form__input" type="text" id="Card-number" placeholder="0000 0000 0000 0000"
+                        data-format="card">
+                    </div>
 
-                      <fieldset class="credit-card__interaction">
+                    <div class="form__box">
+                      <label class="form__label" for="Expiry-date">Expiry date</label>
+                      <input class="form__input" type="text" id="Expiry-date" placeholder="mm/yy" data-format="date">
+                    </div>
 
-                        <div class="form__box">
-                          <label class="form__label" for="expiration-date">Expiry date
-                            <select id="expiration-month" aria-label="Expiration Month" required>
-                              <option disabled>mm</option>
-                              <option>01</option>
-                              <option>02</option>
-                              <option>03</option>
-                              <option>04</option>
-                              <option>05</option>
-                              <option>06</option>
-                              <option>07</option>
-                              <option>08</option>
-                              <option>09</option>
-                              <option>10</option>
-                              <option>11</option>
-                              <option>12</option>
-                            </select>
-                            <select id="expiration-year" aria-label="Expiration Year" required
-                              data-expiration-year></select>
-                          </label>
+                    <div class="form__box">
+                      <label class="form__label" for="CVC">CVC</label>
+                      <input class="form__input" type="text" id="CVC" placeholder="000" data-format="cvc">
+                    </div>
 
-                        </div>
-
-                        <div class="form__box">
-                          <label class="form__label" for="cvc">CVC</label>
-                          <input class="form__input" type="tel" maxlength="3" id="cvc" aria-label="Credit Card CVC code"
-                            required />
-                        </div>
-
-                      </fieldset>
+                  </div>
 
                 </details>
               </li>
