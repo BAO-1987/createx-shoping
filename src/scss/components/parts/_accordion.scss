@@ -19,12 +19,11 @@
       margin-bottom: rem-f(40);
     }
 
-
-    &--credit {
-      padding: 1.2rem;
+    &--payment {
       width: 100%;
       max-width: 390px;
       padding: rem-f(24);
+      box-shadow: var(--shadow-small);
       border: 1px solid var(--color-gray-300);
       border-radius: var(--br);
 
@@ -35,6 +34,10 @@
       summary {
         @include flex;
         gap: 15px;
+      }
+
+      .form__label {
+        pointer-events: none;
       }
     }
 
@@ -100,12 +103,22 @@
       max-width: 100%;
       display: flex;
     }
-
-    &--credit {}
   }
 
   &__content {
     padding-top: 1rem;
+    width: max-content;
+
+    &--credit {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0;
+      gap: rem-f(24);
+
+      .form__box:first-child {
+        grid-column: 2 span;
+      }
+    }
   }
 
   &__text {

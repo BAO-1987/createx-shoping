@@ -178,7 +178,8 @@
             <ul class="shipping-method" role="list">
 
               <li class="shipping-method__item">
-                <input class="form__input form__input--ratio" type="radio" id="curier-method">
+                <input class="form__input form__input--ratio" type="radio" id="curier-method" value="curier-method"
+                  name="shipping">
                 <label class="form__label" for="curier-method">
                   Courier to your address
                   <span class="shipping-method__time">Estimated date: September 9</span>
@@ -187,7 +188,8 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="form__input form__input--ratio" type="radio" id="store-method" name="shipping">
+                <input class="form__input form__input--ratio" type="radio" id="store-method" value="store-method"
+                  name="shipping">
                 <label class="form__label" for="store-method">
                   Pick up from store
                   <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
@@ -196,7 +198,8 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="form__input form__input--ratio" type="radio" id="ups-method" name="shipping">
+                <input class="form__input form__input--ratio" type="radio" id="ups-method" value="ups-method"
+                  name="shipping">
                 <label class="form__label" for="ups-method">
                   UPS Ground Shipping
                   <span class="shipping-method__time">Up to one week</span>
@@ -205,8 +208,8 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="form__input form__input--ratio" type="radio" id="createx-method" name="shipping">
-
+                <input class="form__input form__input--ratio" type="radio" id="createx-method" value="createx-method"
+                  name="shipping">
                 <label class="form__label" for="createx-method">
                   Pick up at Createx Locker
                   <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
@@ -215,14 +218,15 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="form__input form__input--ratio" type="radio" id="global-method" name="shipping">
-
+                <input class="form__input form__input--ratio" type="radio" id="global-method" value="global-method"
+                  name="shipping">
                 <label class="form__label" for="global-method">
                   Createx Global Export
                   <span class="shipping-method__time">3-4 days</span>
                 </label>
                 <span class="shipping-method__price">$15.00</span>
               </li>
+
             </ul>
 
           </li>
@@ -233,65 +237,74 @@
 
             <ul class="accordion__list" role="list">
 
-              <li class="accordion__item">
+              <li class="accordion__item accordion__item--payment">
                 <details>
                   <summary>
-                    <input class="form__input form__input--ratio" type="radio" id="Credit-card" name="Credit-card">
-
-                    <label class="shipping-method__label" for="Credit-card">
+                    <input class="form__input form__input--ratio" type="radio" id="Credit-card" name="payment">
+                    <label class="form__label" for="Credit-card">
                       Credit card:
                     </label>
-
                     <img src="img/visa.png" alt="pay card" width="48" height="26" loading="lazy">
                     <img src="img/master-card.png" alt="pay card" width="48" height="26" loading="lazy">
                   </summary>
 
-                  <div class="accordion__conten accordion__conten--credit">
+                  <div class="accordion__content accordion__content--credit">
 
-                      <div class="form__box">
-                        <label class="form__label" for="Card-number">Card number:
-                          <span class="credit-card__type"></span>
-                        </label>
-                        <input class="form__input" type="text" id="Card-number" placeholder="0000 0000 0000 0000"
-                          data-format="card">
-                      </div>
+                    <div class="form__box">
+                      <label class="form__label" for="Card-number">Card number:
+                        <span class="credit-card__type"></span>
+                      </label>
+                      <input class="form__input" type="text" id="Card-number" placeholder="0000 0000 0000 0000"
+                        data-format="card">
+                    </div>
 
-                      <div class="form__box">
-                        <label class="form__label" for="Expiry-date">Expiry date</label>
-                        <input class="form__input" type="text" id="Expiry-date" placeholder="mm/yy" data-format="date">
-                      </div>
+                    <div class="form__box">
+                      <label class="form__label" for="Expiry-date">Expiry date</label>
+                      <input class="form__input" type="text" id="Expiry-date" placeholder="mm/yy" data-format="date">
+                    </div>
 
-                      <div class="form__box">
-                        <label class="form__label" for="CVC">CVC</label>
-                        <input class="form__input" type="text" id="CVC" placeholder="000" data-format="cvc">
-                      </div>
+                    <div class="form__box">
+                      <label class="form__label" for="CVC">CVC</label>
+                      <input class="form__input" type="text" id="CVC" placeholder="000" data-format="cvc">
+                    </div>
 
                   </div>
 
                 </details>
               </li>
 
-              <li class="accordion__item">
+              <li class="accordion__item accordion__item--payment">
                 <details>
                   <summary>
-                    <p>PayPal</p>
+                    <input class="form__input form__input--ratio" type="radio" id="PayPal" name="payment"
+                      value="PayPal">
+                    <label class="form__label" for="PayPal">
+                      PayPal
+                    </label>
+                    <img src="img/pay-pal.png" alt="PayPal method" width="48" height="26" loading="lazy">
                   </summary>
 
                   <div class="accordion__content">
-                    Pay paypal
+                    <a href="#" target="_blank">
+                      <img src="img/paypal-main.png" alt="paypal method" width="300" height="44" loading="lazy">
+                    </a>
                   </div>
 
                 </details>
               </li>
 
-              <li class="accordion__item">
+              <li class="accordion__item accordion__item--payment">
                 <details>
-                  <summary>
-                    <p>Cash on delivery</p>
-                  </summary>
+                    <summary>
+                      <input class="form__input form__input--ratio" type="radio" id="Cash" name="payment"
+                        value="Cash">
+                      <label class="form__label" for="Cash">
+                        Cash on delivery
+                      </label>
+                    </summary>
 
                   <div class="accordion__content">
-                    3
+                  <p>You have selected to pay with cash upon delivery.</p>
                   </div>
 
                 </details>

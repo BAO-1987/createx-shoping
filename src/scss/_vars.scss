@@ -7,7 +7,7 @@
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --color-white: #fff;
-   --color-white-100: #f1f1f1;
+  --color-white-100: #f1f1f1;
   --color-green: #17696a;
   --color-green-100: #03cea4;
   --color-green-200: #67ba92;
@@ -36,4 +36,8 @@
   --color-orange: #fb9620;
   --br: 0.25em;
   --grid-gap: 30px;
+  --shadow-small: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.08);
 }

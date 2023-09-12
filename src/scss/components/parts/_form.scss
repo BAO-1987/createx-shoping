@@ -5,7 +5,7 @@
   &__box {
     @include flex-col;
 
-    margin-bottom: rem-f(25);
+    // margin-bottom: rem-f(25);
     gap: rem-f(10);
 
     &--textarea {

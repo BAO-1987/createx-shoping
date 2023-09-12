@@ -17,24 +17,6 @@
     font-weight: 700;
   }
 
-  // .accordion__item {
-  //   padding: 1.2rem;
-  //   width: 100%;
-  //   max-width: 390px;
-  //   padding: rem-f(24);
-  //   border: 1px solid var(--color-gray-300);
-  //   border-radius: var(--br);
-
-  //   &::before {
-  //     content: none;
-  //   }
-
-  //   summary {
-  //     @include flex;
-  //     gap: 15px;
-  //   }
-  // }
-
   .form__label {
     @include flex-col;
 
@@ -199,16 +181,8 @@
   }
 }
 
-.credit-card {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 20px;
-
-  &__type {
-    text-transform: capitalize;
-  }
-
-  .form__box:first-child {
-    grid-column: 2 span;
-  }
+.credit-card__type {
+  display: contents;
+  text-transform: capitalize;
+  color: var(--color-green);
 }
