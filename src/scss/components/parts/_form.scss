@@ -3,34 +3,13 @@
   max-width: 100%;
 
   &__box {
-    @include flex-sb;
+    @include flex-col;
 
-    position: relative;
-    margin-bottom: 50px;
+    margin-bottom: rem-f(25);
+    gap: rem-f(10);
 
     &--textarea {
       grid-column: 2 span;
-    }
-
-    &--fieldset {
-      padding: 16px 0 13px 13px;
-      justify-content: flex-start;
-      border-radius: var(--br);
-      border: 1px solid var(--color-gray-400);
-      background-color: var(--color-white);
-
-      input {
-        width: 45px;
-        padding: 2px;
-        height: 25px;
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
-
-        // &:focus {
-        //   outline-color: transparent;
-        // }
-      }
     }
   }
 
@@ -39,10 +18,14 @@
     outline: 0;
     border: 1px solid var(--color-gray-400);
     border-radius: var(--br);
-    padding: em(10) 0 em(10) em(16);
+    padding: rem-f(12) 0 rem-f(12) rem-f(16);
     width: 100%;
     background-color: var(--color-white);
     transition: border-color 0.3s linear;
+
+    &::placeholder {
+      color: var(--color-gray-600);
+    }
 
     &:focus {
       border-color: var(--color-green);
@@ -64,10 +47,9 @@
     }
   }
 
-  &__label {
-    position: absolute;
-    top: -30px;
-  }
+  // &__label {
+  //   // top: -30px;
+  // }
 
   &__text {
     margin-bottom: 3rem;
@@ -188,7 +170,6 @@
     margin-bottom: 2rem;
   }
 }
-
 
 // переробити модалки//
 .form-modal {
@@ -358,7 +339,6 @@
 
 //   &__item {
 //     counter-increment: my-awesome-counter;
-
 
 //     &::before {
 //       content: counter(my-awesome-counter) ". ";

@@ -14,7 +14,7 @@ import Cleave from 'cleave.js';
         new Cleave(element, {
           creditCard: true,
           onCreditCardTypeChanged: function (type) {
-            document.querySelector('.type').innerHTML = type;
+            document.querySelector('.credit-card__type').innerHTML = type;
           }
         });
         break;

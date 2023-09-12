@@ -16,6 +16,13 @@
   &__link {
     font-weight: 700;
   }
+
+  .accordion__item {
+    summary {
+      @include flex;
+      gap: 15px;
+    }
+  }
 }
 
 .alert {
@@ -68,7 +75,7 @@
       padding-top: 1.5rem;
     }
 
-    .accordion__item summary{
+    .accordion__item summary {
 
       &::before,
       &::after {
@@ -183,9 +190,7 @@
   border: 1px solid var(--color-gray-300);
   border-radius: var(--br);
 
-
-  &__interaction {
-    border: none;
-    
+  &__type {
+    text-transform: capitalize;
   }
 }

@@ -659,29 +659,40 @@
 
             <ul class="accordion__list" role="list">
 
-              <li class="accordion__item accordion__item--creddit">
+              <li class="accordion__item">
                 <details>
                   <summary>
-                    <p>Credit card (<span class="type">unknown</span>):</p>
-                    <img data-logo src="img/visa.svg" alt="pay card" width="48" height="26">
+                    <label for="Credit-card">
+                      Credit card
+                      <input class="shipping-method__input" type="radio" id="Credit-card" name="Credit-card"
+                        value="Credit-card">
+                      <span class="credit-card__type"></span>
+                    </label>
+
+                    <img src="img/visa.svg" alt="pay card" width="48" height="26">
+                    <img src="img/master-card.svg" alt="pay card" width="48" height="26">
                   </summary>
 
                   <div class="accordion__content">
 
-                    <div class="form__box">
-                      <label class="form__label" for="Card-number">Card number</label>
-                      <input class="form__input" type="text" id="Card-number" placeholder="0000 0000 0000 0000"
-                        data-format="card">
-                    </div>
+                    <div class="credit-card">
 
-                    <div class="form__box">
-                      <label class="form__label" for="Expiry-date">Expiry date</label>
-                      <input class="form__input" type="text" id="Expiry-date" placeholder="mm/yy" data-format="date">
-                    </div>
+                      <div class="form__box">
+                        <label class="form__label" for="Card-number">Card number</label>
+                        <input class="form__input" type="text" id="Card-number" placeholder="0000 0000 0000 0000"
+                          data-format="card">
+                      </div>
 
-                    <div class="form__box">
-                      <label class="form__label" for="CVC">CVC</label>
-                      <input class="form__input" type="text" id="CVC" placeholder="000" data-format="cvc">
+                      <div class="form__box">
+                        <label class="form__label" for="Expiry-date">Expiry date</label>
+                        <input class="form__input" type="text" id="Expiry-date" placeholder="mm/yy" data-format="date">
+                      </div>
+
+                      <div class="form__box">
+                        <label class="form__label" for="CVC">CVC</label>
+                        <input class="form__input" type="text" id="CVC" placeholder="000" data-format="cvc">
+                      </div>
+
                     </div>
 
                   </div>
