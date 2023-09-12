@@ -19,9 +19,28 @@
       margin-bottom: rem-f(40);
     }
 
-    details {
-      overflow: hidden;
+
+    &--credit {
+      padding: 1.2rem;
+      width: 100%;
+      max-width: 390px;
+      padding: rem-f(24);
+      border: 1px solid var(--color-gray-300);
+      border-radius: var(--br);
+
+      &::before {
+        content: none;
+      }
+
+      summary {
+        @include flex;
+        gap: 15px;
+      }
     }
+
+    // details {
+    //   overflow: hidden;
+    // }
 
     summary {
       position: relative;
@@ -82,9 +101,7 @@
       display: flex;
     }
 
-    &--credit {
-      
-    }
+    &--credit {}
   }
 
   &__content {

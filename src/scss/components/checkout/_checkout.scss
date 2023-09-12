@@ -17,11 +17,31 @@
     font-weight: 700;
   }
 
-  .accordion__item {
-    summary {
-      @include flex;
-      gap: 15px;
-    }
+  // .accordion__item {
+  //   padding: 1.2rem;
+  //   width: 100%;
+  //   max-width: 390px;
+  //   padding: rem-f(24);
+  //   border: 1px solid var(--color-gray-300);
+  //   border-radius: var(--br);
+
+  //   &::before {
+  //     content: none;
+  //   }
+
+  //   summary {
+  //     @include flex;
+  //     gap: 15px;
+  //   }
+  // }
+
+  .form__label {
+    @include flex-col;
+
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--color-gray-800);
+    cursor: pointer;
   }
 }
 
@@ -126,51 +146,47 @@
 
   &__item {
     @include flex-a-center;
-    padding-left: 30px;
-    position: relative;
     gap: 12px;
   }
 
-  &__input {
-    position: absolute;
-    left: 0;
-    top: 8px;
-    display: grid;
-    place-content: center;
-    border-radius: 100vw;
-    width: 8px;
-    height: 8px;
-    background-color: var(--color-white);
-    transition: background-color 120ms ease-in-out;
-    cursor: pointer;
+  // &__input {
+  //   align-self: baseline;
+  //   margin-top: 8px;
+  //   display: grid;
+  //   place-content: center;
+  //   border-radius: 100vw;
+  //   width: 8px;
+  //   height: 8px;
+  //   background-color: var(--color-white);
+  //   transition: background-color 120ms ease-in-out;
+  //   cursor: pointer;
 
-    &::before {
-      content: "";
-      border: 1px solid var(--color-gray-500);
-      border-radius: 100vw;
-      width: 1rem;
-      height: 1rem;
-      transition: 120ms border-color ease-in-out;
-    }
+  //   &::before {
+  //     content: "";
+  //     border: 1px solid var(--color-gray-500);
+  //     border-radius: 100vw;
+  //     width: 1rem;
+  //     height: 1rem;
+  //     transition: 120ms border-color ease-in-out;
+  //   }
 
-    &:checked {
-      background-color: var(--color-green);
+  //   &:checked {
+  //     background-color: var(--color-green);
 
-      &::before {
-        border-color: var(--color-green);
-      }
-    }
-  }
+  //     &::before {
+  //       border-color: var(--color-green);
+  //     }
+  //   }
+  // }
 
-  &__label {
-    position: relative;
-    @include flex-col;
+  // &__label {
+  //   @include flex-col;
 
-    font-weight: 700;
-    line-height: 1.6;
-    color: var(--color-gray-800);
-    cursor: pointer;
-  }
+  //   font-weight: 700;
+  //   line-height: 1.6;
+  //   color: var(--color-gray-800);
+  //   cursor: pointer;
+  // }
 
   &__price {
     margin-left: auto;
@@ -184,13 +200,15 @@
 }
 
 .credit-card {
-  width: 100%;
-  max-width: 390px;
-  padding: rem-f(44) rem-f(24) rem-f(24);
-  border: 1px solid var(--color-gray-300);
-  border-radius: var(--br);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
 
   &__type {
     text-transform: capitalize;
+  }
+
+  .form__box:first-child {
+    grid-column: 2 span;
   }
 }

@@ -173,14 +173,13 @@
 
           <li class="checkout-form__item">
 
-            <span class="checkout-form__title">Shipping Method</span>
+            <p class="checkout-form__title">Shipping Method</p>
 
             <ul class="shipping-method" role="list">
 
               <li class="shipping-method__item">
-                <input class="shipping-method__input" type="radio" id="curier-method" name="shipping"
-                  value="Courier to your address">
-                <label class="shipping-method__label" for="curier-method">
+                <input class="form__input form__input--ratio" type="radio" id="curier-method">
+                <label class="form__label" for="curier-method">
                   Courier to your address
                   <span class="shipping-method__time">Estimated date: September 9</span>
                 </label>
@@ -188,9 +187,8 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="shipping-method__input" type="radio" id="store-method" name="shipping"
-                  value="Pick up from store">
-                <label class="shipping-method__label" for="store-method">
+                <input class="form__input form__input--ratio" type="radio" id="store-method" name="shipping">
+                <label class="form__label" for="store-method">
                   Pick up from store
                   <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
                 </label>
@@ -198,9 +196,8 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="shipping-method__input" type="radio" id="ups-method" name="shipping"
-                  value="UPS Ground Shipping">
-                <label class="shipping-method__label" for="ups-method">
+                <input class="form__input form__input--ratio" type="radio" id="ups-method" name="shipping">
+                <label class="form__label" for="ups-method">
                   UPS Ground Shipping
                   <span class="shipping-method__time">Up to one week</span>
                 </label>
@@ -208,10 +205,9 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="shipping-method__input" type="radio" id="createx-method" name="shipping"
-                  value="Pick up at Createx Locker">
+                <input class="form__input form__input--ratio" type="radio" id="createx-method" name="shipping">
 
-                <label class="shipping-method__label" for="createx-method">
+                <label class="form__label" for="createx-method">
                   Pick up at Createx Locker
                   <span class="shipping-method__time">Pick up on September 8 from 12:00</span>
                 </label>
@@ -219,10 +215,9 @@
               </li>
 
               <li class="shipping-method__item">
-                <input class="shipping-method__input" type="radio" id="global-method" name="shipping"
-                  value="Createx Global Export">
+                <input class="form__input form__input--ratio" type="radio" id="global-method" name="shipping">
 
-                <label class="shipping-method__label" for="global-method">
+                <label class="form__label" for="global-method">
                   Createx Global Export
                   <span class="shipping-method__time">3-4 days</span>
                 </label>
@@ -234,31 +229,29 @@
 
           <li class="checkout-form__item">
 
-            <span class="checkout-form__title">Payment Method</span>
+            <p class="checkout-form__title">Payment Method</p>
 
             <ul class="accordion__list" role="list">
 
               <li class="accordion__item">
                 <details>
                   <summary>
-                    <label for="Credit-card">
-                      Credit card
-                      <input class="shipping-method__input" type="radio" id="Credit-card" name="Credit-card"
-                        value="Credit-card">
-                      <span class="credit-card__type"></span>
+                    <input class="form__input form__input--ratio" type="radio" id="Credit-card" name="Credit-card">
+
+                    <label class="shipping-method__label" for="Credit-card">
+                      Credit card:
                     </label>
 
-
-                    <img src="img/visa.svg" alt="pay card" width="48" height="26">
-                    <img src="img/master-card.svg" alt="pay card" width="48" height="26">
+                    <img src="img/visa.png" alt="pay card" width="48" height="26" loading="lazy">
+                    <img src="img/master-card.png" alt="pay card" width="48" height="26" loading="lazy">
                   </summary>
 
-                  <div class="accordion__content">
-
-                    <div class="credit-card">
+                  <div class="accordion__conten accordion__conten--credit">
 
                       <div class="form__box">
-                        <label class="form__label" for="Card-number">Card number</label>
+                        <label class="form__label" for="Card-number">Card number:
+                          <span class="credit-card__type"></span>
+                        </label>
                         <input class="form__input" type="text" id="Card-number" placeholder="0000 0000 0000 0000"
                           data-format="card">
                       </div>
@@ -272,8 +265,6 @@
                         <label class="form__label" for="CVC">CVC</label>
                         <input class="form__input" type="text" id="CVC" placeholder="000" data-format="cvc">
                       </div>
-
-                    </div>
 
                   </div>
 

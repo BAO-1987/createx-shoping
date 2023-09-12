@@ -26,4 +26,8 @@
     font-size: rem-f(20);
     color: var(--color-gray-700);
   }
+
+  .form {
+    @include flex-sb;
+  }
 }
