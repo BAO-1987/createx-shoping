@@ -11,6 +11,12 @@
     &--textarea {
       grid-column: 2 span;
     }
+
+    &--btn {
+      flex-direction: initial;
+      justify-content: space-between;
+       gap: rem-f(10);
+    }
   }
 
   &__input {

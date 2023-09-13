@@ -87,6 +87,8 @@
   }
 
   &__aside {
+    @include flex-col;
+    gap: 1.5rem;
     position: sticky;
     top: 10%;
     flex-basis: 390px;
@@ -99,6 +101,11 @@
     font-weight: 700;
     font-size: rem-f(24);
     line-height: 1.3;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -185,4 +192,39 @@
   display: contents;
   text-transform: capitalize;
   color: var(--color-green);
+}
+
+.checkout-order {
+  padding: 1.5rem;
+  border-radius: var(--br);
+  background-color: var(--color-gray-200);
+  font-weight: 700;
+  line-height: 1.6;
+
+  &__list {
+    position: relative;
+    padding: 1.5rem 0;
+    margin-bottom: 1.25rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-gray-300);
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  &__total {
+    @include flex-sb;
+  }
 }

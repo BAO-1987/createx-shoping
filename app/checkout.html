@@ -670,7 +670,6 @@
                   </summary>
 
                   <div class="accordion__content accordion__content--credit">
-
                     <div class="form__box">
                       <label class="form__label" for="Card-number">Card number:
                         <span class="credit-card__type"></span>
@@ -688,9 +687,7 @@
                       <label class="form__label" for="CVC">CVC</label>
                       <input class="form__input" type="text" id="CVC" placeholder="000" data-format="cvc">
                     </div>
-
                   </div>
-
                 </details>
               </li>
 
@@ -704,39 +701,32 @@
                     </label>
                     <img src="img/pay-pal.png" alt="PayPal method" width="48" height="26" loading="lazy">
                   </summary>
-
                   <div class="accordion__content">
                     <a href="#" target="_blank">
                       <img src="img/paypal-main.png" alt="paypal method" width="300" height="44" loading="lazy">
                     </a>
                   </div>
-
                 </details>
               </li>
 
               <li class="accordion__item accordion__item--payment">
                 <details>
-                    <summary>
-                      <input class="form__input form__input--ratio" type="radio" id="Cash" name="payment"
-                        value="Cash">
-                      <label class="form__label" for="Cash">
-                        Cash on delivery
-                      </label>
-                    </summary>
-
+                  <summary>
+                    <input class="form__input form__input--ratio" type="radio" id="Cash" name="payment" value="Cash">
+                    <label class="form__label" for="Cash">
+                      Cash on delivery
+                    </label>
+                  </summary>
                   <div class="accordion__content">
-                  <p>You have selected to pay with cash upon delivery.</p>
+                    <p>You have selected to pay with cash upon delivery.</p>
                   </div>
-
                 </details>
               </li>
-
             </ul>
           </li>
 
           <li class="checkout-form__item">
-            <span>Additional Information (Optional)</span>
-
+            <p class="checkout-form__title">Additional Information (Optional)</p>
             <div class="form__box form__box--textarea">
               <label class="form__label" for="message">Order notes</label>
               <textarea class="form__input form__input--textarea" name="message" id="reviewText" rows="3"
@@ -748,16 +738,55 @@
 
         <aside class="checkout-form__aside">
 
-          <div class="form__box">
+          <div class="form__box form__box--btn">
             <label class="form__label" for="promo">Apply a promo code
+              <input class="form__input" type="text" id="promo" placeholder="Enter promo code">
             </label>
-            <input class="form__input" type="text" id="promo" placeholder="Enter promo code">
+
             <button class="btn" type="button">Apply</button>
           </div>
+
+          <div class="checkout-order">
+
+            <p class="checkout-form__title">Order totals</p>
+
+            <ul class="checkout-order__list" role="list">
+
+              <li class="check-order__item">
+                <span>Subtotal:</span>
+                <span>$198.65</span>
+              </li>
+
+              <li class="check-order__item">
+                <span>Shipping costs:</span>
+                <span>$25.00</span>
+              </li>
+
+              <li class="check-order__item">
+                <span>Discount:</span>
+                <span>—</span>
+              </li>
+
+              <li class="check-order__item">
+                <span>Estimated sales tax:</span>
+                <span>$6.35</span>
+              </li>
+
+            </ul>
+
+            <div class="check-order__total">
+              <span>Order total:</span>
+              <span>$230.00</span>
+            </div>
+
+          </div>
+
+          <button class="heckout-form__btn btn" type="button">Complete order</button>
 
         </aside>
 
       </div>
+
     </form>
 
   </div>
