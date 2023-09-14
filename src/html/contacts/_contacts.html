@@ -70,43 +70,39 @@
             </li>
           </ul>
 
-          <form class="form" action="#" autocomplete="off" method="get">
+          <form class="form form--contacts" action="#" autocomplete="off" method="get">
 
             <p class="form__text">Or get in touch with us by completing the below form:</p>
 
             <div class="form__wrapper">
 
-              <div class="form__box">
-                <label class="form__label" for="name">Full Name*
-                </label>
+              <label class="form__label" for="name">
+                <span>Full Name*</span>
                 <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your full name"
-                  required aria-invalid="true" aria-errormessage="Your full name eror">
-              </div>
+                  required>
+              </label>
 
-              <div class="form__box">
-                <label class="form__label" for="phone">Phone
-                </label>
+              <label class="form__label" for="phone">
+                <span>Phone</span>
                 <input class="form__input" type="tel" id="phone" name="phone" placeholder="Your phone number" required>
-              </div>
+              </label>
 
-              <div class="form__box">
-                <label class="form__label" for="email">Email*</label>
+              <label class="form__label" for="email">
+                <span>Email*</span>
                 <input class="form__input" type="email" id="email" autocomplete="username"
-                  placeholder="Your working email" required aria-invalid="true" aria-errormessage="email-error">
-              </div>
+                  placeholder="Your working email" required>
+              </label>
 
-              <div class="form__box">
-                <label class="form__label" for="subject">Subject
-                </label>
-                <input class="form__input" type="text" id="subject" placeholder="Title your message" required
-                  aria-invalid="true" aria-errormessage="Your full name eror">
-              </div>
+              <label class="form__label" for="subject">
+                <span> Subject</span>
+                <input class="form__input" type="text" id="subject" placeholder="Title your message" required>
+              </label>
 
-              <div class="form__box form__box--textarea">
-                <label class="form__label" for="message">Message*</label>
+              <label class="form__label form__label--textarea" for="message">
+                <span> Message*</span>
                 <textarea class="form__input form__input--textarea" name="message" id="reviewText" rows="3"
                   placeholder="Write your message here" required></textarea>
-              </div>
+              </label>
 
               <button class="btn" type="submit">Send message</button>
 

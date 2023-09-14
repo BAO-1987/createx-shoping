@@ -12,29 +12,27 @@
 
     <p class="modal__text">Sign in to your account using email and password provided during registration.</p>
 
-    <form class="form-modal form" action="#" autocomplete="off" method="get">
+    <form class="form form--modal" action="#" autocomplete="off" method="get">
 
-      <div class="form-modal__box">
-        <label class="form__label" for="email">Email
+      <label class="form__label" for="email">
+        <span>Email</span>
+        <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email">
+      </label>
+
+      <div class="form__box form__box--password">
+        <label class="form__label" for="password">
+          <span>Password</span>
+          <input class="form__input form__input--password" type="password" id="password" autocomplete="current-password"
+            required>
         </label>
 
-        <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email"
-          required aria-invalid="true" aria-errormessage="email-error">
-      </div>
-
-      <div class="form-modal__box">
-        <input class="form__input form__input--password" type="password" id="password" autocomplete="current-password"
-          required aria-invalid="true" aria-errormessage="password-error">
-        <label class="form__label" for="password">Password</label>
-
         <div class="show-password">
-
           <input class="show-password__input" type="checkbox" name="show" id="show-password-checkbox" />
           <label class="visually-hidden" for="show-password-checkbox"></label>
         </div>
       </div>
 
-      <div class="form-modal__box form-modal__box--password">
+      <div class="form__box form__box--checkbox">
 
         <label class="custom-checkbox">
           <input type="checkbox" class="custom-checkbox__field">
@@ -104,26 +102,25 @@
 
     <p class="modal__text">Registration takes less than a minute but gives you full control over your orders.</p>
 
-    <form class="form-modal form" action="#" autocomplete="off" method="get">
+    <form class="form form--modal" action="#" autocomplete="off" method="get">
 
-      <div class="form-modal__box">
-        <label class="form__label" for="text">Full Name
-        </label>
-        <input class="form__input" type="text" id="text" placeholder="Your full name" required aria-invalid="true"
-          aria-errormessage="name-error" required>
-      </div>
+      <label class="form__label" for="text">
+        <span>Full Name</span>
+        <input class="form__input" type="text" id="text" placeholder="Your full name" required>
+      </label>
 
-      <div class="form-modal__box">
-        <label class="form__label" for="emailSing">Email
-        </label>
+      <label class="form__label" for="emailSing">
+        <span>Email</span>
         <input class="form__input" type="email" id="emailSing" autocomplete="username" placeholder="Your working email"
-          required aria-invalid="true" aria-errormessage="email-error">
-      </div>
+          required>
+      </label>
 
-      <div class="form-modal__box">
-        <input class="form__input form__input--password" type="password" id="passwordSing"
-          autocomplete="current-password" required aria-invalid="true" aria-errormessage="password-error">
-        <label class="form__label" for="passwordSing">Password</label>
+      <div class="form__box form__box--password">
+        <label class="form__label" for="passwordSing">
+          <span>Password</span>
+          <input class="form__input form__input--password" type="password" id="passwordSing"
+            autocomplete="current-password" required>
+        </label>
 
         <div class="show-password">
           <input class="show-password__input" type="checkbox" name="show" id="showPassword" />
@@ -131,10 +128,12 @@
         </div>
       </div>
 
-      <div class="form-modal__box">
-        <input class="form__input form__input--password" type="password" id="confirmPassword"
-          autocomplete="current-password" required aria-invalid="true" aria-errormessage="password-error">
-        <label class="form__label" for="confirmPassword">Confirm Password</label>
+      <div class="form__box form__box--password">
+        <label class="form__label" for="confirmPassword">
+          <span>Confirm Password</span>
+          <input class="form__input form__input--password" type="password" id="confirmPassword"
+            autocomplete="current-password" required>
+        </label>
 
         <div class="show-password">
           <input class="show-password__input" type="checkbox" name="show" id="showPasswordConfirm" />
@@ -142,7 +141,7 @@
         </div>
       </div>
 
-      <div class="form-modal__box form-modal__box--password">
+      <div class="form__box form__box--checkbox">
         <label class="custom-checkbox">
           <input type="checkbox" class="custom-checkbox__field">
           <span class="custom-checkbox__content">Remember me</span>
@@ -421,17 +420,15 @@
             <caption>FootwearKids</caption>
 
             <tr>
-              <ttd>
-                <t <t <t <t <t <t <t <t </tr> <tr>
-                  <td>USA</td>
-                  <td>5</td>
-                  <td>6</td>
-                  <td>6.5</td>
-                  <td>7.5</td>
-                  <td>8</td>
-                  <td>9</td>
-                  <td>10</td>
-                  <td>11</td>
+              <td>USA</td>
+              <td>5</td>
+              <td>6</td>
+              <td>6.5</td>
+              <td>7.5</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
             </tr>
 
             <tr>
@@ -502,57 +499,50 @@
 
     <h2 class="modal__title title">Leave a review</h2>
 
-    <form class="form-modal form" action="#" autocomplete="off" method="get">
+    <form class="form form--modal" action="#" autocomplete="off" method="get">
 
-      <div class="form-modal__box">
-        <label class="form__label" for="name">Name
-        </label>
+      <label class="form__label" for="name">
+        <span> Name</span>
+        <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your name" required>
+      </label>
 
-        <input class="form__input" type="text" id="name" autocomplete="username" placeholder="Your name" required
-          aria-invalid="true" aria-errormessage="name-error">
-      </div>
-
-      <div class="form-modal__box">
-        <label class="form__label" for="emailReview">Email
-        </label>
+      <label class="form__label" for="emailReview">
+        <span>Email</span>
         <input class="form__input" type="email" id="emailReview" autocomplete="username"
-          placeholder="Your working email" required aria-invalid="true" aria-errormessage="email-error">
+          placeholder="Your working email" required>
+      </label>
+
+      <div class="form__box custom-select custom-select--rating">
+        <label class="form__label" for="rating">Rating</label>
+
+        <select class="choices-select" name="rating" id="rating">
+          <option value>Choose rating</option>
+          <option value="1">1 star</option>
+          <option value="2">2 star</option>
+          <option value="3">3 star</option>
+          <option value="4">4 star</option>
+          <option value="5">5 star</option>
+        </select>
       </div>
 
-      <div class="form-modal__box">
-
-        <div class="custom-select custom-select--rating">
-          <label class="form__label" for="rating">Rating</label>
-
-          <select class="choices-select" name="rating" id="rating">
-            <option value>Choose rating</option>
-            <option value="1">1 star</option>
-            <option value="2">2 star</option>
-            <option value="3">3 star</option>
-            <option value="4">4 star</option>
-            <option value="5">5 star</option>
-          </select>
-
-        </div>
-      </div>
-
-      <div class="form-modal__box form-modal__box--upload">
+      <div class="form__box form__box--upload">
         <label class="form__label" for="rating">Upload a photo or video (optional)</label>
 
         <span>Drag and drop here to upload</span>
 
-        <input class="form__input form__input--file" type="file" id="rating" accept="image/png, image/jpeg">
+        <input class="form__input form__input--file" type="file" id="rating" accept="image/png, image/jpeg, video/*">
 
         <span class="btn btn--inverse">Or select file</span>
 
       </div>
 
-      <div class="form-modal__box">
+      <div class="form__box">
 
-        <label class="form__label" for="reviewText">Review</label>
-
-        <textarea class="form__input form__input--textarea" name="textarea" id="reviewText" rows="3"
-          placeholder="Your review text" required></textarea>
+        <label class="form__label" for="reviewText">
+          <span>Review</span>
+          <textarea class="form__input form__input--textarea" name="textarea" id="reviewText" rows="3"
+            placeholder="Your review text" required></textarea>
+        </label>
 
       </div>
 

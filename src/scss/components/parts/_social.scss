@@ -1,7 +1,23 @@
 .social {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -15%;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-gray-300);
+  }
+
   &__list {
+
     @include flex-all-center;
     gap: 12px;
+
+
 
     &--footer {
       .social__icon {

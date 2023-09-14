@@ -32,7 +32,7 @@
       }
 
       summary {
-        @include flex;
+        @include flex-a-center;
         gap: 15px;
       }
 
@@ -107,7 +107,6 @@
 
   &__content {
     padding-top: 1rem;
-    width: max-content;
 
     &--credit {
       display: grid;

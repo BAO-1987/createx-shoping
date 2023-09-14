@@ -1,7 +1,7 @@
 .btn {
   @include flex-all-center;
+  align-self: end;
 
-  align-self: center;
   position: relative;
   z-index: 1;
   overflow: hidden;

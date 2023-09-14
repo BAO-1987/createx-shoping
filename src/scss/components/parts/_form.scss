@@ -1,9 +1,10 @@
 .form {
-  width: 100%;
-  max-width: 100%;
+  @include flex;
+  margin-bottom: rem-f(24);
 
   &__box {
     @include flex-col;
+    position: relative;
 
     // margin-bottom: rem-f(25);
     gap: rem-f(10);
@@ -13,9 +14,57 @@
     }
 
     &--btn {
-      flex-direction: initial;
-      justify-content: space-between;
-       gap: rem-f(10);
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      margin-bottom: rem-f(24);
+      gap: 0;
+    }
+
+    &--checkbox {
+      @include flex-all-sb;
+    }
+
+    &--upload {
+      @include flex-all-center;
+
+      flex-direction: column;
+      border: 2px dashed var(--color-gray-400);
+      padding: rem-f(60) rem-f(24) rem-f(24);
+      text-align: center;
+      transition: border-color 0.3s linear;
+
+      &::before {
+        @include mask-icon;
+
+        mask-image: url("../img/sprite.svg#upload");
+        background-color: var(--color-gray-600);
+        inset: 14px auto;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding: 0 em(24);
+        max-width: 122px !important;
+        margin: 0 auto;
+        font-size: rem-f(12);
+        user-select: none;
+      }
+
+      &:hover {
+        border-color: var(--color-green);
+
+        .btn {
+          color: var(--color-white);
+
+          &::after {
+            transform: scale(160%) translateY(0);
+          }
+        }
+      }
     }
   }
 
@@ -24,7 +73,7 @@
     outline: 0;
     border: 1px solid var(--color-gray-400);
     border-radius: var(--br);
-    padding: rem-f(12) 0 rem-f(12) rem-f(16);
+    padding: rem-f(13) 0 rem-f(13) rem-f(16);
     width: 100%;
     background-color: var(--color-white);
     transition: border-color 0.3s linear;
@@ -78,35 +127,68 @@
     }
 
     &--textarea {
-      margin-bottom: clamp(1.5rem, calc(1rem + 1.77vw), 3.125rem);
-      padding: em(10) 0 em(10) em(16);
+
+      padding: rem-f(13) 0 rem-f(13) rem-f(16);
       min-height: 107px;
       resize: none;
     }
   }
 
-  // &__label {
-  //   // top: -30px;
-  // }
+  &__label {
+    @include flex-col;
+
+    font-size: rem-f(14);
+    gap: 8px;
+
+    span {
+      text-align: left;
+      color: var(--color-gray-800);
+    }
+
+    &--textarea {
+      grid-column: 2 span;
+      margin-bottom: clamp(0.5rem, calc(0.5rem + 0.83vw), 1.5rem);
+
+      @include for-width (-mobile-s) {
+        grid-column: auto;
+      }
+    }
+  }
 
   &__text {
-    margin-bottom: 3rem;
+    margin-bottom: clamp(1.5rem, calc(0.5rem + 2.08vw), 3rem);
     font-weight: 700;
     font-size: rem-f(20);
   }
 
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    // grid-template-rows: repeat(4, 1fr);
-    // display: flex;
-    // flex-wrap: wrap;
-    column-gap: 30px;
-    row-gap: 10px;
+    gap: rem-f(24) rem-f(30);
 
-    .form__input--textarea {
-      margin: 0;
+    @include for-width (-mobile-s) {
+      grid-template-columns: 1fr;
+
+      .btn {
+        width: 100%;
+        max-width: 100%;
+      }
     }
+  }
+
+  &--modal {
+    @include flex-col;
+    margin: 0;
+    gap: rem-f(20);
+
+    .btn {
+      margin-bottom: rem-f(24);
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &--contacts {
+    flex-direction: column;
   }
 }
 
@@ -209,72 +291,6 @@
   }
 }
 
-// переробити модалки//
-.form-modal {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-
-  .btn {
-    margin-bottom: 24px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  &__box {
-    position: relative;
-
-    .form__label {
-      left: 0;
-    }
-
-    &--password {
-      @include flex-all-sb;
-    }
-
-    &--upload {
-      @include flex-all-center;
-
-      flex-direction: column;
-      border: 2px dashed var(--color-gray-400);
-      padding: rem-f(60) rem-f(24) rem-f(24);
-      text-align: center;
-      transition: border-color 0.3s linear;
-
-      &::before {
-        @include mask-icon;
-
-        mask-image: url("../img/sprite.svg#upload");
-        background-color: var(--color-gray-600);
-        inset: 14px auto;
-      }
-
-      span {
-        display: block;
-        margin-bottom: 20px;
-      }
-
-      .btn {
-        padding: 0 em(24);
-        max-width: 122px;
-        font-size: rem-f(12);
-        user-select: none;
-      }
-
-      &:hover {
-        border-color: var(--color-green);
-
-        .btn {
-          color: var(--color-white);
-
-          &::after {
-            transform: scale(160%) translateY(0);
-          }
-        }
-      }
-    }
-  }
-}
 
 .custom-checkbox {
   @include custom-checkbox;
@@ -285,7 +301,7 @@
 
   position: absolute;
   right: 0;
-  top: 25%;
+  top: 60%;
 
   &__label {
     position: relative;
@@ -370,19 +386,88 @@
   }
 }
 
-// .checkout-form {
-//   &__list {
-//     counter-reset: my-awesome-counter;
-//   }
+.checkout-form {
+  &__wrapper {
+    @include flex-sb;
 
-//   &__item {
-//     counter-increment: my-awesome-counter;
+    align-items: flex-start;
+    gap: 1.5rem;
 
-//     &::before {
-//       content: counter(my-awesome-counter) ". ";
-//       color: red;
-//       font-weight: bold;
-//     }
+    @include for-width (-mobile-l) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
-//   }
-// }
+  &__list {
+    counter-reset: --counter;
+    width: min(80%, 735px);
+  }
+
+  &__item {
+    counter-increment: --counter;
+    position: relative;
+
+    &::before {
+      content: counter(--counter) ". ";
+      font-weight: 700;
+      font-size: rem-f(24);
+      line-height: 1.3;
+    }
+
+    &:not(:last-child) {
+      padding: 2rem 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-gray-300);
+      }
+    }
+
+    .accordion__content {
+      padding-top: 1.5rem;
+    }
+
+    .accordion__item summary {
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__aside {
+    @include flex-col;
+    gap: 1.5rem;
+    position: sticky;
+    top: 10%;
+    width: min(80%, 390px);
+    margin-top: -190px;
+
+    @include for-width (-mobile-l) {
+     position: relative;
+     margin: 0;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: rem-f(24);
+    line-height: 1.3;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
