@@ -5,8 +5,6 @@
   &__box {
     @include flex-col;
     position: relative;
-
-    // margin-bottom: rem-f(25);
     gap: rem-f(10);
 
     &--textarea {
@@ -73,7 +71,7 @@
     outline: 0;
     border: 1px solid var(--color-gray-400);
     border-radius: var(--br);
-    padding: rem-f(13) 0 rem-f(13) rem-f(16);
+    padding: rem-f(14) 0 rem-f(14) rem-f(16);
     width: 100%;
     background-color: var(--color-white);
     transition: border-color 0.3s linear;
@@ -451,8 +449,8 @@
     margin-top: -190px;
 
     @include for-width (-mobile-l) {
-     position: relative;
-     margin: 0;
+      position: relative;
+      margin: 0;
     }
   }
 
@@ -469,5 +467,3 @@
     max-width: 100%;
   }
 }
-
-

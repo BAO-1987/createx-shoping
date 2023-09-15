@@ -30,6 +30,16 @@
     color: var(--color-gray-800);
     cursor: pointer;
   }
+
+  .cart-preview__list {
+    padding: 1.5rem;
+    border-radius: var(--br);
+    background-color: var(--color-gray-200);
+  }
+
+  .cart-preview__item {
+    align-items: flex-start;
+  }
 }
 
 .alert {
@@ -59,6 +69,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--grid-gap);
+
+  @include for-width (-mobile-sl) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .shipping-method {

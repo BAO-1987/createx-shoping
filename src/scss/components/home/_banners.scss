@@ -20,7 +20,7 @@
   }
 
   &__content {
-    padding: clamp(2rem, calc(1rem + 2.29vw), 4.1rem) 1rem 0 clamp(2rem, calc(1rem + 2.29vw), 4.1rem);
+    padding: clamp(2rem, calc(1rem + vw(44)), 4.1rem) 1rem 0 clamp(2rem, calc(1rem + vw(44)), 4.1rem);
     width: 100%;
     max-width: 400px;
 
