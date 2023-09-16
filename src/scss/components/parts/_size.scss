@@ -113,6 +113,7 @@
   width: 100%;
   max-width: 80px;
   position: relative;
+  flex-shrink: 0;
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
   padding: em(12) em(15);

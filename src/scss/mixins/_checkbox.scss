@@ -11,8 +11,8 @@
   }
 
   &__content {
-
-    padding-left: 25px;
+    display: block;
+    padding-left: 1.56rem;
     color: var(--color-gray-800);
 
     &::before {

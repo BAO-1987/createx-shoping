@@ -1,5 +1,6 @@
 .form {
   @include flex;
+  align-items: flex-end;
   margin-bottom: rem-f(24);
 
   &__box {
@@ -12,8 +13,9 @@
     }
 
     &--btn {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
+      @include flex;
+      align-items: flex-end;
+      flex-direction: initial;
       margin-bottom: rem-f(24);
       gap: 0;
     }
@@ -288,7 +290,6 @@
     margin-bottom: 2rem;
   }
 }
-
 
 .custom-checkbox {
   @include custom-checkbox;
