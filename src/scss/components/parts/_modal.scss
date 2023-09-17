@@ -8,26 +8,20 @@
   text-align: center;
   background-color: var(--color-white);
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 20%;
-  //   width: 100%;
-  //   height: 1px;
-  //   background-color: var(--color-gray-300);
-  // }
-
   &--size {
     width: min(90%, 870px);
 
-    &::before {
-      content: none;
+    @include for-width(-mobile-md) {
+      width: 100%;
+      padding: 1rem;
     }
 
-    @include for-width(-mobile-md) {
-      width: 570px;
+    .tabs {
+      @include flex-col;
+    }
+
+    .tabs__nav {
+      justify-content: center;
     }
   }
 

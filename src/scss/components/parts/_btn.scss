@@ -150,7 +150,6 @@
 
     &::before {
       left: clamp(0.5rem, calc(0.3rem + 1.3vw), 1.5rem);
-      // bottom: 16px;
       mask-image: url("../img/sprite.svg#heart");
       width: 18px;
       height: 16px;

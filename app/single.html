@@ -2642,28 +2642,28 @@
 
     <h2 class="title">Size chart</h2>
 
-    <div class="modal__inner tabs" data-tabs=".size">
+    <div class="tabs">
 
       <ul class="tabs__nav">
 
-        <li class="tabs__nav-item">
-          <button class="tabs__nav-btn" type="button">Women</button>
+        <li>
+          <a class="tabs__link" href="#WomenSize" id="tab-1">Women</a>
         </li>
 
-        <li class="tabs__nav-item">
-          <button class="tabs__nav-btn">Men</button>
+        <li>
+          <a class="tabs__link" href="#MenSize" id="tab-2">Men</a>
         </li>
 
-        <li class="tabs__nav-item">
-          <button class="tabs__nav-btn" type="button">Kids
-          </button>
+        <li>
+          <a class="tabs__link" href="#KidsSize" id="tab-3">Kids
+          </a>
         </li>
 
       </ul>
 
-      <div class="tabs__content">
+      <div class="tabs__panels">
 
-        <div class="tabs__panel table__wrapper">
+        <div class="tabs__content tablet__inner scroll" id="WomenSize" aria-labelledby="tab-1">
 
           <table class="table table--size">
 
@@ -2763,14 +2763,15 @@
 
         </div>
 
-        <div class="tabs__panel">
+        <div class="tabs__content" id="MenSize" aria-labelledby="tab-2">
 
-          <table class="size__table">
+          2
+          <table class="table table--size">
 
-            <caption>FootwearMen</caption>
+            <caption>Footwear</caption>
 
             <tr>
-              <td>Europe</td>
+              <th>Europe</th>
               <td>35</td>
               <td>36</td>
               <td>37</td>
@@ -2782,18 +2783,19 @@
             </tr>
 
             <tr>
-              <td>USA</td>
+              <th>USA</th>
               <td>5</td>
               <td>6</td>
               <td>6.5</td>
               <td>7.5</td>
               <td>8</td>
               <td>9</td>
-              <td10</td> <td>11</td>
+              <td>10</td>
+              <td>11</td>
             </tr>
 
             <tr>
-              <td>United Kingdom</td>
+              <th>United Kingdom</th>
               <td>2</td>
               <td>3</td>
               <td>4</td>
@@ -2805,7 +2807,7 @@
             </tr>
 
             <tr>
-              <td>China</td>
+              <th>China</th>
               <td>230/83</td>
               <td>235/84</td>
               <td>240/85</td>
@@ -2817,7 +2819,7 @@
             </tr>
 
             <tr>
-              <td>South Korea</td>
+              <th>South Korea</th>
               <td>230</td>
               <td>235</td>
               <td>240</td>
@@ -2829,7 +2831,7 @@
             </tr>
 
             <tr>
-              <td>Italy</td>
+              <th>Italy</th>
               <td>5</td>
               <td>6</td>
               <td>6.5</td>
@@ -2842,16 +2844,46 @@
 
           </table>
 
-        </div>
+          <table class="table table--equivalence">
 
-        <div class="tabs__panel">
-
-          <table class="size__table">
-
-            <caption>FootwearKids</caption>
+            <caption>Equivalence in centimeters</caption>
 
             <tr>
-              <td>USA</td>
+              <th>Foot length</th>
+              <td>22.4 cm</td>
+              <td>23 cm</td>
+              <td>23.6 cm</td>
+              <td>24.3 cm</td>
+              <td>24.9 cm</td>
+              <td>25.5 cm</td>
+              <td>26.2 cm</td>
+              <td>26.8 cm</td>
+            </tr>
+
+          </table>
+
+        </div>
+
+        <div class="tabs__content" id="KidsSize" aria-labelledby="tab-3">
+          33
+          <table class="table table--size">
+
+            <caption>Footwear</caption>
+
+            <tr>
+              <th>Europe</th>
+              <td>35</td>
+              <td>36</td>
+              <td>37</td>
+              <td>38</td>
+              <td>39</td>
+              <td>40</td>
+              <td>41</td>
+              <td>42</td>
+            </tr>
+
+            <tr>
+              <th>USA</th>
               <td>5</td>
               <td>6</td>
               <td>6.5</td>
@@ -2863,7 +2895,7 @@
             </tr>
 
             <tr>
-              <td>United Kingdom</td>
+              <th>United Kingdom</th>
               <td>2</td>
               <td>3</td>
               <td>4</td>
@@ -2875,7 +2907,7 @@
             </tr>
 
             <tr>
-              <td>China</td>
+              <th>China</th>
               <td>230/83</td>
               <td>235/84</td>
               <td>240/85</td>
@@ -2887,7 +2919,7 @@
             </tr>
 
             <tr>
-              <td>South Korea</td>
+              <th>South Korea</th>
               <td>230</td>
               <td>235</td>
               <td>240</td>
@@ -2899,7 +2931,7 @@
             </tr>
 
             <tr>
-              <td>Italy</td>
+              <th>Italy</th>
               <td>5</td>
               <td>6</td>
               <td>6.5</td>
@@ -2908,6 +2940,24 @@
               <td>9</td>
               <td>10</td>
               <td>11</td>
+            </tr>
+
+          </table>
+
+          <table class="table table--equivalence">
+
+            <caption>Equivalence in centimeters</caption>
+
+            <tr>
+              <th>Foot length</th>
+              <td>22.4 cm</td>
+              <td>23 cm</td>
+              <td>23.6 cm</td>
+              <td>24.3 cm</td>
+              <td>24.9 cm</td>
+              <td>25.5 cm</td>
+              <td>26.2 cm</td>
+              <td>26.8 cm</td>
             </tr>
 
           </table>
