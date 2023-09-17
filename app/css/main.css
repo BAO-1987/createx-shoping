@@ -4397,9 +4397,7 @@ h3::first-letter {
 }
 @media (max-width: calc(48em - 0.0625em)) {
   .checkout-form__list {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
   }
 }
 .checkout-form__item {
@@ -5954,9 +5952,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .accordion__item:not(:last-child) {
   margin-bottom: 2.5rem;
-}
-.accordion__item details {
-  overflow: hidden;
 }
 .accordion__item summary {
   position: relative;
