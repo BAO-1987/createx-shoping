@@ -4,7 +4,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  border: 1px solid var(--color-green);
+  border: 0.8px solid var(--color-green);
   border-radius: var(--br);
   padding: em(10) em(40);
   max-width: fit-content;
@@ -67,6 +67,8 @@
     &::before {
       left: 38px;
       mask-image: url("../img/sprite.svg#instagram");
+      width: 1.5rem;
+      height: 1.5rem;
     }
 
     &::after {
@@ -115,16 +117,19 @@
     z-index: 10;
 
     &::before {
-      left: clamp(0.5rem, calc(0.3rem + 4.5vw), 4.07rem);
+      left: clamp(0.5rem, calc(0.5rem + vw(42)), 3.125rem);
       mask-image: url("../img/sprite.svg#cart");
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 
   &--size {
     border: 0;
-    padding: 0 0 0 em(24);
+    padding: em(10) em(10) em(10) em(24);
     color: var(--color-gray-800);
     background-color: var(--color-white);
+    align-self: flex-end;
 
     &::before {
       left: 0;
@@ -139,13 +144,13 @@
   }
 
   &--favorite {
-    padding: 0 em(38) 0 em(67);
+    padding: em(10) em(38) em(10) em(67);
     color: var(--color-green);
     background-color: var(--color-white);
 
     &::before {
       left: clamp(0.5rem, calc(0.3rem + 1.3vw), 1.5rem);
-      bottom: 16px;
+      // bottom: 16px;
       mask-image: url("../img/sprite.svg#heart");
       width: 18px;
       height: 16px;

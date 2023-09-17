@@ -139,6 +139,10 @@
     }
   }
 
+  &__item {
+    @include flex-sb;
+  }
+
   &__total {
     @include flex-sb;
   }

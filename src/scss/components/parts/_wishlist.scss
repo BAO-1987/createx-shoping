@@ -2,19 +2,21 @@
   @include flex;
 
   gap: 8px;
-  // margin-right: clamp(20px, rem(22), 25px);
 
   &__btn {
     @include flex-all-sb;
 
     font-weight: 700;
-    letter-spacing: 0.041em;
+    line-height: 1.5;
+    letter-spacing: 0.0341em;
+    padding: 8px 0;
     gap: 8px;
     transition: color 0.3s linear;
 
     .wishlist__icon {
       width: 1rem;
       height: 1rem;
+      align-self: center;
     }
 
     &:hover {

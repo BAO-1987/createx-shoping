@@ -164,7 +164,7 @@
 
     .btn--article {
       &::before {
-        left: clamp(1rem, calc(1rem + 5.5vw), 7.2rem);
+        left: clamp(1rem, calc(1rem + vw(88)), 6.7rem);
       }
     }
 

@@ -116,7 +116,9 @@
   flex-shrink: 0;
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
+  background-color: var(--color-white);
   padding: em(12) em(15);
+  height: fit-content;
   outline-color: transparent;
 
   @include for-width (-mobile-s) {
