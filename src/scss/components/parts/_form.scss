@@ -1,7 +1,10 @@
 .form {
   @include flex;
-  align-items: flex-end;
   margin-bottom: rem-f(24);
+
+  .btn {
+    align-self: flex-end;
+  }
 
   &__box {
     @include flex-col;
@@ -73,7 +76,7 @@
     outline: 0;
     border: 1px solid var(--color-gray-400);
     border-radius: var(--br);
-    padding: rem-f(14) 0 rem-f(14) rem-f(16);
+    padding: rem-f(13) 0 rem-f(13) rem-f(16);
     width: 100%;
     background-color: var(--color-white);
     transition: border-color 0.3s linear;
@@ -189,7 +192,6 @@
 
   &--contacts {
     flex-direction: column;
-    align-items: flex-start;
   }
 }
 
