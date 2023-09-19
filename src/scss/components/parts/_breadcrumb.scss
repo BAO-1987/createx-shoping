@@ -7,7 +7,6 @@
     @include flex;
 
     flex-wrap: wrap;
-    font-weight: 400;
     font-size: rem-f(14);
 
     li {
@@ -16,7 +15,7 @@
       align-items: center;
 
       &:not(:last-child) {
-        margin-right: clamp(1.5rem, calc(1vw + 1rem), 2rem);
+        margin-right: 2rem;
 
         &::after {
           @include mask-small;

@@ -45,7 +45,6 @@ const heroSlider = new Swiper(".hero-slider", {
   ...commonSwiperOptions,
 
   speed: heroSliderSpeed,
-  parallax: true,
   autoplay: {
     delay: 2500,
   },

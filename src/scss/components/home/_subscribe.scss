@@ -4,6 +4,10 @@
 
   &__inner {
     @include flex-all-sb;
+
+    @include for-width (-mobile-md) {
+      justify-content: center;
+    }
   }
 
   &__content {
@@ -12,7 +16,7 @@
   }
 
   &__box {
-    @include for-width(-mobile-sl) {
+    @include for-width(-mobile-md) {
       display: none;
     }
   }

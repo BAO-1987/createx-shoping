@@ -18,8 +18,8 @@
     width: fit-content;
 
     @include for-width(-desktop-med) {
-      left: 15px !important;
-      padding-right: 15px;
+      left: 1rem !important;
+      padding-right: 1rem;
 
       @include for-width(-tablet) {
         bottom: 80px !important;
@@ -111,11 +111,11 @@
   }
 
   &__next {
-    right: 42px;
+    right: rem-f(42);
   }
 
   &__prev {
-    left: 32px;
+    left: rem-f(42);
   }
 
   .slider-btn {
@@ -126,3 +126,4 @@
     opacity: 0.6;
   }
 }
+

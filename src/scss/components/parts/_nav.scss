@@ -60,6 +60,7 @@
   }
 
   &__item {
+
     @include for-width(-mobile-l) {
       width: 100%;
     }
@@ -80,9 +81,7 @@
       .nav__list--dropdown {
         opacity: 1;
         visibility: visible;
-        transition:
-          opacity 0.3s ease-in-out,
-          visibility 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
       }
     }
 
@@ -128,25 +127,21 @@
     &::before {
       content: "";
       position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 100vw;
-      pointer-events: none;
-      background-color: var(--color-green);
-      bottom: 100%;
-      left: 50%;
-      opacity: 0;
-      transition:
-        opacity 0.3s linear,
-        bottom 0.3s linear;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: currentcolor;
+      transform: scale(0);
+      transform-origin: center;
+      transition: transform 0.3s linear;
     }
 
-    &:hover {
+    &:is(:hover, :active) {
       color: var(--color-green);
 
       &::before {
-        opacity: 1;
-        bottom: -20px;
+        transform: scale(1);
       }
     }
 
@@ -158,7 +153,6 @@
     }
 
     &--dropdown {
-
       display: block;
       padding-right: 20px;
       cursor: pointer;
@@ -172,7 +166,7 @@
         --rotate: rotate(0);
         content: "";
         position: absolute;
-         top: 50%;
+        top: 50%;
         right: 0;
         mask-image: url("../img/sprite.svg#arrow-down");
         mask-position: center;
@@ -182,9 +176,7 @@
         height: 15px;
         background-color: currentcolor;
         transform: translateY(-50%) var(--rotate);
-        transition:
-          background-color 0.3s linear,
-          transform 0.3s linear;
+        transition: background-color 0.3s linear, transform 0.3s linear;
 
         @include for-width(-mobile-l) {
           right: 50%;
@@ -197,11 +189,8 @@
 .dropdown-list {
   @include flex-jc;
   display: none;
-  box-shadow:
-    0px 60px 80px -20px rgba(30, 33, 44, 0.16),
-    0px 26px 24px -10px rgba(30, 33, 44, 0.1),
-    0px 12px 10px -6px rgba(30, 33, 44, 0.08),
-    0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+    0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
   border-radius: 0 0 4px 4px;
   border-top: 1px solid var(--color-gray-300);
   font-size: 14px;
@@ -309,9 +298,7 @@
         display: none;
         visibility: hidden;
         opacity: 0;
-        transition:
-          opacity 150ms ease-in-out,
-          visibility 150ms ease-in-out;
+        transition: opacity 150ms ease-in-out, visibility 150ms ease-in-out;
       }
     }
 
@@ -347,9 +334,7 @@
         height: 15px;
         background-color: currentcolor;
         transform: translateY(-50%) var(--rotate);
-        transition:
-          background-color 0.3s linear,
-          transform 0.3s linear;
+        transition: background-color 0.3s linear, transform 0.3s linear;
       }
 
       &:not(:last-child) {

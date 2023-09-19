@@ -1,117 +1,6 @@
-// .custom-select {
-//   font-size: clamp(0.88rem, calc(0.85rem + 0.13vw), 1rem);
-//   margin-right: 1rem;
-
-
-//   &--sort {
-//     @include flex-all-sb;
-
-//     margin: 0;
-//     gap: 10px;
-//    width: min(95%, 235px);
-//   }
-
-//   &--show {
-//     @include flex-all-sb;
-//     margin: 0;
-//     width: min(95%, 255px);
-//     gap: 10px;
-//   }
-
-
-
-//   &__inner {
-//     position: relative;
-//     display: grid;
-//     align-items: center;
-//     grid-template-areas: "select";
-//     border: 1px solid var(--color-gray-400);
-//     border-radius: var(--br);
-//     padding: 12px 16px 12px 16px;
-//     // width: 170px;
-//     cursor: pointer;
-
-
-//     &::after {
-//       --rotate: rotate(0);
-
-//       content: "";
-//       // position: absolute;
-//       // right: 0;
-//       // top: 50%;
-//       justify-self: end;
-//       grid-area: select;
-//       mask-image: url("../img/sprite.svg#arrow-down");
-//       mask-position: center;
-//       mask-repeat: no-repeat;
-//       mask-size: cover;
-//       width: 16px;
-//       height: 16px;
-//       background-color: var(--color-gray-800);
-//       // transform: translateY(-50%) var(--rotate);
-//       transition:
-//         background-color 0.3s linear,
-//         transform 0.3s linear;
-//       z-index: -1;
-//       cursor: pointer;
-//     }
-
-//     select {
-//       grid-area: select;
-//       z-index: 1;
-//       cursor: inherit;
-//       width: 100%;
-
-//       &:focus+.custom-select__focus {
-//         position: absolute;
-//         top: -1px;
-//         left: -1px;
-//         right: -1px;
-//         bottom: -1px;
-//         border: 2px solid var(--color-green);
-//         border-radius: inherit;
-//       }
-//     }
-
-//     &::after {
-//       grid-area: select;
-//     }
-
-//     &:hover::after {
-//       background-color: var(--color-green);
-//     }
-
-
-//     option {
-//       white-space: normal;
-
-//       // Only affects Chrome
-//       outline-color: var(--color-green);
-//     }
-//   }
-
-
-//   &__label {
-//     font-weight: 700;
-//     line-height: 1.6;
-//     white-space: nowrap;
-//   }
-
-//   &__span {
-//     font-size: 14px;
-//     color: var(--color-gray-700);
-//     white-space: nowrap;
-
-//     @include for-width(-desktop-med) {
-//       font-size: 0;
-//       display: none;
-//     }
-//   }
-// }
 
 .input-number {
-  width: 100%;
-  max-width: 80px;
+  width: 80px;
   position: relative;
   flex-shrink: 0;
   border: 1px solid var(--color-gray-400);
@@ -157,7 +46,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
   th {
     padding: 12px;
-    // position: sticky;
     left: 0;
   }
 
@@ -173,28 +61,6 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
   }
 
-  // &--size {
-  //   @include for-width(-mobile-md) {
-
-
-  //     td {
-  //       padding: 5px;
-  //     }
-
-  //     tbody {
-  //       display: grid;
-  //       grid-template-columns: repeat(6, 1fr);
-  //     }
-
-  //     tr {
-  //       display: grid;
-  //     }
-
-  //     td:first-child {
-  //       min-height: 50px;
-  //     }
-  //   }
-  // }
 }
 
 .table__inner {

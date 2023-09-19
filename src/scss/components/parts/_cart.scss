@@ -121,12 +121,15 @@
     &-desc {
       @include flex;
       align-items: flex-start;
+
+      @include for-width (-mobile-l) {
+        align-items: center;
+      }
     }
   }
 
   &__content {
-    margin-right: 24px;
-
+  
     a {
       transition: color 0.3s linear;
 

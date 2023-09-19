@@ -1,4 +1,5 @@
-.modal {
+.modal
+{
   margin: auto;
   border: 0;
   border-radius: var(--br);
@@ -8,55 +9,79 @@
   text-align: center;
   background-color: var(--color-white);
 
-  &--size {
+  &--size
+  {
     width: min(90%, 870px);
 
-    @include for-width(-mobile-md) {
-      width: 100%;
-      padding: 1rem;
-    }
 
-    .tabs {
+
+    .tabs
+    {
       @include flex-col;
     }
 
-    .tabs__nav {
+    .tabs__nav
+    {
       justify-content: center;
+    }
+
+    .tabs__panels
+    {
+      align-self: center;
+    }
+
+    @include for-width(-mobile-md)
+    {
+      width: 100%;
+      padding: 1rem;
+
+      .tabs__panels
+      {
+        align-self: flex-start;
+      }
     }
   }
 
-  &--review {
-    &::before {
+  &--review
+  {
+    &::before
+    {
       content: none;
     }
 
-    .custom-select {
+    .custom-select
+    {
       max-width: 100%;
     }
   }
 
-  &::backdrop {
+  &::backdrop
+  {
     background: rgba(30, 33, 44, 0.75);
   }
 
-  &__title {
+  &__title
+  {
     margin-bottom: rem-f(24);
     font-weight: 700;
     font-size: clamp(1.13rem, calc(-0.08rem + 6.02vw), 1.75rem);
   }
 
-  &__text {
+  &__text
+  {
     margin-bottom: rem-f(24);
     font-size: rem-f(14);
     color: var(--color-gray-700);
   }
 
   &__link,
-  .modal__btn {
+  .modal__btn
+  {
     color: var(--color-green);
   }
 
-  &__close {
+  &__close
+  {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -64,49 +89,60 @@
     height: 16px;
   }
 
-  &__icon {
+  &__icon
+  {
     display: inline-block;
     width: 16px;
     height: 16px;
     fill: var(--color-gray-700);
     transition: fill 0.3s linear;
 
-    &:hover {
+    &:hover
+    {
       fill: var(--color-green);
     }
   }
 
-  &__singup {
+  &__singup
+  {
     margin-bottom: rem-f(48);
     text-align: left;
   }
 
-  &__inner {
-    .tabs__nav {
+  &__inner
+  {
+    .tabs__nav
+    {
       justify-content: center;
     }
 
-    .tabs__panel--active {
+    .tabs__panel--active
+    {
       flex-direction: column;
     }
   }
 
-  &[open] {
+  &[open]
+  {
     animation: slide-up 1000ms forwards;
   }
 }
 
-@keyframes slide-up {
-  0% {
+@keyframes slide-up
+{
+  0%
+  {
     transform: translateY(50%);
   }
 
-  100% {
+  100%
+  {
     transform: translateY(0%);
   }
 }
 
-.table__wrapper {
+.table__wrapper
+{
   overflow: scroll hidden;
   width: 100%;
 }

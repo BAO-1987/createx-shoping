@@ -26,6 +26,7 @@
     @include flex-col;
 
     font-weight: 700;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--color-gray-800);
     cursor: pointer;
@@ -39,6 +40,7 @@
 
   .cart-preview__item {
     align-items: flex-start;
+    gap: 1rem;
 
     &:not(:last-child) {
       &::before {
@@ -46,6 +48,7 @@
         bottom: 0;
       }
     }
+
     &:last-child {
       justify-content: flex-end;
     }
@@ -77,6 +80,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--grid-gap);
+  margin-bottom: 2rem;
 
   @include for-width (-mobile-sl) {
     grid-template-columns: repeat(1, 1fr);
