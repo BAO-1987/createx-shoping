@@ -6,10 +6,11 @@
   overflow: hidden;
   border: 0.8px solid var(--color-green);
   border-radius: var(--br);
-  padding: em(10) em(40);
+  padding: rem-f(10) clamp(1.5rem, calc(1rem + vw(24)), 2.5rem);
   max-width: fit-content;
   height: fit-content;
   font-weight: 700;
+  // font-size: clamp(0.88rem, calc(0.85rem + 0.13vw), 1rem);
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.031em;
@@ -20,6 +21,10 @@
   transition-property: color, background;
   transition-duration: 0.6s;
   transition-timing-function: linear;
+
+  &::before {
+    background-color: currentcolor;
+  }
 
   &::after {
     content: "";
@@ -32,17 +37,28 @@
     inset: 0;
   }
 
-  &::before {
-    @include mask;
-
-    background-color: currentcolor;
-  }
-
   &:hover {
     color: var(--color-green);
 
     &::after {
       transform: scale(1.6) translateY(0);
+    }
+  }
+
+  &--icon {
+    color: var(--color-green);
+    background-color: var(--color-white);
+
+    &::before {
+      @include mask-icon;
+    }
+
+    &::after {
+      background-color: var(--color-green);
+    }
+
+    &:hover {
+      color: var(--color-white);
     }
   }
 
@@ -60,34 +76,16 @@
   }
 
   &--instagram {
-    padding: em(10) em(40) em(10) em(72);
-    color: var(--color-green);
-    background-color: var(--color-white);
+    padding-left: rem-f(72);
 
     &::before {
-      left: 38px;
+      left: rem-f(38);
       mask-image: url("../img/sprite.svg#instagram");
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-
-    &::after {
-      background-color: var(--color-green);
-    }
-
-    &:hover {
-      color: var(--color-white);
-
-      &::after {
-        transform: scale(150%) translateY(0);
-      }
     }
   }
 
   &--offers {
-    padding: em(10) em(48) em(10) em(24);
-    color: var(--color-green);
-    background-color: var(--color-white);
+    padding: rem-f(10) rem-f(48) rem-f(10) rem-f(24);
 
     &::before {
       right: 20px;
@@ -95,18 +93,6 @@
       width: 1rem;
       height: 1rem;
       rotate: -180deg;
-    }
-
-    &::after {
-      background-color: var(--color-green);
-    }
-
-    &:hover {
-      color: var(--color-white);
-
-      &::after {
-        transform: scale(150%) translateY(0);
-      }
     }
   }
 

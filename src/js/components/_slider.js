@@ -72,13 +72,8 @@ const heroSlider = new Swiper(".hero-slider", {
 });
 
 const offersSlider = new Swiper(".offers-slider", {
-  // ...commonSwiperOptions,
+  loop: true,
   slidesPerView: 1,
-
-  // autoplay: {
-  //   delay: 4500,
-  //   disableOnInteraction: false,
-  // },
 
   navigation: {
     nextEl: ".offers-btn__next",
@@ -566,4 +561,3 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   );
 });
-
