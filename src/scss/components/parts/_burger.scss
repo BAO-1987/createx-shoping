@@ -32,11 +32,13 @@
 
     & .line.top {
       --rotation: -45deg;
+      
       transform-origin: 65px 45px;
     }
 
     & .line.bottom {
       --rotation: 45deg;
+
       transform-origin: 80px 60px;
     }
 
@@ -81,33 +83,6 @@
     }
   }
 }
-
-
-// .burger {
-//   --button-color: black;
-//   overflow: hidden;
-//   width: 33px;
-//   height: 33px;
-// }
-
-// .burger .hamburger {
-//   transition: translate 1s, rotate 1s;
-// }
-
-// .burger[aria-expanded="true"] .hamburger {
-//   translate: 10px -10px;
-//   rotate: 0.125turn;
-// }
-
-// .burger .line {
-//   transition: 1s;
-//   stroke-dasharray: 60 31 60 300;
-// }
-
-// .burger[aria-expanded="true"] .line {
-//   stroke-dasharray: 60 105 60 300;
-//   stroke-dashoffset: -90;
-// }
 
 .open .nav__list {
   transform: translate(0);

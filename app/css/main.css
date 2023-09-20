@@ -3279,21 +3279,25 @@ h3::first-letter {
   rotate: -180deg;
 }
 .btn--article {
-  padding: 0.625em 5.125em;
+  padding: 0.625rem 5.125rem;
   width: 100%;
   max-width: 100%;
+  background-color: var(--color-green);
+  color: var(--color-white);
   z-index: 10;
 }
 .btn--article::before {
-  left: clamp(0.5rem, 0.5rem + 2.1875vw, 3.125rem);
+  left: 3.125rem;
   -webkit-mask-image: url("../img/sprite.svg#cart");
   mask-image: url("../img/sprite.svg#cart");
-  width: 1.5rem;
-  height: 1.5rem;
+}
+.btn--article:hover {
+  background-color: var(--color-white);
+  color: var(--color-white);
 }
 .btn--size {
   border: 0;
-  padding: 0.625em 0.625em 0.625em 1.5em;
+  padding: 0.625rem 0.625rem 0.625rem 1.5rem;
   color: var(--color-gray-800);
   background-color: var(--color-white);
   -ms-flex-item-align: end;
@@ -3310,7 +3314,7 @@ h3::first-letter {
   background-color: transparent;
 }
 .btn--favorite {
-  padding: 0.625em 2.375em 0.625em 4.1875em;
+  padding: 0.625rem 2.375rem 0.625rem 4.1875rem;
   color: var(--color-green);
   background-color: var(--color-white);
 }
@@ -3318,8 +3322,6 @@ h3::first-letter {
   left: clamp(0.5rem, 0.3rem + 1.3vw, 1.5rem);
   -webkit-mask-image: url("../img/sprite.svg#heart");
   mask-image: url("../img/sprite.svg#heart");
-  width: 18px;
-  height: 16px;
 }
 .btn--favorite::after {
   background-color: var(--color-green);
@@ -3895,7 +3897,7 @@ h3::first-letter {
   outline: 0;
   border: 1px solid var(--color-gray-400);
   border-radius: var(--br);
-  padding: 0.8125rem 0 0.8125rem 1rem;
+  padding: 0.875rem 0 0.875rem 1rem;
   width: 100%;
   background-color: var(--color-white);
   -webkit-transition: border-color 0.3s linear;
