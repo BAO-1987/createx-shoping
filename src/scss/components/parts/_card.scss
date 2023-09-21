@@ -4,11 +4,30 @@
   position: relative;
   flex-direction: column;
   border-radius: var(--br);
-  box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05),
-    0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  box-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
 
-  &:hover a {
-    color: var(--color-green);
+  &:hover {
+    img {
+      transform: scale(1.02);
+    }
+
+    a {
+      color: var(--color-green);
+    }
+  }
+
+  &__box {
+    picture {
+      overflow: hidden;
+    }
+
+    img {
+      transition: transform 0.3s ease-in-out;
+    }
   }
 
   &__content {
@@ -52,6 +71,8 @@
       margin-right: clamp(10px, rem-f(24), 25px);
 
       &::after {
+        position: absolute;
+        content: "";
         right: -13px;
         bottom: 5px;
         width: 1px;
