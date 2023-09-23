@@ -2,8 +2,8 @@
 
 @mixin custom-checkbox {
   display: inline-flex;
+  align-items: center;
   position: relative;
-  font-size: rem-f(14);
   cursor: pointer;
 
   &__field {
@@ -13,6 +13,7 @@
 
   &__content {
     padding-left: 1.56rem;
+    line-height: 1.6;
     color: var(--color-gray-800);
 
     &::before {

@@ -348,8 +348,12 @@
   .btn--article {
     max-width: 244px;
 
-    @include for-width(-mobile-s) {
+    @include for-width(-mobile-sl) {
       max-width: 100%;
+
+      &::before {
+        left: rem-f(75);
+      }
     }
   }
 
@@ -366,9 +370,9 @@
 
     &--number {
       @include flex-all-sb;
-      gap: clamp(0.8rem, calc(0.3rem + 1vw), 1.5rem);
+      gap: clamp(0.2rem, calc(0.3rem + 1vw), 1.5rem);
 
-      @include for-width(-mobile-s) {
+      @include for-width (-mobile-s) {
         flex-wrap: wrap;
       }
     }

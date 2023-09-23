@@ -36,7 +36,7 @@
 
     <div class="single__content">
       <h1 class="single__title title title--single">Basic hooded sweatshirt in pink</h1>
-      <p class="single__code">Art. No. <span>183260098</span></p>
+      <p class="single__code">Art. No.<span>183260098</span></p>
     </div>
 
     <h2 class="visually-hidden">Basic hooded sweatshirt in pink</h2>
@@ -251,10 +251,29 @@
                 </li>
 
                 <li class="product-form__item product-form__item--number">
-                  <label class="visually-hidden" for="number"></label>
 
-                  <input class="input-number" type="number" inputmode="numeric" id="number" step="1" min="1" max="10"
-                    placeholder="1" value="1">
+                  <div class="stepper">
+
+                    <label class="stepper__field">
+                      <input class="stepper__input" type="text" value="1" maxlength="3">
+                    </label>
+
+                    <div class="stepper__btns">
+
+                      <button class="stepper__btn stepper__btn--up" type="button" aria-label="plus">
+                        <svg class="stepper__icon">
+                          <use xlink:href="img/sprite.svg#up-select"></use>
+                        </svg>
+                      </button>
+
+                      <button class="stepper__btn stepper__btn--down stepper__btn--disabled" type="button"
+                        aria-label="minus">
+                        <svg class="stepper__icon">
+                          <use xlink:href="img/sprite.svg#up-select"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
 
                   <button class="btn btn--icon btn--article" type="submit">Add to cart</button>
 
@@ -521,12 +540,12 @@
               <div class="custom-select custom-select--sort">
 
                 <label class="custom-select__lable" for="sort">Sort by</label>
-                  <select class="choices-select" name="sort" id="sort">
-                    <option value="Newest">Newest</option>
-                    <option value="Oldest">Oldest</option>
-                    <option value="High rating">High rating</option>
-                    <option value="Low rating">High rating</option>
-                  </select>
+                <select class="choices-select" name="sort" id="sort">
+                  <option value="Newest">Newest</option>
+                  <option value="Oldest">Oldest</option>
+                  <option value="High rating">High rating</option>
+                  <option value="Low rating">High rating</option>
+                </select>
 
               </div>
 

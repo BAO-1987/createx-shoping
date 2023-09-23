@@ -105,7 +105,7 @@
     z-index: 10;
 
     &::before {
-      left: rem-f(50);
+      left: clamp(0.5rem, calc(0.5rem + vw(42)), 3.125rem);
       mask-image: url("../img/sprite.svg#cart");
     }
 
