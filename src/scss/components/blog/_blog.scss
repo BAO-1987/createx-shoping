@@ -1,0 +1,16 @@
+.blog {
+  &__inner {
+    @include flex-sb;
+  }
+
+  &__list {
+    @include flex-col;
+    row-gap: 60px;
+    width: min(80%, 810px);
+    margin-right: 1rem;
+  }
+
+  &__aside {
+    width: min(80%, 342px);
+  }
+}

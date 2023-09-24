@@ -1,27 +1,27 @@
 <li class="@class">
 
-  <article class="card">
+  <article class="blog-article">
 
-    <div class="card__box">
+    <div class="blog-article__box">
       <picture>
         <source srcset="img/@image.webp" type="image/webp">
         <img src="img/@image" class="card__img" width="@width" height="@height" alt="@imageDesc" loading="lazy">
       </picture>
     </div>
 
-    <div class="card__content">
+    <div class="blog-article__content">
 
       <a href="@http">
         <h3>@title</h3>
       </a>
 
-      <ul class="card__information">
-        <span class="card__info">@name</span>
-        <span class="card__info"><time datetime="@datetime">@time</time></span>
-        <span class="card__info card__info--comments">@comments</span>
+      <ul class="blog-article__information">
+        <li>@name</li>
+        <li><time datetime="@datetime">@time</time></li>
+        <li>@comments</li>
       </ul>
 
-      <div class="card__text">
+      <div class="blog-article__text">
         <p>
           @desc
         </p>

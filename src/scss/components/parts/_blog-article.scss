@@ -1,4 +1,4 @@
-.card {
+.blog-article {
   @include flex;
 
   position: relative;
@@ -26,6 +26,7 @@
     }
 
     img {
+      border-radius: var(--br);
       transition: transform 0.3s ease-in-out;
     }
   }
@@ -56,50 +57,50 @@
     @include flex;
 
     margin-bottom: 1rem;
-    font-size: 14px;
+    font-size: rem-f(14);
     color: var(--color-gray-700);
 
     @include for-width(-mobile-l) {
       font-size: 12px;
     }
-  }
 
-  &__info {
-    position: relative;
+    li {
+      position: relative;
 
-    &:not(:last-child) {
-      margin-right: clamp(10px, rem-f(24), 25px);
-
-      &::after {
-        position: absolute;
-        content: "";
-        right: -13px;
-        bottom: 5px;
-        width: 1px;
-        height: 12px;
-        background-color: currentcolor;
-      }
-
-      @include for-width(-mobile-l) {
-        margin-right: 5px;
+      &:not(:last-child) {
+        margin-right: 1.5rem;
 
         &::after {
-          content: none;
+          position: absolute;
+          content: "";
+          right: -13px;
+          bottom: 5px;
+          width: 1px;
+          height: 12px;
+          background-color: currentcolor;
+        }
+
+        @include for-width(-mobile-l) {
+          margin-right: 5px;
+
+          &::after {
+            content: none;
+          }
         }
       }
-    }
 
-    &--comments {
-      padding-left: 26px;
+      &:last-child {
+        padding-left: rem-f(26);
 
-      &::before {
-        @include mask;
+        &::before {
+          @include mask;
 
-        left: 0;
-        mask-image: url("../img/sprite.svg#chat");
-        width: 16px;
-        height: 16px;
-        background-color: currentcolor;
+          left: 0;
+          mask-image: url("../img/sprite.svg#chat");
+          width: 16px;
+          height: 16px;
+          background-color: currentcolor;
+        }
       }
     }
   }

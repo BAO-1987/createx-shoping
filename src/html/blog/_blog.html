@@ -1,0 +1,161 @@
+<section class="checkout section">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb__list">
+
+        <li>
+          <a href="#">
+            <svg class="breadcrumb__icon">
+              <use xlink:href="img/sprite.svg#home"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <span aria-current="page">Blog</span>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <section class="blog section">
+
+      <div class="blog__inner">
+
+
+        <ul class="blog__list" role="list">
+
+          @loop("../parts/_blog-article.html",[{
+          class: "",
+          image: "blog/bag",
+          imageDescr: "image of bag",
+          width: "810",
+          height: "360",
+          title: "Bag Trends for Summer 2020",
+          name: "Fashion",
+          time: "August 24, 2023",
+          datetime: "2023-08-24",
+          http: "#",
+          comments: "No comments",
+          desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis convallis"
+          },
+          {
+          class: "",
+          image: "blog/blue-shirt",
+          imageDescr: "image of sneakers",
+          width: "810",
+          height: "360",
+          title: "Wardrobe Essentials Everyone Should Own Today",
+          name: "Celebrity style",
+          time: "August 5, 2023",
+          datetime: "2023-08-05",
+          http: "#",
+          comments: "No comments",
+          desc: "Mauris tincidunt sollicitudin tristique odio eget volutpat. Fringilla viverra amet, mi interdum blandit. Tellus sed morbi massa quis sed. Faucibus tincidunt magnenim ultricies fringilla at rhoncus, hac..."
+          },
+          {
+          class: "",
+          image: "blog/sneakers",
+          imageDescr: "image of sneakers",
+          width: "810",
+          height: "360",
+          title: "Top 10 of This Season’s Hottest Sneakers",
+          name: "Lifestyle",
+          time: "July 16, 2023",
+          datetime: "2023-07-06",
+          http: "#",
+          comments: "4 comments",
+          desc: "Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus convallis"
+          },
+          {
+          class: "",
+          image: "blog/heart-accessories",
+          imageDescr: "image of heart-accessories",
+          width: "810",
+          height: "360",
+          title: "Modern Accessories 2030: Why Simple Isn't Easy",
+          name: "Fashion",
+          time: "July 2, 2023",
+          datetime: "2023-07-02",
+          http: "#",
+          comments: "2 comments",
+          desc: "Tellus sed morbi massa quis sed. Faucibus tincidunt magna enim ultricies fringilla at rhoncus, hac.Sollicitudin et nec congue magna quis commodo quis luctus risus. Dolor, dignissim semper faucibus quisque massa ut enim..."
+          }
+          ])
+
+        </ul>
+
+        <aside class="blog__aside">
+
+          <form class="form-search" action="#" autocomplete="off" method="get" id="blog-search">
+
+            <button class="form-search__close btn-reset" type="button" aria-label="close search-form">
+              <svg class="form-search__icon">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </button>
+
+            <label class="visually-hidden" for="blog-search"></label>
+
+            <input class="form-search__input" type="search" id="blog-search" placeholder="Search for blog" required>
+
+            <button class="form-search__btn btn-reset" type="submit" aria-label="blog search">
+              <svg class="form-search__icon">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+
+        </aside>
+
+      </div>
+
+      <nav class="pagination" aria-label="blog pagination" title="pagination">
+
+        <button class="pagination__btn btn-rest" type="button">
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <ul class="pagination__list" role="list">
+
+          <li>
+            <a href="#" aria-current="page">
+              <span class="visually-hidden">page</span>1
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="visually-hidden">page</span>2
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="visually-hidden">page</span>3
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="visually-hidden">page</span>4
+            </a>
+          </li>
+
+          <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
+            <span class="visually-hidden">Prev</span>
+          </button>
+
+        </ul>
+
+      </nav>
+
+    </section>
+
+  </div>
+
+</section>
