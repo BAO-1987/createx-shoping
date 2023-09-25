@@ -3764,24 +3764,9 @@ h3::first-letter {
   -webkit-box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
   box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
 }
-.blog-article:hover img {
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-}
-.blog-article:hover a {
-  color: var(--color-green);
-}
 .blog-article__box picture {
   overflow: hidden;
-}
-.blog-article__box img {
   border-radius: var(--br);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .blog-article__content {
   padding: clamp(5px, 0.31rem + 1vw, 1.5rem);
@@ -3791,11 +3776,6 @@ h3::first-letter {
   -o-transition: color 0.6s linear;
   transition: color 0.6s linear;
 }
-.blog-article__content a ::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
 .blog-article__content h3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3803,12 +3783,14 @@ h3::first-letter {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   min-height: 50px;
-  text-align: left;
+  -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.blog-article__content h3:hover {
+  color: var(--color-green);
 }
 .blog-article__information {
   display: -webkit-box;
@@ -3867,6 +3849,14 @@ h3::first-letter {
   width: 16px;
   height: 16px;
   background-color: currentcolor;
+}
+.blog-article__information li a {
+  -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.blog-article__information li a:hover {
+  color: var(--color-green);
 }
 .blog-article__text {
   -o-text-overflow: ellipsis;

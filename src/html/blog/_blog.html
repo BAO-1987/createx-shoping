@@ -26,7 +26,6 @@
 
       <div class="blog__inner">
 
-
         <ul class="blog__list" role="list">
 
           @loop("../parts/_blog-article.html",[{
@@ -36,12 +35,13 @@
           width: "810",
           height: "360",
           title: "Bag Trends for Summer 2020",
-          name: "Fashion",
+          meta: "Fashion",
+          metaLink: "#",
           time: "August 24, 2023",
           datetime: "2023-08-24",
           http: "#",
           comments: "No comments",
-          desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis convallis"
+          desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel,venenatis nulla. Integer bibendum turpis convallis convallis"
           },
           {
           class: "",
@@ -50,7 +50,8 @@
           width: "810",
           height: "360",
           title: "Wardrobe Essentials Everyone Should Own Today",
-          name: "Celebrity style",
+          meta: "Celebrity style",
+          metaLink: "#",
           time: "August 5, 2023",
           datetime: "2023-08-05",
           http: "#",
@@ -64,7 +65,8 @@
           width: "810",
           height: "360",
           title: "Top 10 of This Season’s Hottest Sneakers",
-          name: "Lifestyle",
+          meta: "Lifestyle",
+          metaLink: "#",
           time: "July 16, 2023",
           datetime: "2023-07-06",
           http: "#",
@@ -78,37 +80,122 @@
           width: "810",
           height: "360",
           title: "Modern Accessories 2030: Why Simple Isn't Easy",
-          name: "Fashion",
+          meta: "Fashion",
+          metaLink: "#",
           time: "July 2, 2023",
           datetime: "2023-07-02",
           http: "#",
           comments: "2 comments",
-          desc: "Tellus sed morbi massa quis sed. Faucibus tincidunt magna enim ultricies fringilla at rhoncus, hac.Sollicitudin et nec congue magna quis commodo quis luctus risus. Dolor, dignissim semper faucibus quisque massa ut enim..."
+          desc: "Tellus sed morbi massa quis sed. Faucibus tincidunt magna enim ultricies fringilla at rhoncus,hac.Sollicitudin et nec congue magna quis commodo quis luctus risus. Dolor, dignissim semper faucibus quisque massa ut enim..."
           }
           ])
 
         </ul>
 
-        <aside class="blog__aside">
+        <aside class="blog__aside blog-aside">
 
-          <form class="form-search" action="#" autocomplete="off" method="get" id="blog-search">
+          <ul class="blog-aside__list" role="list">
 
-            <button class="form-search__close btn-reset" type="button" aria-label="close search-form">
-              <svg class="form-search__icon">
-                <use xlink:href="img/sprite.svg#close"></use>
-              </svg>
-            </button>
+            <li class="blog-aside__item">
+              <form class="form-search form-search--blog" action="#" autocomplete="off" method="get" id="blog-search">
+                <button class="form-search__close btn-reset" type="button" aria-label="close search-form">
+                  <svg class="form-search__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
 
-            <label class="visually-hidden" for="blog-search"></label>
+                <label class="visually-hidden" for="blog-search"></label>
 
-            <input class="form-search__input" type="search" id="blog-search" placeholder="Search for blog" required>
+                <input class="form-search__input" type="search" id="blog-search" placeholder="Search for blog" required>
 
-            <button class="form-search__btn btn-reset" type="submit" aria-label="blog search">
-              <svg class="form-search__icon">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
-            </button>
-          </form>
+                <button class="form-search__btn btn-reset" type="submit" aria-label="blog search">
+                  <svg class="form-search__icon">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+            </li>
+
+            <li class="blog-aside__item">
+
+              <h3>Blog Categories</h3>
+
+              <ul class="blog-categories__list">
+                <li>
+                  <a href="#">
+                    <span>All</span>
+                    <span>23</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>Fashion</span>
+                    <span>3</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>Designers</span>
+                    <span>7</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>Lifestyle</span>
+                    <span>4</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>Celebrity style</span>
+                    <span>9</span>
+                  </a>
+                </li>
+              </ul>
+
+            </li>
+
+            <li class="blog-aside__item">
+              <h3>Featured Posts</h3>
+
+              <ul class="blog-featured__list" role="list">
+
+                <li class="blog-featured__item">
+
+                  <div class="blog-featured__box">
+                    <picture>
+                      <source srcset="img/blog/yellow-shoes.webp" type="image/webp">
+                      <img src="img/blog/yellow-shoes.jpg" width="100" height="100" alt="image of yellow shoes"
+                        loading="lazy">
+                    </picture>
+                  </div>
+
+                  <div class="blog-featured__content">
+                    
+                  </div>
+
+                </li>
+
+                <li class="blog-featured__item">
+
+                </li>
+                <li class="blog-featured__item">
+
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="blog-aside__item">
+
+            </li>
+
+
+          </ul>
 
         </aside>
 
