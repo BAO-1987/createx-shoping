@@ -4,8 +4,11 @@
   position: relative;
   flex-direction: column;
   border-radius: var(--br);
-  box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05),
-    0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  box-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
 
   &__box {
     picture {
@@ -21,26 +24,25 @@
   &__content {
     padding: clamp(5px, calc(0.31rem + 1vw), 1.5rem);
 
-    a {
-      transition: color 0.3s linear;
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-      }
-
-      &:hover {
-        color: var(--color-green);
-      }
-    }
-
     h3 {
       @include flex-a-center;
 
       margin-bottom: rem-f(12);
       min-height: 50px;
-      transition: color 0.3s linear;
+
+      a {
+        transition: color 0.3s linear;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+        }
+
+        &:hover {
+          color: var(--color-green);
+        }
+      }
     }
   }
 
@@ -112,7 +114,6 @@
     overflow: hidden;
   }
 
-
   &--featured {
     box-shadow: none;
     flex-direction: initial;
@@ -123,6 +124,11 @@
       padding: 0;
       width: 100%;
       max-width: 225px;
+
+      time {
+        font-size: rem-f(14);
+        color: var(--color-gray-700);
+      }
     }
   }
 

@@ -88,12 +88,12 @@
 
 .input-reset {
   border-color: transparent;
-  padding: 15px 30px;
+  padding: rem-f(14) 0 rem-f(14) rem-f(16);
   width: 100%;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.6;
-  background-color: transparent;
+  font-size: rem-f(14);
+  line-height: 1.5;
+  background-color: var(--color-white);
 
   &::placeholder {
     color: var(--color-gray);

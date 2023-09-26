@@ -1,0 +1,26 @@
+.tags {
+  &__list {
+    @include flex;
+
+    flex-wrap: wrap;
+    gap: 12px;
+
+    a {
+      border: 1px solid var(--color-gray-400);
+      border-radius: var(--br);
+      padding: 5.5px 16px;
+      font-weight: 700;
+      font-size: rem-f(14);
+      color: var(--color-gray-700);
+      transition: color 0.5s linear,
+        background-color 0.5s linear,
+        border-color 0.5s linear;
+
+      &:hover {
+        border-color: var(--color-green);
+        color: var(--color-white);
+        background-color: var(--color-green);
+      }
+    }
+  }
+}
