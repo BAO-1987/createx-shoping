@@ -3087,6 +3087,7 @@
 .blog-aside__item:not(:last-child)::before {
   content: "";
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%;
   height: 1px;
@@ -5707,6 +5708,12 @@
 }
 .modal--review .custom-select {
   max-width: 100%;
+}
+.modal--blog {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
 }
 .modal::-webkit-backdrop {
   background: rgba(30, 33, 44, 0.75);
