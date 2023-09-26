@@ -47,7 +47,7 @@
 
   &--icon {
     color: var(--color-green);
-    background-color: var(--color-white);
+    background-color: transparent;
 
     &::before {
       @include mask-icon;
