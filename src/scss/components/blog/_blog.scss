@@ -1,6 +1,10 @@
 .blog {
   &__inner {
     @include flex-sb;
+
+    @include for-width(-mobile-md) {
+      justify-content: center;
+    }
   }
 
   &__list {
@@ -8,6 +12,11 @@
     margin: 0 1.5rem clamp(1.5rem, calc(1.5rem + vw(44)), 3.75rem) 0;
     row-gap: clamp(1.5rem, calc(1.5rem + vw(44)), 3.75rem);
     width: min(80%, 810px);
+
+    @include for-width(-mobile-md) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__aside {
@@ -47,6 +56,34 @@
 
     &:last-child {
       padding-top: 2rem;
+    }
+  }
+
+  &__modal {
+
+    position: relative;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    border: none;
+
+    @include for-width (-mobile-md) {
+      position: fixed;
+      max-width: 342px;
+      padding: 10px;
+      display: none;
+      margin-left: auto;
+    }
+
+    &[open] {
+      display: grid;
+      animation: slide-open 800ms forwards;
+    }
+
+    &::backdrop {
+      background: rgba(30, 33, 44, 0.75);
     }
   }
 }

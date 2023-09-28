@@ -10,7 +10,6 @@
   scroll-behavior: smooth;
   overscroll-behavior-y: contain;
 
-
   &__body {
     min-width: 320px;
     min-height: 100%;
@@ -32,6 +31,10 @@
     >.page__body::before {
       width: 100%;
     }
+  }
+
+  &.scroll {
+    padding: 0;
   }
 }
 
@@ -279,10 +282,6 @@
   .article__img {
     min-height: 440px;
   }
-
-  // @include for-width(-mobile-sl) {
-  //   width: calc(100vw - 30px);
-  // }
 }
 
 .list {
