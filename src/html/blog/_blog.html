@@ -22,317 +22,309 @@
 
   <div class="container">
 
+    <div class="blog__inner">
 
+      <ul class="blog__list" role="list">
 
-      <div class="blog__inner">
+        @loop("../parts/_blog-article.html",[{
+        class: "",
+        image: "blog/bag",
+        imageDescr: "image of bag",
+        width: "810",
+        height: "360",
+        title: "Bag Trends for Summer 2020",
+        meta: "Fashion",
+        metaLink: "#",
+        time: "August 24, 2023",
+        datetime: "2023-08-24",
+        http: "#",
+        comments: "No comments",
+        desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit convallis"
+        },
+        {
+        class: "",
+        image: "blog/blue-shirt",
+        imageDescr: "image of sneakers",
+        width: "810",
+        height: "360",
+        title: "Wardrobe Essentials Everyone Should Own Today",
+        meta: "Celebrity style",
+        metaLink: "#",
+        time: "August 5, 2023",
+        datetime: "2023-08-05",
+        http: "#",
+        comments: "No comments",
+        desc: "Mauris tincidunt sollicitudin tristique odio eget volutpat. Fringilla viverra amet, mi interdum blandit."
+        },
+        {
+        class: "",
+        image: "blog/sneakers",
+        imageDescr: "image of sneakers",
+        width: "810",
+        height: "360",
+        title: "Top 10 of This Season’s Hottest Sneakers",
+        meta: "Lifestyle",
+        metaLink: "#",
+        time: "July 16, 2023",
+        datetime: "2023-07-06",
+        http: "#",
+        comments: "4 comments",
+        desc: "Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque.Rhoncus"
+        },
+        {
+        class: "",
+        image: "blog/heart-accessories",
+        imageDescr: "image of heart-accessories",
+        width: "810",
+        height: "360",
+        title: "Modern Accessories 2030: Why Simple Isn't Easy",
+        meta: "Fashion",
+        metaLink: "#",
+        time: "July 2, 2023",
+        datetime: "2023-07-02",
+        http: "#",
+        comments: "2 comments",
+        desc: "Tellus sed morbi massa quis sed. Faucibus tincidunt magna enim ultricies fringilla at rhoncus,hac."
+        }
+        ])
 
-        <ul class="blog__list" role="list">
+      </ul>
 
-          @loop("../parts/_blog-article.html",[{
-          class: "",
-          image: "blog/bag",
-          imageDescr: "image of bag",
-          width: "810",
-          height: "360",
-          title: "Bag Trends for Summer 2020",
-          meta: "Fashion",
-          metaLink: "#",
-          time: "August 24, 2023",
-          datetime: "2023-08-24",
-          http: "#",
-          comments: "No comments",
-          desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit convallis"
-          },
-          {
-          class: "",
-          image: "blog/blue-shirt",
-          imageDescr: "image of sneakers",
-          width: "810",
-          height: "360",
-          title: "Wardrobe Essentials Everyone Should Own Today",
-          meta: "Celebrity style",
-          metaLink: "#",
-          time: "August 5, 2023",
-          datetime: "2023-08-05",
-          http: "#",
-          comments: "No comments",
-          desc: "Mauris tincidunt sollicitudin tristique odio eget volutpat. Fringilla viverra amet, mi interdum blandit."
-          },
-          {
-          class: "",
-          image: "blog/sneakers",
-          imageDescr: "image of sneakers",
-          width: "810",
-          height: "360",
-          title: "Top 10 of This Season’s Hottest Sneakers",
-          meta: "Lifestyle",
-          metaLink: "#",
-          time: "July 16, 2023",
-          datetime: "2023-07-06",
-          http: "#",
-          comments: "4 comments",
-          desc: "Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque.Rhoncus"
-          },
-          {
-          class: "",
-          image: "blog/heart-accessories",
-          imageDescr: "image of heart-accessories",
-          width: "810",
-          height: "360",
-          title: "Modern Accessories 2030: Why Simple Isn't Easy",
-          meta: "Fashion",
-          metaLink: "#",
-          time: "July 2, 2023",
-          datetime: "2023-07-02",
-          http: "#",
-          comments: "2 comments",
-          desc: "Tellus sed morbi massa quis sed. Faucibus tincidunt magna enim ultricies fringilla at rhoncus,hac."
-          }
-          ])
+      <aside class="blog__aside blog-aside">
 
-        </ul>
+        <dialog class="blog-aside__modal" id="modalBlog">
 
-        <aside class="blog__aside blog-aside">
+        <div class="modal__header">
+          <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
+            <svg class="modal__icon">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
 
-            <button class="blog__btn modal__btn btn" type="button" data-modal="modalBlog">
-              Open Aside
-            </button>
+          <h3 class="modal__title title">Sidebar</h3>
+        </div>
 
-          <dialog class="blog-aside__modal" id="modalBlog">
+        <ul class="blog-aside__list" role="list">
 
-            <div class="modal__header">
-              <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
-                <svg class="modal__icon">
+          <li class="blog-aside__item">
+            <form class="form-search form-search--blog" action="#" autocomplete="off" method="get" id="blog-form">
+              <button class="form-search__close btn-reset" type="button" aria-label="close search-form">
+                <svg class="form-search__icon">
                   <use xlink:href="img/sprite.svg#close"></use>
                 </svg>
               </button>
 
-              <h3 class="modal__title title">Sidebar</h3>
-            </div>
+              <label class="visually-hidden" for="blog-search"></label>
 
-            <ul class="blog-aside__list" role="list">
+              <input class="form-search__input" type="search" id="blog-search" placeholder="Search for blog" required>
 
-              <li class="blog-aside__item">
-                <form class="form-search form-search--blog" action="#" autocomplete="off" method="get" id="blog-form">
-                  <button class="form-search__close btn-reset" type="button" aria-label="close search-form">
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#close"></use>
-                    </svg>
-                  </button>
+              <button class="form-search__btn btn-reset" type="submit" aria-label="blog search">
+                <svg class="form-search__icon">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+          </li>
 
-                  <label class="visually-hidden" for="blog-search"></label>
+          <li class="blog-aside__item">
 
-                  <input class="form-search__input" type="search" id="blog-search" placeholder="Search for blog"
-                    required>
+            <h3 class="item-title">Blog Categories</h3>
 
-                  <button class="form-search__btn btn-reset" type="submit" aria-label="blog search">
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                  </button>
-                </form>
+            <ul class="blog-categories__list">
+              <li>
+                <a href="#">
+                  <span>All</span>
+                  <span>23</span>
+                </a>
               </li>
 
-              <li class="blog-aside__item">
-
-                <h3 class="item-title">Blog Categories</h3>
-
-                <ul class="blog-categories__list">
-                  <li>
-                    <a href="#">
-                      <span>All</span>
-                      <span>23</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <span>Fashion</span>
-                      <span>3</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <span>Designers</span>
-                      <span>7</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <span>Lifestyle</span>
-                      <span>4</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <span>Celebrity style</span>
-                      <span>9</span>
-                    </a>
-                  </li>
-                </ul>
-
+              <li>
+                <a href="#">
+                  <span>Fashion</span>
+                  <span>3</span>
+                </a>
               </li>
 
-              <li class="blog-aside__item">
-                <h3 class="item-title">Featured Posts</h3>
-
-                <ul class="blog-featured__list" role="list">
-
-                  <li class="blog-featured__item">
-
-                    <article class="blog-article blog-article--featured">
-
-                      <div class="blog-article__box">
-                        <picture>
-                          <source srcset="img/blog/yellow-shoes.webp" type="image/webp">
-                          <img src="img/blog/yellow-shoes.jpg" width="100" height="100" alt="image of yellow shoes"
-                            loading="lazy">
-                        </picture>
-                      </div>
-
-                      <div class="blog-article__content">
-                        <time datetime="2023-07-05">July 5, 2023</time>
-                        <h3 class="blog-article__title blog-article__title--small">
-                          <a href="#">
-                            14 Items From End-of-Spring Sales Are Sure to Spark Joy
-                          </a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-
-                  <li class="blog-featured__item">
-                    <article class="blog-article blog-article--featured">
-
-                      <div class="blog-article__box">
-                        <picture>
-                          <source srcset="img/blog/asian-woman.webp" type="image/webp">
-                          <img src="img/blog/asian-woman.jpg" width="100" height="100" alt="image of asian-woman"
-                            loading="lazy">
-                        </picture>
-                      </div>
-
-                      <div class="blog-article__content">
-                        <time datetime="2023-03-12">March 12, 2023</time>
-                        <h3 class="blog-article__title blog-article__title--small">
-                          <a href="#">
-                            Top 10 Looks from the Venice Film Festival
-                          </a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-
-                  <li class="blog-featured__item">
-                    <article class="blog-article blog-article--featured">
-                      <div class="blog-article__box">
-                        <picture>
-                          <source srcset="img/blog/black-woman.webp" type="image/webp">
-                          <img src="img/blog/black-woman.jpg" width="100" height="100" alt="image of black woman"
-                            loading="lazy">
-                        </picture>
-                      </div>
-
-                      <div class="blog-article__content">
-                        <time datetime="2023-04-09">April 9, 2023</time>
-                        <h3 class="blog-article__title blog-article__title--small">
-                          <a href="#">
-                            Best Fashion Instagrams of the Week
-                          </a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-
-                </ul>
-
+              <li>
+                <a href="#">
+                  <span>Designers</span>
+                  <span>7</span>
+                </a>
               </li>
 
-              <li class="blog-aside__item">
+              <li>
+                <a href="#">
+                  <span>Lifestyle</span>
+                  <span>4</span>
+                </a>
+              </li>
 
-                <h3 class="item-title">
-                  Tags
-                </h3>
+              <li>
+                <a href="#">
+                  <span>Celebrity style</span>
+                  <span>9</span>
+                </a>
+              </li>
+            </ul>
 
-                <ul class="tags__list" role="list">
+          </li>
 
-                  <li>
-                    <a href="#">#trends</a>
-                  </li>
+          <li class="blog-aside__item">
+            <h3 class="item-title">Featured Posts</h3>
 
-                  <li>
-                    <a href="#">#inspiration</a>
-                  </li>
+            <ul class="blog-featured__list" role="list">
 
-                  <li>
-                    <a href="#">#designers</a>
-                  </li>
+              <li class="blog-featured__item">
 
-                  <li>
-                    <a href="#">#kidsfashion</a>
-                  </li>
+                <article class="blog-article blog-article--featured">
 
-                  <li>
-                    <a href="#">#streetstyle</a>
-                  </li>
+                  <div class="blog-article__box">
+                    <picture>
+                      <source srcset="img/blog/yellow-shoes.webp" type="image/webp">
+                      <img src="img/blog/yellow-shoes.jpg" width="100" height="100" alt="image of yellow shoes"
+                        loading="lazy">
+                    </picture>
+                  </div>
 
-                  <li>
-                    <a href="#">#models</a>
-                  </li>
+                  <div class="blog-article__content">
+                    <time datetime="2023-07-05">July 5, 2023</time>
+                    <h3 class="blog-article__title blog-article__title--small">
+                      <a href="#">
+                        14 Items From End-of-Spring Sales Are Sure to Spark Joy
+                      </a>
+                    </h3>
+                  </div>
+                </article>
+              </li>
 
-                </ul>
+              <li class="blog-featured__item">
+                <article class="blog-article blog-article--featured">
 
+                  <div class="blog-article__box">
+                    <picture>
+                      <source srcset="img/blog/asian-woman.webp" type="image/webp">
+                      <img src="img/blog/asian-woman.jpg" width="100" height="100" alt="image of asian-woman"
+                        loading="lazy">
+                    </picture>
+                  </div>
+
+                  <div class="blog-article__content">
+                    <time datetime="2023-03-12">March 12, 2023</time>
+                    <h3 class="blog-article__title blog-article__title--small">
+                      <a href="#">
+                        Top 10 Looks from the Venice Film Festival
+                      </a>
+                    </h3>
+                  </div>
+                </article>
+              </li>
+
+              <li class="blog-featured__item">
+                <article class="blog-article blog-article--featured">
+                  <div class="blog-article__box">
+                    <picture>
+                      <source srcset="img/blog/black-woman.webp" type="image/webp">
+                      <img src="img/blog/black-woman.jpg" width="100" height="100" alt="image of black woman"
+                        loading="lazy">
+                    </picture>
+                  </div>
+
+                  <div class="blog-article__content">
+                    <time datetime="2023-04-09">April 9, 2023</time>
+                    <h3 class="blog-article__title blog-article__title--small">
+                      <a href="#">
+                        Best Fashion Instagrams of the Week
+                      </a>
+                    </h3>
+                  </div>
+                </article>
               </li>
 
             </ul>
-          </dialog>
 
-        </aside>
+          </li>
 
-      </div>
+          <li class="blog-aside__item">
 
-      <nav class="pagination" aria-label="blog pagination" title="pagination">
+            <h3 class="item-title">
+              Tags
+            </h3>
 
-        <button class="pagination__btn btn-rest" type="button">
-          <span class="visually-hidden">Next</span>
+            <ul class="tags__list" role="list">
+
+              <li>
+                <a href="#">#trends</a>
+              </li>
+
+              <li>
+                <a href="#">#inspiration</a>
+              </li>
+
+              <li>
+                <a href="#">#designers</a>
+              </li>
+
+              <li>
+                <a href="#">#kidsfashion</a>
+              </li>
+
+              <li>
+                <a href="#">#streetstyle</a>
+              </li>
+
+              <li>
+                <a href="#">#models</a>
+              </li>
+
+            </ul>
+
+          </li>
+        </ul>
+        </dialog>
+
+      </aside>
+
+    </div>
+
+    <nav class="pagination" aria-label="blog pagination" title="pagination">
+
+      <button class="pagination__btn btn-rest" type="button">
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <ul class="pagination__list" role="list">
+
+        <li>
+          <a href="#" aria-current="page">
+            <span class="visually-hidden">page</span>1
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="visually-hidden">page</span>2
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="visually-hidden">page</span>3
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="visually-hidden">page</span>4
+          </a>
+        </li>
+
+        <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
+          <span class="visually-hidden">Prev</span>
         </button>
 
-        <ul class="pagination__list" role="list">
+      </ul>
 
-          <li>
-            <a href="#" aria-current="page">
-              <span class="visually-hidden">page</span>1
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <span class="visually-hidden">page</span>2
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <span class="visually-hidden">page</span>3
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <span class="visually-hidden">page</span>4
-            </a>
-          </li>
-
-          <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
-            <span class="visually-hidden">Prev</span>
-          </button>
-
-        </ul>
-
-      </nav>
+    </nav>
 
 
   </div>

@@ -28,7 +28,6 @@
   }
 }
 
-
 .blog-aside {
   &__list {
     @include flex-col;
@@ -37,7 +36,7 @@
   &__item {
     &:not(:last-child) {
       position: relative;
-      padding: 2rem 0;
+      padding: clamp(1rem, calc(1rem + 1vw), 2rem) 0;
 
       &::before {
         content: "";
@@ -60,11 +59,7 @@
   }
 
   &__modal {
-
-    position: relative;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    display: block;
     width: 100%;
     padding: 0;
     border: none;
@@ -78,7 +73,7 @@
     }
 
     &[open] {
-      display: grid;
+      display: block;
       animation: slide-open 800ms forwards;
     }
 
