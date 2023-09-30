@@ -49,7 +49,7 @@
   }
 
   &__title {
-    margin-bottom: rem-f(24);
+    margin-bottom: clamp(0.8rem, calc(0.8rem + vw(16)), 1.5rem);
     font-weight: 700;
     font-size: clamp(1.13rem, calc(-0.08rem + 6.02vw), 1.75rem);
   }

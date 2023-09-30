@@ -25,6 +25,7 @@
 
     &--checkbox {
       @include flex-all-sb;
+      flex-direction: initial;
     }
 
     &--upload {
@@ -235,6 +236,7 @@
   }
 
   &--blog {
+     @include flex-a-center;
     width: 100%;
     max-width: 100%;
   }

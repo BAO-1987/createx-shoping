@@ -420,6 +420,8 @@
     <main class="main">
       <section class="blog section">
 
+  <h1 class="visually-hidden">Fashion blog</h1>
+
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <ul class="breadcrumb__list">
@@ -444,9 +446,12 @@
 
     <div class="blog__inner">
 
-      <ul class="blog__list" role="list">
+      <div class="blog__content">
+        <h2 class="blog__title title">Fashion blog</h2>
 
-        <li class="">
+        <ul class="blog__list" role="list">
+
+          <li class="">
 
   <article class="blog-article">
 
@@ -591,13 +596,14 @@
 
 </li>
 
-      </ul>
+        </ul>
+      </div>
 
       <aside class="blog__aside blog-aside">
 
         <dialog class="blog-aside__modal" id="modalBlog">
 
-          <div class="modal__header">
+          <div class="blog-aside__header">
             <button class="modal__close btn-reset" aria-label="close modal" type="button" data-modal-close>
               <svg class="modal__icon">
                 <use xlink:href="img/sprite.svg#close"></use>

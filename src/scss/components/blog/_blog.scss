@@ -3,6 +3,7 @@
   &__inner {
     position: relative;
     @include flex-sb;
+    align-items: flex-start;
 
     @include for-width(-mobile-md) {
       justify-content: center;
@@ -23,10 +24,6 @@
     }
   }
 
-  // &__aside {
-  //   width: min(80%, 342px);
-  // }
-
   .pagination {
     justify-content: flex-start;
   }
@@ -46,6 +43,8 @@
 }
 
 .blog-aside {
+  position: sticky;
+  top: 10%;
   width: min(80%, 342px);
 
   &__list {
@@ -77,10 +76,19 @@
     }
   }
 
+  &__header {
+    display: none;
+    visibility: hidden;
+
+    @include for-width (-mobile-md) {
+      display: block;
+      visibility: visible;
+    }
+  }
+
   &__modal {
     position: relative;
     display: block;
-
     border: none;
 
     @include for-width(-mobile-md) {
@@ -91,10 +99,9 @@
       margin-left: auto;
     }
 
+
     &[open] {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto 1fr auto;
+      display: block;
       min-height: 100vh;
       animation: slide-open 800ms forwards;
     }
@@ -102,9 +109,8 @@
     &::backdrop {
       background: rgba(30, 33, 44, 0.75);
     }
+
   }
-
-
 
   @include for-width (-mobile-md) {
     width: auto;
