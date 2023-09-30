@@ -89,6 +89,30 @@
   outline: none;
 }
 
+.scroll {
+  overflow: auto;
+  padding: 0 5px 5px 0;
+  scrollbar-color: var(--color-green) var(--color-white);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-green);
+  }
+}
+
 .input-reset {
   border-color: transparent;
   padding: rem-f(14) 0 rem-f(14) rem-f(16);
@@ -498,28 +522,7 @@
   }
 }
 
-.scroll {
-  overflow: auto;
-  scrollbar-color: var(--color-green) var(--color-white);
-  scrollbar-width: thin;
 
-  &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-white);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-green);
-  }
-}
 
 .color-picker {
   @include flex;

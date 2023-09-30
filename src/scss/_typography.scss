@@ -22,7 +22,7 @@
   line-height: 1.5;
 
   &--small {
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 0.8rem + vw(3.2), 1rem);
     line-height: 1.6;
   }
 }

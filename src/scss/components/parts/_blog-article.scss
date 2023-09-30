@@ -126,8 +126,22 @@
       max-width: 225px;
 
       time {
+        position: relative;
+        padding-left: 24px;
         font-size: rem-f(14);
+        line-height: 1.4;
         color: var(--color-gray-700);
+
+        &::before {
+          @include mask;
+           mask-image: url("../img/sprite.svg#clock");
+           left: 0;
+           bottom: 0;
+           width: 16px;
+           height: 16px;
+           background-color: currentcolor;
+        }
+
       }
     }
 
