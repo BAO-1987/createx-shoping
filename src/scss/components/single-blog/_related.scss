@@ -1,0 +1,24 @@
+.related {
+  padding: clamp(2rem, calc(2rem + vw(48)), 5rem) 0;
+  background-color: var(--color-gray-200);
+
+  &__content {
+    @include flex-sb;
+  }
+
+  .blog__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem-f(30);
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .blog-article__box {
+    img {
+      aspect-ratio: 16/9;
+    }
+  }
+}

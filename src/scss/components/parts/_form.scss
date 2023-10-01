@@ -197,6 +197,19 @@
   &--contacts {
     flex-direction: column;
   }
+
+  &--blog {
+    display: block;
+
+    .btn {
+      grid-column: 2 span;
+      margin: 0 auto;
+
+      @include for-width (-mobile-s) {
+        grid-column: auto;
+      }
+    }
+  }
 }
 
 .form-search {
@@ -236,7 +249,7 @@
   }
 
   &--blog {
-     @include flex-a-center;
+    @include flex-a-center;
     width: 100%;
     max-width: 100%;
   }

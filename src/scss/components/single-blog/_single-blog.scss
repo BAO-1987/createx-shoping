@@ -1,0 +1,90 @@
+.single-blog {
+  &__wrapper {
+    max-width: 840px;
+  }
+
+  &__content {
+    @include flex-sb;
+    margin-bottom: 60px;
+  }
+}
+
+.blog-post {
+  img {
+    margin-bottom: 2rem;
+    border-radius: var(--br);
+  }
+
+  p {
+    color: var(--color-gray-800);
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: rem-f(20);
+  }
+
+  &__text {
+    margin-bottom: 3rem;
+  }
+
+  &__blockqote {
+    position: relative;
+    padding-left: rem-f(58);
+    margin-bottom: 3rem;
+
+    &::before {
+      @include mask;
+      mask-image: url("../img/sprite.svg#quotes");
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 20px;
+      background-color: var(--color-green);
+    }
+  }
+
+  &__list {
+    @include flex-col;
+
+    margin-bottom: 1.5rem;
+    gap: 4px;
+
+    li {
+
+      position: relative;
+      padding-left: 2rem;
+
+      &::before {
+        @include mask;
+
+        mask-image: url("../img/sprite.svg#check-list");
+        left: 0;
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--color-green);
+      }
+    }
+  }
+
+  &__footer {
+    @include flex-all-sb;
+    padding-top: 40px;
+
+    .item-title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tags,
+  &__social {
+    @include flex;
+    gap: 12px;
+  }
+
+}

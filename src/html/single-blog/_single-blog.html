@@ -1,7 +1,5 @@
 <section class="single-blog section">
 
-  <h1 class="visually-hidden">Top 10 of This Season’s Hottest Sneakers</h1>
-
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <ul class="breadcrumb__list">
@@ -26,9 +24,9 @@
     </div>
   </nav>
 
-  <div class="containe single-blog__inner">
+  <div class="container single-blog__wrapper">
 
-    <h2 class="single-blog__title title">Top 10 of This Season’s Hottest Sneakers</h2>
+    <h1 class="single-blog__title title">Top 10 of This Season’s Hottest Sneakers</h1>
 
     <div class="single-blog__content">
 
@@ -54,9 +52,9 @@
         class: "social__item",
         link: "social__link",
         http: "#",
-        aria: "facebook page",
+        aria: "instagram page",
         iconTitle: "social__icon",
-        icon: "img/sprite.svg#facebook",
+        icon: "img/sprite.svg#instagram",
         },
         {
         class: "social__item",
@@ -84,25 +82,28 @@
 
       <div class="blog-post__box">
         <picture>
-          <source srcset="img/sneakers.webp" type="image/webp">
+          <source srcset="img/blog/sneakers.webp" type="image/webp">
           <img src="img/blog/sneakers.jpg" width="810" height="360" alt="image of white sneakers" loading="lazy">
         </picture>
       </div>
 
-      <h2>
+      <h2 class="blog-post__title">
         Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio. Interdum aenean sit
         malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac euismod.
       </h2>
 
-      <p>At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras
-        dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque,
-        fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi varius viverra
-        risus vel.</p>
+      <div class="blog-post__text">
 
-      <p> Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl
-        massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis diam
-        vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet velit pharetra,
-        nisi nunc, non.</p>
+        <p>At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras
+          dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque,
+          fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi varius
+          viverr risus vel.</p>
+
+        <p>Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl
+          massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis diam
+          vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet velit
+          pharetra,nisi nunc, non.</p>
+      </div>
 
       <blockquote class="blog-post__blockqote">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum
@@ -114,7 +115,7 @@
       <p>Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat mattis. Vitae mus blandit in neque amet
         non fringilla blandit:</p>
 
-      <ul role="list">
+      <ul class="blog-post__list" role="list">
         <li>A fermentum in morbi pretium aliquam adipiscing donec tempus.</li>
         <li>Vulputate placerat amet pulvinar lorem nisl.</li>
         <li>Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.</li>
@@ -127,11 +128,81 @@
         Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis sagittis curabitur tellus
         convallis eget netus vitae.</p>
 
-        <div class="blog-post__footer">
-          
+      <div class="blog-post__footer">
+
+        <div class="blog-post__tags">
+
+          <span class="item-title">
+          Tags:
+          </span>
+
+          <ul class="tags__list" role="list">
+
+            <li>
+              <a href="#" rel="tag">#trends</a>
+            </li>
+
+            <li>
+              <a href="#" rel="tag">#inspiration</a>
+            </li>
+
+            <li>
+              <a href="#" rel="tag">#designers</a>
+            </li>
+
+          </ul>
+
         </div>
 
+        <div class="blog-post__social">
+
+          <span class="item-title">
+            Share:
+          </span>
+          
+          <ul class="social__list" role="list">
+
+            @loop("../parts/_social.html",[{
+            class: "social__item",
+            link: "social__link",
+            http: "#",
+            aria: "facebook page",
+            iconTitle: "social__icon",
+            icon: "img/sprite.svg#facebook",
+            },
+            {
+            class: "social__item",
+            link: "social__link",
+            http: "#",
+            aria: "instagram page",
+            iconTitle: "social__icon",
+            icon: "img/sprite.svg#instagram",
+            },
+            {
+            class: "social__item",
+            link: "social__link",
+            http: "#",
+            aria: "twitter page",
+            iconTitle: "social__icon",
+            icon: "img/sprite.svg#twitter",
+            },
+            {
+            class: "social__item",
+            link: "social__link",
+            http: "#",
+            aria: "linkedin page",
+            iconTitle: "social__icon",
+            icon: "img/sprite.svg#linkedin",
+            }
+            ])
+
+          </ul>
+        </div>
+
+      </div>
+
     </article>
+
 
   </div>
 
