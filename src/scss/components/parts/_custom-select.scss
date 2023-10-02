@@ -131,3 +131,11 @@
   border-bottom-left-radius: var(--br);
   border-bottom-right-radius: var(--br);
 }
+
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  position: relative;
+  padding: 13px 16px;
+  font-size: 14px;
+}

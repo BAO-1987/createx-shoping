@@ -1,10 +1,9 @@
 .single-reviews {
+  @include flex-sb;
   position: relative;
-@include flex-sb;
- gap: 1rem;
+  gap: 1rem;
 
   &__inner {
-
     width: 100%;
     max-width: 735px;
   }
@@ -14,7 +13,7 @@
 
     margin-bottom: clamp(2rem, calc(0.5rem + 4vw), 5rem);
 
-    @include for-width (-mobile-sl) {
+    @include for-width(-mobile-sl) {
       display: grid;
       place-content: center;
       gap: 2rem;
@@ -30,42 +29,45 @@
       color: var(--color-gray-700);
     }
 
-    @include for-width (-mobile-sl) {
+    @include for-width(-mobile-sl) {
       margin: 0;
-      width: fit-content;
+      width: 100%;
       text-align: center;
     }
   }
 
   &__title {
     position: relative;
-    margin-bottom: rem-f(55);
+    margin-bottom: clamp(2.5rem, calc(0.5rem + 2.7vw), 3.75rem);
     text-align: left;
 
     &::before {
+      content: "";
+      position: absolute;
       bottom: -1.8rem;
-      background-image: url("../img/sprite.svg#rating-for");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
       width: 78px;
       height: 14px;
+      background-image: url("../img/sprite.svg#rating-for");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
   &__sort {
     @include flex-sb;
-    margin-bottom: 50px;
+
+    margin-bottom: clamp(1.5rem, calc(1rem + vw(32)), 3rem);
   }
 
   &__item {
     @include flex;
 
     position: relative;
+    margin-bottom: clamp(1rem, calc(1rem + 1vw), 2rem);
     line-height: 1.6;
-    gap: 30px;
     color: var(--color-gray-800);
-    margin-bottom: 2rem;
+    gap: var(--grid-gap);
 
     &:not(:last-child)::before {
       content: "";
@@ -76,41 +78,51 @@
       background-color: var(--color-gray-300);
     }
 
-    @include for-width (-tablet) {
+    @include for-width(-tablet) {
       flex-direction: column;
     }
-
   }
 
   &__blockqoute {
-    margin-bottom: 2rem;
+    margin-bottom: clamp(1rem, calc(1rem + 1vw), 2rem);
+
+    a {
+      transition: color 0.5s linear;
+
+      &:hover {
+        color: var(--color-green);
+      }
+    }
   }
 
   &__author {
     @include flex-col;
+
     width: 100%;
     max-width: 150px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: rem-f(18);
     color: var(--color-gray-900);
   }
 
   &__time {
     position: relative;
     display: inline-block;
-    padding-bottom: 20px;
+    padding-bottom: rem-f(20);
     font-weight: 400;
-    font-size: 14px;
+    font-size: rem-f(14);
     color: var(--color-gray-700);
 
     &::before {
+      content: "";
+      position: absolute;
       bottom: 0;
-      background-image: url("../img/sprite.svg#rating-five");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
       width: 78px;
       height: 14px;
+      background-image: url("../img/sprite.svg#rating-five");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
@@ -122,7 +134,7 @@
 
   &__btn {
     position: relative;
-    padding-left: 25px;
+    padding-left: rem-f(25);
     font-size: rem-f(14);
     color: var(--color-gray-700);
     transition: color 0.3s linear;
@@ -133,7 +145,6 @@
       left: 0;
       mask-image: url("../img/sprite.svg#share-arrow");
       background-color: currentcolor;
-
     }
 
     &:hover {

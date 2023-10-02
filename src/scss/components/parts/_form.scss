@@ -156,7 +156,7 @@
       grid-column: 2 span;
       margin-bottom: clamp(0.5rem, calc(0.5rem + 0.83vw), 1.5rem);
 
-      @include for-width(-mobile-s) {
+      @include for-width(-mobile-sl) {
         grid-column: auto;
       }
     }
@@ -205,7 +205,7 @@
       grid-column: 2 span;
       margin: 0 auto;
 
-      @include for-width (-mobile-s) {
+      @include for-width (-mobile-sl) {
         grid-column: auto;
       }
     }
@@ -400,7 +400,7 @@
       @include flex-all-sb;
       gap: clamp(0.2rem, calc(0.3rem + 1vw), 1.5rem);
 
-      @include for-width(-mobile-s) {
+      @include for-width(-mobile-sl) {
         flex-wrap: wrap;
       }
     }
