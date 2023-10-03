@@ -4,15 +4,17 @@
   background-color: var(--color-gray-200);
 
   &__list {
-    @include flex;
-
+    @include flex-a-center;
     flex-wrap: wrap;
-    font-size: rem-f(14);
+    gap: 0.5rem;
+
 
     li {
       position: relative;
-      display: inline-flex;
+      display: flex;
       align-items: center;
+      font-size: rem-f(16);
+      line-height: 1;
 
       &:not(:last-child) {
         margin-right: 2rem;
@@ -27,8 +29,10 @@
       }
 
       a {
+        position: relative;
         color: var(--color-gray-800);
         transition: color 0.3s linear;
+
 
         &:is(:hover, :active) {
           color: var(--color-green);

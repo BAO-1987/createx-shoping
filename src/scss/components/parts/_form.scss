@@ -51,9 +51,9 @@
       }
 
       .btn {
-        padding: 0 em(24);
         max-width: 122px !important;
         margin: 0 auto;
+        padding: rem-f(10) rem-f(25);
         font-size: rem-f(12);
         user-select: none;
       }
@@ -65,7 +65,8 @@
           color: var(--color-white);
 
           &::after {
-            transform: scale(160%) translateY(0);
+            opacity: 1;
+            transform: scale(20);
           }
         }
       }
@@ -97,6 +98,7 @@
     &--file {
       position: absolute;
       z-index: 5;
+      padding: 0;
       opacity: 0;
       cursor: pointer;
       inset: 0;

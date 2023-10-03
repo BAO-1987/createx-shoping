@@ -1,4 +1,6 @@
 const buttons = document.querySelectorAll(".modal__btn");
+const page = document.querySelector(".page");
+
 const closeButtons = document.querySelectorAll("[data-modal-close]");
 let currentModal = null;
 
@@ -12,7 +14,7 @@ buttons.forEach((button) => {
       }
       modal.showModal();
       currentModal = modal;
-      document.body.classList.add(".open");
+      page.classList.add("dis-scroll");
     }
   });
 });
@@ -23,6 +25,7 @@ closeButtons.forEach((button) => {
     if (modal && modal === currentModal) {
       modal.close();
       currentModal = null;
+      page.classList.remove("dis-scroll");
     }
   });
 });
