@@ -2575,6 +2575,13 @@
 .filter::backdrop {
   background: rgba(30, 33, 44, 0.75);
 }
+.filter[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  -webkit-animation: fade-out 500ms forwards;
+  animation: fade-out 500ms forwards;
+}
 
 .filter-group__list {
   display: -webkit-box;
@@ -5271,28 +5278,14 @@
 .cart-preview::backdrop {
   background: rgba(30, 33, 44, 0.75);
 }
-
-@-webkit-keyframes slide-open {
-  0% {
-    -webkit-transform: translateX(5%);
-    transform: translateX(5%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
+.cart-preview[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  -webkit-animation: fade-out 300ms forwards;
+  animation: fade-out 300ms forwards;
 }
 
-@keyframes slide-open {
-  0% {
-    -webkit-transform: translateX(5%);
-    transform: translateX(5%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-}
 .languages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5998,8 +5991,15 @@
   flex-direction: column;
 }
 .modal[open] {
-  -webkit-animation: slide-up 1000ms forwards;
-  animation: slide-up 1000ms forwards;
+  -webkit-animation: slide-up 1000ms forwards, fade-in 1000ms forwards;
+  animation: slide-up 1000ms forwards, fade-in 1000ms forwards;
+}
+.modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  -webkit-animation: fade-out 500ms forwards;
+  animation: fade-out 500ms forwards;
 }
 
 @-webkit-keyframes slide-up {
@@ -6657,7 +6657,27 @@ input[type=number]::-webkit-outer-spin-button {
     opacity: 1;
   }
 }
-@-webkit-keyframes hide {
+@-webkit-keyframes slide-open {
+  0% {
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-open {
+  0% {
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes fade-out {
   0% {
     opacity: 1;
   }
@@ -6665,44 +6685,12 @@ input[type=number]::-webkit-outer-spin-button {
     opacity: 0;
   }
 }
-@keyframes hide {
+@keyframes fade-out {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-  }
-}
-@-webkit-keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes hide-away {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hide-away {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 .slider {

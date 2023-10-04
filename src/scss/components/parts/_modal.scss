@@ -101,7 +101,15 @@
   }
 
   &[open] {
-    animation: slide-up 1000ms forwards;
+    animation: slide-up 1000ms forwards, fade-in 1000ms forwards;
+
+  }
+
+  &[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fade-out 500ms forwards;
   }
 }
 

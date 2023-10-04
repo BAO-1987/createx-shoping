@@ -33,6 +33,7 @@
 
   .filter__btn {
     margin-bottom: 2rem;
+
     &::before {
       mask-image: url("../img/sprite.svg#filter-hide");
       left: clamp(1rem, calc(-0.3rem + 3.7vw), 4.1rem);
@@ -45,6 +46,13 @@
 
   &::backdrop {
     background: rgba(30, 33, 44, 0.75);
+  }
+
+  &[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fade-out 500ms forwards;
   }
 }
 
@@ -97,7 +105,7 @@
       border: 1px solid var(--color-gray-500);
     }
 
-    .custom-checkbox__field:checked + .custom-checkbox__content::before {
+    .custom-checkbox__field:checked+.custom-checkbox__content::before {
       background-color: var(--color-green);
     }
   }
