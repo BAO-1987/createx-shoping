@@ -221,21 +221,14 @@
   &::backdrop {
     background: rgba(30, 33, 44, 0.75);
   }
-
-  &[closing] {
-    display: block;
-    pointer-events: none;
-    inset: 0;
-    animation: fade-out 300ms forwards;
-  }
 }
 
-// @keyframes slide-open {
-//   0% {
-//     transform: translateX(5%);
-//   }
+@keyframes slide-open {
+  0% {
+    transform: translateX(5%);
+  }
 
-//   100% {
-//     transform: translateY(0%);
-//   }
-// }
+  100% {
+    transform: translateX(0%);
+  }
+}

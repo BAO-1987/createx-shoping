@@ -2559,15 +2559,23 @@
 }
 .filter .filter__btn {
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 255px;
 }
-.filter .filter__btn::before {
-  -webkit-mask-image: url("../img/sprite.svg#filter-hide");
-  mask-image: url("../img/sprite.svg#filter-hide");
-  left: clamp(1rem, -0.3rem + 3.7vw, 4.1rem);
+.filter__icon {
+  margin-right: 8px;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+.filter__icon--reverse {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .filter[open] {
-  -webkit-animation: slide-open 800ms forwards;
-  animation: slide-open 800ms forwards;
+  -webkit-animation: slide-left 800ms forwards;
+  animation: slide-left 800ms forwards;
 }
 .filter::-webkit-backdrop {
   background: rgba(30, 33, 44, 0.75);
@@ -2575,14 +2583,28 @@
 .filter::backdrop {
   background: rgba(30, 33, 44, 0.75);
 }
-.filter[closing] {
-  display: block;
-  pointer-events: none;
-  inset: 0;
-  -webkit-animation: fade-out 500ms forwards;
-  animation: fade-out 500ms forwards;
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-5%);
+    transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
 }
 
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-5%);
+    transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
 .filter-group__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3715,34 +3737,6 @@
   width: 1rem;
   height: 1rem;
   background-color: currentcolor;
-}
-.btn--filter {
-  width: 100%;
-  max-width: 255px;
-}
-.btn--filter::before {
-  content: "";
-  position: absolute;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: currentcolor;
-  -webkit-transition: background-color 0.5s linear;
-  -o-transition: background-color 0.5s linear;
-  transition: background-color 0.5s linear;
-  -webkit-mask-image: url("../img/sprite.svg#filter-show");
-  mask-image: url("../img/sprite.svg#filter-show");
-  left: clamp(1rem, -0.3rem + 3.7vw, 4.1rem);
-}
-@media (max-width: calc(48em - 0.0625em)) {
-  .btn--filter::before {
-    left: 5px;
-  }
 }
 
 .btn-reset {
@@ -5278,14 +5272,28 @@
 .cart-preview::backdrop {
   background: rgba(30, 33, 44, 0.75);
 }
-.cart-preview[closing] {
-  display: block;
-  pointer-events: none;
-  inset: 0;
-  -webkit-animation: fade-out 300ms forwards;
-  animation: fade-out 300ms forwards;
+
+@-webkit-keyframes slide-open {
+  0% {
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
 }
 
+@keyframes slide-open {
+  0% {
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
 .languages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5991,15 +5999,8 @@
   flex-direction: column;
 }
 .modal[open] {
-  -webkit-animation: slide-up 1000ms forwards, fade-in 1000ms forwards;
-  animation: slide-up 1000ms forwards, fade-in 1000ms forwards;
-}
-.modal[closing] {
-  display: block;
-  pointer-events: none;
-  inset: 0;
-  -webkit-animation: fade-out 500ms forwards;
-  animation: fade-out 500ms forwards;
+  -webkit-animation: slide-up 0.6s forwards, fade-in 0.6s forwards;
+  animation: slide-up 0.6s forwards, fade-in 0.6s forwards;
 }
 
 @-webkit-keyframes slide-up {
@@ -6655,26 +6656,6 @@ input[type=number]::-webkit-outer-spin-button {
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes slide-open {
-  0% {
-    -webkit-transform: translateX(5%);
-    transform: translateX(5%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-}
-@keyframes slide-open {
-  0% {
-    -webkit-transform: translateX(5%);
-    transform: translateX(5%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
   }
 }
 @-webkit-keyframes fade-out {

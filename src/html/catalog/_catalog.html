@@ -32,7 +32,12 @@
 
     <div class="catalog__nav">
 
-      <button class="modal__btn btn btn--filter" type="button" data-modal="filtersSidebar">Show filters</button>
+      <button class="modal__btn filter__btn btn" type="button" data-modal="filtersSidebar">
+        <svg class="filter__icon" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#filter-hide"></use>
+        </svg>
+        Show filters
+      </button>
 
       <div class="catalog__sort">
 
@@ -210,7 +215,12 @@
 
     <dialog class="filter scroll" id="filtersSidebar">
 
-      <button class="filter__btn btn btn--filter" type="button" data-modal-close>Hide filters</button>
+      <button class="filter__btn btn" type="button" data-modal-close>
+        <svg class="filter__icon" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#filter-show"></use>
+        </svg>
+        Hide filters
+      </button>
 
       <ul class="accordion__list" role="list">
 
