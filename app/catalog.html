@@ -454,10 +454,7 @@
 
     <div class="catalog__nav">
 
-      <button class="btn filter__btn hide show" type="button" data-filters-hide="#filtersSidebar">Hide filters</button>
-
-      <button class="btn filter__btn filter__btn--show hide" type="button" data-filters-show="#filtersSidebar">Show
-        filters</button>
+      <button class="modal__btn btn btn--filter" type="button" data-modal="filtersSidebar">Show filters</button>
 
       <div class="catalog__sort">
 
@@ -538,473 +535,9 @@
 
     </div>
 
-    <div class="catalog__wrapper">
+    <ul class="catalog__list" role="list">
 
-      <div class="filter" id="filtersSidebar">
-
-        <ul class="accordion__list filter-group" role="list">
-
-          <li class="accordion__item">
-
-            <details>
-              <summary>
-                <h3>Clothes</h3>
-              </summary>
-
-              <div class="accordion__content">
-
-                <form class="form-search" action="#" autocomplete="off" method="get">
-
-                  <label class="visually-hidden" for="filter-clothes"></label>
-
-                  <input class="form-search__input" type="search" id="filter-clothes"
-                    placeholder="Search the clothes type">
-
-                  <button class="form-search__btn btn-reset" type="submit" aria-label="search">
-
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                  </button>
-
-                </form>
-
-                <ul class="filter-group__list" role="list">
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Coats</span>
-                      <span class="custom-checkbox__counter">(16)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Jackets</span>
-                      <span class="custom-checkbox__counter">(12)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Suits</span>
-                      <span class="custom-checkbox__counter">(5)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Dresses</span>
-                      <span class="custom-checkbox__counter">(11)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Cardigans & sweaters</span>
-                      <span class="custom-checkbox__counter">(18)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Sweatshirts & hoodies</span>
-                      <span class="custom-checkbox__counter">(21)</span>
-                    </label>
-                  </li>
-
-                </ul>
-
-              </div>
-
-            </details>
-
-          </li>
-
-          <li class="accordion__item filter-group">
-            <details>
-
-              <summary>
-                <h3>Size</h3>
-              </summary>
-
-              <div class="accordion__content">
-
-                <form class="form-search" action="#" autocomplete="off" method="get">
-
-                  <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#close"></use>
-                    </svg>
-                  </button>
-
-                  <label class="visually-hidden" for="filter-size"></label>
-
-                  <input class="form-search__input" type="search" id="filter-size" placeholder="Search the size">
-
-                  <button class="form-search__btn btn-reset" type="submit" aria-label="search">
-
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                  </button>
-
-                </form>
-
-                <ul class="filter-group__list" role="list">
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">XS</span>
-                      <span class="custom-checkbox__counter">(16)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">S</span>
-                      <span class="custom-checkbox__counter">(12)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">M</span>
-                      <span class="custom-checkbox__counter">(5)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">L</span>
-                      <span class="custom-checkbox__counter">(10)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">XL</span>
-                      <span class="custom-checkbox__counter">(18)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Plus Size</span>
-                      <span class="custom-checkbox__counter">(4)</span>
-                    </label>
-                  </li>
-
-                </ul>
-
-              </div>
-
-            </details>
-          </li>
-
-          <li class="accordion__item filter-group">
-            <details>
-              <summary>
-                <h3>Color</h3>
-              </summary>
-              <div class="accordion__content">
-
-                <ul class="filter-group__list filter-group__list--color" role="list">
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="black" name="color" value="black">
-                    <label class="color-picker__label" for="black">Black</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="blue-gray" name="color" value="blue-gray">
-                    <label class="color-picker__label" for="blue-gray">Blue-gray</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="yellow-100" name="color" value="yellow-100">
-                    <label class="color-picker__label" for="yellow-100">Yellow</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="red" name="color" value="red">
-                    <label class="color-picker__label" for="red">Red</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="dark-blue" name="color" value="dark-blue">
-                    <label class="color-picker__label" for="dark-blue">Dark-blue</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="beige" name="color" value="beige">
-                    <label class="color-picker__label" for="beige">Beige</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="brown" name="color" value="brown">
-                    <label class="color-picker__label" for="brown">Brown</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="gray" name="color" value="gray">
-                    <label class="color-picker__label" for="gray">Gray</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="purple" name="color" value="purple">
-                    <label class="color-picker__label" for="purple">Purple</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="green" name="color" value="green">
-                    <label class="color-picker__label" for="green">Green</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="orange" name="color" value="orange">
-                    <label class="color-picker__label" for="orange">Orange</label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <input class="color-picker__input" type="checkbox" id="white" name="color" value="white">
-                    <label class="color-picker__label" for="white">White</label>
-                  </li>
-
-                </ul>
-              </div>
-            </details>
-          </li>
-
-          <li class="accordion__item filter-group">
-            <details>
-              <summary>
-                <h3>Material</h3>
-              </summary>
-              <div class="accordion__content">
-                <form class="form-search" action="#" autocomplete="off" method="get">
-
-                  <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#close"></use>
-                    </svg>
-                  </button>
-
-                  <label class="visually-hidden" for="filter-material"></label>
-
-                  <input class="form-search__input" type="search" id="filter-material"
-                    placeholder="Search the material type">
-
-                  <button class="form-search__btn btn-reset" type="submit" aria-label="search">
-
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                  </button>
-
-                </form>
-
-                <ul class="filter-group__list" role="list">
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Cotton</span>
-                      <span class="custom-checkbox__counter">(162)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Synthetics</span>
-                      <span class="custom-checkbox__counter">(12)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Nappa leather</span>
-                      <span class="custom-checkbox__counter">(26)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Leather</span>
-                      <span class="custom-checkbox__counter">(5)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Cashmere</span>
-                      <span class="custom-checkbox__counter">(41)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Denim</span>
-                      <span class="custom-checkbox__counter">(48)</span>
-                    </label>
-                  </li>
-
-                </ul>
-
-              </div>
-
-            </details>
-          </li>
-
-          <li class="accordion__item filter-group">
-            <details>
-              <summary>
-                <h3>Brand</h3>
-              </summary>
-
-              <div class="accordion__content">
-
-                <form class="form-search" action="#" autocomplete="off" method="get">
-
-                  <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#close"></use>
-                    </svg>
-                  </button>
-
-                  <label class="visually-hidden" for="filter-brand"></label>
-
-                  <input class="form-search__input" type="search" id="filter-brand" placeholder="Search the brand">
-
-                  <button class="form-search__btn btn-reset" type="submit" aria-label="search">
-
-                    <svg class="form-search__icon">
-                      <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                  </button>
-
-                </form>
-
-                <ul class="filter-group__list" role="list">
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Adidas</span>
-                      <span class="custom-checkbox__counter">(162)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Ann Taylor</span>
-                      <span class="custom-checkbox__counter">(12)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Armani</span>
-                      <span class="custom-checkbox__counter">(26)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Banana Republic</span>
-                      <span class="custom-checkbox__counter">(5)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Calvin Klein</span>
-                      <span class="custom-checkbox__counter">(41)</span>
-                    </label>
-                  </li>
-
-                  <li class="filter-group__item">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="custom-checkbox__field">
-                      <span class="custom-checkbox__content">Columbia</span>
-                      <span class="custom-checkbox__counter">(48)</span>
-                    </label>
-                  </li>
-
-                </ul>
-
-              </div>
-
-            </details>
-          </li>
-
-          <li class="accordion__item filter-group">
-            <details>
-              <summary>
-                <h3>Price</h3>
-              </summary>
-
-              <div class="accordion__content">
-
-                <div class="range-slider" data-start-min="200" data-start-max="890" data-min="0" data-max="1000"
-                  data-step="1">
-
-                  <div class="range-slider__body"></div>
-
-                  <ul class="range-slider__counter" role="list">
-
-                    <li>
-                      <label class="visually-hidden" for="range-min"></label>
-                      <input class="range-slider__input range-slider__input--min" type="number" inputmode="numeric"
-                        step="1" id="range-min">
-                    </li>
-
-                    <li>
-                      <span>—</span>
-                    </li>
-
-                    <li>
-                      <label class="visually-hidden" for="range-max"></label>
-                      <input class="range-slider__input range-slider__input--max" type="number" inputmode="numeric"
-                        step="1" id="range-max">
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-
-          </li>
-
-        </ul>
-
-      </div>
-
-      <div class="catalog__content" data-filters-columns>
-
-        <li class="@class">
+      <li class="@class">
 
   <article class="article">
 
@@ -1051,7 +584,7 @@
 
 </li>
 
-        <li class="@class">
+      <li class="@class">
 
   <article class="article">
 
@@ -1100,7 +633,7 @@
 
 </li>
 
-        <li class="@class">
+      <li class="@class">
 
   <article class="article">
 
@@ -1147,7 +680,7 @@
 
 </li>
 
-        <li class="@class">
+      <li class="@class">
 
   <article class="article">
 
@@ -1196,7 +729,7 @@
 
 </li>
 
-        <li class="@class">
+      <li class="@class">
 
   <article class="article">
 
@@ -1243,7 +776,7 @@
 
 </li>
 
-        <li class="@class">
+      <li class="@class">
 
   <article class="article">
 
@@ -1290,7 +823,7 @@
 
 </li>
 
-        <li class="@class">
+      <li class="@class">
 
   <article class="article">
 
@@ -1337,11 +870,454 @@
 
 </li>
 
-      </div>
+    </ul>
 
-    </div>
+    <dialog class="filter scroll" id="filtersSidebar">
 
-  </div>
+      <button class="filter__btn btn btn--filter" type="button" data-modal-close>Hide filters</button>
+
+      <ul class="accordion__list" role="list">
+
+        <li class="accordion__item filter-group">
+
+          <details>
+            <summary>
+              <h3>Clothes</h3>
+            </summary>
+
+            <div class="accordion__content">
+
+              <form class="form-search" action="#" autocomplete="off" method="get">
+                <label class="visually-hidden" for="filter-clothes"></label>
+                <input class="form-search__input" type="search" id="filter-clothes"
+                  placeholder="Search the clothes type">
+                <button class="form-search__btn btn-reset" type="submit" aria-label="search">
+                  <svg class="form-search__icon" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="filter-group__list scroll" role="list">
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Coats</span>
+                    <span class="custom-checkbox__counter">(16)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Jackets</span>
+                    <span class="custom-checkbox__counter">(12)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Suits</span>
+                    <span class="custom-checkbox__counter">(5)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Dresses</span>
+                    <span class="custom-checkbox__counter">(11)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Cardigans & sweaters</span>
+                    <span class="custom-checkbox__counter">(18)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Sweatshirts & hoodies</span>
+                    <span class="custom-checkbox__counter">(21)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Sweatshirts & hoodies</span>
+                    <span class="custom-checkbox__counter">(21)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Sweatshirts & hoodies</span>
+                    <span class="custom-checkbox__counter">(21)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Sweatshirts & hoodies</span>
+                    <span class="custom-checkbox__counter">(21)</span>
+                  </label>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </details>
+
+        </li>
+
+        <li class="accordion__item filter-group">
+          <details>
+            <summary>
+              <h3>Size</h3>
+            </summary>
+
+            <div class="accordion__content">
+
+              <form class="form-search" action="#" autocomplete="off" method="get">
+                <label class="visually-hidden" for="filter-size"></label>
+                <input class="form-search__input" type="search" id="filter-size" placeholder="Search the size">
+                <button class="form-search__btn btn-reset" type="submit" aria-label="search">
+                  <svg class="form-search__icon" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="filter-group__list scroll" role="list">
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">XS</span>
+                    <span class="custom-checkbox__counter">(16)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">S</span>
+                    <span class="custom-checkbox__counter">(12)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">M</span>
+                    <span class="custom-checkbox__counter">(5)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">L</span>
+                    <span class="custom-checkbox__counter">(10)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">XL</span>
+                    <span class="custom-checkbox__counter">(18)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Plus Size</span>
+                    <span class="custom-checkbox__counter">(4)</span>
+                  </label>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </details>
+        </li>
+
+        <li class="accordion__item filter-group">
+          <details>
+            <summary>
+              <h3>Color</h3>
+            </summary>
+            <div class="accordion__content">
+
+              <ul class="filter-group__list filter-group__list--color scroll" role="list">
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="black" name="color" value="black">
+                  <label class="color-picker__label" for="black">Black</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="blue-gray" name="color" value="blue-gray">
+                  <label class="color-picker__label" for="blue-gray">Blue-gray</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="yellow-100" name="color" value="yellow-100">
+                  <label class="color-picker__label" for="yellow-100">Yellow</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="red" name="color" value="red">
+                  <label class="color-picker__label" for="red">Red</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="dark-blue" name="color" value="dark-blue">
+                  <label class="color-picker__label" for="dark-blue">Dark-blue</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="beige" name="color" value="beige">
+                  <label class="color-picker__label" for="beige">Beige</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="brown" name="color" value="brown">
+                  <label class="color-picker__label" for="brown">Brown</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="gray" name="color" value="gray">
+                  <label class="color-picker__label" for="gray">Gray</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="purple" name="color" value="purple">
+                  <label class="color-picker__label" for="purple">Purple</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="green" name="color" value="green">
+                  <label class="color-picker__label" for="green">Green</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="orange" name="color" value="orange">
+                  <label class="color-picker__label" for="orange">Orange</label>
+                </li>
+
+                <li class="filter-group__item">
+                  <input class="color-picker__input" type="checkbox" id="white" name="color" value="white">
+                  <label class="color-picker__label" for="white">White</label>
+                </li>
+
+              </ul>
+            </div>
+          </details>
+        </li>
+
+        <li class="accordion__item filter-group">
+          <details>
+            <summary>
+              <h3>Material</h3>
+            </summary>
+
+            <div class="accordion__content">
+
+              <form class="form-search" action="#" autocomplete="off" method="get">
+                <label class="visually-hidden" for="filter-material"></label>
+                <input class="form-search__input" type="search" id="filter-material"
+                  placeholder="Search the material type">
+                <button class="form-search__btn btn-reset" type="submit" aria-label="search">
+                  <svg class="form-search__icon" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="filter-group__list scroll" role="list">
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Cotton</span>
+                    <span class="custom-checkbox__counter">(162)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Synthetics</span>
+                    <span class="custom-checkbox__counter">(12)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Nappa leather</span>
+                    <span class="custom-checkbox__counter">(26)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Leather</span>
+                    <span class="custom-checkbox__counter">(5)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Cashmere</span>
+                    <span class="custom-checkbox__counter">(41)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Denim</span>
+                    <span class="custom-checkbox__counter">(48)</span>
+                  </label>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </details>
+        </li>
+
+        <li class="accordion__item filter-group">
+          <details>
+            <summary>
+              <h3>Brand</h3>
+            </summary>
+
+            <div class="accordion__content">
+
+              <form class="form-search" action="#" autocomplete="off" method="get">
+                <label class="visually-hidden" for="filter-brand"></label>
+                <input class="form-search__input" type="search" id="filter-brand" placeholder="Search the brand">
+                <button class="form-search__btn btn-reset" type="submit" aria-label="search">
+                  <svg class="form-search__icon" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+
+              <ul class="filter-group__list scroll" role="list">
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Adidas</span>
+                    <span class="custom-checkbox__counter">(162)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Ann Taylor</span>
+                    <span class="custom-checkbox__counter">(12)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Armani</span>
+                    <span class="custom-checkbox__counter">(26)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Banana Republic</span>
+                    <span class="custom-checkbox__counter">(5)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Calvin Klein</span>
+                    <span class="custom-checkbox__counter">(41)</span>
+                  </label>
+                </li>
+
+                <li class="filter-group__item">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__content">Columbia</span>
+                    <span class="custom-checkbox__counter">(48)</span>
+                  </label>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </details>
+        </li>
+
+        <li class="accordion__item filter-group">
+          <details>
+            <summary>
+              <h3>Price</h3>
+            </summary>
+
+            <div class="accordion__content">
+              <div class="range-slider" data-start-min="200" data-start-max="890" data-min="0" data-max="1000"
+                data-step="1">
+
+                <div class="range-slider__body"></div>
+
+                <ul class="range-slider__counter" role="list">
+                  <li>
+                    <label class="visually-hidden" for="range-min"></label>
+                    <input class="range-slider__input range-slider__input--min" type="number" inputmode="numeric"
+                      step="1" id="range-min">
+                  </li>
+
+                  <li>
+                    <span>—</span>
+                  </li>
+
+                  <li>
+                    <label class="visually-hidden" for="range-max"></label>
+                    <input class="range-slider__input range-slider__input--max" type="number" inputmode="numeric"
+                      step="1" id="range-max">
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </details>
+        </li>
+
+      </ul>
+
+    </dialog>
 
   </div>
 

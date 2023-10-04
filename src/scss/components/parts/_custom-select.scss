@@ -2,7 +2,6 @@
   position: relative;
   @include flex-col;
   gap: 10px;
-  z-index: 120;
   width: min(70%, 352px);
 
   &--sort {

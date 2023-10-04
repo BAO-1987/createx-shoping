@@ -87,8 +87,8 @@
     transition: border-color 0.3s linear;
 
     &::placeholder {
-      color: var(--color-gray-600);
       font-size: rem-f(14);
+      color: var(--color-gray-600);
     }
 
     &:focus {

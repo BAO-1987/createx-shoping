@@ -7,8 +7,8 @@
   border: 0.8px solid var(--color-green);
   border-radius: var(--br);
   padding: rem-f(10) clamp(1.5rem, calc(1rem + vw(24)), 2.5rem);
-  max-width: fit-content;
   height: fit-content;
+  max-width: fit-content;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5;
@@ -32,7 +32,7 @@
     margin-left: 0;
     width: 10%;
     background-color: var(--color-white);
-    opacity: 0; 
+    opacity: 0;
     transition:
       transform 0.6s ease-in-out,
       opacity 0.6s ease-in-out;
@@ -170,6 +170,22 @@
       width: 1rem;
       height: 1rem;
       background-color: currentcolor;
+    }
+  }
+
+  &--filter {
+    width: 100%;
+    max-width: 255px;
+
+    &::before {
+      @include mask-icon;
+      mask-image: url("../img/sprite.svg#filter-show");
+
+      left: clamp(1rem, calc(-0.3rem + 3.7vw), 4.1rem);
+
+      @include for-width(-mobile-l) {
+        left: 5px;
+      }
     }
   }
 }

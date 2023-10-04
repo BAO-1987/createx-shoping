@@ -5,8 +5,6 @@
   &__btn {
     @include flex-all-center;
     position: relative;
-    // width: 20px;
-    // height: 20px;
 
     &::before {
       @include mask;
@@ -44,7 +42,7 @@
   padding: 2rem 1.5rem;
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-300);
-  border-radius: var(--br);
+  border-radius: 4px 0 0 4px;
   font-size: rem-f(12);
   box-shadow:
     0 4px 4px -4px rgba(30, 33, 44, 0.05),
@@ -129,7 +127,7 @@
   }
 
   &__content {
-  
+
     a {
       transition: color 0.3s linear;
 

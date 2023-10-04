@@ -42,57 +42,10 @@
     }
   }
 
-  &__wrapper {
-    position: relative;
-    @include flex;
-    gap: clamp(1rem, calc(0.5rem + 2.7vw), 3.8rem);
-
-    @include for-width(-mobile-md) {
-      justify-content: center;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 0;
-        z-index: 95;
-        inset: 0;
-        background-color: rgba(30, 33, 44, 0.75);
-        transition: width 0.3s ease-in-out;
-      }
-    }
-
-    &.active::before {
-      width: 100%;
-    }
-  }
-
-  &__content {
-    --catalog-grid: 3;
+  &__list {
     display: grid;
-    grid-template-columns: repeat(var(--catalog-grid), 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: var(--grid-gap);
-    // flex: 1 0 0%;
-    animation: fade-in 0.6s ease-in-out forwards;
-
-    @include for-width(-tablet) {
-      --catalog-grid: 2;
-    }
-
-    @include for-width(-mobile-md) {
-      --catalog-grid: 1;
-    }
-
-    &.active {
-      --catalog-grid: 4;
-      animation: show 0.9s ease-in-out forwards;
-
-      @include for-width(-tablet) {
-        --catalog-grid: 3;
-      }
-
-      @include for-width(-mobile-md) {
-        --catalog-grid: 1;
-      }
-    }
   }
+
 }
