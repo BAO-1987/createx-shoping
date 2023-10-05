@@ -2527,7 +2527,7 @@
   max-width: 320px;
   margin-right: auto;
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 4rem 1rem 0;
   border: 1px solid var(--color-gray-300);
   border-radius: 0 4px 4px 0;
   z-index: 110;
@@ -2613,11 +2613,14 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding-left: 5px;
+  max-height: 250px;
   gap: 8px;
 }
 .filter-group__list--color {
   display: -ms-grid;
   display: grid;
+  padding-top: 10px;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
@@ -2660,8 +2663,14 @@
   gap: 5px;
 }
 .filter-group__item .custom-checkbox__content::before {
-  background-color: var(--color-white);
   border: 1px solid var(--color-gray-500);
+  background-color: var(--color-white);
+}
+.filter-group__item .custom-checkbox__field:checked + .custom-checkbox__content {
+  color: var(--color-green);
+}
+.filter-group__item .custom-checkbox__field:checked + .custom-checkbox__content ~ span {
+  color: var(--color-green);
 }
 .filter-group__item .custom-checkbox__field:checked + .custom-checkbox__content::before {
   background-color: var(--color-green);
