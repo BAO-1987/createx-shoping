@@ -487,14 +487,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 document.addEventListener("click", e => {
-  const DropdownButton = e.target.matches("[dropdown-button]");
-  if (!DropdownButton && e.target.closest("[dropdown]") != null) return;
+  const DropdownButton = e.target.matches("[data-dropdown-button]");
+  if (!DropdownButton && e.target.closest("[data-dropdown]") != null) return;
   let currentDropdown;
   if (DropdownButton) {
-    currentDropdown = e.target.closest("[dropdown]");
+    currentDropdown = e.target.closest("[data-dropdown]");
     currentDropdown.classList.toggle("open");
   }
-  document.querySelectorAll("[dropdown].open").forEach(dropDown => {
+  document.querySelectorAll("[data-dropdown].open").forEach(dropDown => {
     if (dropDown === currentDropdown) return;
     dropDown.classList.remove("open");
   });
@@ -1408,14 +1408,14 @@ window.addEventListener('DOMContentLoaded', () => {
 /***/ (() => {
 
 document.addEventListener("click", e => {
-  const isDropdownButton = e.target.matches("[data-dropdown-button]");
+  const isDropdownButton = e.target.matches("[data-dropdown-button-sub]");
   if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
   let currentDropdown;
   if (isDropdownButton) {
-    currentDropdown = e.target.closest("[data-dropdown]");
+    currentDropdown = e.target.closest("[data-dropdown-sub]");
     currentDropdown.classList.toggle("open");
   }
-  document.querySelectorAll("[data-dropdown].open").forEach(dropdown => {
+  document.querySelectorAll("[data-dropdown-sub].open").forEach(dropdown => {
     if (dropdown === currentDropdown) return;
     dropdown.classList.remove("open");
   });

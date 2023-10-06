@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="shortcut icon" type="image/ico" sizes="32x32" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -122,9 +124,9 @@
             <a class="nav__link" href="#">boys</a>
           </li>
 
-          <li class="nav__item" dropdown>
+          <li class="nav__item" data-dropdown>
 
-            <span class="nav__link nav__link--dropdown" dropdown-button>sale</span>
+            <span class="nav__link nav__link--dropdown" data-dropdown-button>sale</span>
 
             <ul class="nav__list nav__list--dropdown dropdown-list scroll">
 
@@ -145,9 +147,9 @@
                 </ul>
               </li>
 
-              <li class="dropdown-list__item dropdown-submenu" data-dropdown>
+              <li class="dropdown-list__item dropdown-submenu" data-dropdown-sub>
 
-                <span class="dropdown-submenu__title" data-dropdown-button>clothes</span>
+                <span class="dropdown-submenu__title" data-dropdown-button-sub>clothes</span>
 
                 <ul class="dropdown-submenu__list">
 
@@ -202,8 +204,8 @@
                 </ul>
               </li>
 
-              <li class="dropdown-list__item dropdown-submenu" data-dropdown>
-                <span class="dropdown-submenu__title" data-dropdown-button>shoes</span>
+              <li class="dropdown-list__item dropdown-submenu" data-dropdown-sub>
+                <span class="dropdown-submenu__title" data-dropdown-button-sub>shoes</span>
                 <ul class="dropdown-submenu__list">
                   <li class="dropdown-submenu__item">
                     <a class="dropdown-submenu__link" href="#">Boots</a>
@@ -232,8 +234,8 @@
                 </ul>
               </li>
 
-              <li class="dropdown-list__item dropdown-submenu" data-dropdown>
-                <span class="dropdown-submenu__title" data-dropdown-button>accessories</span>
+              <li class="dropdown-list__item dropdown-submenu" data-dropdown-sub>
+                <span class="dropdown-submenu__title" data-dropdown-button-sub>accessories</span>
                 <ul class="dropdown-submenu__list">
                   <li class="dropdown-submenu__item">
                     <a class="dropdown-submenu__link" href="#">Bags & bagpacks</a>
@@ -286,9 +288,9 @@
 
           </li>
 
-          <li class="nav__item nav__item--account" dropdown>
+          <li class="nav__item nav__item--account" data-dropdown>
 
-            <span class="nav__link nav__link--dropdown" dropdown-button>account</span>
+            <span class="nav__link nav__link--dropdown" data-dropdown-button>account</span>
 
             <ul class="nav__list nav__list--dropdown dropdown-list">
               <li class="dropdown-list__item dropdown-submenu">
@@ -505,18 +507,12 @@
 </section>
 
       <div class="container">
-        <section class="gender section">
+        <div class="gender section">
   <ul class="gender__list" role="list">
     <li class="gender__item">
       <picture>
         <source srcset="img/gender/woman.webp" type="image/webp" />
-        <img
-          loading="lazy"
-          src="img/gender/woman.jpg"
-          width="390"
-          height="390"
-          alt="image of woman"
-        />
+        <img loading="lazy" src="img/gender/woman.jpg" width="390" height="390" alt="image of woman" />
       </picture>
 
       <a href="#">
@@ -527,13 +523,7 @@
     <li class="gender__item">
       <picture>
         <source srcset="img/gender/men.webp" type="image/webp" />
-        <img
-          loading="lazy"
-          src="img/gender/men.jpg"
-          width="390"
-          height="390"
-          alt="image of men"
-        />
+        <img loading="lazy" src="img/gender/men.jpg" width="390" height="390" alt="image of men" />
       </picture>
 
       <a href="#">
@@ -544,13 +534,7 @@
     <li class="gender__item">
       <picture>
         <source srcset="img/gender/kid.webp" type="image/webp" />
-        <img
-          loading="lazy"
-          src="img/gender/kid.jpg"
-          width="390"
-          height="390"
-          alt="image of kid"
-        />
+        <img loading="lazy" src="img/gender/kid.jpg" width="390" height="390" alt="image of kid" />
       </picture>
 
       <a href="#">
@@ -558,7 +542,7 @@
       </a>
     </li>
   </ul>
-</section>
+</div>
 
       </div>
 
@@ -572,7 +556,7 @@
 
     <div class="arrival__text">
       <p>Check out our latest arrivals for the upcoming season</p>
-      <a href="#">See the collection here</a>
+      <a class="arrival__link link"  href="#">See the collection here</a>
     </div>
 
     <div class="arrival-slider">
@@ -1009,7 +993,7 @@
           <h2 class="title title--banners">Get 5% Off & Free Delivery</h2>
 
           <form class="form" action="#" autocomplete="off" method="get">
-    <label class="form__label" for="email">
+    <label class="form__label">
      <span>Email</span>
      <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email">
    </label>
@@ -2168,13 +2152,13 @@
 
     <form class="form form--modal" action="#" autocomplete="off" method="get">
 
-      <label class="form__label" for="email">
+      <label class="form__label">
         <span>Email</span>
         <input class="form__input" type="email" id="email" autocomplete="username" placeholder="Your working email">
       </label>
 
       <div class="form__box form__box--password">
-        <label class="form__label" for="password">
+        <label class="form__label">
           <span>Password</span>
           <input class="form__input form__input--password" type="password" id="password" autocomplete="current-password"
             required>
@@ -2254,19 +2238,19 @@
 
     <form class="form form--modal" action="#" autocomplete="off" method="get">
 
-      <label class="form__label" for="text">
+      <label class="form__label">
         <span>Full Name</span>
         <input class="form__input" type="text" id="text" placeholder="Your full name" required>
       </label>
 
-      <label class="form__label" for="emailSing">
+      <label class="form__label">
         <span>Email</span>
         <input class="form__input" type="email" id="emailSing" autocomplete="username" placeholder="Your working email"
           required>
       </label>
 
       <div class="form__box form__box--password">
-        <label class="form__label" for="passwordSing">
+        <label class="form__label">
           <span>Password</span>
           <input class="form__input form__input--password" type="password" id="passwordSing"
             autocomplete="current-password" required>
@@ -2279,7 +2263,7 @@
       </div>
 
       <div class="form__box form__box--password">
-        <label class="form__label" for="confirmPassword">
+        <label class="form__label">
           <span>Confirm Password</span>
           <input class="form__input form__input--password" type="password" id="confirmPassword"
             autocomplete="current-password" required>
@@ -2721,11 +2705,12 @@
       </div>
 
       <div class="form__box form__box--upload">
-        <label class="form__label" for="rating">Upload a photo or video (optional)</label>
+        <label class="form__label" for="rating-upload">Upload a photo or video (optional)</label>
 
         <span>Drag and drop here to upload</span>
 
-        <input class="form__input form__input--file" type="file" id="rating" accept="image/png, image/jpeg, video/*">
+        <input class="form__input form__input--file" type="file" id="rating-upload"
+          accept="image/png, image/jpeg, video/*">
 
         <span class="btn btn--inverse">Or select file</span>
 
@@ -2733,7 +2718,7 @@
 
       <div class="form__box">
 
-        <label class="form__label" for="reviewText">
+        <label class="form__label">
           <span>Review</span>
           <textarea class="form__input form__input--textarea" name="textarea" id="reviewText" rows="3"
             placeholder="Your review text" required></textarea>
@@ -2769,7 +2754,8 @@
         <div class="cart-preview__picture">
           <picture>
             <source srcset="img/article/kenguroo-sweater.webp" type="image/webp">
-            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" alt="img of kenguru sweater"
+              loading="lazy">
           </picture>
         </div>
 
@@ -2793,9 +2779,25 @@
 
           <div class="cart-preview__quality">
 
-            <label class="visually-hidden" for="cart-input"></label>
-            <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
-              placeholder="1">
+            <div class="stepper">
+              <label class="stepper__field">
+                <input class="stepper__input" type="text" value="1" maxlength="3">
+              </label>
+
+              <div class="stepper__btns">
+                <button class="stepper__btn stepper__btn--up" type="button" aria-label="plus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+
+                <button class="stepper__btn stepper__btn--down stepper__btn--disabled" type="button" aria-label="minus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
 
             <span class="cart-preview__price">$15.50</span>
 
@@ -2823,7 +2825,8 @@
         <div class="cart-preview__picture">
           <picture>
             <source srcset="img/article/kenguroo-sweater.webp" type="image/webp">
-            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" alt="img of kenguru sweater"
+              loading="lazy">
           </picture>
         </div>
 
@@ -2847,9 +2850,25 @@
 
           <div class="cart-preview__quality">
 
-            <label class="visually-hidden" for="cart-input"></label>
-            <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
-              placeholder="1">
+            <div class="stepper">
+              <label class="stepper__field">
+                <input class="stepper__input" type="text" value="1" maxlength="3">
+              </label>
+
+              <div class="stepper__btns">
+                <button class="stepper__btn stepper__btn--up" type="button" aria-label="plus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+
+                <button class="stepper__btn stepper__btn--down stepper__btn--disabled" type="button" aria-label="minus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
 
             <span class="cart-preview__price">$15.50</span>
 
@@ -2877,7 +2896,8 @@
         <div class="cart-preview__picture">
           <picture>
             <source srcset="img/article/kenguroo-sweater.webp" type="image/webp">
-            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" alt="img of kenguru sweater"
+              loading="lazy">
           </picture>
         </div>
 
@@ -2901,9 +2921,25 @@
 
           <div class="cart-preview__quality">
 
-            <label class="visually-hidden" for="cart-input"></label>
-            <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
-              placeholder="1">
+            <div class="stepper">
+              <label class="stepper__field">
+                <input class="stepper__input" type="text" value="1" maxlength="3">
+              </label>
+
+              <div class="stepper__btns">
+                <button class="stepper__btn stepper__btn--up" type="button" aria-label="plus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+
+                <button class="stepper__btn stepper__btn--down stepper__btn--disabled" type="button" aria-label="minus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
 
             <span class="cart-preview__price">$15.50</span>
 
@@ -2931,7 +2967,8 @@
         <div class="cart-preview__picture">
           <picture>
             <source srcset="img/article/kenguroo-sweater.webp" type="image/webp">
-            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" loading="lazy">
+            <img src="img/article/kenguroo-sweater.jpg" width="80" height="80" alt="img of kenguru sweater"
+              loading="lazy">
           </picture>
         </div>
 
@@ -2954,10 +2991,25 @@
           </div>
 
           <div class="cart-preview__quality">
+             <div class="stepper">
+              <label class="stepper__field">
+                <input class="stepper__input" type="text" value="1" maxlength="3">
+              </label>
 
-            <label class="visually-hidden" for="cart-input"></label>
-            <input class="input-number" type="number" inputmode="numeric" id="cart-input" step="1" min="1" max="10"
-              placeholder="1">
+              <div class="stepper__btns">
+                <button class="stepper__btn stepper__btn--up" type="button" aria-label="plus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+
+                <button class="stepper__btn stepper__btn--down stepper__btn--disabled" type="button" aria-label="minus">
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#up-select"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
 
             <span class="cart-preview__price">$15.50</span>
 

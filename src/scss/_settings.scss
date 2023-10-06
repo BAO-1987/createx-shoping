@@ -21,7 +21,7 @@
       z-index: 95;
       width: 0;
       background-color: rgba(30, 33, 44, 0.75);
-      transition: width 0.2s linear;
+      transition: width 0.3s linear;
       inset: 0;
     }
   }
@@ -31,7 +31,6 @@
 
     >.page__body::before {
       width: 100%;
-      transition: width 0.2s linear;
     }
   }
 
@@ -409,7 +408,7 @@
     &::before {
       @include mask-small;
 
-      left: -rem-f(-20);
+      left: rem-f(-20);
       mask-image: url("../img/sprite.svg#like");
       transform: translateY(-50%);
 
@@ -432,6 +431,11 @@
         }
       }
     }
+  }
+
+  &__count {
+    font-size: rem-f(14);
+    color: var(--color-gray-700);
   }
 }
 
@@ -729,7 +733,7 @@
   padding: 9px 12px;
   height: 44px;
   min-width: 80px;
-  font-size: rem-f(12);
+  font-size: rem-f(14);
   background-color: var(--color-white);
   user-select: none;
 

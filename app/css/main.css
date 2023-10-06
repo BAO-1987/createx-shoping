@@ -34,7 +34,7 @@
   --color-purple: #a27ac9;
   --color-orange: #fb9620;
   --br: 4px;
-  --grid-gap: 30px;
+  --grid-gap: 1.875rem;
   --shadow-small: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
     0px 12px 10px -6px rgba(154, 156, 165, 0.04),
     0px 30px 24px -10px rgba(154, 156, 165, 0.05),
@@ -115,9 +115,9 @@
   z-index: 95;
   width: 0;
   background-color: rgba(30, 33, 44, 0.75);
-  -webkit-transition: width 0.2s linear;
-  -o-transition: width 0.2s linear;
-  transition: width 0.2s linear;
+  -webkit-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
   inset: 0;
 }
 .page.open {
@@ -125,9 +125,6 @@
 }
 .page.open > .page__body::before {
   width: 100%;
-  -webkit-transition: width 0.2s linear;
-  -o-transition: width 0.2s linear;
-  transition: width 0.2s linear;
 }
 .page.dis-scroll {
   overflow: hidden;
@@ -598,7 +595,7 @@
   -webkit-transition: background-color 0.5s linear;
   -o-transition: background-color 0.5s linear;
   transition: background-color 0.5s linear;
-  left: -rem-f(-20);
+  left: -1.25rem;
   -webkit-mask-image: url("../img/sprite.svg#like");
   mask-image: url("../img/sprite.svg#like");
   -webkit-transform: translateY(-50%);
@@ -614,6 +611,10 @@
 }
 .vote__btn--dislike:is(:hover, :active)::before {
   background-color: var(--color-red);
+}
+.vote__count {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
 }
 
 .pagination {
@@ -943,7 +944,7 @@
   padding: 9px 12px;
   height: 44px;
   min-width: 80px;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   background-color: var(--color-white);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1432,23 +1433,9 @@ h3::first-letter {
   text-align: center;
   color: var(--color-gray-700);
 }
-.arrival__text a {
-  position: relative;
+.arrival__link {
+  font-size: 1.125rem;
   color: var(--color-green);
-  -webkit-transition: color 0.3s linear;
-  -o-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-.arrival__text a::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  width: 100%;
-  height: 1px;
-  background-color: currentcolor;
-}
-.arrival__text a:hover {
-  color: var(--color-green-100);
 }
 @media (max-width: calc(36em - 0.0625em)) {
   .arrival {
@@ -5230,6 +5217,9 @@ h3::first-letter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
