@@ -296,7 +296,7 @@
       <form class="form-search" action="#" autocomplete="off" method="get" id="form-search" data-search>
 
         <button class="form-search__close btn-reset" type="button" aria-label="close search-form" data-close>
-          <svg class="form-search__icon">
+          <svg class="form-search__icon" aria-hidden="true">
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
         </button>
@@ -321,9 +321,9 @@
       <div class="header__action" data-hide>
 
         <div class="wishlist">
-          <span class="visually-hidden">wishlist</span>
-          <a class="wishlist__link" href="#">
-            <svg class="wishlist__icon">
+
+          <a class="wishlist__link" href="#" aria-label="link to wishlist">
+            <svg class="wishlist__icon" aria-hidden="true">
               <use xlink:href="img/sprite.svg#heart"></use>
             </svg>
           </a>
@@ -332,7 +332,7 @@
 
         <div class="cart">
 
-          <button class="cart__btn modal__btn btn-reset" type="button" data-modal="cart-preview">
+          <button class="cart__btn modal__btn btn-reset" aria-label="open cart preview" type="button" data-modal="cart-preview">
           </button>
 
           <span class="cart__count">4</span>

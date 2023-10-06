@@ -442,39 +442,48 @@
 .pagination {
   @include flex-all-center;
 
+
+
+  &__list {
+    @include flex-all-center;
+
+    li {
+      &:not(:last-child) {
+        margin-right: rem-f(20);
+      }
+    }
+
+    a {
+      font-weight: 700;
+      line-height: 1.6;
+      transition: color 0.3s linear;
+
+      &:is(:hover, [aria-current="page"]) {
+        color: var(--color-green);
+      }
+    }
+  }
+
   &__btn {
     @include flex-all-center;
 
     position: relative;
+    padding-left: 1rem;
 
     &::before {
-      @include mask-small;
+      @include mask;
 
       left: 0;
       mask-image: url("../img/sprite.svg#arrow");
       background-color: currentcolor;
+      width: 24px;
+      height: 24px;
     }
 
     &--reverse {
       &::before {
         right: 0;
         rotate: 180deg;
-      }
-    }
-  }
-
-  &__list {
-    @include flex-all-center;
-    padding: 0 2rem;
-    gap: clamp(0.8rem, calc(0.05rem + 1vw), 1.3rem);
-
-    a {
-      position: relative;
-      font-weight: 700;
-      transition: color 0.3s linear;
-
-      &:is(:hover, [aria-current="page"]) {
-        color: var(--color-green);
       }
     }
   }

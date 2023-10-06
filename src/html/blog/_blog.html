@@ -44,7 +44,7 @@
           datetime: "2023-08-24",
           http: "#",
           comments: "No comments",
-          desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit convallis scelerisque.Rhoncus"
+          desc: "Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit convalli  scelerisque.Rhoncus"
           },
           {
           class: "",
@@ -300,11 +300,12 @@
 
     <nav class="pagination" aria-label="blog pagination" title="pagination">
 
-      <button class="pagination__btn btn-rest" type="button">
-        <span class="visually-hidden">Next</span>
-      </button>
-
       <ul class="pagination__list" role="list">
+
+        <li>
+          <a class="pagination__btn" href="#" aria-hidden="true"></a>
+          <span class="visually-hidden">previous set of pages</span>
+        </li>
 
         <li>
           <a href="#" aria-current="page">
@@ -330,16 +331,14 @@
           </a>
         </li>
 
-        <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
-          <span class="visually-hidden">Prev</span>
-        </button>
+          <li>
+            <a class="pagination__btn pagination__btn--reverse" href="#" aria-hidden="true"></a>
+            <span class="visually-hidden">next set of pages</span>
+          </li>
 
       </ul>
 
     </nav>
-
-
-
 
   </div>
 

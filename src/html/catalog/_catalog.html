@@ -8,7 +8,7 @@
 
         <li>
           <a href="#">
-            <svg class="breadcrumb__icon">
+            <svg class="breadcrumb__icon" aria-hidden="true">
               <use xlink:href="img/sprite.svg#home"></use>
             </svg>
           </a>
@@ -70,51 +70,47 @@
 
       </div>
 
-      <nav class="pagination" aria-label="Reviews pagination" title="pagination">
+        <nav class="pagination" aria-label="Reviews pagination" title="pagination">
 
-        <button class="pagination__btn btn-rest" type="button">
-          <span class="visually-hidden">Next</span>
-        </button>
+          <ul class="pagination__list" role="list">
 
-        <ul class="pagination__list" role="list">
+            <li>
+              <a class="pagination__btn" href="#" aria-hidden="true"></a>
+              <span class="visually-hidden">previous set of pages</span>
+            </li>
 
-          <li>
-            <a href="#" aria-current="page">
-              <span class="visually-hidden">page</span>1
-            </a>
-          </li>
+            <li>
+              <a href="#" aria-current="page">
+                <span class="visually-hidden">page</span>1
+              </a>
+            </li>
 
-          <li>
-            <a href="#">
-              <span class="visually-hidden">page</span>2
-            </a>
-          </li>
+            <li>
+              <a href="#">
+                <span class="visually-hidden">page</span>2
+              </a>
+            </li>
 
-          <li>
-            <a href="#">
-              <span class="visually-hidden">page</span>3
-            </a>
-          </li>
+            <li>
+              <a href="#">
+                <span class="visually-hidden">page</span>3
+              </a>
+            </li>
 
-          <li>
-            <a href="#">
-              <span class="visually-hidden">page</span>...
-            </a>
-          </li>
+            <li>
+              <a href="#">
+                <span class="visually-hidden">page</span>4
+              </a>
+            </li>
 
-          <li>
-            <a href="#">
-              <span class="visually-hidden">page</span>10
-            </a>
-          </li>
+            <li>
+              <a class="pagination__btn pagination__btn--reverse" href="#" aria-hidden="true"></a>
+              <span class="visually-hidden">next set of pages</span>
+            </li>
 
-          <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
-            <span class="visually-hidden">Prev</span>
-          </button>
+          </ul>
 
-        </ul>
-
-      </nav>
+        </nav>
 
     </div>
 
