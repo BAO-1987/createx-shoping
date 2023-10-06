@@ -32,7 +32,7 @@
 
     & .line.top {
       --rotation: -45deg;
-      
+
       transform-origin: 65px 45px;
     }
 
@@ -84,7 +84,7 @@
   }
 }
 
-.open .nav__list {
+.opened .nav__list {
   transform: translate(0);
 }
 

@@ -14,15 +14,19 @@
       position: absolute;
       left: 0;
       top: calc(var(--header-height) - 1px);
-      overflow-y: auto;
       width: 100%;
+      overflow-y: auto;
       max-width: 320px;
       height: calc(var(--vh) - var(--header-height) + 1px);
       background-color: var(--color-white);
       transform: translateX(-100%);
-      transition: translate 0.3s linear;
-      font-size: 20px;
+      transition: transform 0.5s linear;
+      font-size: rem-f(20);
       z-index: -1;
+
+      &.scroll {
+        overflow: hidden auto;
+      }
     }
 
     &--dropdown {
@@ -60,7 +64,6 @@
   }
 
   &__item {
-
     @include for-width(-mobile-l) {
       width: 100%;
     }
