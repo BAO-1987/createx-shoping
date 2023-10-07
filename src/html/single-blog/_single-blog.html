@@ -6,9 +6,10 @@
 
         <li>
           <a href="#">
-            <svg class="breadcrumb__icon">
+            <svg class="breadcrumb__icon" aria-hidden="true">
               <use xlink:href="img/sprite.svg#home"></use>
             </svg>
+            <span class="visually-hidden">Home</span>
           </a>
         </li>
 
@@ -133,7 +134,7 @@
         <div class="blog-post__tags">
 
           <span class="item-title">
-          Tags:
+            Tags:
           </span>
 
           <ul class="tags__list" role="list">
@@ -159,7 +160,7 @@
           <span class="item-title">
             Share:
           </span>
-          
+
           <ul class="social__list" role="list">
 
             @loop("../parts/_social.html",[{

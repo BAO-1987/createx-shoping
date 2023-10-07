@@ -18,10 +18,6 @@
         grid-column: 1 / span 2;
         margin: 0;
       }
-
-      @include for-width(-mobile-sl) {
-        grid-column: inherit;
-      }
     }
   }
 

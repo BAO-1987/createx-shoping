@@ -8,9 +8,10 @@
 
         <li>
           <a href="#">
-            <svg class="breadcrumb__icon">
+            <svg class="breadcrumb__icon" aria-hidden="true">
               <use xlink:href="img/sprite.svg#home"></use>
             </svg>
+            <span class="visually-hidden">Home</span>
           </a>
         </li>
 
@@ -197,7 +198,7 @@
 
             </div>
 
-            <form class="product-form" action="">
+            <form class="product-form" action="#" autocomplete="off">
 
               <ul class="product-form__list">
 
@@ -664,7 +665,8 @@
                 </p>
 
                 <blockquote class="single-reviews__blockqoute">
-                  Ullamcorper nibh sed ac ipsum nunc imperdiet rhoncus. Quam donec habitant nibh sit consequat erat libero, tincidunt. Eros ut aliquam proin et duis. Mauris, egestas congue nibh dui a nulla.
+                  Ullamcorper nibh sed ac ipsum nunc imperdiet rhoncus. Quam donec habitant nibh sit consequat erat
+                  libero, tincidunt. Eros ut aliquam proin et duis. Mauris, egestas congue nibh dui a nulla.
 
                   <div class="single-reviews__vote">
 
@@ -689,14 +691,14 @@
 
               </li>
             </ul>
-
-            <nav class="pagination" aria-label="Reviews pagination" title="pagination">
-
-              <button class="pagination__btn btn-rest" type="button">
-                <span class="visually-hidden">Next</span>
-              </button>
+            <nav class="pagination" aria-label="reviews pagination" title="pagination">
 
               <ul class="pagination__list" role="list">
+
+                <li>
+                  <a class="pagination__btn" href="#" aria-hidden="true"></a>
+                  <span class="visually-hidden">previous set of pages</span>
+                </li>
 
                 <li>
                   <a href="#" aria-current="page">
@@ -722,9 +724,10 @@
                   </a>
                 </li>
 
-                <button class="pagination__btn pagination__btn--reverse btn-rest" type="button">
-                  <span class="visually-hidden">Prev</span>
-                </button>
+                <li>
+                  <a class="pagination__btn pagination__btn--reverse" href="#" aria-hidden="true"></a>
+                  <span class="visually-hidden">next set of pages</span>
+                </li>
 
               </ul>
 

@@ -21,7 +21,7 @@ ScrollReveal().reveal(".hero__title, .title--banners", {
 });
 
 
-ScrollReveal().reveal(".arrival__text", {
+ScrollReveal().reveal(".arrival__text, .catalog__nav, .single-blog__content", {
   duration: 1000,
   distance: "20px",
   delay: "100",
@@ -35,7 +35,7 @@ ScrollReveal().reveal(".subscribe__box", {
   origin: "right",
 });
 
-ScrollReveal().reveal(".slider__btn, .btn--instagram", {
+ScrollReveal().reveal(".slider__btn, .btn--instagram, .checkout-form__aside, .single-blog__article, .form--blog", {
   duration: 800,
   distance: "30px",
   delay: "500",
@@ -44,7 +44,7 @@ ScrollReveal().reveal(".slider__btn, .btn--instagram", {
 
 
 
-ScrollReveal().reveal(".gender__list > li, .services__list > li, .instagram__list > li, .fashion__list > li", {
+ScrollReveal().reveal(".gender__list > li, .services__list > li, .instagram__list > li, .fashion__list > li, .catalog__list > li, .checkout-form__list > li, .single-reviews__list > li", {
   duration: 700,
   distance: "10px",
   delay: "200",
@@ -61,7 +61,7 @@ ScrollReveal().reveal(".partners__list > li, .categories__list > li", {
 });
 
 ScrollReveal().reveal(
-  ".arrival-slider, .trending-slider, .sale-slider, .mobile-app__inner", {
+  ".arrival-slider, .trending-slider, .sale-slider, .mobile-app__inner, .interest-slider, .look__inner, .recently-slider, .alert, .related", {
     duration: 700,
     distance: "20px",
     delay: "200",

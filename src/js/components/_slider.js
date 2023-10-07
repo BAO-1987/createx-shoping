@@ -10,7 +10,7 @@ const commonSwiperOptions = {
   grabCursor: true,
   loop: true,
   autoplay: {
-    delay: 4500,
+    delay: 6500,
     disableOnInteraction: false,
   },
 };
