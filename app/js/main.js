@@ -276,38 +276,51 @@ __webpack_require__.r(__webpack_exports__);
   reset: true,
   easing: "ease"
 });
-(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".hero__title", {
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".title", {
+  duration: 1200,
+  distance: "20px",
+  delay: "100",
+  origin: "top"
+});
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".hero__title, .title--banners", {
   distance: '0',
   delay: 0,
   duration: 0,
   reset: false,
   opacity: 1
 });
-(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".arrival__title", {
-  duration: 1200,
-  distance: "20px",
-  delay: "100",
-  origin: "top"
-});
-
-// ScrollReveal().reveal(".title--banners", {
-//   mobile: false,
-// });
-
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".arrival__text", {
   duration: 1000,
   distance: "20px",
   delay: "100",
   origin: "top"
 });
-(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".gender__list > li", {
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".subscribe__box", {
+  duration: 1000,
+  distance: "20px",
+  delay: "100",
+  origin: "right"
+});
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".slider__btn, .btn--instagram", {
+  duration: 800,
+  distance: "30px",
+  delay: "600",
+  origin: "bottom"
+});
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".gender__list > li, .services__list > li, .instagram__list > li, .fashion__list > li", {
   duration: 700,
   distance: "10px",
   delay: "200",
   origin: "top",
   interval: 300
 });
-(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".arrival-slider", {
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".partners__list > li, .categories__list > li", {
+  duration: 700,
+  distance: "10px",
+  delay: "200",
+  origin: "top"
+});
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".arrival-slider, .trending-slider, .sale-slider, .mobile-app__inner", {
   duration: 700,
   distance: "20px",
   delay: "200",
@@ -428,7 +441,7 @@ function isMobile() {
 
 // Function to enable/disable animations based on screen width
 function toggleAnimations() {
-  const elementsToAnimate = document.querySelectorAll('.title.title--banners');
+  const elementsToAnimate = document.querySelectorAll('.banners__list > li');
 
   // Check if it's not a mobile device
   if (!isMobile()) {
@@ -438,7 +451,8 @@ function toggleAnimations() {
         duration: 1200,
         distance: "20px",
         delay: "100",
-        origin: "top"
+        origin: "top",
+        interval: 200
       });
     });
   }

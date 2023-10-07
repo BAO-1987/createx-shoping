@@ -3376,7 +3376,7 @@ h3::first-letter {
 
 .footer {
   position: relative;
-  padding: 3.75rem 0 1.875rem 0;
+  padding: clamp(1.5rem, 1.5rem + 1.875vw, 3.75rem) 0 1.875rem 0;
   background-color: var(--color-gray-900);
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;

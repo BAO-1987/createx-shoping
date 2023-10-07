@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  padding: rem-f(60) 0 rem-f(30) 0;
+  padding: clamp(1.5rem, calc(1.5rem + vw(36)), 3.75rem) 0 rem-f(30) 0;
   background-color: var(--color-gray-900);
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;

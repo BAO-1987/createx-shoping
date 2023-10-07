@@ -5,7 +5,14 @@ ScrollReveal({
 });
 
 
-ScrollReveal().reveal(".hero__title", {
+ScrollReveal().reveal(".title", {
+  duration: 1200,
+  distance: "20px",
+  delay: "100",
+  origin: "top",
+});
+
+ScrollReveal().reveal(".hero__title, .title--banners", {
   distance: '0',
   delay: 0,
   duration: 0,
@@ -13,16 +20,6 @@ ScrollReveal().reveal(".hero__title", {
   opacity: 1,
 });
 
-ScrollReveal().reveal(".arrival__title", {
-  duration: 1200,
-  distance: "20px",
-  delay: "100",
-  origin: "top",
-});
-
-// ScrollReveal().reveal(".title--banners", {
-//   mobile: false,
-// });
 
 ScrollReveal().reveal(".arrival__text", {
   duration: 1000,
@@ -31,7 +28,23 @@ ScrollReveal().reveal(".arrival__text", {
   origin: "top",
 });
 
-ScrollReveal().reveal(".gender__list > li", {
+ScrollReveal().reveal(".subscribe__box", {
+  duration: 1000,
+  distance: "20px",
+  delay: "100",
+  origin: "right",
+});
+
+ScrollReveal().reveal(".slider__btn, .btn--instagram", {
+  duration: 800,
+  distance: "30px",
+  delay: "600",
+  origin: "bottom",
+});
+
+
+
+ScrollReveal().reveal(".gender__list > li, .services__list > li, .instagram__list > li, .fashion__list > li", {
   duration: 700,
   distance: "10px",
   delay: "200",
@@ -39,8 +52,15 @@ ScrollReveal().reveal(".gender__list > li", {
   interval: 300,
 });
 
+ScrollReveal().reveal(".partners__list > li, .categories__list > li", {
+  duration: 700,
+  distance: "10px",
+  delay: "200",
+  origin: "top",
+});
+
 ScrollReveal().reveal(
-  ".arrival-slider", {
+  ".arrival-slider, .trending-slider, .sale-slider, .mobile-app__inner", {
     duration: 700,
     distance: "20px",
     delay: "200",
@@ -166,7 +186,7 @@ function isMobile() {
 
 // Function to enable/disable animations based on screen width
 function toggleAnimations() {
-  const elementsToAnimate = document.querySelectorAll('.title.title--banners');
+  const elementsToAnimate = document.querySelectorAll('.banners__list > li');
 
   // Check if it's not a mobile device
   if (!isMobile()) {
@@ -177,6 +197,7 @@ function toggleAnimations() {
         distance: "20px",
         delay: "100",
         origin: "top",
+        interval: 200,
       });
     });
   }
