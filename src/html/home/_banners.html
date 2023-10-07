@@ -8,11 +8,11 @@
 
         <div class="banners__content">
 
-          <span class="slogan">summer collections</span>
+          <span class="slogan" data-swiper-parallax="-500">summer collections</span>
 
-          <h2 class="banners__title title title--banners">Sale Up to 70%</h2>
+          <h2 class="title title--banners" data-swiper-parallax="-400">Sale Up to 70%</h2>
 
-          <a class="btn btn--inverse" href="#">Explore new prices</a>
+          <a class="btn btn--inverse" href="#" data-swiper-parallax="-300">Explore new prices</a>
         </div>
 
       </li>
@@ -21,13 +21,13 @@
 
         <div class="banners__content">
 
-          <span class="slogan">Deal of the week</span>
+          <span class="slogan" data-swiper-parallax="-500">Deal of the week</span>
 
-          <h2 class="title title--banners">Stay Warm With Our New Sweaters</h2>
+          <h2 class="title title--banners" data-swiper-parallax="-400">Stay Warm With Our New Sweaters</h2>
 
-          <a class="btn btn--inverse" href="#">Shop now</a>
+          <a class="btn btn--inverse" href="#" data-swiper-parallax="-300">Shop now</a>
 
-          <div class="countdown" data-countdown="07/30/2024 07:00:00 PM">
+          <div class="countdown" data-countdown="07/30/2024 07:00:00 PM" data-swiper-parallax="-500">
 
             <span class="slogan">Limited time offer</span>
 
@@ -65,12 +65,12 @@
 
         <div class="banners__content">
 
-          <span class="slogan">new collection</span>
+          <span class="slogan" data-swiper-parallax="-500">new collection</span>
 
-          <h2 class="title title--banners">Shoes & Bags
+          <h2 class="title title--banners" data-swiper-parallax="-400">Shoes & Bags
             autumn / winter 2020</h2>
 
-          <a class="btn btn--icon btn--offers" href="#">See offers</a>
+          <a class="btn btn--icon btn--offers" href="#" data-swiper-parallax="-300">See offers</a>
         </div>
 
       </li>
@@ -80,11 +80,19 @@
 
         <div class="banners__content banners__content--delivery">
 
-          <span class="slogan">for all new email subscribers</span>
+          <span class="slogan" data-swiper-parallax="-500">for all new email subscribers</span>
 
-          <h2 class="title title--banners">Get 5% Off & Free Delivery</h2>
+          <h2 class="title title--banners" data-swiper-parallax="-400">Get 5% Off & Free Delivery</h2>
 
-          @include("../parts/_form.html")
+          <form class="form" action="#" autocomplete="off" method="get" data-swiper-parallax="-400">
+            <label class="form__label">
+              <span>Email</span>
+              <input class="form__input" type="email" id="email-banners" autocomplete="username"
+                placeholder="Your working email">
+            </label>
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+
 
           <p>*Sign up to be the first to hear about exclusive deals, special offers and upcoming
             collections.</p>

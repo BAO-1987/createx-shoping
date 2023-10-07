@@ -10,7 +10,7 @@
   }
 
   &--banners {
-    margin-bottom: rem-f(40);
+    margin-bottom: clamp(1.5rem, calc(1.5rem + vw(16)), 2.5rem);
     font-size: clamp(1.56rem, calc(1.48rem + 0.44vw), 2rem);
   }
 }

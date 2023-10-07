@@ -34,7 +34,7 @@ const commonSwiperBreakpoints = {
   },
 }
 
-const heroSliderSpeed = 1500;
+const heroSliderSpeed = 2500;
 
 const bodyStyles = window.getComputedStyle(document.body);
 const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
@@ -45,6 +45,7 @@ const heroSlider = new Swiper(".hero-slider", {
   ...commonSwiperOptions,
 
   speed: heroSliderSpeed,
+  parallax: true,
   autoplay: {
     delay: 2500,
   },
@@ -256,262 +257,6 @@ const recentlySlider = new Swiper(".recently-slider", {
   },
 });
 
-// const categoriesSlider = new Swiper(".categories-slider", {
-//   ...commonSwiperOptions,
-
-//   breakpoints: {
-
-//     425: {
-//       slidesPerView: 2,
-//       spaceBetween: 10,
-//     },
-
-//     600: {
-//       slidesPerView: 3,
-//       spaceBetween: 20,
-//     },
-
-//     1200: {
-//       slidesPerView: 3,
-//     }
-//   },
-
-//   navigation: {
-//     nextEl: ".recently-slider__next",
-//     prevEl: ".recently-slider__prev",
-//   },
-// });
-
-
-
-
-// window.addEventListener('DOMContentLoaded', () => {
-//   const enableSwiper = (className, settings, callback) => {
-//     const swiper = new Swiper(className, settings);
-//     if (callback) {
-//       callback(swiper);
-//     }
-//     return swiper;
-//   };
-
-//   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-//     const mq = window.matchMedia(breakpoint);
-
-//     const checker = () => {
-//       if (mq.matches) {
-//         const swiper = enableSwiper(swiperClass, swiperSettings, callback);
-//         mq.removeEventListener('change', checker); // Remove the listener after creating the swiper
-//       }
-//     };
-
-//     mq.addEventListener('change', checker);
-//     checker();
-//   };
-
-//   resizableSwiper(
-//     '(max-width: 768px)',
-//     '.banners', {
-//       slidesPerView: 1,
-//       mousewheelControl: true,
-//       keyboardControl: true,
-//       grabCursor: true,
-//       pagination: {
-//         el: ".banners__pagination",
-//         clickable: true,
-//       },
-//     },
-//     (swiper) => {
-//       // Optional callback function
-//     }
-//   );
-
-//   //  resizableSwiper(
-//   //    '(max-width: 575px)',
-//   //    '.categories-slider', {
-//   //      slidesPerView: 1,
-//   //      mousewheelControl: true,
-//   //      keyboardControl: true,
-//   //      grabCursor: true,
-//   //     //  pagination: {
-//   //     //    el: ".banners__pagination",
-//   //     //    clickable: true,
-//   //     //  },
-//   //    },
-//   //    (swiper) => {
-//   //      // Optional callback function
-//   //    }
-//   //  );
-// });
-
-
-// window.addEventListener('DOMContentLoaded', () => {
-
-//   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-//     let swiper;
-
-//     breakpoint = window.matchMedia(breakpoint);
-
-//     const enableSwiper = function (className, settings) {
-//       swiper = new Swiper(className, settings);
-
-//       if (callback) {
-//         callback(swiper);
-//       }
-//     }
-
-//     const checker = function () {
-//       if (breakpoint.matches) {
-//         return enableSwiper(swiperClass, swiperSettings);
-//       } else {
-//         if (swiper !== undefined) swiper.destroy(true, true);
-//         return;
-//       }
-//     };
-
-//     breakpoint.addEventListener('change', checker);
-//     checker();
-//   }
-
-//   const someFunc = (instance) => {
-//     if (instance) {
-//       instance.on('slideChange', function (e) {
-//         console.log('*** mySwiper.activeIndex', instance.activeIndex);
-//       });
-//     }
-//   };
-
-//   resizableSwiper(
-//     '(max-width: 768px)',
-//     '.banners', {
-//       loop: true,
-//       grabCursor: true,
-//       spaceBetween: 0,
-//       slidesPerView: 1,
-//       pagination: {
-//         el: '.banners__pagination',
-//         clickable: true,
-//       },
-//     },
-//     someFunc
-//   );
-
-//   // resizableSwiper(
-//   //   '(max-width:768px)',
-//   //   '.categories-slider', {
-//   //     loop: true,
-//   //     grabCursor: true,
-//   //     spaceBetween: 30,
-//   //     slidesPerView: 4,
-//   //     pagination: {
-//   //       el: '.categories__pagination',
-//   //       clickable: true,
-//   //     },
-//   //   }
-//   // );
-
-//   //  resizableSwiper(
-//   //    '(max-width:475px)',
-//   //    '.categories-slider', {
-//   //      loop: true,
-//   //      grabCursor: true,
-//   //      spaceBetween: 20,
-//   //      slidesPerView: 3,
-//   //     //  pagination: {
-//   //     //    el: '.categories__pagination',
-//   //     //    clickable: true,
-//   //     //  },
-//   //    }
-//   //  );
-// });
-
-
-// window.addEventListener('DOMContentLoaded', () => {
-
-//   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-//     let swiper;
-//     const sliderElement = document.querySelector(swiperClass);
-
-//     if (!sliderElement) {
-//       // If the slider element does not exist on the page, return early.
-//       console.error(`Slider element with class '${swiperClass}' not found on the page.`);
-//       return;
-//     }
-
-//     breakpoint = window.matchMedia(breakpoint);
-
-//     const enableSwiper = function (className, settings) {
-//       swiper = new Swiper(className, settings);
-
-//       if (callback) {
-//         callback(swiper);
-//       }
-//     };
-
-//     const checker = function () {
-//       if (breakpoint.matches) {
-//         return enableSwiper(swiperClass, swiperSettings);
-//       } else {
-//         if (swiper !== undefined) swiper.destroy(true, true);
-//         return;
-//       }
-//     };
-
-//     breakpoint.addEventListener('change', checker);
-//     checker();
-//   };
-
-//   const someFunc = (instance) => {
-//     if (instance) {
-//       instance.on('slideChange', function (e) {
-//         console.log('*** mySwiper.activeIndex', instance.activeIndex);
-//       });
-//     }
-//   };
-
-//   resizableSwiper(
-//     '(max-width: 768px)',
-//     '.banners', {
-//       loop: true,
-//       grabCursor: true,
-//       spaceBetween: 0,
-//       slidesPerView: 1,
-//       pagination: {
-//         el: '.banners__pagination',
-//         clickable: true,
-//       },
-//     },
-//     someFunc
-//   );
-
-//   // resizableSwiper(
-//   //   '(max-width:768px)',
-//   //   '.categories-slider', {
-//   //     loop: true,
-//   //     grabCursor: true,
-//   //     spaceBetween: 30,
-//   //     slidesPerView: 4,
-//   //     pagination: {
-//   //       el: '.categories__pagination',
-//   //       clickable: true,
-//   //     },
-//   //   }
-//   // );
-
-//   //  resizableSwiper(
-//   //    '(max-width:475px)',
-//   //    '.categories-slider', {
-//   //      loop: true,
-//   //      grabCursor: true,
-//   //      spaceBetween: 20,
-//   //      slidesPerView: 3,
-//   //     //  pagination: {
-//   //     //    el: '.categories__pagination',
-//   //     //    clickable: true,
-//   //     //  },
-//   //    }
-//   //  );
-// });
-
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -552,6 +297,7 @@ window.addEventListener('DOMContentLoaded', () => {
     '.banners', {
       loop: true,
       grabCursor: true,
+       parallax: true,
       spaceBetween: 0,
       slidesPerView: 1,
       pagination: {
