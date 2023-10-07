@@ -3377,9 +3377,9 @@ h3::first-letter {
 .footer {
   position: relative;
   padding: clamp(1.5rem, 1.5rem + 1.875vw, 3.75rem) 0 1.875rem 0;
-  background-color: var(--color-gray-900);
-  color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-gray-900);
 }
 .footer::before {
   content: "";
@@ -3391,11 +3391,11 @@ h3::first-letter {
   opacity: 0.15;
 }
 .footer__inner {
-  margin-bottom: 4rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
   grid-template-columns: repeat(3, auto);
+  margin-bottom: 4rem;
   gap: clamp(1.5rem, 0.16rem + 11.7vw, 9.38rem);
 }
 @media (max-width: calc(48em - 0.0625em)) {
@@ -3417,9 +3417,9 @@ h3::first-letter {
   }
 }
 .footer__copyright {
-  color: var(--color-white);
   font-size: 0.75rem;
   line-height: 1.5;
+  color: var(--color-white);
 }
 .footer__copyright a {
   position: relative;
