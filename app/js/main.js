@@ -304,8 +304,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".slider__btn, .btn--instagram", {
   duration: 800,
   distance: "30px",
-  delay: "600",
-  origin: "bottom"
+  delay: "500",
+  origin: "top"
 });
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".gender__list > li, .services__list > li, .instagram__list > li, .fashion__list > li", {
   duration: 700,
@@ -318,7 +318,8 @@ __webpack_require__.r(__webpack_exports__);
   duration: 700,
   distance: "10px",
   delay: "200",
-  origin: "top"
+  origin: "top",
+  mobile: false
 });
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".arrival-slider, .trending-slider, .sale-slider, .mobile-app__inner", {
   duration: 700,
@@ -1143,7 +1144,7 @@ const commonSwiperBreakpoints = {
     }
   }
 };
-const heroSliderSpeed = 2500;
+const heroSliderSpeed = 1500;
 const bodyStyles = window.getComputedStyle(document.body);
 const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
 document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');
@@ -1152,7 +1153,7 @@ const heroSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".h
   speed: heroSliderSpeed,
   parallax: true,
   autoplay: {
-    delay: 2500
+    delay: 1500
   },
   navigation: {
     nextEl: ".hero-slider__next",

@@ -38,8 +38,8 @@ ScrollReveal().reveal(".subscribe__box", {
 ScrollReveal().reveal(".slider__btn, .btn--instagram", {
   duration: 800,
   distance: "30px",
-  delay: "600",
-  origin: "bottom",
+  delay: "500",
+  origin: "top",
 });
 
 
@@ -57,6 +57,7 @@ ScrollReveal().reveal(".partners__list > li, .categories__list > li", {
   distance: "10px",
   delay: "200",
   origin: "top",
+   mobile: false,
 });
 
 ScrollReveal().reveal(
