@@ -21,7 +21,7 @@ ScrollReveal().reveal(".hero__title, .title--banners, .modal__title, .single-rev
 });
 
 
-ScrollReveal().reveal(".arrival__text, .catalog__nav, .single-blog__content", {
+ScrollReveal().reveal(".arrival__text, .single-blog__content", {
   duration: 1000,
   distance: "20px",
   origin: "top",
@@ -50,7 +50,7 @@ ScrollReveal().reveal(".slider__btn, .btn--instagram, .single-blog__article, .fo
 
 
 
-ScrollReveal().reveal(".gender__list > li, .services__list > li, .instagram__list > li, .fashion__list > li, .catalog__list > li, .checkout-form__list > li, .single-reviews__list > li", {
+ScrollReveal().reveal(".gender__list > li, .services__list > li, .instagram__list > li, .fashion__list > li, .catalog__list > li, .checkout-form__list > li", {
   duration: 700,
   distance: "10px",
   delay: "200",

@@ -34,7 +34,7 @@ const commonSwiperBreakpoints = {
   },
 }
 
-const heroSliderSpeed = 1500;
+const heroSliderSpeed = 2000;
 
 const bodyStyles = window.getComputedStyle(document.body);
 const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');

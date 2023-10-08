@@ -375,18 +375,6 @@
 .product-form {
   margin-bottom: 3rem;
 
-  .btn--article {
-    max-width: 244px;
-
-    @include for-width(-mobile-sl) {
-      max-width: 100%;
-
-      &::before {
-        left: rem-f(75);
-      }
-    }
-  }
-
   &__list {
     @include flex-col;
     gap: 2rem;
@@ -407,6 +395,22 @@
       }
     }
   }
+
+  &__btn {
+    margin-left: 9px;
+    width: 100%;
+    max-width: 255px;
+
+    @include for-width (-mobile-sl) {
+      max-width: 100%;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentcolor;
+  }
 }
 
 .form-article {
@@ -414,6 +418,10 @@
     @include flex-all-sb;
 
     margin-bottom: rem-f(20);
+  }
+
+  .product-form__btn {
+    max-width: 100%;
   }
 
   .checkboxes {
