@@ -1,0 +1,77 @@
+.range-slider {
+  &__body {
+    margin: 3rem 0;
+    border: 0;
+    padding: 0 5px;
+    height: 0.125rem;
+    box-shadow: none;
+    background-color: var(--color-gray-400);
+
+    .noUi-connect {
+      background-color: var(--color-green);
+    }
+
+    .noUi-handle {
+      top: 50%;
+      margin-top: -0.4375rem;
+      border: 2px solid var(--color-white);
+      border-radius: 100vw;
+      width: 0.875rem;
+      height: 0.875rem;
+      box-shadow: none;
+      background-color: var(--color-green);
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .noUi-marker-normal {
+      display: none;
+    }
+
+    .noUi-pips.noUi-pips-horizontal {
+      display: none;
+    }
+
+    .noUi-marker-horizontal.noUi-marker {
+      width: 1px;
+      background-color: #d3d8e0;
+    }
+
+    .noUi-tooltip {
+      border: 0;
+      border-radius: var(--br);
+      padding: 0.25rem 0.5rem;
+      height: 22px;
+      font-size: 0.75rem;
+      line-height: 1.2;
+      color: var(--color-white);
+      background-color: var(--color-gray-800);
+    }
+  }
+
+  .noUi-horizontal .noUi-handle {
+    right: -0.4rem;
+  }
+
+  &__counter {
+    @include flex-a-center;
+    gap: 12px;
+
+    li {
+      font-size: rem-f(12);
+      color: var(--color-gray-800);
+    }
+  }
+
+  &__input {
+    border: 1px solid var(--color-gray-800);
+    border-radius: var(--br);
+    padding: 9px 0 9px 12px;
+    width: 110px;
+    outline-color: transparent;
+  }
+}

@@ -40,7 +40,8 @@
 
   &__icon {
     margin-right: 8px;
-    fill: currentColor;
+    flex-shrink: 0;
+    fill: currentcolor;
     width: 1rem;
     height: 1rem;
 
@@ -121,10 +122,10 @@
       background-color: var(--color-white);
     }
 
-    .custom-checkbox__field:checked+.custom-checkbox__content {
+    .custom-checkbox__field:checked + .custom-checkbox__content {
       color: var(--color-green);
 
-      ~span {
+      ~ span {
         color: var(--color-green);
       }
 

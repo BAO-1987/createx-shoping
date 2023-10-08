@@ -1,15 +1,10 @@
 .catalog {
   &__nav {
     @include flex;
+
     justify-content: space-between;
     margin-bottom: 2rem;
     gap: clamp(1rem, calc(0.3rem + 2.8vw), 3.8rem);
-
-    @include for-width(-mobile-l) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
 
     .pagination {
       margin-left: auto;
@@ -19,10 +14,22 @@
         margin: 0;
       }
     }
+
+    .filter__btn {
+      width: 100%;
+      max-width: 255px;
+    }
+
+    @include for-width(-mobile-l) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 
   &__sort {
     @include flex-a-center;
+
     flex: 0 0 auto;
     width: 45%;
     gap: clamp(1rem, calc(0.5rem + 2.708vw), 3.8rem);
@@ -39,9 +46,10 @@
   }
 
   &__list {
+    position: relative;
+    z-index: -1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: var(--grid-gap);
   }
-
 }

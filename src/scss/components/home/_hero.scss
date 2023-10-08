@@ -125,16 +125,15 @@
   }
 
   .slider-btn {
-    opacity: 0;
+    opacity: 0.6;
+    transition: opacity 0.5s linear;
 
     @include for-width (-mobile-sl) {
       display: none;
     }
+
+    &:hover {
+      opacity: 1;
+    }
   }
-
-  &:hover .slider-btn {
-    opacity: 0.6;
-  }
-
-
 }

@@ -23,14 +23,12 @@
   &__link {
     @include flex-all-center;
 
-    padding: em(10) em(20);
-    font-weight: 700;
+    border: 1px solid transparent;
     border-radius: var(--br);
-    border-color: transparent;
-    border-width: 1px;
-    border-style: solid;
-    color: var(--color-gray-600);
+    padding: rem-f(10) rem-f(20);
     white-space: nowrap;
+    font-weight: 700;
+    color: var(--color-gray-600);
     transition: color 0.3s linear, border-color 0.3s linear;
 
     sup {
@@ -47,8 +45,8 @@
     }
 
     &[aria-selected="true"] {
-      color: var(--color-green);
       border-color: var(--color-green);
+      color: var(--color-green);
     }
   }
 

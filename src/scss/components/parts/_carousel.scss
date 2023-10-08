@@ -1,0 +1,51 @@
+.carousel {
+  position: relative;
+  min-height: 440px;
+
+  &__item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    inset: 0;
+
+    &[data-active] {
+      z-index: 1;
+      opacity: 1;
+      transition-delay: 0ms;
+    }
+  }
+
+  &-btn {
+    @include flex-a-center;
+
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    z-index: 2;
+    isolation: isolate;
+
+    &::before {
+      @include mask;
+
+      mask-image: url("../img/sprite.svg#chevron");
+      background-color: var(--color-gray-800);
+      transition: background-color 0.3s linear;
+      width: 18px;
+      height: 18px;
+    }
+
+    &--reverse {
+      left: auto;
+      right: 1rem;
+      rotate: 180deg;
+    }
+
+    &:hover::before {
+      background-color: var(--color-green);
+    }
+  }
+
+  .article__img {
+    min-height: 440px;
+  }
+}
